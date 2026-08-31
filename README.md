@@ -1,56 +1,97 @@
 <div align="center">
 
-<!-- Animated Header Banner with Cyberpunk Dark Neon Aesthetics -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,17,24&height=220&section=header&text=TAHIR%20AZEEM&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Software%20Engineer%20•%20System%20Architect%20•%20Product%20Builder&descFontSize=18&descAlignY=62&descAlign=50" width="100%" alt="Tahir Azeem Header Banner"/>
+<!-- ══════════════════════════════════════════════════════════════════════════ -->
+<!--                           🚀 ANIMATED HEADER BANNER                         -->
+<!-- ══════════════════════════════════════════════════════════════════════════ -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,17,24,30&height=240&section=header&text=TAHIR%20AZEEM%20R&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full-Stack%20Software%20Engineer%20•%20AI%20Solutions%20Architect%20•%20Co-founder%20@%20BOCT&descFontSize=17&descAlignY=60&descAlign=50" width="100%" alt="Tahir Azeem Header Banner"/>
 
-<!-- Dynamic Animated Typing Subtitle -->
+<!-- ══════════════════════════════════════════════════════════════════════════ -->
+<!--                        ⚡ DYNAMIC ANIMATED TYPING SVG                      -->
+<!-- ══════════════════════════════════════════════════════════════════════════ -->
 <p align="center">
   <a href="https://github.com/tahirazeem145">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=false&width=750&height=45&lines=🚀+Full-Stack+Software+Engineer+%26+System+Architect;🌟+Creator+of+TripNest+2.0+(React+18+%2B+Spring+Boot+%2B+Supabase);⚡+Building+High-Performance+Cloud+Ecosystems+%26+APIs;💡+Turning+Complex+Problems+Into+Intuitive+Digital+Experiences" alt="Typing Animation" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&multiline=false&width=780&height=45&lines=🚀+Full-Stack+Web+Developer+%26+AI-Integrated+Architect;🤖+Co-Founder+@+BOCT+|+One+Bot.+Infinite+Conversations.;🌟+Creator+of+TripNest+2.0+(React+18+%2B+Spring+Boot+%2B+Supabase);✍️+Author+of+Tomorrow's+Code+Newsletter+%26+5K%2B+LinkedIn+Community;💡+Building+Scalable+Cloud+Ecosystems+%26+Cinematic+Experiences" alt="Typing Animation" />
   </a>
 </p>
 
-<!-- Quick Navigation Badges -->
+<!-- ══════════════════════════════════════════════════════════════════════════ -->
+<!--                        🧭 INTERACTIVE NAVIGATION PILLS                     -->
+<!-- ══════════════════════════════════════════════════════════════════════════ -->
 <p align="center">
-  <a href="#-about-me"><img src="https://img.shields.io/badge/📖_ABOUT-0d1117?style=for-the-badge&logoColor=00f2fe&labelColor=161b22" alt="About" /></a>
-  <a href="#-flagship-project--tripnest-20"><img src="https://img.shields.io/badge/🌟_FEATURED_PROJECT-0d1117?style=for-the-badge&logoColor=4facfe&labelColor=161b22" alt="Featured Project" /></a>
-  <a href="#-tech-stack--capabilities"><img src="https://img.shields.io/badge/🛠️_TECH_STACK-0d1117?style=for-the-badge&logoColor=a855f7&labelColor=161b22" alt="Tech Stack" /></a>
-  <a href="#-engineering-loop"><img src="https://img.shields.io/badge/🔄_PROCESS-0d1117?style=for-the-badge&logoColor=00e5ff&labelColor=161b22" alt="Process" /></a>
-  <a href="#-github-telemetry--metrics"><img src="https://img.shields.io/badge/📊_ANALYTICS-0d1117?style=for-the-badge&logoColor=10b981&labelColor=161b22" alt="Stats" /></a>
-  <a href="#-lets-connect"><img src="https://img.shields.io/badge/📫_CONTACT-0d1117?style=for-the-badge&logoColor=ec4899&labelColor=161b22" alt="Contact" /></a>
+  <a href="#-about--system-telemetry"><img src="https://img.shields.io/badge/📖_ABOUT-06070a?style=for-the-badge&logoColor=38bdf8&labelColor=111827" alt="About" /></a>
+  <a href="#-ventures--leadership"><img src="https://img.shields.io/badge/🏢_VENTURES-06070a?style=for-the-badge&logoColor=a855f7&labelColor=111827" alt="Ventures" /></a>
+  <a href="#-flagship-project--tripnest-20"><img src="https://img.shields.io/badge/🌟_PROJECTS-06070a?style=for-the-badge&logoColor=06b6d4&labelColor=111827" alt="Projects" /></a>
+  <a href="#-tech-stack--ecosystem"><img src="https://img.shields.io/badge/🛠️_TECH_STACK-06070a?style=for-the-badge&logoColor=3b82f6&labelColor=111827" alt="Tech Stack" /></a>
+  <a href="#-github-telemetry--analytics"><img src="https://img.shields.io/badge/📊_TELEMETRY-06070a?style=for-the-badge&logoColor=10b981&labelColor=111827" alt="Stats" /></a>
+  <a href="#-achievements--impact"><img src="https://img.shields.io/badge/🏆_AWARDS-06070a?style=for-the-badge&logoColor=f59e0b&labelColor=111827" alt="Achievements" /></a>
+  <a href="#-lets-connect"><img src="https://img.shields.io/badge/📫_CONTACT-06070a?style=for-the-badge&logoColor=ec4899&labelColor=111827" alt="Contact" /></a>
+</p>
+
+<!-- Profile Views Badge -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=tahirazeem145&label=Profile%20Views&color=38bdf8&style=flat-square" alt="Profile Views" />
+  &nbsp;
+  <a href="https://tahirazeemportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Live_Site-38bdf8?style=flat-square&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
+  &nbsp;
+  <a href="https://linkedin.com/in/tahirazeem-r"><img src="https://img.shields.io/badge/LinkedIn-5K+_Network-0a66c2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
 ---
 
 </div>
 
-## 🌌 About Me
+## 🌌 About & System Telemetry
 
-```yaml
-name: Tahir Azeem
-role: Full-Stack Software Engineer & Product Architect
-specialization: Modern Frontend (React/Vite) & Distributed Backends (Spring Boot, Supabase, Postgres)
-core_focus: High-concurrency architectures, cloud scalability, intuitive UI/UX, database optimization
-location: Global / Remote
-status: 🚀 Architecting scalable web applications and open-source systems
+```typescript
+interface DeveloperCore {
+  name: "Tahir Azeem R";
+  alias: "TAR";
+  identity: "Full-Stack Software Engineer & AI Systems Architect";
+  academics: "B.E. Computer Science (2nd Year) @ JJCET, Trichy, Tamil Nadu";
+  coFounding: "BOCT — Scalable AI & Intelligent Automation Systems";
+  weeklyDigest: "Tomorrow's Code — Decoding AI trends, Startup Evolution & Vibe Coding";
+  status: "🚀 Open for High-Impact Software Engineering & AI Internships";
+  coreEthos: "I don't just follow tutorials — I innovate and build in public to solve real-world problems.";
+  currentFocus: [
+    "Building high-concurrency microservices & distributed architectures",
+    "Pioneering cinematic frontend UI/UX experiences (React 18 / Next.js)",
+    "Integrating autonomous AI agent workflows & real-time communication"
+  ];
+}
 ```
 
-> **"Passionate about bridging the gap between elegant UI engineering, high-throughput microservices, and resilient cloud architectures to deliver transformative digital products."**
+> 💬 *"Passionate about bridging the gap between elegant UI engineering, high-throughput microservices, and resilient cloud architectures to deliver transformative digital products."*
 
 ---
 
-<div align="center">
+## 🏢 Ventures & Leadership
 
-## 🔄 Engineering & Product Loop
-
-```
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  💡 USER &   │ ──► │  📐 SYSTEM   │ ──► │ 💻 FULL-STACK│ ──► │ 🚀 CLOUD     │ ──► │  🌟 USER     │
-│   PROBLEM    │     │ ARCHITECTURE │     │ DEVELOPMENT  │     │ DEPLOYMENT   │     │   IMPACT     │
-└──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
-```
-
-</div>
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <div align="center">
+        <h3>🤖 Co-Founder @ BOCT</h3>
+        <p><i>"One Bot. Infinite Conversations."</i> &nbsp;•&nbsp; <b>2024 – Present</b></p>
+      </div>
+      <ul>
+        <li>Architecting next-generation AI-powered communication frameworks and intelligent conversational pipelines.</li>
+        <li>Bridging advanced NLP models with real-world enterprise business logic and automated bot workflows.</li>
+        <li>Leading product vision, backend infrastructure, and scalable system deployment.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <div align="center">
+        <h3>✍️ Author & Creator @ Tomorrow's Code</h3>
+        <p><i>"Decoding the Future of Tech."</i> &nbsp;•&nbsp; <b>2026 – Present</b></p>
+      </div>
+      <ul>
+        <li>Weekly deep-dive newsletter analyzing the real-world impact of AI on modern engineering practices.</li>
+        <li>Pioneering perspectives on <b>"Vibe Coding"</b> and AI-first product development workflows.</li>
+        <li>Author of <i>"Adapt or Get Replaced: The New Rule of Coding in 2026"</i>, engaging a <b>5K+ tech audience</b> on LinkedIn.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -61,9 +102,9 @@ status: 🚀 Architecting scalable web applications and open-source systems
 ### ✈️ **TripNest 2.0 — Next-Gen Social Travel & Discovery Platform**
 
 <p>
-  <a href="https://tripnest20.netlify.app"><img src="https://img.shields.io/badge/🌐_Live_Demo-tripnest20.netlify.app-00f2fe?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" /></a>
-  <a href="https://tripnest-backend-ahl5.onrender.com"><img src="https://img.shields.io/badge/🚀_API_Backend-Live_on_Render-4facfe?style=for-the-badge&logo=render&logoColor=white" alt="Live Backend API" /></a>
-  <a href="https://github.com/tahirazeem145/TripNest-2.0"><img src="https://img.shields.io/badge/💻_Source_Code-GitHub_Repo-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" /></a>
+  <a href="https://tripnest20.netlify.app"><img src="https://img.shields.io/badge/🌐_Live_Application-tripnest20.netlify.app-00f2fe?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" /></a>
+  <a href="https://tripnest-backend-ahl5.onrender.com"><img src="https://img.shields.io/badge/🚀_Spring_Boot_API-Live_on_Render-4facfe?style=for-the-badge&logo=render&logoColor=white" alt="Live Backend API" /></a>
+  <a href="https://github.com/tahirazeem145/TripNest-2.0"><img src="https://img.shields.io/badge/💻_Source_Code-TripNest--2.0-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" /></a>
 </p>
 
 </div>
@@ -71,16 +112,16 @@ status: 🚀 Architecting scalable web applications and open-source systems
 <table>
   <tr>
     <td width="55%">
-      <h4>🌟 Core Architecture & Highlights</h4>
+      <h4>🌟 Architectural Highlights & Core Capabilities</h4>
       <ul>
-        <li><b>Dynamic Feed & Uncropped Media</b>: Custom aspect-ratio ambient blur presentation engine rendering portrait and landscape travel photography without cropping.</li>
-        <li><b>Multi-Photo Carousels</b>: Drag-reorder interactive carousels supporting up to 10 photos per travel moment.</li>
-        <li><b>Real-Time Social Graph</b>: Instant double-tap likes, bookmark collections, threaded discussions, and bidirectional follower/following graph.</li>
-        <li><b>Full-Stack Cloud Infrastructure</b>: React 18 + Vite frontend deployed on <b>Netlify</b>, Spring Boot 3.2 Java API running on <b>Render</b>, and PostgreSQL database with Row Level Security on <b>Supabase</b>.</li>
+        <li><b>Dynamic Presentation Engine</b>: Aspect-ratio adaptive ambient blur engine displaying portrait and landscape travel photography without ugly crops.</li>
+        <li><b>Multi-Photo Gesture Carousels</b>: Drag-and-drop reorderable interactive carousels supporting up to 10 photos per travel moment.</li>
+        <li><b>Real-Time Social Graph</b>: Instant double-tap likes, custom bookmark collections, nested discussion threads, and bidirectional follow graphs.</li>
+        <li><b>Distributed Cloud Stack</b>: React 18 + Vite frontend on <b>Netlify</b>, Spring Boot 3.2 Java API hosted on <b>Render</b>, and PostgreSQL database with Row-Level Security on <b>Supabase</b>.</li>
       </ul>
     </td>
     <td width="45%">
-      <h4>🛠️ Tech Stack Employed</h4>
+      <h4>🛠️ Tech Stack & Architecture Docs</h4>
       <p>
         <img src="https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
         <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
@@ -89,11 +130,11 @@ status: 🚀 Architecting scalable web applications and open-source systems
         <img src="https://img.shields.io/badge/Supabase_PostgreSQL-3ECF8E?style=flat-square&logo=supabase&logoColor=white" />
         <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white" />
         <img src="https://img.shields.io/badge/Render-000000?style=flat-square&logo=render&logoColor=white" />
-        <img src="https://img.shields.io/badge/Lucide_Icons-F56565?style=flat-square" />
+        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
       </p>
       <p>
         <a href="https://github.com/tahirazeem145/TripNest-2.0/blob/main/docs/ER_DIAGRAM.md">📊 <b>View Relational ER Diagram</b></a> &nbsp;|&nbsp; 
-        <a href="https://github.com/tahirazeem145/TripNest-2.0/blob/main/docs/ARCHITECTURE_DIAGRAM.md">🏛️ <b>System Architecture</b></a>
+        <a href="https://github.com/tahirazeem145/TripNest-2.0/blob/main/docs/ARCHITECTURE_DIAGRAM.md">🏛️ <b>System Architecture Specs</b></a>
       </p>
     </td>
   </tr>
@@ -101,38 +142,51 @@ status: 🚀 Architecting scalable web applications and open-source systems
 
 ---
 
-## 🛠️ Tech Stack & Capabilities
+## 🛠️ Tech Stack & Ecosystem
 
 <div align="center">
 
-### 💻 Frontend Architecture & UI/UX
+### 🧠 AI & LLM Engineering
 <p>
-  <img src="https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3_&_Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Responsive_Design-00c7b7?style=for-the-badge&logo=web&logoColor=white" alt="Responsive" />
+  <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT" />
+  <img src="https://img.shields.io/badge/Claude_AI-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude" />
+  <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini" />
+  <img src="https://img.shields.io/badge/Lovable_AI-FF3366?style=for-the-badge&logoColor=white" alt="Lovable AI" />
+  <img src="https://img.shields.io/badge/Replit_AI-F26207?style=for-the-badge&logo=replit&logoColor=white" alt="Replit AI" />
+  <img src="https://img.shields.io/badge/Prompt_Engineering-00E5FF?style=for-the-badge&logo=codestream&logoColor=black" alt="Prompt Engineering" />
 </p>
 
-### ⚙️ Backend & API Engineering
+### 💻 Modern Frontend & Cinematic UI/UX
 <p>
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/RESTful_APIs-0052CC?style=for-the-badge&logo=postman&logoColor=white" alt="REST APIs" />
+  <img src="https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black" alt="GSAP" />
+</p>
+
+### ⚙️ Scalable Backend, APIs & Architecture
+<p>
+  <img src="https://img.shields.io/badge/Spring_Boot_3.2-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/Java_17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 17" />
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-  <img src="https://img.shields.io/badge/Microservices-FF6C37?style=for-the-badge" alt="Microservices" />
+  <img src="https://img.shields.io/badge/RESTful_APIs-0052CC?style=for-the-badge&logo=postman&logoColor=white" alt="REST APIs" />
+  <img src="https://img.shields.io/badge/Microservices-FF6C37?style=for-the-badge&logo=apache-kafka&logoColor=white" alt="Microservices" />
 </p>
 
-### 🗄️ Databases, Cloud & DevOps
+### 🗄️ Databases, Cloud & Infrastructure
 <p>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Render" />
+  <img src="https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
   <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
   <img src="https://img.shields.io/badge/Git_&_GitHub-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
 
@@ -140,22 +194,22 @@ status: 🚀 Architecting scalable web applications and open-source systems
 
 ---
 
-## 📊 GitHub Telemetry & Metrics
+## 📊 GitHub Telemetry & Analytics
 
 <div align="center">
 
-<table border="0">
+<table border="0" width="100%">
   <tr>
     <td align="center" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=tahirazeem145&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f2fe&icon_color=4facfe&text_color=c9d1d9" alt="Tahir's GitHub Stats" />
+      <img src="https://github-readme-stats.vercel.app/api?username=tahirazeem145&show_icons=true&theme=radical&hide_border=true&bg_color=06070a&title_color=38bdf8&icon_color=a855f7&text_color=e2e8f0&ring_color=38bdf8" width="100%" alt="Tahir's GitHub Stats" />
     </td>
     <td align="center" width="50%">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=tahirazeem145&theme=radical&hide_border=true&background=0d1117&ring=00f2fe&fire=4facfe&currStreakLabel=00e5ff" alt="Tahir's Streak Stats" />
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=tahirazeem145&theme=radical&hide_border=true&background=06070a&ring=38bdf8&fire=a855f7&currStreakLabel=38bdf8&currStreakNum=ffffff&sideNums=e2e8f0" width="100%" alt="Tahir's Streak Stats" />
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tahirazeem145&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f2fe&text_color=c9d1d9" alt="Top Languages" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tahirazeem145&layout=compact&theme=radical&hide_border=true&bg_color=06070a&title_color=38bdf8&text_color=e2e8f0" width="65%" alt="Top Languages" />
     </td>
   </tr>
 </table>
@@ -164,25 +218,58 @@ status: 🚀 Architecting scalable web applications and open-source systems
 
 ---
 
-## 📫 Let's Connect & Collaborate
+## 🏆 Achievements & Impact
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://img.shields.io/badge/Smart_India_Hackathon-Participant-F59E0B?style=for-the-badge&logo=hackaday&logoColor=white" alt="SIH" /><br/><br/>
+      <b>Smart India Hackathon (SIH)</b><br/>
+      <i>Competed nationally against top student teams to prototype innovative AI & web solutions.</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://img.shields.io/badge/LinkedIn_Community-5K+_Followers-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Community" /><br/><br/>
+      <b>5,000+ Developer Network</b><br/>
+      <i>Active tech voice sharing deep dives on modern AI tools, vibe coding, and developer productivity.</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://img.shields.io/badge/Venture_Building-BOCT_Co--Founder-A855F7?style=for-the-badge&logo=probot&logoColor=white" alt="BOCT" /><br/><br/>
+      <b>Co-Founder @ BOCT</b><br/>
+      <i>Building intelligent automation systems & scalable bot pipelines for real business impact.</i>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## 📫 Let's Connect & Build The Future
 
 <div align="center">
 
 <p align="center">
+  <a href="https://tahirazeemportfolio.vercel.app/">
+    <img src="https://img.shields.io/badge/🌐_Explore_Portfolio-tahirazeemportfolio.vercel.app-38bdf8?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>
+  <a href="https://linkedin.com/in/tahirazeem-r">
+    <img src="https://img.shields.io/badge/LinkedIn-tahirazeem--r-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
   <a href="mailto:tahirazeems145s@gmail.com">
-    <img src="https://img.shields.io/badge/Email-tahirazeems145s%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-tahirazeems145s%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://github.com/tahirazeem145">
     <img src="https://img.shields.io/badge/GitHub-tahirazeem145-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a href="https://tripnest20.netlify.app">
-    <img src="https://img.shields.io/badge/Portfolio%20%2F%20Live%20Project-TripNest%202.0-00f2fe?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Portfolio" />
-  </a>
 </p>
 
-<!-- Animated Footer -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,17,24&height=120&section=footer" width="100%" alt="Footer Wave" />
+<!-- Animated Closing Wave Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,17,24,30&height=130&section=footer" width="100%" alt="Footer Wave" />
 
-<p><b>⚡ Crafted with curiosity, caffeine & clean code by Tahir Azeem ⚡</b></p>
+<p align="center">
+  <b>⚡ Crafted with curiosity, relentless innovation & clean code by Tahir Azeem ⚡</b>
+</p>
 
 </div>
