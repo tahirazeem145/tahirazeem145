@@ -1,0 +1,781 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap');
+
+      /* Typography Classes */
+      .font-sans {
+        font-family: 'Outfit', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+      }
+
+      /* Entrance Animation Keyframes */
+      @keyframes galFadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes travelRouteAnim {
+        0% { stroke-dashoffset: 240; opacity: 0.3; }
+        50% { opacity: 1; stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -240; opacity: 0.3; }
+      }
+
+      @keyframes qrLaserSweep {
+        0% { transform: translateY(-10px); opacity: 0; }
+        25% { opacity: 0.8; }
+        75% { opacity: 0.8; }
+        100% { transform: translateY(80px); opacity: 0; }
+      }
+
+      @keyframes aiCorePulse {
+        0%, 100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 4px #a855f7) drop-shadow(0 0 10px rgba(168, 85, 247, 0.4));
+          opacity: 0.85;
+        }
+        50% {
+          transform: scale(1.12);
+          filter: drop-shadow(0 0 12px #a855f7) drop-shadow(0 0 24px rgba(0, 240, 255, 0.6));
+          opacity: 1;
+        }
+      }
+
+      @keyframes aiRingRotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes aiRingRotateRev {
+        0% { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+      @keyframes pulseCyan {
+        0%, 100% { opacity: 0.75; filter: drop-shadow(0 0 2px #00f0ff); }
+        50% { opacity: 1; filter: drop-shadow(0 0 7px #00f0ff); }
+      }
+
+      @keyframes pulseViolet {
+        0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 2px #a855f7); }
+        50% { opacity: 1; filter: drop-shadow(0 0 7px #a855f7); }
+      }
+
+      @keyframes pulseGreen {
+        0%, 100% { opacity: 0.75; filter: drop-shadow(0 0 2px #22c55e); }
+        50% { opacity: 1; filter: drop-shadow(0 0 7px #22c55e); }
+      }
+
+      @keyframes floatPhoto {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+
+      @keyframes headerGlowSweep {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      /* Entrance Staging */
+      .anim-base { animation: galFadeIn 0.8s ease-out forwards; }
+      .anim-hdr { animation: galFadeIn 0.8s ease-out 0.3s both; }
+      .anim-flagship { animation: galFadeIn 0.9s ease-out 0.8s both; }
+      .anim-card-2 { animation: galFadeIn 0.9s ease-out 1.4s both; }
+      .anim-card-3 { animation: galFadeIn 0.9s ease-out 1.8s both; }
+      .anim-ftr { animation: galFadeIn 0.8s ease-out 2.2s both; }
+
+      /* Continuous Micro-Animations */
+      .travel-pulse-1 {
+        stroke-dasharray: 20, 80;
+        animation: travelRouteAnim 3.8s linear infinite;
+      }
+      .travel-pulse-2 {
+        stroke-dasharray: 25, 75;
+        animation: travelRouteAnim 4.5s linear infinite 0.8s;
+      }
+
+      .ai-core-glow {
+        transform-origin: 470px 545px;
+        animation: aiCorePulse 3.5s ease-in-out infinite;
+      }
+      .ai-ring-spin {
+        transform-origin: 470px 545px;
+        animation: aiRingRotate 18s linear infinite;
+      }
+      .ai-ring-spin-rev {
+        transform-origin: 470px 545px;
+        animation: aiRingRotateRev 22s linear infinite;
+      }
+
+      .qr-scan-line {
+        animation: qrLaserSweep 3.2s ease-in-out infinite 1s;
+      }
+
+      .photo-frame-1 { animation: floatPhoto 4s ease-in-out infinite alternate; }
+      .photo-frame-2 { animation: floatPhoto 5s ease-in-out infinite alternate 1s; }
+      .photo-frame-3 { animation: floatPhoto 4.5s ease-in-out infinite alternate 0.5s; }
+
+      .pulse-cyan-dot { animation: pulseCyan 2.8s ease-in-out infinite; }
+      .pulse-violet-dot { animation: pulseViolet 3.2s ease-in-out infinite 0.5s; }
+      .pulse-green-dot { animation: pulseGreen 2.5s ease-in-out infinite; }
+
+      /* Button Hover Effects */
+      .btn-galaxy {
+        cursor: pointer;
+        transition: transform 0.2s ease, filter 0.2s ease, fill 0.2s ease;
+      }
+      .btn-galaxy:hover rect {
+        fill: #16243d;
+        stroke: #00f0ff;
+        stroke-opacity: 0.9;
+      }
+      .btn-galaxy:hover {
+        filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.6));
+      }
+
+      .btn-violet-glow:hover rect {
+        fill: #221438;
+        stroke: #a855f7;
+        stroke-opacity: 0.9;
+      }
+      .btn-violet-glow:hover {
+        filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));
+      }
+
+      .btn-green-glow:hover rect {
+        fill: #0d261b;
+        stroke: #22c55e;
+        stroke-opacity: 0.9;
+      }
+      .btn-green-glow:hover {
+        filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+      }
+
+      .card-galaxy {
+        transition: stroke 0.3s ease, fill 0.3s ease;
+      }
+      .card-galaxy:hover {
+        stroke-opacity: 0.6;
+        fill: #0c1527;
+      }
+    </style>
+
+    <!-- Gradients -->
+    <radialGradient id="galBgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#080e1e" stop-opacity="0.96" />
+      <stop offset="50%" stop-color="#040712" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#020306" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Flagship Hero Panel Gradient -->
+    <linearGradient id="flagshipBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d172e" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#080f1e" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#040813" stop-opacity="0.98" />
+    </linearGradient>
+
+    <!-- Sub Panels Gradient -->
+    <linearGradient id="subPanelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1224" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#050914" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="flagshipHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#142647" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#091326" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Title Cyan-Violet Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#d9f6ff" />
+      <stop offset="70%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="accentViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="accentGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+
+    <linearGradient id="badgeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="qrLaserGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0" />
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="dividerFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
+      <stop offset="15%" stop-color="#00f0ff" stop-opacity="0.4" />
+      <stop offset="85%" stop-color="#a855f7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-violet" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Patterns -->
+    <pattern id="galaxyGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#00f0ff" stroke-width="0.6" stroke-opacity="0.03" />
+      <circle cx="32" cy="32" r="0.6" fill="#00f0ff" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Clip Paths -->
+    <clipPath id="galaxyClip">
+      <rect x="0" y="0" width="1200" height="720" rx="14" />
+    </clipPath>
+    <clipPath id="qrScanClip">
+      <rect x="1005" y="495" width="110" height="110" rx="6" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Canvas Container -->
+  <g clip-path="url(#galaxyClip)">
+    <!-- Base Background & Grid -->
+    <rect width="1200" height="720" fill="url(#galBgGrad)" class="anim-base" />
+    <rect width="1200" height="720" fill="url(#galaxyGrid)" class="anim-base" />
+
+    <!-- ======================================================== -->
+    <!-- HEADER BAR: 03 // PROJECT GALAXY                         -->
+    <!-- ======================================================== -->
+    <g class="anim-hdr">
+      <!-- Top Dividing Line -->
+      <line x1="35" y1="56" x2="1165" y2="56" stroke="url(#dividerFade)" stroke-width="1" />
+
+      <!-- Left Section Title -->
+      <g transform="translate(35, 36)">
+        <rect x="0" y="-13" width="22" height="20" rx="4" fill="#0c1629" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.6" />
+        <text x="6" y="1" fill="#00f0ff" class="font-mono" font-size="11" font-weight="700">★</text>
+        <text x="32" y="1" fill="#f8fafc" class="font-mono" font-size="14" font-weight="800" letter-spacing="2.5">
+          03 // PROJECT GALAXY
+          <tspan fill="#64748b" font-size="11" font-weight="500" letter-spacing="1"> // ACTIVE BUILDS</tspan>
+        </text>
+      </g>
+
+      <!-- Center Metadata Tag -->
+      <g transform="translate(600, 36)" text-anchor="middle">
+        <text x="0" y="0" fill="#475569" class="font-mono" font-size="9.5" letter-spacing="1.5">
+          UNIVERSE: <tspan fill="#38bdf8">TAHIR_AZEEM</tspan> • HUB: <tspan fill="#a855f7">PRODUCT_LAB</tspan> • NODE: <tspan fill="#94a3b8">03_ONLINE</tspan>
+        </text>
+      </g>
+
+      <!-- Right 3 Projects Online Pill -->
+      <g transform="translate(1165, 36)" text-anchor="end">
+        <rect x="-160" y="-12" width="160" height="22" rx="11" fill="#0c1527" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.4" />
+        <circle cx="-144" cy="-1" r="3" fill="#00f0ff" class="pulse-cyan-dot" />
+        <text x="-16" y="2.5" fill="#38bdf8" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+          3 PROJECTS ONLINE
+        </text>
+      </g>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- FLAGSHIP CENTERPIECE: 01 — TRIPNEST 2.0 (50-55% FOCAL)  -->
+    <!-- ======================================================== -->
+    <g class="anim-flagship">
+      <!-- Flagship Main Card Box -->
+      <rect x="35" y="74" width="1130" height="336" rx="10" fill="url(#flagshipBg)" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.35" class="card-galaxy" />
+      <rect x="35" y="74" width="1130" height="28" rx="10" fill="url(#flagshipHeaderGrad)" />
+
+      <!-- Card Header Telemetry -->
+      <path d="M 47 88 L 53 88" stroke="#00f0ff" stroke-width="2" />
+      <text x="60" y="92" fill="#38bdf8" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+        PROJECT_01 // FLAGSHIP_BUILD
+      </text>
+
+      <g transform="translate(1145, 92)" text-anchor="end">
+        <text x="0" y="0" fill="#64748b" class="font-mono" font-size="9" letter-spacing="1">
+          PROJECT_ID: <tspan fill="#38bdf8">TRP-02</tspan> • STATE: <tspan fill="#00f0ff" font-weight="700">ACTIVE</tspan>
+        </text>
+      </g>
+
+      <!-- ---------------------------------------------------- -->
+      <!-- LEFT CONTENT COLUMN: TRIPNEST 2.0 INFO & ACTIONS     -->
+      <!-- ---------------------------------------------------- -->
+      <g transform="translate(60, 126)">
+        <!-- Flagship Golden Badge -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="168" height="22" rx="4" fill="#081b30" stroke="#00f0ff" stroke-width="0.75" />
+          <circle cx="12" cy="11" r="2.5" fill="#00f0ff" class="pulse-cyan-dot" />
+          <text x="22" y="14.5" fill="#00f0ff" class="font-mono" font-size="9.5" font-weight="800" letter-spacing="1.5">
+            ★ FLAGSHIP BUILD
+          </text>
+        </g>
+
+        <!-- Project Title -->
+        <text x="0" y="58" fill="url(#titleGrad)" class="font-sans" font-size="34" font-weight="900" letter-spacing="2">
+          TRIPNEST 2.0
+        </text>
+
+        <!-- Project Description -->
+        <text x="0" y="86" fill="#cbd5e1" class="font-sans" font-size="14.5" font-weight="500" letter-spacing="0.5">
+          Travel Photo Sharing Community Platform
+        </text>
+
+        <!-- Metadata Chips: STATUS & TYPE -->
+        <g transform="translate(0, 110)">
+          <!-- Status Pill -->
+          <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="118" height="22" rx="4" fill="#091424" stroke="#1e293b" stroke-width="0.75" />
+            <text x="8" y="14.5" fill="#64748b" class="font-mono" font-size="9">STATUS:</text>
+            <circle cx="62" cy="11" r="2.5" fill="#00f0ff" class="pulse-cyan-dot" />
+            <text x="70" y="14.5" fill="#00f0ff" class="font-mono" font-size="9" font-weight="700">ACTIVE</text>
+          </g>
+
+          <!-- Type Pill -->
+          <g transform="translate(126, 0)">
+            <rect x="0" y="0" width="138" height="22" rx="4" fill="#091424" stroke="#1e293b" stroke-width="0.75" />
+            <text x="8" y="14.5" fill="#64748b" class="font-mono" font-size="9">TYPE:</text>
+            <text x="44" y="14.5" fill="#38bdf8" class="font-mono" font-size="9" font-weight="700">FULL STACK</text>
+          </g>
+        </g>
+
+        <!-- Technology Stack Tags (STRICTLY SPECIFIED TECH ONLY) -->
+        <g transform="translate(0, 154)">
+          <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="700" letter-spacing="1.5">TECH STACK:</text>
+          <g transform="translate(0, 10)">
+            <!-- React -->
+            <g transform="translate(0, 0)">
+              <rect x="0" y="0" width="62" height="22" rx="4" fill="#081528" stroke="#00f0ff" stroke-width="0.6" />
+              <text x="31" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">React</text>
+            </g>
+            <!-- Vite -->
+            <g transform="translate(68, 0)">
+              <rect x="0" y="0" width="52" height="22" rx="4" fill="#081528" stroke="#38bdf8" stroke-width="0.6" />
+              <text x="26" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">Vite</text>
+            </g>
+            <!-- Tailwind CSS -->
+            <g transform="translate(126, 0)">
+              <rect x="0" y="0" width="102" height="22" rx="4" fill="#081528" stroke="#38bdf8" stroke-width="0.6" />
+              <text x="51" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">Tailwind CSS</text>
+            </g>
+            <!-- Supabase -->
+            <g transform="translate(234, 0)">
+              <rect x="0" y="0" width="82" height="22" rx="4" fill="#0c102b" stroke="#a855f7" stroke-width="0.6" />
+              <text x="41" y="14.5" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">Supabase</text>
+            </g>
+            <!-- PostgreSQL -->
+            <g transform="translate(322, 0)">
+              <rect x="0" y="0" width="94" height="22" rx="4" fill="#0c102b" stroke="#a855f7" stroke-width="0.6" />
+              <text x="47" y="14.5" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">PostgreSQL</text>
+            </g>
+          </g>
+        </g>
+
+        <!-- Action CTA Buttons (Clickable SVG Links with placeholders) -->
+        <g transform="translate(0, 222)">
+          <!-- VIEW PROJECT LINK -->
+          <a href="https://github.com/tahirazeem145/PROJECT_URL_HERE" target="_blank">
+            <g class="btn-galaxy">
+              <rect x="0" y="0" width="145" height="30" rx="15" fill="#0a1930" stroke="#00f0ff" stroke-width="0.8" />
+              <circle cx="18" cy="15" r="2.5" fill="#00f0ff" />
+              <text x="78" y="19" fill="#e2e8f0" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5" text-anchor="middle">⌥ VIEW PROJECT</text>
+            </g>
+          </a>
+
+          <!-- SOURCE CODE LINK -->
+          <a href="https://github.com/tahirazeem145/GITHUB_URL_HERE" target="_blank">
+            <g transform="translate(155, 0)" class="btn-galaxy">
+              <rect x="0" y="0" width="145" height="30" rx="15" fill="#130e28" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.7" />
+              <circle cx="18" cy="15" r="2.5" fill="#a855f7" />
+              <text x="78" y="19" fill="#e2e8f0" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5" text-anchor="middle">⚡ SOURCE CODE</text>
+            </g>
+          </a>
+        </g>
+      </g>
+
+      <!-- ---------------------------------------------------- -->
+      <!-- RIGHT VISUAL: ABSTRACT TRAVEL MAP & PHOTO NETWORK    -->
+      <!-- ---------------------------------------------------- -->
+      <g transform="translate(620, 115)">
+        <!-- Digital Map Grid Coordinate Container -->
+        <rect x="0" y="0" width="500" height="260" rx="8" fill="#060c18" stroke="#1e293b" stroke-width="0.75" />
+        
+        <!-- Subtle Map Grid Lines -->
+        <g stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.08">
+          <line x1="0" y1="65" x2="500" y2="65" />
+          <line x1="0" y1="130" x2="500" y2="130" />
+          <line x1="0" y1="195" x2="500" y2="195" />
+          <line x1="125" y1="0" x2="125" y2="260" />
+          <line x1="250" y1="0" x2="250" y2="260" />
+          <line x1="375" y1="0" x2="375" y2="260" />
+        </g>
+
+        <!-- Travel Route Connecting Paths (Beziers) -->
+        <path d="M 60 190 Q 150 70, 240 120 T 430 80" fill="none" stroke="#1e3a5f" stroke-width="1.5" stroke-dasharray="3,3" />
+        <path d="M 60 190 Q 180 230, 280 180 T 430 80" fill="none" stroke="#2e1b4d" stroke-width="1.5" stroke-dasharray="3,3" />
+
+        <!-- Animated Traveling Route Pulses -->
+        <path d="M 60 190 Q 150 70, 240 120 T 430 80" fill="none" stroke="#00f0ff" stroke-width="1.8" class="travel-pulse-1" />
+        <path d="M 60 190 Q 180 230, 280 180 T 430 80" fill="none" stroke="#a855f7" stroke-width="1.8" class="travel-pulse-2" />
+
+        <!-- Waypoint Nodes (Location Markers) -->
+        <!-- Waypoint A (Tokyo / Pacific: 60, 190) -->
+        <g transform="translate(60, 190)">
+          <circle cx="0" cy="0" r="10" fill="none" stroke="#00f0ff" stroke-width="0.75" stroke-dasharray="2,2" />
+          <circle cx="0" cy="0" r="4.5" fill="#081426" stroke="#00f0ff" stroke-width="1.5" />
+          <circle cx="0" cy="0" r="2" fill="#00f0ff" />
+          <text x="0" y="20" fill="#64748b" class="font-mono" font-size="8" text-anchor="middle">LOC_01</text>
+        </g>
+
+        <!-- Waypoint B (Alps / Center: 240, 120) -->
+        <g transform="translate(240, 120)">
+          <circle cx="0" cy="0" r="12" fill="none" stroke="#a855f7" stroke-width="0.75" stroke-dasharray="2,2" />
+          <circle cx="0" cy="0" r="5" fill="#130e28" stroke="#a855f7" stroke-width="1.5" />
+          <circle cx="0" cy="0" r="2" fill="#a855f7" />
+          <text x="0" y="22" fill="#64748b" class="font-mono" font-size="8" text-anchor="middle">HUB_COMMUNITY</text>
+        </g>
+
+        <!-- Waypoint C (Nordic / Top-Right: 430, 80) -->
+        <g transform="translate(430, 80)">
+          <circle cx="0" cy="0" r="10" fill="none" stroke="#00f0ff" stroke-width="0.75" stroke-dasharray="2,2" />
+          <circle cx="0" cy="0" r="4.5" fill="#081426" stroke="#00f0ff" stroke-width="1.5" />
+          <circle cx="0" cy="0" r="2" fill="#00f0ff" />
+          <text x="0" y="20" fill="#64748b" class="font-mono" font-size="8" text-anchor="middle">LOC_03</text>
+        </g>
+
+        <!-- Waypoint D (Island / Bottom-Right: 280, 180) -->
+        <g transform="translate(280, 180)">
+          <circle cx="0" cy="0" r="3.5" fill="#00f0ff" />
+        </g>
+
+        <!-- Floating Abstract Photo Frames (Community Uploads) -->
+        <!-- Frame 1: Alpine Sunrise -->
+        <g transform="translate(130, 50)" class="photo-frame-1">
+          <rect x="0" y="0" width="76" height="52" rx="4" fill="#091428" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.8" />
+          <rect x="4" y="4" width="68" height="34" rx="2" fill="#0d2442" />
+          <!-- Abstract photo elements -->
+          <polygon points="12,32 26,18 42,32" fill="#00f0ff" opacity="0.6" />
+          <polygon points="34,32 48,14 62,32" fill="#38bdf8" opacity="0.7" />
+          <circle cx="54" cy="12" r="3" fill="#f8fafc" />
+          <text x="6" y="47" fill="#64748b" class="font-mono" font-size="6.5">PHOTO_#814</text>
+        </g>
+
+        <!-- Frame 2: Coastal Haven -->
+        <g transform="translate(325, 140)" class="photo-frame-2">
+          <rect x="0" y="0" width="82" height="56" rx="4" fill="#130e28" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.8" />
+          <rect x="4" y="4" width="74" height="38" rx="2" fill="#20113b" />
+          <!-- Sunset gradient curve -->
+          <path d="M 6 36 Q 41 24, 76 36" fill="none" stroke="#a855f7" stroke-width="1.5" />
+          <circle cx="41" cy="18" r="4.5" fill="#c084fc" opacity="0.8" />
+          <text x="6" y="50" fill="#64748b" class="font-mono" font-size="6.5">COMMUNITY_POST</text>
+        </g>
+
+        <!-- Floating Metadata HUD tag -->
+        <g transform="translate(20, 20)">
+          <rect x="0" y="0" width="112" height="18" rx="3" fill="#07101f" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.4" />
+          <text x="6" y="12.5" fill="#38bdf8" class="font-mono" font-size="8" letter-spacing="1">GEO_SYNC // 99.4%</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- ROW 2 — PROJECT 02: HIREMIND AI (Left Column)           -->
+    <!-- ======================================================== -->
+    <g class="anim-card-2">
+      <!-- Box Container -->
+      <rect x="35" y="430" width="550" height="236" rx="8" fill="url(#subPanelBg)" stroke="#a855f7" stroke-width="0.75" stroke-opacity="0.3" class="card-galaxy" />
+      <rect x="35" y="430" width="550" height="26" rx="8" fill="#150f29" fill-opacity="0.8" />
+
+      <!-- Card Header -->
+      <path d="M 47 443 L 53 443" stroke="#a855f7" stroke-width="2" />
+      <text x="60" y="447" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+        02 // AI_PRODUCT
+      </text>
+
+      <g transform="translate(565, 447)" text-anchor="end">
+        <text x="0" y="0" fill="#64748b" class="font-mono" font-size="8.5" letter-spacing="1">
+          PROJECT_ID: <tspan fill="#c084fc">HRM-01</tspan>
+        </text>
+      </g>
+
+      <!-- Content Details -->
+      <g transform="translate(56, 474)">
+        <!-- Project Title -->
+        <text x="0" y="24" fill="#f8fafc" class="font-sans" font-size="22" font-weight="800" letter-spacing="1.5">
+          HIREMIND AI
+        </text>
+
+        <!-- Project Description -->
+        <text x="0" y="46" fill="#94a3b8" class="font-sans" font-size="13" font-weight="500">
+          AI-powered career coach
+        </text>
+
+        <!-- Status Pill: BUILDING -->
+        <g transform="translate(0, 64)">
+          <rect x="0" y="0" width="108" height="20" rx="4" fill="#140a26" stroke="#a855f7" stroke-width="0.6" />
+          <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">STATUS:</text>
+          <circle cx="56" cy="10" r="2.5" fill="#a855f7" class="pulse-violet-dot" />
+          <text x="64" y="13.5" fill="#c084fc" class="font-mono" font-size="8.5" font-weight="700">BUILDING</text>
+        </g>
+
+        <!-- Type Pill: AI PRODUCT -->
+        <g transform="translate(116, 64)">
+          <rect x="0" y="0" width="128" height="20" rx="4" fill="#140a26" stroke="#a855f7" stroke-width="0.6" stroke-opacity="0.4" />
+          <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">TYPE:</text>
+          <text x="40" y="13.5" fill="#e2e8f0" class="font-mono" font-size="8.5" font-weight="700">AI PRODUCT</text>
+        </g>
+
+        <!-- Action CTA Buttons -->
+        <g transform="translate(0, 118)">
+          <!-- VIEW PROJECT LINK -->
+          <a href="https://github.com/tahirazeem145/PROJECT_URL_HERE" target="_blank">
+            <g class="btn-galaxy btn-violet-glow">
+              <rect x="0" y="0" width="128" height="28" rx="14" fill="#150e29" stroke="#a855f7" stroke-width="0.75" />
+              <circle cx="16" cy="14" r="2.5" fill="#a855f7" />
+              <text x="68" y="18" fill="#e2e8f0" class="font-mono" font-size="9" font-weight="700" letter-spacing="1" text-anchor="middle">⌥ VIEW PROJECT</text>
+            </g>
+          </a>
+
+          <!-- SOURCE CODE LINK -->
+          <a href="https://github.com/tahirazeem145/GITHUB_URL_HERE" target="_blank">
+            <g transform="translate(138, 0)" class="btn-galaxy btn-violet-glow">
+              <rect x="0" y="0" width="128" height="28" rx="14" fill="#0d1426" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.6" />
+              <circle cx="16" cy="14" r="2.5" fill="#38bdf8" />
+              <text x="68" y="18" fill="#e2e8f0" class="font-mono" font-size="9" font-weight="700" letter-spacing="1" text-anchor="middle">⚡ SOURCE CODE</text>
+            </g>
+          </a>
+        </g>
+      </g>
+
+      <!-- AI Neural Core Visualization (Right Side of Hiremind Card) -->
+      <g transform="translate(470, 545)">
+        <!-- Orbiting Neural Synapse Rings -->
+        <g class="ai-ring-spin">
+          <circle cx="0" cy="0" r="44" fill="none" stroke="#a855f7" stroke-width="0.75" stroke-dasharray="4,8" opacity="0.6" />
+          <circle cx="44" cy="0" r="2.5" fill="#a855f7" />
+          <circle cx="-44" cy="0" r="2.5" fill="#a855f7" />
+        </g>
+        <g class="ai-ring-spin-rev">
+          <circle cx="0" cy="0" r="30" fill="none" stroke="#00f0ff" stroke-width="0.75" stroke-dasharray="3,6" opacity="0.6" />
+          <circle cx="0" cy="30" r="2" fill="#00f0ff" />
+          <circle cx="0" cy="-30" r="2" fill="#00f0ff" />
+        </g>
+
+        <!-- Connected Neural Data Nodes -->
+        <g stroke="#a855f7" stroke-width="0.75" stroke-opacity="0.4">
+          <line x1="0" y1="0" x2="-22" y2="-20" />
+          <line x1="0" y1="0" x2="22" y2="-20" />
+          <line x1="0" y1="0" x2="0" y2="28" />
+        </g>
+
+        <!-- Central AI Core Node -->
+        <circle cx="0" cy="0" r="14" fill="#1b0e36" stroke="#c084fc" stroke-width="1.2" class="ai-core-glow" />
+        <circle cx="0" cy="0" r="5" fill="#00f0ff" />
+
+        <text x="0" y="58" fill="#64748b" class="font-mono" font-size="7.5" letter-spacing="1" text-anchor="middle">NEURAL_ENGINE</text>
+      </g>
+
+      <!-- Corner Reticle -->
+      <path d="M 575 655 L 575 659 L 571 659" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.5" />
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- ROW 2 — PROJECT 03: QR (Right Column)                    -->
+    <!-- ======================================================== -->
+    <g class="anim-card-3">
+      <!-- Box Container -->
+      <rect x="615" y="430" width="550" height="236" rx="8" fill="url(#subPanelBg)" stroke="#22c55e" stroke-width="0.75" stroke-opacity="0.3" class="card-galaxy" />
+      <rect x="615" y="430" width="550" height="26" rx="8" fill="#091d17" fill-opacity="0.8" />
+
+      <!-- Card Header -->
+      <path d="M 627 443 L 633 443" stroke="#22c55e" stroke-width="2" />
+      <text x="640" y="447" fill="#4ade80" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+        03 // WEB_TOOL
+      </text>
+
+      <g transform="translate(1145, 447)" text-anchor="end">
+        <text x="0" y="0" fill="#64748b" class="font-mono" font-size="8.5" letter-spacing="1">
+          PROJECT_ID: <tspan fill="#4ade80">QR-01</tspan>
+        </text>
+      </g>
+
+      <!-- Content Details -->
+      <g transform="translate(636, 474)">
+        <!-- Project Title -->
+        <text x="0" y="24" fill="#f8fafc" class="font-sans" font-size="22" font-weight="800" letter-spacing="1.5">
+          QR
+        </text>
+
+        <!-- Project Description -->
+        <text x="0" y="46" fill="#94a3b8" class="font-sans" font-size="13" font-weight="500">
+          Modern QR Code Generator
+        </text>
+
+        <!-- Status Pill: BUILT -->
+        <g transform="translate(0, 64)">
+          <rect x="0" y="0" width="98" height="20" rx="4" fill="#081e14" stroke="#22c55e" stroke-width="0.6" />
+          <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">STATUS:</text>
+          <circle cx="54" cy="10" r="2.5" fill="#22c55e" class="pulse-green-dot" />
+          <text x="62" y="13.5" fill="#4ade80" class="font-mono" font-size="8.5" font-weight="700">BUILT</text>
+        </g>
+
+        <!-- Type Pill: WEB TOOL -->
+        <g transform="translate(106, 64)">
+          <rect x="0" y="0" width="116" height="20" rx="4" fill="#081e14" stroke="#22c55e" stroke-width="0.6" stroke-opacity="0.4" />
+          <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">TYPE:</text>
+          <text x="40" y="13.5" fill="#e2e8f0" class="font-mono" font-size="8.5" font-weight="700">WEB TOOL</text>
+        </g>
+
+        <!-- Action CTA Buttons -->
+        <g transform="translate(0, 118)">
+          <!-- VIEW PROJECT LINK -->
+          <a href="https://github.com/tahirazeem145/PROJECT_URL_HERE" target="_blank">
+            <g class="btn-galaxy btn-green-glow">
+              <rect x="0" y="0" width="128" height="28" rx="14" fill="#091d17" stroke="#22c55e" stroke-width="0.75" />
+              <circle cx="16" cy="14" r="2.5" fill="#22c55e" />
+              <text x="68" y="18" fill="#e2e8f0" class="font-mono" font-size="9" font-weight="700" letter-spacing="1" text-anchor="middle">⌥ VIEW PROJECT</text>
+            </g>
+          </a>
+
+          <!-- SOURCE CODE LINK -->
+          <a href="https://github.com/tahirazeem145/GITHUB_URL_HERE" target="_blank">
+            <g transform="translate(138, 0)" class="btn-galaxy btn-green-glow">
+              <rect x="0" y="0" width="128" height="28" rx="14" fill="#0d1426" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.6" />
+              <circle cx="16" cy="14" r="2.5" fill="#38bdf8" />
+              <text x="68" y="18" fill="#e2e8f0" class="font-mono" font-size="9" font-weight="700" letter-spacing="1" text-anchor="middle">⚡ SOURCE CODE</text>
+            </g>
+          </a>
+        </g>
+      </g>
+
+      <!-- Stylized Futuristic QR Matrix Visual (Right Side of QR Card) -->
+      <g transform="translate(1005, 495)">
+        <!-- QR Matrix Card Container -->
+        <rect x="0" y="0" width="110" height="110" rx="6" fill="#06140f" stroke="#22c55e" stroke-width="0.75" stroke-opacity="0.5" />
+        
+        <!-- QR Finder Patterns (Top-Left, Top-Right, Bottom-Left) -->
+        <!-- Top-Left Finder -->
+        <rect x="10" y="10" width="26" height="26" rx="2" fill="none" stroke="#22c55e" stroke-width="2" />
+        <rect x="16" y="16" width="14" height="14" rx="1" fill="#4ade80" />
+
+        <!-- Top-Right Finder -->
+        <rect x="74" y="10" width="26" height="26" rx="2" fill="none" stroke="#22c55e" stroke-width="2" />
+        <rect x="80" y="16" width="14" height="14" rx="1" fill="#4ade80" />
+
+        <!-- Bottom-Left Finder -->
+        <rect x="10" y="74" width="26" height="26" rx="2" fill="none" stroke="#22c55e" stroke-width="2" />
+        <rect x="16" y="80" width="14" height="14" rx="1" fill="#4ade80" />
+
+        <!-- Stylized Inner Data Bits Matrix -->
+        <g fill="#22c55e" opacity="0.8">
+          <rect x="44" y="12" width="6" height="6" rx="1" />
+          <rect x="56" y="12" width="6" height="6" rx="1" fill="#00f0ff" />
+          <rect x="44" y="24" width="6" height="6" rx="1" />
+          <rect x="56" y="30" width="6" height="6" rx="1" />
+          
+          <rect x="14" y="44" width="6" height="6" rx="1" />
+          <rect x="24" y="56" width="6" height="6" rx="1" />
+          <rect x="44" y="44" width="8" height="8" rx="1" fill="#00f0ff" />
+          <rect x="58" y="44" width="6" height="6" rx="1" />
+          <rect x="44" y="58" width="6" height="6" rx="1" />
+          <rect x="56" y="58" width="8" height="8" rx="1" />
+          <rect x="70" y="48" width="6" height="6" rx="1" fill="#00f0ff" />
+          <rect x="82" y="58" width="6" height="6" rx="1" />
+          <rect x="94" y="46" width="6" height="6" rx="1" />
+
+          <rect x="44" y="76" width="6" height="6" rx="1" />
+          <rect x="56" y="88" width="6" height="6" rx="1" fill="#00f0ff" />
+          <rect x="74" y="76" width="8" height="8" rx="1" />
+          <rect x="90" y="86" width="6" height="6" rx="1" />
+        </g>
+
+        <!-- Scanning Laser Beam Sweeping Over QR -->
+        <g clip-path="url(#qrScanClip)">
+          <rect x="0" y="10" width="110" height="24" fill="url(#qrLaserGrad)" class="qr-scan-line" pointer-events="none" />
+          <line x1="0" y1="22" x2="110" y2="22" stroke="#4ade80" stroke-width="1.2" class="qr-scan-line" filter="url(#glow-green)" />
+        </g>
+
+        <text x="55" y="124" fill="#64748b" class="font-mono" font-size="7.5" letter-spacing="1" text-anchor="middle">DATA_MATRIX // LIVE</text>
+      </g>
+
+      <!-- Corner Reticle -->
+      <path d="M 1155 655 L 1155 659 L 1151 659" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-opacity="0.5" />
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- FOOTER BAR: SUMMARY & TELEMETRY                          -->
+    <!-- ======================================================== -->
+    <g class="anim-ftr">
+      <!-- Bottom Tech Line -->
+      <line x1="35" y1="680" x2="1165" y2="680" stroke="url(#dividerFade)" stroke-width="1" />
+
+      <!-- Left Footer Metadata -->
+      <g transform="translate(40, 702)">
+        <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1">
+          <tspan fill="#64748b">TAHIR_AZEEM // </tspan>
+          <tspan fill="#38bdf8">PRODUCT_GALAXY</tspan>
+          <tspan fill="#475569">   •   </tspan>
+          <tspan fill="#00f0ff">3 OF 3 OPERATIONAL</tspan>
+          <tspan fill="#475569">   •   </tspan>
+          <tspan fill="#a855f7">FLAGSHIP: TRIPNEST_2.0</tspan>
+        </text>
+      </g>
+
+      <!-- Right Footer: Build Philosophy -->
+      <g transform="translate(1160, 702)" text-anchor="end">
+        <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1.5">
+          <tspan fill="#94a3b8">BUILD</tspan> <tspan fill="#00f0ff">→</tspan> <tspan fill="#94a3b8">EXPERIMENT</tspan> <tspan fill="#a855f7">→</tspan> <tspan fill="#94a3b8">SHIP</tspan>
+          <tspan fill="#475569">   [ </tspan><tspan fill="#22c55e" font-weight="700">VERIFIED</tspan><tspan fill="#475569"> ]</tspan>
+        </text>
+      </g>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- OUTER RETICLES & CORNER BRACKETS                         -->
+    <!-- ======================================================== -->
+    <!-- Outer Border Line -->
+    <rect x="1" y="1" width="1198" height="718" rx="13" fill="none" stroke="url(#badgeBorder)" stroke-width="1" opacity="0.3" />
+
+    <!-- Corner Sci-Fi Reticles -->
+    <!-- Top-Left -->
+    <path d="M 10 24 L 10 10 L 24 10" fill="none" stroke="#00f0ff" stroke-width="2" />
+    <!-- Top-Right -->
+    <path d="M 1190 24 L 1190 10 L 1176 10" fill="none" stroke="#a855f7" stroke-width="2" />
+    <!-- Bottom-Left -->
+    <path d="M 10 696 L 10 710 L 24 710" fill="none" stroke="#00f0ff" stroke-width="2" />
+    <!-- Bottom-Right -->
+    <path d="M 1190 696 L 1190 710 L 1176 710" fill="none" stroke="#a855f7" stroke-width="2" />
+  </g>
+</svg>

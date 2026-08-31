@@ -56,7 +56,7 @@
       border: 1px solid rgba(0, 240, 255, 0.3);
     }
     .section-separator {
-      height: 24px;
+      height: 28px;
     }
     .section-label {
       font-family: 'JetBrains Mono', monospace;
@@ -68,27 +68,34 @@
       align-items: center;
       gap: 8px;
     }
-    .hero-wrapper {
+    .svg-wrapper {
       width: 100%;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 12px 40px rgba(0, 240, 255, 0.12), 0 4px 20px rgba(168, 85, 247, 0.15);
       border: 1px solid rgba(0, 240, 255, 0.2);
     }
-    .system-wrapper {
+    .svg-wrapper-purple {
       width: 100%;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 12px 40px rgba(168, 85, 247, 0.12), 0 4px 20px rgba(0, 240, 255, 0.1);
       border: 1px solid rgba(168, 85, 247, 0.25);
     }
-    .hero-img {
+    .svg-wrapper-galaxy {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 14px 45px rgba(0, 240, 255, 0.14), 0 6px 24px rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+    }
+    .readme-svg {
       width: 100%;
       height: auto;
       display: block;
     }
     .meta-info {
-      margin-top: 32px;
+      margin-top: 36px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
@@ -151,8 +158,8 @@
     <div class="section-label">
       <span>✦</span> 01 — HERO SECTION
     </div>
-    <div class="hero-wrapper">
-      <img id="heroImg" src="hero.svg" alt="Tahir Azeem - Hero Banner" class="hero-img" />
+    <div class="svg-wrapper">
+      <img id="heroImg" src="hero.svg" alt="Tahir Azeem - Hero Banner" class="readme-svg" />
     </div>
 
     <div class="section-separator"></div>
@@ -161,22 +168,32 @@
     <div class="section-label">
       <span>✦</span> 02 — DEVELOPER SYSTEM // TAHIR_OS
     </div>
-    <div class="system-wrapper">
-      <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS" class="hero-img" />
+    <div class="svg-wrapper-purple">
+      <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS" class="readme-svg" />
+    </div>
+
+    <div class="section-separator"></div>
+
+    <!-- 03 — PROJECT GALAXY -->
+    <div class="section-label">
+      <span>✦</span> 03 — PROJECT GALAXY // ACTIVE BUILDS
+    </div>
+    <div class="svg-wrapper-galaxy">
+      <img id="galaxyImg" src="project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" class="readme-svg" />
     </div>
 
     <div class="meta-info">
       <div class="meta-card">
-        <h3>⚡ Section 02 Architecture</h3>
-        <p>5-module Mission Control interface: <code>IDENTITY_CORE</code>, <code>CURRENT_MISSION</code>, <code>DEVELOPER_LOOP</code> orbital particle, <code>DEVELOPMENT_FOCUS</code> matrix, and <code>CURRENTLY_EXPLORING</code> network.</p>
+        <h3>⭐ Flagship Project</h3>
+        <p><strong>TripNest 2.0</strong> — Full-Stack Travel Photo Sharing Community with interactive digital travel network animation and live route pulses.</p>
       </div>
       <div class="meta-card">
-        <h3>🎨 Restrained Motion System</h3>
-        <p>Technical, elegant, and controlled — features an animated 6-phase developer loop particle, traveling network data pulses, and an evolving system status badge.</p>
+        <h3>🤖 AI & Web Tools</h3>
+        <p><strong>Hiremind AI</strong> (Pulsing Neural AI Core) and <strong>QR</strong> (Futuristic Data Matrix with laser scanning beam).</p>
       </div>
       <div class="meta-card">
-        <h3>🚀 README Embed Snippet</h3>
-        <code>&lt;img src="./developer-system.svg" width="100%" alt="Developer System" /&gt;</code>
+        <h3>🚀 Section 03 Embed Code</h3>
+        <code>&lt;img src="./project-galaxy.svg" width="100%" alt="Tahir Azeem Project Galaxy" /&gt;</code>
       </div>
     </div>
   </div>
@@ -186,6 +203,7 @@
       const t = new Date().getTime();
       document.getElementById('heroImg').src = 'hero.svg?t=' + t;
       document.getElementById('systemImg').src = 'developer-system.svg?t=' + t;
+      document.getElementById('galaxyImg').src = 'project-galaxy.svg?t=' + t;
     }
     window.addEventListener('DOMContentLoaded', () => {
       reloadAllSVGs();
