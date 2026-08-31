@@ -98,13 +98,28 @@
       padding: 2px 6px;
       border-radius: 4px;
     }
+    .refresh-btn {
+      background: #238636;
+      color: white;
+      border: 1px solid rgba(240,246,252,0.1);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .refresh-btn:hover {
+      background: #2ea043;
+    }
   </style>
 </head>
 <body>
   <div class="readme-container">
     <div class="header-bar">
-      <div style="font-weight: 600; font-size: 14px; color: #8b949e;">
+      <div style="font-weight: 600; font-size: 14px; color: #8b949e; display: flex; align-items: center;">
         📄 <strong>tahirazeem145</strong> / README.md
+        <button class="refresh-btn" onclick="reloadHero()">⚡ Reload Latest SVG</button>
       </div>
       <div class="badge">
         <span style="width: 8px; height: 8px; border-radius: 50%; background: #00f0ff; display: inline-block;"></span>
@@ -112,21 +127,19 @@
       </div>
     </div>
 
-    <!-- The Hero Image (Direct object & img fallback with cache-buster) -->
-    <div class="hero-wrapper">
-      <object data="hero.svg" type="image/svg+xml" class="hero-img">
-        <img src="hero.svg" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder Hero Banner" class="hero-img" />
-      </object>
+    <!-- The Hero Image with dynamic cache-busting loader -->
+    <div class="hero-wrapper" id="heroWrapper">
+      <img id="heroImage" src="hero.svg?v=latest" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder Hero Banner" class="hero-img" />
     </div>
 
     <div class="meta-info">
       <div class="meta-card">
-        <h3>⚡ Top HUD Design</h3>
-        <p>3 symmetrical dark-glass pills: <code>[SYS.AI_CORE // ONLINE]</code>, <code>[KERNEL // V4.9]</code>, and <code>[STATUS: BUILDING | VIBE_CODER]</code>.</p>
+        <h3>⚡ Tech Stack Footer</h3>
+        <p>Configured strictly to: <code>STACK: React • Node.js</code></p>
       </div>
       <div class="meta-card">
-        <h3>🎨 Zero Text Overlap</h3>
-        <p>Every element is rendered in its own dedicated padded container with crisp contrast and crystal-clear readability.</p>
+        <h3>🎨 Top HUD System</h3>
+        <p>3 independent glass pills: <code>SYS.AI_CORE</code>, <code>KERNEL</code>, and <code>STATUS: BUILDING | VIBE_CODER</code>.</p>
       </div>
       <div class="meta-card">
         <h3>🚀 GitHub Embed Code</h3>
@@ -134,5 +147,16 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function reloadHero() {
+      const img = document.getElementById('heroImage');
+      img.src = 'hero.svg?t=' + new Date().getTime();
+    }
+    // Auto cache-bust on load
+    window.addEventListener('DOMContentLoaded', () => {
+      reloadHero();
+    });
+  </script>
 </body>
 </html>
