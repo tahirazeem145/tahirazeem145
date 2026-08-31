@@ -543,7 +543,7 @@
       <!-- Bottom Left: Tech Stack Nodes -->
       <g transform="translate(42, 478)">
         <text x="0" y="0" fill="#475569" class="font-mono" font-size="9.5" letter-spacing="1.5">
-          STACK: <tspan fill="#38bdf8">TypeScript</tspan> • <tspan fill="#38bdf8">React / Next.js</tspan> • <tspan fill="#a855f7">Python</tspan> • <tspan fill="#a855f7">LLMs &amp; Agents</tspan> • <tspan fill="#38bdf8">Node.js</tspan>
+          STACK: <tspan fill="#00f0ff" font-weight="600">React</tspan> • <tspan fill="#38bdf8" font-weight="600">Node.js</tspan>
         </text>
       </g>
 
