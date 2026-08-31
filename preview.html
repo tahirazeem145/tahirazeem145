@@ -89,6 +89,13 @@
       box-shadow: 0 14px 45px rgba(0, 240, 255, 0.14), 0 6px 24px rgba(34, 197, 94, 0.1);
       border: 1px solid rgba(0, 240, 255, 0.25);
     }
+    .svg-wrapper-snake {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 14px 45px rgba(34, 197, 94, 0.14), 0 6px 24px rgba(0, 240, 255, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
     .readme-svg {
       width: 100%;
       height: auto;
@@ -182,18 +189,28 @@
       <img id="galaxyImg" src="project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" class="readme-svg" />
     </div>
 
+    <div class="section-separator"></div>
+
+    <!-- 04 — CONTRIBUTION SNAKE -->
+    <div class="section-label">
+      <span>✦</span> 04 — CONTRIBUTION SNAKE // AUTONOMOUS GAME
+    </div>
+    <div class="svg-wrapper-snake">
+      <img id="snakeImg" src="contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" class="readme-svg" />
+    </div>
+
     <div class="meta-info">
       <div class="meta-card">
-        <h3>⭐ Flagship Project</h3>
-        <p><strong>TripNest 2.0</strong> — Full-Stack Travel Photo Sharing Community with interactive digital travel network animation and live route pulses.</p>
+        <h3>🐍 Autonomous Snake Game</h3>
+        <p>A multi-segment glowing cyber Snake traveling through 52 weeks of GitHub contribution cells, eating targets in real time.</p>
       </div>
       <div class="meta-card">
-        <h3>🤖 AI & Web Tools</h3>
-        <p><strong>Hiremind AI</strong> (Pulsing Neural AI Core) and <strong>QR</strong> (Futuristic Data Matrix with laser scanning beam).</p>
+        <h3>⚡ Collision & Burst Physics</h3>
+        <p>Cells flash, burst into particle rings upon collision, and dissolve as the snake feeds and loops seamlessly across the timeline.</p>
       </div>
       <div class="meta-card">
-        <h3>🚀 Section 03 Embed Code</h3>
-        <code>&lt;img src="./project-galaxy.svg" width="100%" alt="Tahir Azeem Project Galaxy" /&gt;</code>
+        <h3>🚀 Section 04 Embed Code</h3>
+        <code>&lt;img src="./contribution-snake.svg" width="100%" alt="GitHub Contribution Snake" /&gt;</code>
       </div>
     </div>
   </div>
@@ -204,6 +221,7 @@
       document.getElementById('heroImg').src = 'hero.svg?t=' + t;
       document.getElementById('systemImg').src = 'developer-system.svg?t=' + t;
       document.getElementById('galaxyImg').src = 'project-galaxy.svg?t=' + t;
+      document.getElementById('snakeImg').src = 'contribution-snake.svg?t=' + t;
     }
     window.addEventListener('DOMContentLoaded', () => {
       reloadAllSVGs();

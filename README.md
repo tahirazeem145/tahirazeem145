@@ -15,4 +15,9 @@
   <!-- 03 — PROJECT GALAXY -->
   <img src="./project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" width="100%" />
 
+  <br/><br/>
+
+  <!-- 04 — CONTRIBUTION SNAKE -->
+  <img src="./contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" width="100%" />
+
 </div>
