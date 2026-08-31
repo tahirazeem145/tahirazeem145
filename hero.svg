@@ -12,7 +12,7 @@
         font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
       }
 
-      /* Opacity-Safe Entrance Animations (Zero Coordinate Shifting) */
+      /* Opacity-Safe Entrance Animations */
       @keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
@@ -356,18 +356,21 @@
     </g>
 
     <!-- ======================================================== -->
-    <!-- TOP HUD BAR & SYSTEM TELEMETRY (CLEAN SPACED LAYOUT) -->
+    <!-- TOP HUD BAR & SYSTEM TELEMETRY (100% INLINE TSPAN FLOW)  -->
     <!-- ======================================================== -->
     <g class="anim-header-hud">
       <!-- Top Dividing Tech Line -->
       <line x1="30" y1="46" x2="1170" y2="46" stroke="url(#lineFadeX)" stroke-width="1" />
       
-      <!-- Top Left: System Status Node -->
-      <g transform="translate(42, 28)">
-        <circle cx="0" cy="0" r="3.5" fill="#00f0ff" filter="url(#glow-cyan)" />
-        <circle cx="0" cy="0" r="7" stroke="#00f0ff" stroke-width="0.75" fill="none" opacity="0.5" />
-        <text x="16" y="3.5" fill="#38bdf8" class="font-mono" font-size="10.5" font-weight="700" letter-spacing="1.5">SYS.AI_CORE // ONLINE</text>
-        <text x="210" y="3.5" fill="#64748b" class="font-mono" font-size="9.5" letter-spacing="1">LATENCY: 12ms</text>
+      <!-- Top Left: System Status Node (Single Inline Flow) -->
+      <g transform="translate(42, 32)">
+        <circle cx="0" cy="-3.5" r="3.5" fill="#00f0ff" filter="url(#glow-cyan)" />
+        <circle cx="0" cy="-3.5" r="7" stroke="#00f0ff" stroke-width="0.75" fill="none" opacity="0.5" />
+        <text x="16" y="0" class="font-mono" font-size="9.5" letter-spacing="1">
+          <tspan fill="#00f0ff" font-weight="700">SYS.AI_CORE // ONLINE</tspan>
+          <tspan fill="#334155">   |   </tspan>
+          <tspan fill="#64748b">LATENCY: 12ms</tspan>
+        </text>
       </g>
 
       <!-- Top Center: Micro Chip Tag -->
@@ -376,12 +379,14 @@
         <text x="0" y="4" fill="#e2e8f0" class="font-mono" font-size="9.5" font-weight="600" letter-spacing="2" text-anchor="middle">KERNEL // V4.9.2_AI</text>
       </g>
 
-      <!-- Top Right: Identity Telemetry -->
-      <g transform="translate(1158, 28)" text-anchor="end">
-        <text x="-125" y="3.5" fill="#64748b" class="font-mono" font-size="9.5" letter-spacing="1">STATUS:</text>
-        <text x="-50" y="3.5" fill="#00f0ff" class="font-mono" font-size="10" font-weight="700" letter-spacing="1">BUILDING</text>
-        <circle cx="-36" cy="0" r="2.5" fill="#a855f7" filter="url(#glow-cyan)" />
-        <text x="0" y="3.5" fill="#94a3b8" class="font-mono" font-size="9.5" font-weight="600" letter-spacing="1">VIBE_CODER.exe</text>
+      <!-- Top Right: Identity Telemetry (Single Inline Flow - Zero Overlap) -->
+      <g transform="translate(1158, 32)">
+        <text x="0" y="0" class="font-mono" font-size="9.5" text-anchor="end" letter-spacing="1">
+          <tspan fill="#64748b">STATUS: </tspan>
+          <tspan fill="#00f0ff" font-weight="700">BUILDING</tspan>
+          <tspan fill="#a855f7">   •   </tspan>
+          <tspan fill="#94a3b8" font-weight="600">VIBE_CODER.exe</tspan>
+        </text>
       </g>
     </g>
 
@@ -508,7 +513,7 @@
       </text>
     </g>
 
-    <!-- 6. INTERACTIVE ACTION PILLS / QUICK LINKS (STRICT ABSOLUTE COORDINATES) -->
+    <!-- 6. INTERACTIVE ACTION PILLS / QUICK LINKS -->
     <g class="anim-actions">
       <!-- GitHub Action Pill -->
       <g class="btn-hover">
