@@ -6,7 +6,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>Hero Preview - Tahir Azeem Profile README</title>
+  <title>GitHub Profile README Preview - Tahir Azeem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -55,12 +55,32 @@
       color: #00f0ff;
       border: 1px solid rgba(0, 240, 255, 0.3);
     }
+    .section-separator {
+      height: 24px;
+    }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #58a6ff;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
     .hero-wrapper {
       width: 100%;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 12px 40px rgba(0, 240, 255, 0.12), 0 4px 20px rgba(168, 85, 247, 0.15);
       border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+    .system-wrapper {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(168, 85, 247, 0.12), 0 4px 20px rgba(0, 240, 255, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.25);
     }
     .hero-img {
       width: 100%;
@@ -119,7 +139,7 @@
     <div class="header-bar">
       <div style="font-weight: 600; font-size: 14px; color: #8b949e; display: flex; align-items: center;">
         📄 <strong>tahirazeem145</strong> / README.md
-        <button class="refresh-btn" onclick="reloadHero()">⚡ Reload Latest SVG</button>
+        <button class="refresh-btn" onclick="reloadAllSVGs()">⚡ Reload SVGs</button>
       </div>
       <div class="badge">
         <span style="width: 8px; height: 8px; border-radius: 50%; background: #00f0ff; display: inline-block;"></span>
@@ -127,35 +147,48 @@
       </div>
     </div>
 
-    <!-- The Hero Image with dynamic cache-busting loader -->
-    <div class="hero-wrapper" id="heroWrapper">
-      <img id="heroImage" src="hero.svg?v=latest" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder Hero Banner" class="hero-img" />
+    <!-- 01 — HERO SECTION -->
+    <div class="section-label">
+      <span>✦</span> 01 — HERO SECTION
+    </div>
+    <div class="hero-wrapper">
+      <img id="heroImg" src="hero.svg" alt="Tahir Azeem - Hero Banner" class="hero-img" />
+    </div>
+
+    <div class="section-separator"></div>
+
+    <!-- 02 — DEVELOPER SYSTEM (TAHIR_OS) -->
+    <div class="section-label">
+      <span>✦</span> 02 — DEVELOPER SYSTEM // TAHIR_OS
+    </div>
+    <div class="system-wrapper">
+      <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS" class="hero-img" />
     </div>
 
     <div class="meta-info">
       <div class="meta-card">
-        <h3>⚡ Tech Stack Footer</h3>
-        <p>Configured strictly to: <code>STACK: React • Node.js</code></p>
+        <h3>⚡ Section 02 Architecture</h3>
+        <p>5-module Mission Control interface: <code>IDENTITY_CORE</code>, <code>CURRENT_MISSION</code>, <code>DEVELOPER_LOOP</code> orbital particle, <code>DEVELOPMENT_FOCUS</code> matrix, and <code>CURRENTLY_EXPLORING</code> network.</p>
       </div>
       <div class="meta-card">
-        <h3>🎨 Top HUD System</h3>
-        <p>3 independent glass pills: <code>SYS.AI_CORE</code>, <code>KERNEL</code>, and <code>STATUS: BUILDING | VIBE_CODER</code>.</p>
+        <h3>🎨 Restrained Motion System</h3>
+        <p>Technical, elegant, and controlled — features an animated 6-phase developer loop particle, traveling network data pulses, and an evolving system status badge.</p>
       </div>
       <div class="meta-card">
-        <h3>🚀 GitHub Embed Code</h3>
-        <code>&lt;img src="hero.svg" width="100%" alt="Hero Banner" /&gt;</code>
+        <h3>🚀 README Embed Snippet</h3>
+        <code>&lt;img src="./developer-system.svg" width="100%" alt="Developer System" /&gt;</code>
       </div>
     </div>
   </div>
 
   <script>
-    function reloadHero() {
-      const img = document.getElementById('heroImage');
-      img.src = 'hero.svg?t=' + new Date().getTime();
+    function reloadAllSVGs() {
+      const t = new Date().getTime();
+      document.getElementById('heroImg').src = 'hero.svg?t=' + t;
+      document.getElementById('systemImg').src = 'developer-system.svg?t=' + t;
     }
-    // Auto cache-bust on load
     window.addEventListener('DOMContentLoaded', () => {
-      reloadHero();
+      reloadAllSVGs();
     });
   </script>
 </body>

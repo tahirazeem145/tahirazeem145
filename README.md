@@ -1,9 +1,13 @@
 <div align="center">
 
-  <!-- HERO SECTION START -->
+  <!-- 01 — HERO SECTION -->
   <a href="https://github.com/tahirazeem145">
     <img src="./hero.svg" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder" width="100%" />
   </a>
-  <!-- HERO SECTION END -->
+
+  <br/><br/>
+
+  <!-- 02 — DEVELOPER SYSTEM // TAHIR_OS -->
+  <img src="./developer-system.svg" alt="Tahir Azeem Developer System" width="100%" />
 
 </div>
