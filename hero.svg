@@ -19,12 +19,12 @@
       }
 
       @keyframes slideUpFade {
-        from { opacity: 0; transform: translateY(18px); }
+        from { opacity: 0; transform: translateY(16px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
       @keyframes slideDownFade {
-        from { opacity: 0; transform: translateY(-15px); }
+        from { opacity: 0; transform: translateY(-12px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
@@ -49,10 +49,10 @@
 
       @keyframes vibeGlowPulse {
         0%, 100% {
-          filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.5)) drop-shadow(0 0 22px rgba(168, 85, 247, 0.35));
+          filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.45)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.35));
         }
         50% {
-          filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 40px rgba(168, 85, 247, 0.6));
+          filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 35px rgba(168, 85, 247, 0.55));
         }
       }
 
@@ -63,8 +63,8 @@
 
       @keyframes scanSweep {
         0% { transform: translateY(-100px); opacity: 0; }
-        25% { opacity: 0.45; }
-        75% { opacity: 0.45; }
+        25% { opacity: 0.4; }
+        75% { opacity: 0.4; }
         100% { transform: translateY(520px); opacity: 0; }
       }
 
@@ -113,21 +113,13 @@
         65%, 100% { opacity: 1; transform: translateX(0); }
       }
 
-      @keyframes borderBeam {
-        0% { stroke-dashoffset: 300; }
-        100% { stroke-dashoffset: 0; }
-      }
-
-      /* Layer Application */
+      /* Animation Layer Classes */
       .anim-bg { animation: fadeIn 1.2s ease-out forwards; }
       .anim-grid { animation: fadeIn 1.8s ease-out 0.2s both; }
       
-      .anim-nodes {
-        animation: fadeIn 1.6s ease-out 0.6s both;
-      }
-      .anim-constellation {
-        animation: constellationPulse 5s ease-in-out infinite;
-      }
+      .anim-nodes { animation: fadeIn 1.6s ease-out 0.6s both; }
+      .anim-constellation { animation: constellationPulse 5s ease-in-out infinite; }
+      
       .anim-orbit {
         transform-origin: 600px 225px;
         animation: orbitRotate 35s linear infinite;
@@ -141,13 +133,11 @@
       .anim-footer-hud { animation: slideUpFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both; }
 
       .anim-title {
-        transform-origin: 600px 190px;
         animation: titleMaterialize 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.8s both,
                    vibeGlowPulse 4s ease-in-out infinite 3.5s;
       }
 
       .anim-badge {
-        transform-origin: 600px 248px;
         animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 2.8s both;
       }
 
@@ -189,9 +179,8 @@
       .t-line-2 { animation: terminalTypeB 3.5s ease-out 1.5s both; }
       .t-line-3 { animation: terminalTypeC 3.5s ease-out 1.5s both; }
 
-      /* Action Hover Effects */
       .btn-glow {
-        transition: all 0.3s ease;
+        transition: transform 0.2s ease, filter 0.2s ease;
       }
       .btn-glow:hover {
         filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.7));
@@ -343,49 +332,51 @@
     <!-- ======================================================== -->
     <!-- ABSTRACT FUTURISTIC DEVELOPER CONSTELLATION / SILHOUETTE -->
     <!-- ======================================================== -->
-    <g class="anim-nodes" transform="translate(600, 225)" opacity="0.36">
-      <!-- Constellation Mesh Lines (Developer Head & Neural Network) -->
-      <g stroke="url(#vibeGrad)" stroke-width="0.8" fill="none" class="anim-constellation">
-        <!-- Cranial & Silhouette Nodes -->
-        <polygon points="0,-125 42,-95 72,-48 80,15 62,70 24,115 -24,115 -62,70 -80,15 -72,-48 -42,-95" stroke-opacity="0.45" stroke-dasharray="3,3" />
-        <polyline points="0,-125 0,-68 42,-28 62,28 24,85 0,105 -24,85 -62,28 -42,-28 0,-68" stroke-opacity="0.4" />
-        
-        <!-- Neural Synapses Branching to Shoulders & Cyberspace -->
-        <line x1="-125" y1="-75" x2="-42" y2="-95" stroke-opacity="0.35" />
-        <line x1="125" y1="-75" x2="42" y2="-95" stroke-opacity="0.35" />
-        <line x1="-175" y1="2" x2="-80" y2="15" stroke-opacity="0.35" />
-        <line x1="175" y1="2" x2="80" y2="15" stroke-opacity="0.35" />
-        <line x1="-145" y1="78" x2="-62" y2="70" stroke-opacity="0.35" />
-        <line x1="145" y1="78" x2="62" y2="70" stroke-opacity="0.35" />
-        
-        <line x1="-215" y1="135" x2="-145" y2="78" stroke-opacity="0.25" stroke-dasharray="2,4" />
-        <line x1="215" y1="135" x2="145" y2="78" stroke-opacity="0.25" stroke-dasharray="2,4" />
-        <line x1="-95" y1="135" x2="95" y2="135" stroke-opacity="0.3" />
+    <g transform="translate(600, 225)">
+      <g class="anim-nodes" opacity="0.36">
+        <!-- Constellation Mesh Lines (Developer Head & Neural Network) -->
+        <g stroke="url(#vibeGrad)" stroke-width="0.8" fill="none" class="anim-constellation">
+          <!-- Cranial & Silhouette Nodes -->
+          <polygon points="0,-125 42,-95 72,-48 80,15 62,70 24,115 -24,115 -62,70 -80,15 -72,-48 -42,-95" stroke-opacity="0.45" stroke-dasharray="3,3" />
+          <polyline points="0,-125 0,-68 42,-28 62,28 24,85 0,105 -24,85 -62,28 -42,-28 0,-68" stroke-opacity="0.4" />
+          
+          <!-- Neural Synapses Branching to Shoulders & Cyberspace -->
+          <line x1="-125" y1="-75" x2="-42" y2="-95" stroke-opacity="0.35" />
+          <line x1="125" y1="-75" x2="42" y2="-95" stroke-opacity="0.35" />
+          <line x1="-175" y1="2" x2="-80" y2="15" stroke-opacity="0.35" />
+          <line x1="175" y1="2" x2="80" y2="15" stroke-opacity="0.35" />
+          <line x1="-145" y1="78" x2="-62" y2="70" stroke-opacity="0.35" />
+          <line x1="145" y1="78" x2="62" y2="70" stroke-opacity="0.35" />
+          
+          <line x1="-215" y1="135" x2="-145" y2="78" stroke-opacity="0.25" stroke-dasharray="2,4" />
+          <line x1="215" y1="135" x2="145" y2="78" stroke-opacity="0.25" stroke-dasharray="2,4" />
+          <line x1="-95" y1="135" x2="95" y2="135" stroke-opacity="0.3" />
 
-        <!-- Cross Neural Links -->
-        <line x1="-42" y1="-28" x2="42" y2="-28" stroke-opacity="0.3" />
-        <line x1="-62" y1="28" x2="62" y2="28" stroke-opacity="0.25" />
-      </g>
+          <!-- Cross Neural Links -->
+          <line x1="-42" y1="-28" x2="42" y2="-28" stroke-opacity="0.3" />
+          <line x1="-62" y1="28" x2="62" y2="28" stroke-opacity="0.25" />
+        </g>
 
-      <!-- Glowing Neural Nodes -->
-      <g fill="#00f0ff" filter="url(#glow-cyan)">
-        <circle cx="0" cy="-125" r="2.8" />
-        <circle cx="42" cy="-95" r="2.4" />
-        <circle cx="-42" cy="-95" r="2.4" />
-        <circle cx="72" cy="-48" r="2.4" />
-        <circle cx="-72" cy="-48" r="2.4" />
-        <circle cx="80" cy="15" r="2.8" />
-        <circle cx="-80" cy="15" r="2.8" />
-        <circle cx="0" cy="-68" r="2.4" />
-        <circle cx="42" cy="-28" r="2" />
-        <circle cx="-42" cy="-28" r="2" />
-        <circle cx="0" cy="105" r="2.8" fill="#a855f7" />
-        <circle cx="125" cy="-75" r="2" />
-        <circle cx="-125" cy="-75" r="2" />
-        <circle cx="175" cy="2" r="2" fill="#a855f7" />
-        <circle cx="-175" cy="2" r="2" fill="#a855f7" />
-        <circle cx="145" cy="78" r="2.4" />
-        <circle cx="-145" cy="78" r="2.4" />
+        <!-- Glowing Neural Nodes -->
+        <g fill="#00f0ff" filter="url(#glow-cyan)">
+          <circle cx="0" cy="-125" r="2.8" />
+          <circle cx="42" cy="-95" r="2.4" />
+          <circle cx="-42" cy="-95" r="2.4" />
+          <circle cx="72" cy="-48" r="2.4" />
+          <circle cx="-72" cy="-48" r="2.4" />
+          <circle cx="80" cy="15" r="2.8" />
+          <circle cx="-80" cy="15" r="2.8" />
+          <circle cx="0" cy="-68" r="2.4" />
+          <circle cx="42" cy="-28" r="2" />
+          <circle cx="-42" cy="-28" r="2" />
+          <circle cx="0" cy="105" r="2.8" fill="#a855f7" />
+          <circle cx="125" cy="-75" r="2" />
+          <circle cx="-125" cy="-75" r="2" />
+          <circle cx="175" cy="2" r="2" fill="#a855f7" />
+          <circle cx="-175" cy="2" r="2" fill="#a855f7" />
+          <circle cx="145" cy="78" r="2.4" />
+          <circle cx="-145" cy="78" r="2.4" />
+        </g>
       </g>
     </g>
 
@@ -417,15 +408,15 @@
     <!-- ======================================================== -->
     <g class="anim-header-hud">
       <!-- Top Dividing Tech Line -->
-      <line x1="30" y1="42" x2="1170" y2="42" stroke="url(#lineFadeX)" stroke-width="1" />
+      <line x1="30" y1="44" x2="1170" y2="44" stroke="url(#lineFadeX)" stroke-width="1" />
       
       <!-- Top Left: System Status Nodes -->
-      <g transform="translate(40, 28)">
+      <g transform="translate(42, 28)">
         <circle cx="0" cy="0" r="3.5" fill="#00f0ff" filter="url(#glow-cyan)" />
-        <circle cx="0" cy="0" r="6" stroke="#00f0ff" stroke-width="0.75" fill="none" opacity="0.6" />
+        <circle cx="0" cy="0" r="6.5" stroke="#00f0ff" stroke-width="0.75" fill="none" opacity="0.6" />
         <text x="14" y="3.5" fill="#38bdf8" class="font-mono" font-size="10.5" font-weight="700" letter-spacing="1.5">SYS.AI_CORE // ONLINE</text>
         <text x="175" y="3.5" fill="#64748b" class="font-mono" font-size="10" letter-spacing="1">LATENCY: 12ms</text>
-        <text x="280" y="3.5" fill="#64748b" class="font-mono" font-size="10" letter-spacing="1">LOC: 31.52°N 74.35°E</text>
+        <text x="285" y="3.5" fill="#64748b" class="font-mono" font-size="10" letter-spacing="1">LOC: 31.52°N 74.35°E</text>
       </g>
 
       <!-- Top Center: Micro Chip Tag -->
@@ -435,7 +426,7 @@
       </g>
 
       <!-- Top Right: Identity Telemetry -->
-      <g transform="translate(1160, 28)" text-anchor="end">
+      <g transform="translate(1158, 28)" text-anchor="end">
         <text x="-120" y="3.5" fill="#64748b" class="font-mono" font-size="10" letter-spacing="1">STATUS:</text>
         <text x="-48" y="3.5" fill="#00f0ff" class="font-mono" font-size="10" font-weight="700" letter-spacing="1">BUILDING</text>
         <circle cx="-35" cy="0" r="2.5" fill="#a855f7" filter="url(#glow-cyan)" />
@@ -446,69 +437,73 @@
     <!-- ======================================================== -->
     <!-- LEFT SIDE: MINI CYBER TERMINAL HUD -->
     <!-- ======================================================== -->
-    <g class="anim-terminal" transform="translate(45, 175)">
-      <!-- Terminal Glass Container -->
-      <rect x="0" y="0" width="220" height="135" rx="8" fill="url(#cardGrad)" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.25" />
-      <rect x="0" y="0" width="220" height="22" rx="8" fill="#0f1b33" fill-opacity="0.7" />
-      
-      <!-- Terminal Header Dots -->
-      <circle cx="12" cy="11" r="3" fill="#ef4444" opacity="0.8" />
-      <circle cx="22" cy="11" r="3" fill="#eab308" opacity="0.8" />
-      <circle cx="32" cy="11" r="3" fill="#22c55e" opacity="0.8" />
-      <text x="50" y="14.5" fill="#64748b" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1">BASH // AGENT_SESSION</text>
-      
-      <!-- Monospace Code Execution Lines -->
-      <g transform="translate(12, 40)">
-        <g class="t-line-1">
-          <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="9" font-weight="600">&gt; SYSTEM INITIALIZED</text>
+    <g transform="translate(45, 175)">
+      <g class="anim-terminal">
+        <!-- Terminal Glass Container -->
+        <rect x="0" y="0" width="220" height="135" rx="8" fill="url(#cardGrad)" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.25" />
+        <rect x="0" y="0" width="220" height="22" rx="8" fill="#0f1b33" fill-opacity="0.7" />
+        
+        <!-- Terminal Header Dots -->
+        <circle cx="12" cy="11" r="3" fill="#ef4444" opacity="0.8" />
+        <circle cx="22" cy="11" r="3" fill="#eab308" opacity="0.8" />
+        <circle cx="32" cy="11" r="3" fill="#22c55e" opacity="0.8" />
+        <text x="50" y="14.5" fill="#64748b" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1">BASH // AGENT_SESSION</text>
+        
+        <!-- Monospace Code Execution Lines -->
+        <g transform="translate(12, 40)">
+          <g class="t-line-1">
+            <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="9" font-weight="600">&gt; SYSTEM INITIALIZED</text>
+          </g>
+          <g class="t-line-2">
+            <text x="0" y="18" fill="#94a3b8" class="font-mono" font-size="9">developer.identity = <tspan fill="#00f0ff">"Tahir Azeem"</tspan></text>
+            <text x="0" y="34" fill="#94a3b8" class="font-mono" font-size="9">mode = <tspan fill="#a855f7">"VIBE_CODER"</tspan></text>
+          </g>
+          <g class="t-line-3">
+            <text x="0" y="50" fill="#94a3b8" class="font-mono" font-size="9">status = <tspan fill="#22c55e">"BUILDING"</tspan></text>
+            <text x="0" y="66" fill="#38bdf8" class="font-mono" font-size="9">&gt; stack.sync()<tspan class="cursor" fill="#00f0ff"> _</tspan></text>
+          </g>
         </g>
-        <g class="t-line-2">
-          <text x="0" y="18" fill="#94a3b8" class="font-mono" font-size="9">developer.identity = <tspan fill="#00f0ff">"Tahir Azeem"</tspan></text>
-          <text x="0" y="34" fill="#94a3b8" class="font-mono" font-size="9">mode = <tspan fill="#a855f7">"VIBE_CODER"</tspan></text>
-        </g>
-        <g class="t-line-3">
-          <text x="0" y="50" fill="#94a3b8" class="font-mono" font-size="9">status = <tspan fill="#22c55e">"BUILDING"</tspan></text>
-          <text x="0" y="66" fill="#38bdf8" class="font-mono" font-size="9">&gt; stack.sync()<tspan class="cursor" fill="#00f0ff"> _</tspan></text>
-        </g>
+        <!-- Corner Tech Accent -->
+        <path d="M 215 125 L 215 130 L 210 130" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.6" />
       </g>
-      <!-- Corner Tech Accent -->
-      <path d="M 215 125 L 215 130 L 210 130" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.6" />
     </g>
 
     <!-- ======================================================== -->
     <!-- RIGHT SIDE: TELEMETRY & SPECS HUD -->
     <!-- ======================================================== -->
-    <g class="anim-terminal" transform="translate(935, 175)">
-      <!-- Right Tech Card -->
-      <rect x="0" y="0" width="220" height="135" rx="8" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="0.75" stroke-opacity="0.25" />
-      <rect x="0" y="0" width="220" height="22" rx="8" fill="#17122b" fill-opacity="0.7" />
-      <text x="12" y="14.5" fill="#c084fc" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1">SYS_METRICS // CORE</text>
-      <circle cx="206" cy="11" r="3" fill="#a855f7" filter="url(#glow-cyan)" />
+    <g transform="translate(935, 175)">
+      <g class="anim-terminal">
+        <!-- Right Tech Card -->
+        <rect x="0" y="0" width="220" height="135" rx="8" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="0.75" stroke-opacity="0.25" />
+        <rect x="0" y="0" width="220" height="22" rx="8" fill="#17122b" fill-opacity="0.7" />
+        <text x="12" y="14.5" fill="#c084fc" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1">SYS_METRICS // CORE</text>
+        <circle cx="206" cy="11" r="3" fill="#a855f7" filter="url(#glow-cyan)" />
 
-      <!-- Metrics Details -->
-      <g transform="translate(14, 40)">
-        <text x="0" y="0" fill="#64748b" class="font-mono" font-size="8.5">NEURAL_SYNC</text>
-        <text x="192" y="0" fill="#00f0ff" class="font-mono" font-size="9" font-weight="700" text-anchor="end">99.98%</text>
-        <!-- Bar 1 -->
-        <rect x="0" y="6" width="192" height="3" rx="1.5" fill="#1e293b" />
-        <rect x="0" y="6" width="186" height="3" rx="1.5" fill="url(#vibeGrad)" />
+        <!-- Metrics Details -->
+        <g transform="translate(14, 40)">
+          <text x="0" y="0" fill="#64748b" class="font-mono" font-size="8.5">NEURAL_SYNC</text>
+          <text x="192" y="0" fill="#00f0ff" class="font-mono" font-size="9" font-weight="700" text-anchor="end">99.98%</text>
+          <!-- Bar 1 -->
+          <rect x="0" y="6" width="192" height="3" rx="1.5" fill="#1e293b" />
+          <rect x="0" y="6" width="186" height="3" rx="1.5" fill="url(#vibeGrad)" />
 
-        <text x="0" y="24" fill="#64748b" class="font-mono" font-size="8.5">FULL_STACK_FLOW</text>
-        <text x="192" y="24" fill="#a855f7" class="font-mono" font-size="9" font-weight="700" text-anchor="end">OPTIMAL</text>
-        <!-- Bar 2 -->
-        <rect x="0" y="30" width="192" height="3" rx="1.5" fill="#1e293b" />
-        <rect x="0" y="30" width="170" height="3" rx="1.5" fill="url(#vibeGrad)" />
+          <text x="0" y="24" fill="#64748b" class="font-mono" font-size="8.5">FULL_STACK_FLOW</text>
+          <text x="192" y="24" fill="#a855f7" class="font-mono" font-size="9" font-weight="700" text-anchor="end">OPTIMAL</text>
+          <!-- Bar 2 -->
+          <rect x="0" y="30" width="192" height="3" rx="1.5" fill="#1e293b" />
+          <rect x="0" y="30" width="170" height="3" rx="1.5" fill="url(#vibeGrad)" />
 
-        <text x="0" y="48" fill="#64748b" class="font-mono" font-size="8.5">AI_BUILDER_ENGINE</text>
-        <text x="192" y="48" fill="#38bdf8" class="font-mono" font-size="9" font-weight="700" text-anchor="end">ONLINE</text>
-        <!-- Bar 3 -->
-        <rect x="0" y="54" width="192" height="3" rx="1.5" fill="#1e293b" />
-        <rect x="0" y="54" width="192" height="3" rx="1.5" fill="url(#vibeGrad)" />
+          <text x="0" y="48" fill="#64748b" class="font-mono" font-size="8.5">AI_BUILDER_ENGINE</text>
+          <text x="192" y="48" fill="#38bdf8" class="font-mono" font-size="9" font-weight="700" text-anchor="end">ONLINE</text>
+          <!-- Bar 3 -->
+          <rect x="0" y="54" width="192" height="3" rx="1.5" fill="#1e293b" />
+          <rect x="0" y="54" width="192" height="3" rx="1.5" fill="url(#vibeGrad)" />
 
-        <text x="0" y="72" fill="#475569" class="font-mono" font-size="8.5">THREAD_ID: <tspan fill="#94a3b8">#0x7FFE9A14</tspan></text>
+          <text x="0" y="72" fill="#475569" class="font-mono" font-size="8.5">THREAD_ID: <tspan fill="#94a3b8">#0x7FFE9A14</tspan></text>
+        </g>
+        <!-- Corner Tech Accent -->
+        <path d="M 5 130 L 0 130 L 0 125" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6" />
       </g>
-      <!-- Corner Tech Accent -->
-      <path d="M 5 130 L 0 130 L 0 125" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6" />
     </g>
 
     <!-- ======================================================== -->
@@ -516,70 +511,82 @@
     <!-- ======================================================== -->
     
     <!-- 1. Pre-Title Tag -->
-    <g class="anim-badge" transform="translate(600, 108)">
-      <rect x="-135" y="-12" width="270" height="24" rx="12" fill="#081020" stroke="url(#badgeBorderGrad)" stroke-width="1" />
-      <circle cx="-118" cy="0" r="2.5" fill="#00f0ff" filter="url(#glow-cyan)" />
-      <text x="0" y="4" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="2.5" text-anchor="middle">
-        ✦ DEVELOPER PROFILE ✦
-      </text>
-      <circle cx="118" cy="0" r="2.5" fill="#a855f7" filter="url(#glow-cyan)" />
+    <g transform="translate(600, 108)">
+      <g class="anim-badge">
+        <rect x="-135" y="-12" width="270" height="24" rx="12" fill="#081020" stroke="url(#badgeBorderGrad)" stroke-width="1" />
+        <circle cx="-118" cy="0" r="2.5" fill="#00f0ff" filter="url(#glow-cyan)" />
+        <text x="0" y="4" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="2.5" text-anchor="middle">
+          ✦ DEVELOPER PROFILE ✦
+        </text>
+        <circle cx="118" cy="0" r="2.5" fill="#a855f7" filter="url(#glow-cyan)" />
+      </g>
     </g>
 
     <!-- 2. PRIMARY NAME: TAHIR AZEEM -->
-    <g class="anim-title" transform="translate(600, 188)">
-      <!-- Ambient Backglow Layer -->
-      <text x="0" y="0" fill="#00f0ff" opacity="0.32" class="font-display" font-size="64" font-weight="900" letter-spacing="6" text-anchor="middle" filter="url(#glow-heavy)">
-        TAHIR AZEEM
-      </text>
-      <!-- Main Text Surface -->
-      <text x="0" y="0" fill="url(#titleGrad)" class="font-display" font-size="64" font-weight="900" letter-spacing="6" text-anchor="middle">
-        TAHIR AZEEM
-      </text>
+    <g transform="translate(600, 188)">
+      <g class="anim-title">
+        <!-- Ambient Backglow Layer -->
+        <text x="0" y="0" fill="#00f0ff" opacity="0.32" class="font-display" font-size="64" font-weight="900" letter-spacing="6" text-anchor="middle" filter="url(#glow-heavy)">
+          TAHIR AZEEM
+        </text>
+        <!-- Main Text Surface -->
+        <text x="0" y="0" fill="url(#titleGrad)" class="font-display" font-size="64" font-weight="900" letter-spacing="6" text-anchor="middle">
+          TAHIR AZEEM
+        </text>
+      </g>
     </g>
 
     <!-- 3. PRIMARY IDENTITY BADGE: VIBE CODER -->
-    <g class="anim-badge" transform="translate(600, 246)">
-      <!-- Cyber Pill Container -->
-      <rect x="-120" y="-16" width="240" height="32" rx="6" fill="#070e1e" stroke="url(#vibeGrad)" stroke-width="1.2" filter="url(#glow-subtle)" />
-      <!-- Micro HUD Crosshairs on Badge -->
-      <path d="M -114 -10 L -114 -16 L -108 -16" fill="none" stroke="#00f0ff" stroke-width="1.5" />
-      <path d="M 114 10 L 114 16 L 108 16" fill="none" stroke="#a855f7" stroke-width="1.5" />
-      <!-- Badge Content -->
-      <text x="0" y="5.5" fill="url(#vibeGrad)" class="font-display" font-size="14.5" font-weight="800" letter-spacing="5" text-anchor="middle">
-        &lt; VIBE CODER /&gt;
-      </text>
+    <g transform="translate(600, 246)">
+      <g class="anim-badge">
+        <!-- Cyber Pill Container -->
+        <rect x="-120" y="-16" width="240" height="32" rx="6" fill="#070e1e" stroke="url(#vibeGrad)" stroke-width="1.2" filter="url(#glow-subtle)" />
+        <!-- Micro HUD Crosshairs on Badge -->
+        <path d="M -114 -10 L -114 -16 L -108 -16" fill="none" stroke="#00f0ff" stroke-width="1.5" />
+        <path d="M 114 10 L 114 16 L 108 16" fill="none" stroke="#a855f7" stroke-width="1.5" />
+        <!-- Badge Content -->
+        <text x="0" y="5.5" fill="url(#vibeGrad)" class="font-display" font-size="14.5" font-weight="800" letter-spacing="5" text-anchor="middle">
+          &lt; VIBE CODER /&gt;
+        </text>
+      </g>
     </g>
 
     <!-- 4. SECONDARY IDENTITY: FULL STACK DEVELOPER × AI BUILDER -->
-    <g class="anim-subtitle" transform="translate(600, 302)">
-      <text x="0" y="0" class="font-display" text-anchor="middle">
-        <tspan fill="#f1f5f9" font-size="14.5" font-weight="700" letter-spacing="3.5">FULL STACK DEVELOPER</tspan>
-        <tspan fill="#a855f7" font-size="16" font-weight="900">  ×  </tspan>
-        <tspan fill="#38bdf8" font-size="14.5" font-weight="700" letter-spacing="3.5">AI BUILDER</tspan>
-      </text>
+    <g transform="translate(600, 302)">
+      <g class="anim-subtitle">
+        <text x="0" y="0" class="font-display" text-anchor="middle">
+          <tspan fill="#f1f5f9" font-size="14.5" font-weight="700" letter-spacing="3.5">FULL STACK DEVELOPER</tspan>
+          <tspan fill="#a855f7" font-size="16" font-weight="900">  ×  </tspan>
+          <tspan fill="#38bdf8" font-size="14.5" font-weight="700" letter-spacing="3.5">AI BUILDER</tspan>
+        </text>
+      </g>
     </g>
 
     <!-- 5. TAGLINE: "Turning ideas into real products." -->
-    <g class="anim-tagline" transform="translate(600, 342)">
-      <text x="0" y="0" fill="#94a3b8" class="font-display" font-size="14" font-style="italic" font-weight="400" letter-spacing="1.5" text-anchor="middle">
-        “Turning ideas into real products.”
-      </text>
+    <g transform="translate(600, 342)">
+      <g class="anim-tagline">
+        <text x="0" y="0" fill="#94a3b8" class="font-display" font-size="14" font-style="italic" font-weight="400" letter-spacing="1.5" text-anchor="middle">
+          “Turning ideas into real products.”
+        </text>
+      </g>
     </g>
 
     <!-- 6. INTERACTIVE ACTION PILLS / QUICK LINKS -->
-    <g class="anim-actions" transform="translate(600, 394)">
-      <!-- GitHub Action Pill -->
-      <g transform="translate(-105, 0)" class="btn-glow" cursor="pointer">
-        <rect x="-65" y="-14" width="130" height="28" rx="14" fill="#0d172e" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6" />
-        <circle cx="-42" cy="0" r="3" fill="#00f0ff" />
-        <text x="6" y="4" fill="#e2e8f0" class="font-mono" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">⌥ GITHUB</text>
-      </g>
+    <g transform="translate(600, 394)">
+      <g class="anim-actions">
+        <!-- GitHub Action Pill -->
+        <g transform="translate(-105, 0)" class="btn-glow" cursor="pointer">
+          <rect x="-65" y="-14" width="130" height="28" rx="14" fill="#0d172e" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6" />
+          <circle cx="-42" cy="0" r="3" fill="#00f0ff" />
+          <text x="6" y="4" fill="#e2e8f0" class="font-mono" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">⌥ GITHUB</text>
+        </g>
 
-      <!-- Projects Action Pill -->
-      <g transform="translate(105, 0)" class="btn-glow" cursor="pointer">
-        <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#140f29" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.6" />
-        <circle cx="-46" cy="0" r="3" fill="#a855f7" />
-        <text x="6" y="4" fill="#e2e8f0" class="font-mono" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">⚡ PROJECTS</text>
+        <!-- Projects Action Pill -->
+        <g transform="translate(105, 0)" class="btn-glow" cursor="pointer">
+          <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#140f29" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.6" />
+          <circle cx="-46" cy="0" r="3" fill="#a855f7" />
+          <text x="6" y="4" fill="#e2e8f0" class="font-mono" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">⚡ PROJECTS</text>
+        </g>
       </g>
     </g>
 
@@ -591,14 +598,14 @@
       <line x1="30" y1="458" x2="1170" y2="458" stroke="url(#lineFadeX)" stroke-width="1" />
 
       <!-- Bottom Left: Tech Stack Nodes -->
-      <g transform="translate(40, 478)">
+      <g transform="translate(42, 478)">
         <text x="0" y="0" fill="#475569" class="font-mono" font-size="9.5" letter-spacing="1.5">
           STACK: <tspan fill="#38bdf8">TypeScript</tspan> • <tspan fill="#38bdf8">React / Next.js</tspan> • <tspan fill="#a855f7">Python</tspan> • <tspan fill="#a855f7">LLMs &amp; Agents</tspan> • <tspan fill="#38bdf8">Node.js</tspan>
         </text>
       </g>
 
       <!-- Bottom Right: Copyright & System Core -->
-      <g transform="translate(1160, 478)" text-anchor="end">
+      <g transform="translate(1158, 478)" text-anchor="end">
         <text x="0" y="0" fill="#475569" class="font-mono" font-size="9.5" letter-spacing="1.5">
           <tspan fill="#64748b">TAHIR_AZEEM</tspan> // <tspan fill="#00f0ff">PORTFOLIO_SYSTEM_2026</tspan> [ SEC_ALPHA ]
         </text>
