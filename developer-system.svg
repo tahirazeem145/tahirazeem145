@@ -29,13 +29,13 @@
       }
 
       @keyframes pulseCyan {
-        0%, 100% { transform: scale(1); opacity: 0.75; filter: drop-shadow(0 0 2px #00f0ff); }
-        50% { transform: scale(1.35); opacity: 1; filter: drop-shadow(0 0 8px #00f0ff); }
+        0%, 100% { opacity: 0.75; filter: drop-shadow(0 0 2px #00f0ff); }
+        50% { opacity: 1; filter: drop-shadow(0 0 7px #00f0ff); }
       }
 
       @keyframes pulseViolet {
-        0%, 100% { transform: scale(1); opacity: 0.7; filter: drop-shadow(0 0 2px #a855f7); }
-        50% { transform: scale(1.35); opacity: 1; filter: drop-shadow(0 0 8px #a855f7); }
+        0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 2px #a855f7); }
+        50% { opacity: 1; filter: drop-shadow(0 0 7px #a855f7); }
       }
 
       @keyframes evolvingGlow {
@@ -451,38 +451,38 @@
           <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">FRONTEND</text>
           <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">React / JavaScript / Next.js</text>
           <!-- Status Badge: BUILDING -->
-          <g transform="translate(505, 7)">
-            <rect x="0" y="0" width="94" height="20" rx="10" fill="#061c2e" stroke="#00f0ff" stroke-width="0.75" />
-            <circle cx="12" cy="10" r="2.5" fill="#00f0ff" class="pulse-dot-cyan" />
+          <g transform="translate(495, 7)">
+            <rect x="0" y="0" width="104" height="20" rx="10" fill="#061c2e" stroke="#00f0ff" stroke-width="0.8" />
+            <circle cx="12" cy="10" r="2.8" fill="#00f0ff" class="pulse-dot-cyan" />
             <text x="22" y="13.5" fill="#00f0ff" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">BUILDING</text>
           </g>
         </g>
 
         <!-- Row 02: BACKEND -->
         <g transform="translate(0, 42)">
-          <rect x="0" y="0" width="611" height="34" rx="4" fill="#081122" stroke="#1e293b" stroke-width="0.75" />
-          <text x="12" y="21" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700">02</text>
+          <rect x="0" y="0" width="611" height="34" rx="4" fill="#0d0e24" stroke="#1e293b" stroke-width="0.75" />
+          <text x="12" y="21" fill="#a855f7" class="font-mono" font-size="10" font-weight="700">02</text>
           <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">BACKEND</text>
           <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">Node.js / Java / APIs</text>
-          <!-- Status Badge: BUILDING -->
-          <g transform="translate(505, 7)">
-            <rect x="0" y="0" width="94" height="20" rx="10" fill="#061c2e" stroke="#38bdf8" stroke-width="0.75" />
-            <circle cx="12" cy="10" r="2.5" fill="#38bdf8" class="pulse-dot-cyan" />
-            <text x="22" y="13.5" fill="#38bdf8" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">BUILDING</text>
+          <!-- Status Badge: LEARNING -->
+          <g transform="translate(495, 7)">
+            <rect x="0" y="0" width="104" height="20" rx="10" fill="#1e1035" stroke="#a855f7" stroke-width="0.8" />
+            <circle cx="12" cy="10" r="2.8" fill="#a855f7" class="pulse-dot-violet" />
+            <text x="22" y="13.5" fill="#c084fc" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">LEARNING</text>
           </g>
         </g>
 
         <!-- Row 03: AI -->
         <g transform="translate(0, 84)">
-          <rect x="0" y="0" width="611" height="34" rx="4" fill="#0d0e24" stroke="#1e293b" stroke-width="0.75" />
-          <text x="12" y="21" fill="#a855f7" class="font-mono" font-size="10" font-weight="700">03</text>
+          <rect x="0" y="0" width="611" height="34" rx="4" fill="#0c172a" stroke="#1e293b" stroke-width="0.75" />
+          <text x="12" y="21" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700">03</text>
           <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">AI</text>
           <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">Python / AI Engineering</text>
-          <!-- Status Badge: LEARNING -->
-          <g transform="translate(505, 7)">
-            <rect x="0" y="0" width="94" height="20" rx="10" fill="#1e1035" stroke="#a855f7" stroke-width="0.75" />
-            <circle cx="12" cy="10" r="2.5" fill="#a855f7" class="pulse-dot-violet" />
-            <text x="22" y="13.5" fill="#c084fc" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">LEARNING</text>
+          <!-- Status Badge: EXPLORING -->
+          <g transform="translate(495, 7)">
+            <rect x="0" y="0" width="104" height="20" rx="10" fill="#0a1a30" stroke="#38bdf8" stroke-width="0.8" />
+            <circle cx="12" cy="10" r="2.8" fill="#38bdf8" class="pulse-dot-cyan" />
+            <text x="22" y="13.5" fill="#7dd3fc" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">EXPLORING</text>
           </g>
         </g>
 
@@ -493,9 +493,9 @@
           <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">DEVOPS</text>
           <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">Docker / Cloud / Deployment</text>
           <!-- Status Badge: EXPLORING -->
-          <g transform="translate(505, 7)">
-            <rect x="0" y="0" width="94" height="20" rx="10" fill="#0d1829" stroke="#64748b" stroke-width="0.75" />
-            <circle cx="12" cy="10" r="2.5" fill="#94a3b8" opacity="0.8" />
+          <g transform="translate(495, 7)">
+            <rect x="0" y="0" width="104" height="20" rx="10" fill="#0d1829" stroke="#64748b" stroke-width="0.8" />
+            <circle cx="12" cy="10" r="2.8" fill="#94a3b8" opacity="0.85" />
             <text x="22" y="13.5" fill="#94a3b8" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">EXPLORING</text>
           </g>
         </g>
