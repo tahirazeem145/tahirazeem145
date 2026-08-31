@@ -330,9 +330,9 @@
         </text>
       </g>
 
-      <!-- ---------------------------------------------------- -->
+      <!--  -  -->
       <!-- LEFT CONTENT COLUMN: TRIPNEST 2.0 INFO & ACTIONS     -->
-      <!-- ---------------------------------------------------- -->
+      <!--  -  -->
       <g transform="translate(60, 126)">
         <!-- Flagship Golden Badge -->
         <g transform="translate(0, 0)">
@@ -425,9 +425,9 @@
         </g>
       </g>
 
-      <!-- ---------------------------------------------------- -->
+      <!--  -  -->
       <!-- RIGHT VISUAL: ABSTRACT TRAVEL MAP & PHOTO NETWORK    -->
-      <!-- ---------------------------------------------------- -->
+      <!--  -  -->
       <g transform="translate(620, 115)">
         <!-- Digital Map Grid Coordinate Container -->
         <rect x="0" y="0" width="500" height="260" rx="8" fill="#060c18" stroke="#1e293b" stroke-width="0.75" />
