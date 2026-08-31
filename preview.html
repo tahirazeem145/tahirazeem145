@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Hero Preview - Tahir Azeem Profile README</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +28,10 @@
     }
     .readme-container {
       width: 100%;
-      max-width: 980px;
+      max-width: 1000px;
       background-color: #0d1117;
       border: 1px solid #30363d;
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 32px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
@@ -58,10 +61,6 @@
       overflow: hidden;
       box-shadow: 0 12px 40px rgba(0, 240, 255, 0.12), 0 4px 20px rgba(168, 85, 247, 0.15);
       border: 1px solid rgba(0, 240, 255, 0.2);
-      transition: all 0.3s ease;
-    }
-    .hero-wrapper:hover {
-      box-shadow: 0 16px 50px rgba(0, 240, 255, 0.2), 0 6px 30px rgba(168, 85, 247, 0.25);
     }
     .hero-img {
       width: 100%;
@@ -113,19 +112,21 @@
       </div>
     </div>
 
-    <!-- The Hero Image -->
+    <!-- The Hero Image (Direct object & img fallback with cache-buster) -->
     <div class="hero-wrapper">
-      <img src="hero.svg" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder Hero Banner" class="hero-img" />
+      <object data="hero.svg" type="image/svg+xml" class="hero-img">
+        <img src="hero.svg" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder Hero Banner" class="hero-img" />
+      </object>
     </div>
 
     <div class="meta-info">
       <div class="meta-card">
-        <h3>⚡ Render Engine</h3>
-        <p>Pure self-contained animated vector SVG with embedded CSS keyframes. 100% compatible with GitHub Markdown rendering.</p>
+        <h3>⚡ Top HUD Design</h3>
+        <p>3 symmetrical dark-glass pills: <code>[SYS.AI_CORE // ONLINE]</code>, <code>[KERNEL // V4.9]</code>, and <code>[STATUS: BUILDING | VIBE_CODER]</code>.</p>
       </div>
       <div class="meta-card">
-        <h3>🎨 Aesthetic Specification</h3>
-        <p>Deep space canvas, electric cyan (#00f0ff), neon violet (#a855f7), neural constellation silhouette, and dynamic telemetry HUD.</p>
+        <h3>🎨 Zero Text Overlap</h3>
+        <p>Every element is rendered in its own dedicated padded container with crisp contrast and crystal-clear readability.</p>
       </div>
       <div class="meta-card">
         <h3>🚀 GitHub Embed Code</h3>

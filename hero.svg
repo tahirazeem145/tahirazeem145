@@ -356,36 +356,39 @@
     </g>
 
     <!-- ======================================================== -->
-    <!-- TOP HUD BAR & SYSTEM TELEMETRY (100% INLINE TSPAN FLOW)  -->
+    <!-- TOP HUD BAR & SYSTEM TELEMETRY (SYMMETRICAL 3-PILL HUD)  -->
     <!-- ======================================================== -->
     <g class="anim-header-hud">
       <!-- Top Dividing Tech Line -->
       <line x1="30" y1="46" x2="1170" y2="46" stroke="url(#lineFadeX)" stroke-width="1" />
       
-      <!-- Top Left: System Status Node (Single Inline Flow) -->
-      <g transform="translate(42, 32)">
-        <circle cx="0" cy="-3.5" r="3.5" fill="#00f0ff" filter="url(#glow-cyan)" />
-        <circle cx="0" cy="-3.5" r="7" stroke="#00f0ff" stroke-width="0.75" fill="none" opacity="0.5" />
-        <text x="16" y="0" class="font-mono" font-size="9.5" letter-spacing="1">
-          <tspan fill="#00f0ff" font-weight="700">SYS.AI_CORE // ONLINE</tspan>
-          <tspan fill="#334155">   |   </tspan>
-          <tspan fill="#64748b">LATENCY: 12ms</tspan>
+      <!-- Top Left Pill: AI System Status -->
+      <g transform="translate(155, 27)">
+        <rect x="-115" y="-12" width="230" height="24" rx="4" fill="#09101f" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.35" />
+        <circle cx="-100" cy="0" r="3" fill="#00f0ff" filter="url(#glow-cyan)" />
+        <text x="-90" y="3.5" class="font-mono" font-size="10" font-weight="600" letter-spacing="1">
+          <tspan fill="#00f0ff">SYS.AI_CORE</tspan>
+          <tspan fill="#475569"> // </tspan>
+          <tspan fill="#38bdf8">ONLINE</tspan>
+          <tspan fill="#64748b" font-size="9"> (12ms)</tspan>
         </text>
       </g>
 
-      <!-- Top Center: Micro Chip Tag -->
-      <g transform="translate(600, 28)">
-        <rect x="-90" y="-11" width="180" height="22" rx="4" fill="#0c1527" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.4" />
-        <text x="0" y="4" fill="#e2e8f0" class="font-mono" font-size="9.5" font-weight="600" letter-spacing="2" text-anchor="middle">KERNEL // V4.9.2_AI</text>
+      <!-- Top Center Pill: Kernel Version -->
+      <g transform="translate(600, 27)">
+        <rect x="-95" y="-12" width="190" height="24" rx="4" fill="#09101f" stroke="url(#badgeBorderGrad)" stroke-width="0.75" />
+        <text x="0" y="3.5" fill="#e2e8f0" class="font-mono" font-size="10" font-weight="600" letter-spacing="2" text-anchor="middle">✦ KERNEL // V4.9 ✦</text>
       </g>
 
-      <!-- Top Right: Identity Telemetry (Single Inline Flow - Zero Overlap) -->
-      <g transform="translate(1158, 32)">
-        <text x="0" y="0" class="font-mono" font-size="9.5" text-anchor="end" letter-spacing="1">
+      <!-- Top Right Pill: Mode & Status (Crisp Dedicated Box) -->
+      <g transform="translate(1040, 27)">
+        <rect x="-115" y="-12" width="230" height="24" rx="4" fill="#09101f" stroke="#a855f7" stroke-width="0.75" stroke-opacity="0.35" />
+        <circle cx="-100" cy="0" r="3" fill="#a855f7" filter="url(#glow-cyan)" />
+        <text x="-90" y="3.5" class="font-mono" font-size="10" font-weight="600" letter-spacing="1">
           <tspan fill="#64748b">STATUS: </tspan>
           <tspan fill="#00f0ff" font-weight="700">BUILDING</tspan>
-          <tspan fill="#a855f7">   •   </tspan>
-          <tspan fill="#94a3b8" font-weight="600">VIBE_CODER.exe</tspan>
+          <tspan fill="#475569"> | </tspan>
+          <tspan fill="#c084fc">VIBE_CODER</tspan>
         </text>
       </g>
     </g>
