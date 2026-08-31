@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Preview - Tahir Azeem Profile README</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .readme-container {
+      width: 100%;
+      max-width: 980px;
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #21262d;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(0, 240, 255, 0.1);
+      color: #00f0ff;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+    }
+    .hero-wrapper {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 240, 255, 0.12), 0 4px 20px rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    .hero-wrapper:hover {
+      box-shadow: 0 16px 50px rgba(0, 240, 255, 0.2), 0 6px 30px rgba(168, 85, 247, 0.25);
+    }
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .meta-info {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .meta-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .meta-card h3 {
+      font-size: 14px;
+      color: #58a6ff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .meta-card p, .meta-card code {
+      font-size: 13px;
+      color: #8b949e;
+      line-height: 1.5;
+    }
+    .meta-card code {
+      color: #79c0ff;
+      background: rgba(110,118,129,0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="readme-container">
+    <div class="header-bar">
+      <div style="font-weight: 600; font-size: 14px; color: #8b949e;">
+        📄 <strong>tahirazeem145</strong> / README.md
+      </div>
+      <div class="badge">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #00f0ff; display: inline-block;"></span>
+        SYSTEM: ONLINE
+      </div>
+    </div>
+
+    <!-- The Hero Image -->
+    <div class="hero-wrapper">
+      <img src="hero.svg" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder Hero Banner" class="hero-img" />
+    </div>
+
+    <div class="meta-info">
+      <div class="meta-card">
+        <h3>⚡ Render Engine</h3>
+        <p>Pure self-contained animated vector SVG with embedded CSS keyframes. 100% compatible with GitHub Markdown rendering.</p>
+      </div>
+      <div class="meta-card">
+        <h3>🎨 Aesthetic Specification</h3>
+        <p>Deep space canvas, electric cyan (#00f0ff), neon violet (#a855f7), neural constellation silhouette, and dynamic telemetry HUD.</p>
+      </div>
+      <div class="meta-card">
+        <h3>🚀 GitHub Embed Code</h3>
+        <code>&lt;img src="hero.svg" width="100%" alt="Hero Banner" /&gt;</code>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
