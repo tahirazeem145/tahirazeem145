@@ -46,6 +46,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-0 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_0 24s ease-out infinite;
       }
 
@@ -58,6 +60,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-1 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_1 24s ease-out infinite;
       }
 
@@ -70,6 +74,8 @@
         96.0%, 100% { fill: #0e4429; stroke: #0e4429; opacity: 1; }
       }
       .food-cell-2 {
+        fill: #0e4429;
+        stroke: #0e4429;
         animation: eatCell_2 24s ease-out infinite;
       }
 
@@ -82,6 +88,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-3 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_3 24s ease-out infinite;
       }
 
@@ -94,6 +102,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-4 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_4 24s ease-out infinite;
       }
 
@@ -106,6 +116,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-5 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_5 24s ease-out infinite;
       }
 
@@ -118,6 +130,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-6 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_6 24s ease-out infinite;
       }
 
@@ -130,6 +144,8 @@
         96.0%, 100% { fill: #0e4429; stroke: #0e4429; opacity: 1; }
       }
       .food-cell-7 {
+        fill: #0e4429;
+        stroke: #0e4429;
         animation: eatCell_7 24s ease-out infinite;
       }
 
@@ -142,6 +158,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-8 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_8 24s ease-out infinite;
       }
 
@@ -154,6 +172,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-9 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_9 24s ease-out infinite;
       }
 
@@ -166,6 +186,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-10 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_10 24s ease-out infinite;
       }
 
@@ -178,6 +200,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-11 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_11 24s ease-out infinite;
       }
 
@@ -190,6 +214,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-12 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_12 24s ease-out infinite;
       }
 
@@ -202,6 +228,8 @@
         96.0%, 100% { fill: #26a641; stroke: #26a641; opacity: 1; }
       }
       .food-cell-13 {
+        fill: #26a641;
+        stroke: #26a641;
         animation: eatCell_13 24s ease-out infinite;
       }
 
@@ -214,6 +242,8 @@
         96.0%, 100% { fill: #26a641; stroke: #26a641; opacity: 1; }
       }
       .food-cell-14 {
+        fill: #26a641;
+        stroke: #26a641;
         animation: eatCell_14 24s ease-out infinite;
       }
 
@@ -226,6 +256,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-15 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_15 24s ease-out infinite;
       }
 
@@ -238,6 +270,8 @@
         96.0%, 100% { fill: #006d32; stroke: #006d32; opacity: 1; }
       }
       .food-cell-16 {
+        fill: #006d32;
+        stroke: #006d32;
         animation: eatCell_16 24s ease-out infinite;
       }
 
@@ -250,6 +284,8 @@
         96.0%, 100% { fill: #39d353; stroke: #39d353; opacity: 1; }
       }
       .food-cell-17 {
+        fill: #39d353;
+        stroke: #39d353;
         animation: eatCell_17 24s ease-out infinite;
       }
 
@@ -262,6 +298,8 @@
         96.0%, 100% { fill: #39d353; stroke: #39d353; opacity: 1; }
       }
       .food-cell-18 {
+        fill: #39d353;
+        stroke: #39d353;
         animation: eatCell_18 24s ease-out infinite;
       }
 
@@ -274,6 +312,8 @@
         96.0%, 100% { fill: #26a641; stroke: #26a641; opacity: 1; }
       }
       .food-cell-19 {
+        fill: #26a641;
+        stroke: #26a641;
         animation: eatCell_19 24s ease-out infinite;
       }
 
@@ -286,6 +326,8 @@
         96.0%, 100% { fill: #39d353; stroke: #39d353; opacity: 1; }
       }
       .food-cell-20 {
+        fill: #39d353;
+        stroke: #39d353;
         animation: eatCell_20 24s ease-out infinite;
       }
 
@@ -298,6 +340,8 @@
         96.0%, 100% { fill: #26a641; stroke: #26a641; opacity: 1; }
       }
       .food-cell-21 {
+        fill: #26a641;
+        stroke: #26a641;
         animation: eatCell_21 24s ease-out infinite;
       }
 
@@ -310,6 +354,8 @@
         96.0%, 100% { fill: #39d353; stroke: #39d353; opacity: 1; }
       }
       .food-cell-22 {
+        fill: #39d353;
+        stroke: #39d353;
         animation: eatCell_22 24s ease-out infinite;
       }
     </style>
@@ -654,9 +700,9 @@
         <rect x="675" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="694" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="694" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="694" y="203" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-0" />
-        <rect x="694" y="222" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-1" />
-        <rect x="694" y="241" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-2" />
+        <rect x="694" y="203" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-0" />
+        <rect x="694" y="222" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-1" />
+        <rect x="694" y="241" width="15" height="15" rx="3" fill="#0e4429" stroke="#0e4429" stroke-width="0.75" class="food-cell-2" />
         <rect x="694" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="694" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="713" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -668,21 +714,21 @@
         <rect x="713" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="732" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="732" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="732" y="203" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-4" />
-        <rect x="732" y="222" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-3" />
+        <rect x="732" y="203" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-4" />
+        <rect x="732" y="222" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-3" />
         <rect x="732" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="732" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="732" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="751" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="751" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="751" y="203" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-5" />
+        <rect x="751" y="203" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-5" />
         <rect x="751" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="751" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="751" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="751" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="770" y="203" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-6" />
+        <rect x="770" y="203" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-6" />
         <rect x="770" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -709,8 +755,8 @@
         <rect x="827" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="827" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="846" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="846" y="184" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-8" />
-        <rect x="846" y="203" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-7" />
+        <rect x="846" y="184" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-8" />
+        <rect x="846" y="203" width="15" height="15" rx="3" fill="#0e4429" stroke="#0e4429" stroke-width="0.75" class="food-cell-7" />
         <rect x="846" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="846" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="846" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -738,9 +784,9 @@
         <rect x="903" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="922" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="922" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="922" y="203" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-9" />
-        <rect x="922" y="222" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-10" />
-        <rect x="922" y="241" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-11" />
+        <rect x="922" y="203" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-9" />
+        <rect x="922" y="222" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-10" />
+        <rect x="922" y="241" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-11" />
         <rect x="922" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="922" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="941" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -754,44 +800,44 @@
         <rect x="960" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="960" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="960" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="960" y="241" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-12" />
+        <rect x="960" y="241" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-12" />
         <rect x="960" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="960" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="979" y="222" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-14" />
-        <rect x="979" y="241" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-13" />
+        <rect x="979" y="222" width="15" height="15" rx="3" fill="#26a641" stroke="#26a641" stroke-width="0.75" class="food-cell-14" />
+        <rect x="979" y="241" width="15" height="15" rx="3" fill="#26a641" stroke="#26a641" stroke-width="0.75" class="food-cell-13" />
         <rect x="979" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="998" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="998" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="998" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="998" y="222" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-15" />
-        <rect x="998" y="241" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-16" />
-        <rect x="998" y="260" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-17" />
+        <rect x="998" y="222" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-15" />
+        <rect x="998" y="241" width="15" height="15" rx="3" fill="#006d32" stroke="#006d32" stroke-width="0.75" class="food-cell-16" />
+        <rect x="998" y="260" width="15" height="15" rx="3" fill="#39d353" stroke="#39d353" stroke-width="0.75" class="food-cell-17" />
         <rect x="998" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1017" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1017" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1017" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1017" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1017" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="1017" y="260" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-18" />
+        <rect x="1017" y="260" width="15" height="15" rx="3" fill="#39d353" stroke="#39d353" stroke-width="0.75" class="food-cell-18" />
         <rect x="1017" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1036" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1036" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1036" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1036" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1036" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="1036" y="260" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-19" />
-        <rect x="1036" y="279" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-20" />
+        <rect x="1036" y="260" width="15" height="15" rx="3" fill="#26a641" stroke="#26a641" stroke-width="0.75" class="food-cell-19" />
+        <rect x="1036" y="279" width="15" height="15" rx="3" fill="#39d353" stroke="#39d353" stroke-width="0.75" class="food-cell-20" />
         <rect x="1055" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1055" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1055" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1055" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1055" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="1055" y="260" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-22" />
-        <rect x="1055" y="279" width="15" height="15" rx="3" stroke-width="0.75" class="food-cell-21" />
+        <rect x="1055" y="260" width="15" height="15" rx="3" fill="#39d353" stroke="#39d353" stroke-width="0.75" class="food-cell-22" />
+        <rect x="1055" y="279" width="15" height="15" rx="3" fill="#26a641" stroke="#26a641" stroke-width="0.75" class="food-cell-21" />
         <rect x="1074" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1074" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1074" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
