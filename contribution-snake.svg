@@ -674,7 +674,7 @@
       <!-- ======================================================== -->
       <!-- Snake Tail Segment 7 (Violet) -->
       <g>
-        <animateMotion dur="24s" repeatCount="indefinite" begin="-1.05s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
+        <animateMotion dur="24s" repeatCount="indefinite" begin="-22.95s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
         <rect x="-5" y="-5" width="10" height="10" rx="3" fill="#a855f7" />
@@ -682,7 +682,7 @@
 
       <!-- Snake Body Segment 6 -->
       <g>
-        <animateMotion dur="24s" repeatCount="indefinite" begin="-0.90s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
+        <animateMotion dur="24s" repeatCount="indefinite" begin="-23.10s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
         <rect x="-5.5" y="-5.5" width="11" height="11" rx="3" fill="#c084fc" />
@@ -690,7 +690,7 @@
 
       <!-- Snake Body Segment 5 -->
       <g>
-        <animateMotion dur="24s" repeatCount="indefinite" begin="-0.75s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
+        <animateMotion dur="24s" repeatCount="indefinite" begin="-23.25s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
         <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#818cf8" />
@@ -698,7 +698,7 @@
 
       <!-- Snake Body Segment 4 -->
       <g>
-        <animateMotion dur="24s" repeatCount="indefinite" begin="-0.60s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
+        <animateMotion dur="24s" repeatCount="indefinite" begin="-23.40s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
         <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#60a5fa" />
@@ -706,7 +706,7 @@
 
       <!-- Snake Body Segment 3 -->
       <g>
-        <animateMotion dur="24s" repeatCount="indefinite" begin="-0.45s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
+        <animateMotion dur="24s" repeatCount="indefinite" begin="-23.55s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
         <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#38bdf8" />
@@ -714,7 +714,7 @@
 
       <!-- Snake Body Segment 2 -->
       <g>
-        <animateMotion dur="24s" repeatCount="indefinite" begin="-0.30s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
+        <animateMotion dur="24s" repeatCount="indefinite" begin="-23.70s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
         <rect x="-7" y="-7" width="14" height="14" rx="3.5" fill="#00f0ff" />
@@ -722,7 +722,7 @@
 
       <!-- Snake Body Segment 1 (Neck) -->
       <g>
-        <animateMotion dur="24s" repeatCount="indefinite" begin="-0.15s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
+        <animateMotion dur="24s" repeatCount="indefinite" begin="-23.85s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
         <rect x="-7" y="-7" width="14" height="14" rx="3.5" fill="#00f0ff" />
