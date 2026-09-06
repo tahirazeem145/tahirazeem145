@@ -1,15 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60" width="100%" height="60" fill="none" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 56" width="100%" height="56" fill="none" preserveAspectRatio="xMidYMid meet">
   <defs>
     <!-- Glow Filters -->
-    <filter id="lanternGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <filter id="steamGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <filter id="planeGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2.5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -17,430 +9,221 @@
       </feMerge>
     </filter>
 
-    <filter id="redMarkerGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
+    <filter id="beaconGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
-    <!-- Headlight Conical Beam Gradient -->
-    <linearGradient id="headlightBeam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fffbeb" stop-opacity="0.9" />
-      <stop offset="25%" stop-color="#fef08a" stop-opacity="0.45" />
-      <stop offset="70%" stop-color="#fef08a" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#fef08a" stop-opacity="0" />
+    <filter id="jetThrustGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Flight Corridor Path Gradient -->
+    <linearGradient id="flightPathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
+      <stop offset="15%" stop-color="#58a6ff" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.6" />
+      <stop offset="85%" stop-color="#58a6ff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Rail Steel Sheen Gradient -->
-    <linearGradient id="railGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#30363d" stop-opacity="0.3" />
-      <stop offset="15%" stop-color="#8b949e" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#c9d1d9" stop-opacity="0.95" />
-      <stop offset="85%" stop-color="#8b949e" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#30363d" stop-opacity="0.3" />
+    <!-- Contrail Jet Vapor Trail Gradient -->
+    <linearGradient id="contrailGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="15%" stop-color="#7dd3fc" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="85%" stop-color="#0284c7" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Steam Puff Soft Gradient -->
-    <radialGradient id="steamPuffGrad" cx="40%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85" />
-      <stop offset="60%" stop-color="#d0d7de" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#8c959f" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Brass / Gold Metal Trim Gradient -->
-    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f6e05e" />
-      <stop offset="50%" stop-color="#d97706" />
-      <stop offset="100%" stop-color="#b45309" />
+    <!-- Engine Jet Afterburner Flame Gradient -->
+    <linearGradient id="engineFlameGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Coach Warm Interior Window Gradient -->
-    <linearGradient id="coachWindowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef08a" />
-      <stop offset="60%" stop-color="#f59e0b" />
-      <stop offset="100%" stop-color="#b45309" />
+    <!-- Aerodynamic Fuselage Metallic Shading -->
+    <linearGradient id="fuselageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0f6fc" />
+      <stop offset="45%" stop-color="#c9d1d9" />
+      <stop offset="85%" stop-color="#484f58" />
+      <stop offset="100%" stop-color="#21262d" />
+    </linearGradient>
+
+    <!-- Cockpit & Passenger Window Glow -->
+    <linearGradient id="windowGlowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
     </linearGradient>
   </defs>
 
   <!-- ========================================================== -->
-  <!-- 1. BACKGROUND SCENIC ELEMENTS (TELEGRAPH POLES & WIRES)    -->
+  <!-- 1. FLIGHT AIRWAY CORRIDOR & RADAR NAVIGATION PATH          -->
   <!-- ========================================================== -->
 
-  <!-- Telegraph Wires (Thin Sagging Catenary Lines) -->
-  <path d="M0,18 Q150,23 300,18 Q450,23 600,18 Q750,23 900,18 Q1050,23 1200,18" stroke="#21262d" stroke-width="0.75" />
-  <path d="M0,22 Q150,26 300,22 Q450,26 600,22 Q750,26 900,22 Q1050,26 1200,22" stroke="#21262d" stroke-width="0.75" />
+  <!-- Base Ambient Airway Track -->
+  <line x1="50" y1="28" x2="1150" y2="28" stroke="#21262d" stroke-width="1" />
+  
+  <!-- Glowing Radar Vector Line (Dashed Navigation Corridor) -->
+  <line x1="80" y1="28" x2="1120" y2="28" stroke="url(#flightPathGrad)" stroke-width="1.2" stroke-dasharray="10 16" opacity="0.65">
+    <animate attributeName="stroke-dashoffset" from="0" to="-260" dur="8s" repeatCount="indefinite" />
+  </line>
 
-  <!-- Telegraph Poles -->
-  <g stroke="#30363d" stroke-width="1.2" opacity="0.6">
-    <!-- Pole 1 -->
-    <line x1="120" y1="14" x2="120" y2="48" />
-    <line x1="112" y1="18" x2="128" y2="18" />
-    <line x1="114" y1="22" x2="126" y2="22" />
-    <!-- Pole 2 -->
-    <line x1="420" y1="14" x2="420" y2="48" />
-    <line x1="412" y1="18" x2="428" y2="18" />
-    <line x1="414" y1="22" x2="426" y2="22" />
-    <!-- Pole 3 -->
-    <line x1="720" y1="14" x2="720" y2="48" />
-    <line x1="712" y1="18" x2="728" y2="18" />
-    <line x1="714" y1="22" x2="726" y2="22" />
-    <!-- Pole 4 -->
-    <line x1="1020" y1="14" x2="1020" y2="48" />
-    <line x1="1012" y1="18" x2="1028" y2="18" />
-    <line x1="1014" y1="22" x2="1026" y2="22" />
+  <!-- Radar Altitude Flight Marks & Waypoints -->
+  <g opacity="0.6" font-family="'JetBrains Mono', monospace" font-size="6" fill="#8b949e">
+    <!-- Waypoint Alpha (x=160) -->
+    <circle cx="160" cy="28" r="2" fill="#58a6ff" />
+    <text x="160" y="20" text-anchor="middle" fill="#58a6ff">WPT // ALPHA</text>
+
+    <!-- Waypoint Bravo / Cruising Altitude (x=600) -->
+    <circle cx="600" cy="28" r="2.5" fill="#a855f7" />
+    <text x="600" y="20" text-anchor="middle" fill="#c084fc">FL380 // MACH 0.84 // TAHIR-AIR</text>
+    <line x1="590" y1="28" x2="610" y2="28" stroke="#a855f7" stroke-width="1" />
+
+    <!-- Waypoint Delta (x=1040) -->
+    <circle cx="1040" cy="28" r="2" fill="#58a6ff" />
+    <text x="1040" y="20" text-anchor="middle" fill="#58a6ff">WPT // DEST_SHIP</text>
   </g>
 
-  <!-- Railroad Signal Post at x=580 -->
-  <g transform="translate(580, 24)" opacity="0.85">
-    <line x1="0" y1="0" x2="0" y2="24" stroke="#484f58" stroke-width="1.5" />
-    <rect x="-4" y="-3" width="8" height="12" rx="2" fill="#161b22" stroke="#30363d" stroke-width="0.75" />
-    <!-- Green Semaphore Clear Signal -->
-    <circle cx="0" cy="1" r="2.2" fill="#22c55e" filter="url(#lanternGlow)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Mile Marker Post: "145" -->
-  <g transform="translate(860, 40)" opacity="0.6">
-    <rect x="-8" y="-3" width="16" height="8" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.75" />
-    <text x="0" y="3" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="5" font-weight="bold" text-anchor="middle">MP 145</text>
+  <!-- Subtle Drifting Night Sky Cloud Wisps Below Flight Path -->
+  <g opacity="0.25">
+    <path d="M100,42 Q140,36 190,42 Q230,46 270,42" stroke="#484f58" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <animate attributeName="transform" type="translate" values="0,0; -40,0; 0,0" dur="18s" repeatCount="indefinite" />
+    </path>
+    <path d="M520,44 Q570,38 630,44 Q680,48 730,44" stroke="#484f58" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <animate attributeName="transform" type="translate" values="0,0; -50,0; 0,0" dur="22s" repeatCount="indefinite" />
+    </path>
+    <path d="M900,42 Q950,37 1010,42 Q1060,46 1110,42" stroke="#484f58" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <animate attributeName="transform" type="translate" values="0,0; -40,0; 0,0" dur="20s" repeatCount="indefinite" />
+    </path>
   </g>
 
   <!-- ========================================================== -->
-  <!-- 2. RAILWAY TRACK & TIMBER SLEEPERS                         -->
-  <!-- ========================================================== -->
-
-  <!-- Gravel Ballast Foundation Bed -->
-  <line x1="20" y1="52" x2="1180" y2="52" stroke="#161b22" stroke-width="6" />
-
-  <!-- Wooden Cross Ties (Sleepers) Pattern -->
-  <g stroke="#30363d" stroke-width="2.5" opacity="0.75">
-    <!-- Generated across the full width -->
-    <line x1="30" y1="47" x2="30" y2="54" /><line x1="45" y1="47" x2="45" y2="54" /><line x1="60" y1="47" x2="60" y2="54" />
-    <line x1="75" y1="47" x2="75" y2="54" /><line x1="90" y1="47" x2="90" y2="54" /><line x1="105" y1="47" x2="105" y2="54" />
-    <line x1="120" y1="47" x2="120" y2="54" /><line x1="135" y1="47" x2="135" y2="54" /><line x1="150" y1="47" x2="150" y2="54" />
-    <line x1="165" y1="47" x2="165" y2="54" /><line x1="180" y1="47" x2="180" y2="54" /><line x1="195" y1="47" x2="195" y2="54" />
-    <line x1="210" y1="47" x2="210" y2="54" /><line x1="225" y1="47" x2="225" y2="54" /><line x1="240" y1="47" x2="240" y2="54" />
-    <line x1="255" y1="47" x2="255" y2="54" /><line x1="270" y1="47" x2="270" y2="54" /><line x1="285" y1="47" x2="285" y2="54" />
-    <line x1="300" y1="47" x2="300" y2="54" /><line x1="315" y1="47" x2="315" y2="54" /><line x1="330" y1="47" x2="330" y2="54" />
-    <line x1="345" y1="47" x2="345" y2="54" /><line x1="360" y1="47" x2="360" y2="54" /><line x1="375" y1="47" x2="375" y2="54" />
-    <line x1="390" y1="47" x2="390" y2="54" /><line x1="405" y1="47" x2="405" y2="54" /><line x1="420" y1="47" x2="420" y2="54" />
-    <line x1="435" y1="47" x2="435" y2="54" /><line x1="450" y1="47" x2="450" y2="54" /><line x1="465" y1="47" x2="465" y2="54" />
-    <line x1="480" y1="47" x2="480" y2="54" /><line x1="495" y1="47" x2="495" y2="54" /><line x1="510" y1="47" x2="510" y2="54" />
-    <line x1="525" y1="47" x2="525" y2="54" /><line x1="540" y1="47" x2="540" y2="54" /><line x1="555" y1="47" x2="555" y2="54" />
-    <line x1="570" y1="47" x2="570" y2="54" /><line x1="585" y1="47" x2="585" y2="54" /><line x1="600" y1="47" x2="600" y2="54" />
-    <line x1="615" y1="47" x2="615" y2="54" /><line x1="630" y1="47" x2="630" y2="54" /><line x1="645" y1="47" x2="645" y2="54" />
-    <line x1="660" y1="47" x2="660" y2="54" /><line x1="675" y1="47" x2="675" y2="54" /><line x1="690" y1="47" x2="690" y2="54" />
-    <line x1="705" y1="47" x2="705" y2="54" /><line x1="720" y1="47" x2="720" y2="54" /><line x1="735" y1="47" x2="735" y2="54" />
-    <line x1="750" y1="47" x2="750" y2="54" /><line x1="765" y1="47" x2="765" y2="54" /><line x1="780" y1="47" x2="780" y2="54" />
-    <line x1="795" y1="47" x2="795" y2="54" /><line x1="810" y1="47" x2="810" y2="54" /><line x1="825" y1="47" x2="825" y2="54" />
-    <line x1="840" y1="47" x2="840" y2="54" /><line x1="855" y1="47" x2="855" y2="54" /><line x1="870" y1="47" x2="870" y2="54" />
-    <line x1="885" y1="47" x2="885" y2="54" /><line x1="900" y1="47" x2="900" y2="54" /><line x1="915" y1="47" x2="915" y2="54" />
-    <line x1="930" y1="47" x2="930" y2="54" /><line x1="945" y1="47" x2="945" y2="54" /><line x1="960" y1="47" x2="960" y2="54" />
-    <line x1="975" y1="47" x2="975" y2="54" /><line x1="990" y1="47" x2="990" y2="54" /><line x1="1005" y1="47" x2="1005" y2="54" />
-    <line x1="1020" y1="47" x2="1020" y2="54" /><line x1="1035" y1="47" x2="1035" y2="54" /><line x1="1050" y1="47" x2="1050" y2="54" />
-    <line x1="1065" y1="47" x2="1065" y2="54" /><line x1="1080" y1="47" x2="1080" y2="54" /><line x1="1095" y1="47" x2="1095" y2="54" />
-    <line x1="1110" y1="47" x2="1110" y2="54" /><line x1="1125" y1="47" x2="1125" y2="54" /><line x1="1140" y1="47" x2="1140" y2="54" />
-    <line x1="1155" y1="47" x2="1155" y2="54" /><line x1="1170" y1="47" x2="1170" y2="54" />
-  </g>
-
-  <!-- Steel Rails -->
-  <!-- Top Shining Rail -->
-  <line x1="0" y1="47" x2="1200" y2="47" stroke="url(#railGrad)" stroke-width="1.8" />
-  <!-- Bottom Rail Shadow/Base -->
-  <line x1="0" y1="50" x2="1200" y2="50" stroke="#21262d" stroke-width="1.2" />
-
-  <!-- ========================================================== -->
-  <!-- 3. THE CLASSIC STEAM TRAIN (ANIMATED CHUGGING ACROSS)      -->
+  <!-- 2. THE AIRPLANE (ANIMATED FLIGHT ACROSS THE CORRIDOR)       -->
   <!-- ========================================================== -->
   <g>
-    <!-- Master Movement: Left to Right across screen -->
-    <animateTransform attributeName="transform" type="translate" from="-450 0" to="1250 0" dur="15s" repeatCount="indefinite" />
+    <!-- Master Translation: Left to Right across the screen -->
+    <animateTransform attributeName="transform" type="translate" from="-260 0" to="1260 0" dur="9.5s" repeatCount="indefinite" />
 
-    <!-- ======================================================== -->
-    <!-- A. STEAM PUFFS (Emerging from smokestack at x=310, y=14) -->
-    <!-- ======================================================== -->
-    <g filter="url(#steamGlow)">
-      <!-- Steam Puff 1 -->
-      <circle fill="url(#steamPuffGrad)">
-        <animate attributeName="cx" values="310;290;265;235" dur="1.4s" repeatCount="indefinite" />
-        <animate attributeName="cy" values="14;9;4;0" dur="1.4s" repeatCount="indefinite" />
-        <animate attributeName="r" values="3.5;7;11;16" dur="1.4s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.85;0.65;0.35;0" dur="1.4s" repeatCount="indefinite" />
-      </circle>
+    <!-- Aerodynamic Floating/Bobbing (Gentle Altitude Sway) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,28; 0,26.5; 0,29.5; 0,28" dur="4.2s" repeatCount="indefinite" />
 
-      <!-- Steam Puff 2 (Staggered by 0.35s) -->
-      <circle fill="url(#steamPuffGrad)">
-        <animate attributeName="cx" values="310;290;265;235" dur="1.4s" begin="-0.35s" repeatCount="indefinite" />
-        <animate attributeName="cy" values="14;9;4;0" dur="1.4s" begin="-0.35s" repeatCount="indefinite" />
-        <animate attributeName="r" values="3.5;7;11;16" dur="1.4s" begin="-0.35s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.85;0.65;0.35;0" dur="1.4s" begin="-0.35s" repeatCount="indefinite" />
-      </circle>
-
-      <!-- Steam Puff 3 (Staggered by 0.70s) -->
-      <circle fill="url(#steamPuffGrad)">
-        <animate attributeName="cx" values="310;290;265;235" dur="1.4s" begin="-0.70s" repeatCount="indefinite" />
-        <animate attributeName="cy" values="14;9;4;0" dur="1.4s" begin="-0.70s" repeatCount="indefinite" />
-        <animate attributeName="r" values="3.5;7;11;16" dur="1.4s" begin="-0.70s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.85;0.65;0.35;0" dur="1.4s" begin="-0.70s" repeatCount="indefinite" />
-      </circle>
-
-      <!-- Steam Puff 4 (Staggered by 1.05s) -->
-      <circle fill="url(#steamPuffGrad)">
-        <animate attributeName="cx" values="310;290;265;235" dur="1.4s" begin="-1.05s" repeatCount="indefinite" />
-        <animate attributeName="cy" values="14;9;4;0" dur="1.4s" begin="-1.05s" repeatCount="indefinite" />
-        <animate attributeName="r" values="3.5;7;11;16" dur="1.4s" begin="-1.05s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.85;0.65;0.35;0" dur="1.4s" begin="-1.05s" repeatCount="indefinite" />
-      </circle>
-    </g>
-
-    <!-- ======================================================== -->
-    <!-- B. HEADLIGHT BEAM CASTING FORWARD                        -->
-    <!-- ======================================================== -->
-    <polygon points="340,30 460,16 460,46" fill="url(#headlightBeam)" />
-
-    <!-- ======================================================== -->
-    <!-- C. CABOOSE (REAR CAR) [x = -40 to 30]                    -->
-    <!-- ======================================================== -->
-    <g id="caboose">
-      <!-- Rear Red Lantern -->
-      <circle cx="-38" cy="36" r="2.2" fill="#ef4444" filter="url(#redMarkerGlow)">
-        <animate attributeName="opacity" values="1;0.35;1" dur="1.2s" repeatCount="indefinite" />
-      </circle>
-
-      <!-- Rear Balcony Railing -->
-      <line x1="-38" y1="36" x2="-30" y2="36" stroke="#484f58" stroke-width="1" />
-      <line x1="-38" y1="36" x2="-38" y2="44" stroke="#484f58" stroke-width="1" />
-
-      <!-- Caboose Body -->
-      <rect x="-30" y="26" width="60" height="18" rx="2" fill="#7f1d1d" stroke="#991b1b" stroke-width="0.8" />
-      <!-- Dark Lower Trim -->
-      <rect x="-30" y="41" width="60" height="3" fill="#1c1917" />
-
-      <!-- Observation Cupola (Rooftop Turret) -->
-      <rect x="-14" y="20" width="28" height="6" rx="1.5" fill="#991b1b" stroke="#b91c1c" stroke-width="0.6" />
-      <!-- Cupola Window -->
-      <rect x="-8" y="21.5" width="16" height="3" rx="0.5" fill="url(#coachWindowGrad)" />
-
-      <!-- Side Windows (Glowing Amber Warmth) -->
-      <rect x="-24" y="30" width="9" height="7" rx="1" fill="url(#coachWindowGrad)" stroke="#451a03" stroke-width="0.5" />
-      <rect x="-10" y="30" width="9" height="7" rx="1" fill="url(#coachWindowGrad)" stroke="#451a03" stroke-width="0.5" />
-      <rect x="4" y="30" width="9" height="7" rx="1" fill="url(#coachWindowGrad)" stroke="#451a03" stroke-width="0.5" />
-      <rect x="18" y="30" width="7" height="7" rx="1" fill="url(#coachWindowGrad)" stroke="#451a03" stroke-width="0.5" />
-
-      <!-- Wheels (Radius 4 at y=45) -->
-      <g>
-        <circle cx="-18" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="-18" cy="45" r="1.2" fill="#8b949e" />
-        <circle cx="-8" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="-8" cy="45" r="1.2" fill="#8b949e" />
-
-        <circle cx="12" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="12" cy="45" r="1.2" fill="#8b949e" />
-        <circle cx="22" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="22" cy="45" r="1.2" fill="#8b949e" />
+      <!-- A. EXPANDING JET CONTRAIL VAPOR TRAILS (Streaming from Engines) -->
+      <g opacity="0.85">
+        <!-- Upper Engine Contrail -->
+        <rect x="-180" y="-3.5" width="165" height="2.2" rx="1.1" fill="url(#contrailGrad)">
+          <animate attributeName="width" values="150;185;150" dur="2s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.75;0.95;0.75" dur="2s" repeatCount="indefinite" />
+        </rect>
+        <!-- Lower Engine Contrail -->
+        <rect x="-180" y="4.5" width="165" height="2.5" rx="1.2" fill="url(#contrailGrad)">
+          <animate attributeName="width" values="160;190;160" dur="2s" begin="-1s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" begin="-1s" repeatCount="indefinite" />
+        </rect>
       </g>
 
-      <!-- Coupler -->
-      <line x1="30" y1="42" x2="38" y2="42" stroke="#484f58" stroke-width="2" />
-    </g>
-
-    <!-- ======================================================== -->
-    <!-- D. CLASSIC PULLMAN PASSENGER COACH [x = 38 to 142]       -->
-    <!-- ======================================================== -->
-    <g id="passengerCoach">
-      <!-- Roof (Curved Arched Clerestory) -->
-      <path d="M38,24 Q90,21 142,24" stroke="#30363d" stroke-width="2" fill="none" />
-      <rect x="40" y="24" width="100" height="2" fill="#484f58" />
-
-      <!-- Coach Body (Rich Vintage Dark Green/Navy) -->
-      <rect x="40" y="26" width="100" height="18" rx="1.5" fill="#13231b" stroke="#1f382b" stroke-width="0.8" />
-      <!-- Gold Belt Pinstripe -->
-      <line x1="40" y1="37" x2="140" y2="37" stroke="url(#brassGrad)" stroke-width="0.8" />
-
-      <!-- Passenger Windows (Glowing Warmth & Silhouettes) -->
-      <g>
-        <rect x="46" y="28.5" width="10" height="7" rx="1" fill="url(#coachWindowGrad)" />
-        <rect x="62" y="28.5" width="10" height="7" rx="1" fill="url(#coachWindowGrad)" />
-        <rect x="78" y="28.5" width="10" height="7" rx="1" fill="url(#coachWindowGrad)" />
-        <rect x="94" y="28.5" width="10" height="7" rx="1" fill="url(#coachWindowGrad)" />
-        <rect x="110" y="28.5" width="10" height="7" rx="1" fill="url(#coachWindowGrad)" />
-        <rect x="126" y="28.5" width="10" height="7" rx="1" fill="url(#coachWindowGrad)" />
+      <!-- B. JET ENGINE AFTERBURNER FLAMES -->
+      <g filter="url(#jetThrustGlow)">
+        <!-- Upper Engine Core Flame -->
+        <polygon points="-12,-3.5 -26,-2.5 -12,-1.5" fill="url(#engineFlameGrad)">
+          <animate attributeName="points" values="-12,-3.5 -26,-2.5 -12,-1.5; -12,-3.5 -32,-2.5 -12,-1.5; -12,-3.5 -26,-2.5 -12,-1.5" dur="0.25s" repeatCount="indefinite" />
+        </polygon>
+        <!-- Lower Engine Core Flame -->
+        <polygon points="-8,4.5 -24,5.5 -8,6.5" fill="url(#engineFlameGrad)">
+          <animate attributeName="points" values="-8,4.5 -24,5.5 -8,6.5; -8,4.5 -30,5.5 -8,6.5; -8,4.5 -24,5.5 -8,6.5" dur="0.28s" repeatCount="indefinite" />
+        </polygon>
       </g>
 
-      <!-- Wheels / Bogies -->
-      <g>
-        <!-- Front Bogie -->
-        <circle cx="52" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="52" cy="45" r="1.2" fill="#8b949e" />
-        <circle cx="64" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="64" cy="45" r="1.2" fill="#8b949e" />
-        <!-- Rear Bogie -->
-        <circle cx="116" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="116" cy="45" r="1.2" fill="#8b949e" />
-        <circle cx="128" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="128" cy="45" r="1.2" fill="#8b949e" />
-      </g>
+      <!-- C. THE AIRCRAFT BODY (SLEEK MODERN TWIN-JET AIRLINER) -->
+      <g filter="url(#planeGlow)">
 
-      <!-- Coupler to Tender -->
-      <line x1="140" y1="42" x2="150" y2="42" stroke="#484f58" stroke-width="2" />
-    </g>
+        <!-- 1. Far Wing (Port Wing in Background) -->
+        <polygon points="-5,-4 8,-4 -12,-16 -18,-15" fill="#484f58" stroke="#30363d" stroke-width="0.5" />
+        <!-- Far Winglet -->
+        <line x1="-18" y1="-15" x2="-20" y2="-19" stroke="#00f0ff" stroke-width="1.2" />
 
-    <!-- ======================================================== -->
-    <!-- E. TENDER (COAL CAR) [x = 150 to 205]                    -->
-    <!-- ======================================================== -->
-    <g id="tender">
-      <!-- Piled Coal Lumps -->
-      <path d="M154,29 Q165,22 178,25 Q190,21 202,29 Z" fill="#090d13" stroke="#21262d" stroke-width="0.8" />
+        <!-- 2. Horizontal Tail Stabilizer (Elevator) -->
+        <polygon points="-46,-2 -36,-2 -48,-10 -53,-9" fill="#6e7681" stroke="#30363d" stroke-width="0.5" />
 
-      <!-- Tender Body -->
-      <rect x="150" y="28" width="55" height="16" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8" />
-      <!-- Water Tank Fill Cap -->
-      <rect x="153" y="26" width="8" height="2" fill="#30363d" />
-      <!-- Gold Rail Line Accent -->
-      <line x1="150" y1="36" x2="205" y2="36" stroke="url(#brassGrad)" stroke-width="0.6" />
+        <!-- 3. Vertical Tail Fin (Rudder) -->
+        <polygon points="-38,-4 -28,-4 -44,-22 -50,-22" fill="url(#fuselageGrad)" stroke="#30363d" stroke-width="0.6" />
+        <!-- Airline Tail Accent Stripe (Cyan / Electric Blue livery) -->
+        <polygon points="-40,-12 -34,-12 -42,-21 -47,-21" fill="#00f0ff" opacity="0.9" />
 
-      <!-- Wheels (4 wheels on Tender) -->
-      <g>
-        <circle cx="160" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="160" cy="45" r="1.2" fill="#8b949e" />
-        <circle cx="172" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="172" cy="45" r="1.2" fill="#8b949e" />
-        <circle cx="186" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="186" cy="45" r="1.2" fill="#8b949e" />
-        <circle cx="198" cy="45" r="3.8" fill="#161b22" stroke="#484f58" stroke-width="1.2" />
-        <circle cx="198" cy="45" r="1.2" fill="#8b949e" />
-      </g>
+        <!-- Tail Strobe Light (White Flashing Beacon) -->
+        <circle cx="-47" cy="-22" r="1.8" fill="#ffffff" filter="url(#beaconGlow)">
+          <animate attributeName="opacity" values="1;0;0;1;0;0" dur="1.2s" repeatCount="indefinite" />
+        </circle>
 
-      <!-- Drawbar Coupling to Engine -->
-      <line x1="205" y1="41" x2="212" y2="41" stroke="#30363d" stroke-width="2.5" />
-    </g>
+        <!-- 4. Main Fuselage (Aero Sleek Body) -->
+        <!-- Aerodynamic bullet nose to tapered tail cone -->
+        <path d="M-48,-1 Q-20,-5 20,-5 Q48,-5 58,1 Q46,7 18,7 Q-20,7 -48,2 Z" fill="url(#fuselageGrad)" stroke="#30363d" stroke-width="0.75" />
 
-    <!-- ======================================================== -->
-    <!-- F. STEAM LOCOMOTIVE (THE IRON HORSE) [x = 212 to 345]   -->
-    <!-- ======================================================== -->
-    <g id="locomotive">
-      <!-- 1. Engineer's Cab (Cockpit) -->
-      <path d="M212,44 L212,24 Q228,21 245,24 L245,44 Z" fill="#1c2128" stroke="#30363d" stroke-width="0.8" />
-      <!-- Cab Arched Window with Warm Glow -->
-      <path d="M220,34 L220,28 Q227,26 234,28 L234,34 Z" fill="url(#coachWindowGrad)" stroke="#451a03" stroke-width="0.6" />
-      <!-- Engineer Silhouette in Window -->
-      <circle cx="227" cy="30" r="2" fill="#1c1917" />
+        <!-- Nose Cone Radar Radome -->
+        <path d="M50,-2 Q58,1 50,4 Z" fill="#30363d" opacity="0.6" />
 
-      <!-- 2. Cylindrical Boiler Barrel -->
-      <rect x="244" y="25" width="85" height="17" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.8" />
-      <!-- Brass Boiler Bands (Riveted Rings) -->
-      <line x1="262" y1="25" x2="262" y2="42" stroke="url(#brassGrad)" stroke-width="0.9" />
-      <line x1="285" y1="25" x2="285" y2="42" stroke="url(#brassGrad)" stroke-width="0.9" />
-      <line x1="308" y1="25" x2="308" y2="42" stroke="url(#brassGrad)" stroke-width="0.9" />
+        <!-- Cockpit Windshield (Sleek Aviator Glass) -->
+        <path d="M42,-3 L48,-2 L46,0 L41,-0.5 Z" fill="url(#windowGlowGrad)" stroke="#161b22" stroke-width="0.4" />
 
-      <!-- 3. Domes on top of boiler -->
-      <!-- Sand Dome -->
-      <path d="M255,25 Q260,20 265,25 Z" fill="url(#brassGrad)" />
-      <!-- Steam Bell / Whistle -->
-      <rect x="274" y="22" width="3" height="3" fill="url(#brassGrad)" />
-      <!-- Steam Dome -->
-      <path d="M290,25 Q296,19 302,25 Z" fill="url(#brassGrad)" />
-
-      <!-- 4. Classic Flared Smokestack / Chimney -->
-      <path d="M308,25 L309,16 L306,14 L316,14 L313,16 L314,25 Z" fill="#21262d" stroke="#30363d" stroke-width="0.6" />
-      <line x1="306" y1="14" x2="316" y2="14" stroke="url(#brassGrad)" stroke-width="0.8" />
-
-      <!-- 5. Front Cowcatcher (Wedge Pilot Grill) -->
-      <polygon points="330,46 345,46 335,38 329,38" fill="#161b22" stroke="#484f58" stroke-width="0.8" />
-      <!-- Grate Struts -->
-      <line x1="333" y1="46" x2="331" y2="40" stroke="#8b949e" stroke-width="0.75" />
-      <line x1="337" y1="46" x2="333" y2="39" stroke="#8b949e" stroke-width="0.75" />
-      <line x1="341" y1="46" x2="335" y2="39" stroke="#8b949e" stroke-width="0.75" />
-
-      <!-- 6. Front Vintage Headlight Lantern -->
-      <rect x="330" y="27" width="8" height="8" rx="1.5" fill="#161b22" stroke="url(#brassGrad)" stroke-width="0.8" />
-      <!-- Glowing Lens Core -->
-      <circle cx="335" cy="31" r="2.8" fill="#fef08a" filter="url(#lanternGlow)">
-        <animate attributeName="opacity" values="0.85;1;0.85" dur="1.5s" repeatCount="indefinite" />
-      </circle>
-
-      <!-- 7. Piston Steam Cylinder Assembly -->
-      <rect x="312" y="38" width="16" height="6" rx="1" fill="#21262d" stroke="#484f58" stroke-width="0.7" />
-
-      <!-- 8. Wheels & Drive Mechanism -->
-      <!-- Small Front Pilot Wheels (Radius 3.2 at y=45) -->
-      <g>
-        <circle cx="320" cy="45" r="3.2" fill="#161b22" stroke="#8b949e" stroke-width="1" />
-        <circle cx="320" cy="45" r="1" fill="#ffffff" />
-        <circle cx="329" cy="45" r="3.2" fill="#161b22" stroke="#8b949e" stroke-width="1" />
-        <circle cx="329" cy="45" r="1" fill="#ffffff" />
-      </g>
-
-      <!-- Large Spoked Driving Wheels (Radius 6.5 at y=42) -->
-      <!-- Driver 1 (x = 245) -->
-      <g transform="translate(245, 42)">
-        <circle cx="0" cy="0" r="6.5" fill="#161b22" stroke="url(#brassGrad)" stroke-width="1.2" />
-        <!-- Rotating Spokes -->
-        <g>
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.8s" repeatCount="indefinite" />
-          <line x1="-5.5" y1="0" x2="5.5" y2="0" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="-4" y1="-4" x2="4" y2="4" stroke="#8b949e" stroke-width="0.6" />
-          <line x1="-4" y1="4" x2="4" y2="-4" stroke="#8b949e" stroke-width="0.6" />
-          <circle cx="0" cy="0" r="1.8" fill="#d29922" />
+        <!-- Passenger Window Strip (Illuminated Cabin Windows) -->
+        <g fill="url(#windowGlowGrad)" opacity="0.85">
+          <rect x="-32" y="0" width="3" height="2" rx="0.5" />
+          <rect x="-26" y="0" width="3" height="2" rx="0.5" />
+          <rect x="-20" y="0" width="3" height="2" rx="0.5" />
+          <rect x="-14" y="0" width="3" height="2" rx="0.5" />
+          <rect x="-8" y="0" width="3" height="2" rx="0.5" />
+          <rect x="-2" y="0" width="3" height="2" rx="0.5" />
+          <rect x="4" y="0" width="3" height="2" rx="0.5" />
+          <rect x="10" y="0" width="3" height="2" rx="0.5" />
+          <rect x="16" y="0" width="3" height="2" rx="0.5" />
+          <rect x="22" y="0" width="3" height="2" rx="0.5" />
+          <rect x="28" y="0" width="3" height="2" rx="0.5" />
+          <rect x="34" y="0" width="3" height="2" rx="0.5" />
         </g>
-      </g>
 
-      <!-- Driver 2 (x = 265) -->
-      <g transform="translate(265, 42)">
-        <circle cx="0" cy="0" r="6.5" fill="#161b22" stroke="url(#brassGrad)" stroke-width="1.2" />
-        <!-- Rotating Spokes -->
-        <g>
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.8s" repeatCount="indefinite" />
-          <line x1="-5.5" y1="0" x2="5.5" y2="0" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="-4" y1="-4" x2="4" y2="4" stroke="#8b949e" stroke-width="0.6" />
-          <line x1="-4" y1="4" x2="4" y2="-4" stroke="#8b949e" stroke-width="0.6" />
-          <circle cx="0" cy="0" r="1.8" fill="#d29922" />
+        <!-- Airline Livery Pinstripe -->
+        <path d="M-44,3 Q0,3 44,3" stroke="#00f0ff" stroke-width="0.8" opacity="0.85" />
+
+        <!-- 5. Near Main Swept Wing (Starboard Wing in Foreground) -->
+        <polygon points="-8,3 15,3 -6,17 -14,16" fill="url(#fuselageGrad)" stroke="#30363d" stroke-width="0.6" />
+        <!-- Winglet Tip (Turned Upward) -->
+        <polygon points="-14,16 -12,21 -10,21 -12,16" fill="#00f0ff" />
+
+        <!-- Wingtip Starboard Green Nav Light -->
+        <circle cx="-11" cy="21" r="1.6" fill="#22c55e" filter="url(#beaconGlow)">
+          <animate attributeName="opacity" values="1;0.4;1" dur="1s" repeatCount="indefinite" />
+        </circle>
+
+        <!-- 6. Turbofan Jet Engines -->
+        <!-- Upper Engine Pod -->
+        <g transform="translate(0, -3)">
+          <rect x="-12" y="-1" width="16" height="4" rx="1.5" fill="#30363d" stroke="#484f58" stroke-width="0.5" />
+          <line x1="4" y1="-1" x2="4" y2="3" stroke="#8b949e" stroke-width="0.8" />
         </g>
-      </g>
 
-      <!-- Driver 3 (x = 285) -->
-      <g transform="translate(285, 42)">
-        <circle cx="0" cy="0" r="6.5" fill="#161b22" stroke="url(#brassGrad)" stroke-width="1.2" />
-        <!-- Rotating Spokes -->
-        <g>
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.8s" repeatCount="indefinite" />
-          <line x1="-5.5" y1="0" x2="5.5" y2="0" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="-4" y1="-4" x2="4" y2="4" stroke="#8b949e" stroke-width="0.6" />
-          <line x1="-4" y1="4" x2="4" y2="-4" stroke="#8b949e" stroke-width="0.6" />
-          <circle cx="0" cy="0" r="1.8" fill="#d29922" />
+        <!-- Lower Engine Pod (Mounted on Near Wing) -->
+        <g transform="translate(4, 5)">
+          <rect x="-12" y="-1" width="18" height="5" rx="1.8" fill="#21262d" stroke="#484f58" stroke-width="0.6" />
+          <ellipse cx="6" cy="1.5" rx="1" ry="2.2" fill="#8b949e" />
+          <!-- Engine Pylon to Wing -->
+          <line x1="-2" y1="-1" x2="-2" y2="-4" stroke="#484f58" stroke-width="1.2" />
         </g>
-      </g>
 
-      <!-- Driver 4 (x = 305) -->
-      <g transform="translate(305, 42)">
-        <circle cx="0" cy="0" r="6.5" fill="#161b22" stroke="url(#brassGrad)" stroke-width="1.2" />
-        <!-- Rotating Spokes -->
-        <g>
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.8s" repeatCount="indefinite" />
-          <line x1="-5.5" y1="0" x2="5.5" y2="0" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#8b949e" stroke-width="0.75" />
-          <line x1="-4" y1="-4" x2="4" y2="4" stroke="#8b949e" stroke-width="0.6" />
-          <line x1="-4" y1="4" x2="4" y2="-4" stroke="#8b949e" stroke-width="0.6" />
-          <circle cx="0" cy="0" r="1.8" fill="#d29922" />
-        </g>
-      </g>
+        <!-- 7. Anti-Collision Fuselage Beacon (Red Flashing Strobe on Top) -->
+        <circle cx="-5" cy="-5.5" r="1.6" fill="#ef4444" filter="url(#beaconGlow)">
+          <animate attributeName="opacity" values="1;0.1;1" dur="0.9s" repeatCount="indefinite" />
+        </circle>
 
-      <!-- Side Coupling Rod Connecting the Drivers -->
-      <!-- Rotates/orbits on a 3px radius in sync with the wheel rotation -->
-      <g>
-        <line x1="245" y1="44" x2="305" y2="44" stroke="#e6edf3" stroke-width="1.5" stroke-linecap="round">
-          <animateTransform attributeName="transform" type="translate" values="0,0; 2,-2; 0,-4; -2,-2; 0,0" dur="0.8s" repeatCount="indefinite" />
-        </line>
-        <!-- Piston connecting rod to cylinder -->
-        <line x1="305" y1="44" x2="320" y2="41" stroke="#8b949e" stroke-width="1.2">
-          <animateTransform attributeName="transform" type="translate" values="0,0; 2,-2; 0,-4; -2,-2; 0,0" dur="0.8s" repeatCount="indefinite" />
-        </line>
       </g>
     </g>
   </g>
