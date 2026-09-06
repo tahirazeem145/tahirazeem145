@@ -56,9 +56,7 @@
       border: 1px solid rgba(0, 240, 255, 0.3);
     }
     .section-separator {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #30363d 15%, #30363d 85%, transparent);
-      margin: 40px 0;
+      margin: 28px 0;
       width: 100%;
     }
     .section-label {
@@ -186,7 +184,9 @@
       <img id="heroImg" src="hero.svg" alt="Tahir Azeem - Hero Banner" class="readme-svg" />
     </div>
 
-    <div class="section-separator"></div>
+    <div class="section-separator">
+      <img src="divider.svg" alt="Animated Divider" class="divider-img readme-svg" style="height: 32px;" />
+    </div>
 
     <!-- 02 — DEVELOPER SYSTEM (TAHIR_OS) -->
     <div class="section-label">
@@ -196,7 +196,9 @@
       <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS" class="readme-svg" />
     </div>
 
-    <div class="section-separator"></div>
+    <div class="section-separator">
+      <img src="divider.svg" alt="Animated Divider" class="divider-img readme-svg" style="height: 32px;" />
+    </div>
 
     <!-- 03 — PROJECT GALAXY -->
     <div class="section-label">
@@ -206,7 +208,9 @@
       <img id="galaxyImg" src="project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" class="readme-svg" />
     </div>
 
-    <div class="section-separator"></div>
+    <div class="section-separator">
+      <img src="divider.svg" alt="Animated Divider" class="divider-img readme-svg" style="height: 32px;" />
+    </div>
 
     <!-- 04 — CONTRIBUTION SNAKE -->
     <div class="section-label">
@@ -216,7 +220,9 @@
       <img id="snakeImg" src="contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" class="readme-svg" />
     </div>
 
-    <div class="section-separator"></div>
+    <div class="section-separator">
+      <img src="divider.svg" alt="Animated Divider" class="divider-img readme-svg" style="height: 32px;" />
+    </div>
 
     <!-- 05 — BUILDER MINDSET -->
     <div class="section-label">
@@ -226,7 +232,9 @@
       <img id="mindsetImg" src="builder-mindset.svg" alt="Tahir Azeem - Builder Mindset" class="readme-svg" />
     </div>
 
-    <div class="section-separator"></div>
+    <div class="section-separator">
+      <img src="divider.svg" alt="Animated Divider" class="divider-img readme-svg" style="height: 32px;" />
+    </div>
 
     <!-- 06 — CONNECTION -->
     <div class="section-label">
@@ -254,6 +262,7 @@
       document.getElementById('snakeImg').src = 'contribution-snake.svg?t=' + t;
       document.getElementById('mindsetImg').src = 'builder-mindset.svg?t=' + t;
       document.getElementById('connectionImg').src = 'connection.svg?t=' + t;
+      document.querySelectorAll('.divider-img').forEach(el => el.src = 'divider.svg?t=' + t);
     }
     window.addEventListener('DOMContentLoaded', () => {
       reloadAllSVGs();

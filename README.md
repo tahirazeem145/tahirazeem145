@@ -6,36 +6,36 @@
   </a>
 
   <br/><br/>
-  <hr width="100%" size="1" color="#21262d" />
-  <br/>
+  <img src="./divider.svg" alt="Animated Divider" width="100%" />
+  <br/><br/>
 
   <!-- 02 — DEVELOPER SYSTEM // TAHIR_OS -->
   <img src="./developer-system.svg" alt="Tahir Azeem - Developer System" width="100%" />
 
   <br/><br/>
-  <hr width="100%" size="1" color="#21262d" />
-  <br/>
+  <img src="./divider.svg" alt="Animated Divider" width="100%" />
+  <br/><br/>
 
   <!-- 03 — PROJECT GALAXY -->
   <img src="./project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" width="100%" />
 
   <br/><br/>
-  <hr width="100%" size="1" color="#21262d" />
-  <br/>
+  <img src="./divider.svg" alt="Animated Divider" width="100%" />
+  <br/><br/>
 
   <!-- 04 — CONTRIBUTION SNAKE -->
   <img src="./contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" width="100%" />
 
   <br/><br/>
-  <hr width="100%" size="1" color="#21262d" />
-  <br/>
+  <img src="./divider.svg" alt="Animated Divider" width="100%" />
+  <br/><br/>
 
   <!-- 05 — BUILDER MINDSET -->
   <img src="./builder-mindset.svg" alt="Tahir Azeem - Builder Mindset" width="100%" />
 
   <br/><br/>
-  <hr width="100%" size="1" color="#21262d" />
-  <br/>
+  <img src="./divider.svg" alt="Animated Divider" width="100%" />
+  <br/><br/>
 
   <!-- 06 — CONNECTION -->
   <img src="./connection.svg" alt="Tahir Azeem - Connection" width="100%" />
