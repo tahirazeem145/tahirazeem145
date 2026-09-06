@@ -26,8 +26,8 @@
 
       /* Ambient Aurora Pulse */
       @keyframes auroraGaze {
-        0%, 100% { opacity: 0.35; transform: scale(1); }
-        50% { opacity: 0.65; transform: scale(1.12); }
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.70; }
       }
 
       /* Subtle Link Capsule Pulse */
@@ -184,10 +184,10 @@
     <!-- Main Message / Invitation -->
     <g transform="translate(600, 102)" text-anchor="middle">
       <text x="0" y="0" fill="#8b949e" class="font-sans" font-size="16" font-style="italic" font-weight="400" letter-spacing="0.5">
-        &ldquo;If you&rsquo;ve made it this far,
+        &quot;If you&apos;ve made it this far,
       </text>
       <text x="0" y="28" fill="url(#quoteGrad)" class="font-sans" font-size="20" font-weight="700" letter-spacing="0.8" filter="url(#softGlow)">
-        let&rsquo;s build something worth shipping.&rdquo;
+        let&apos;s build something worth shipping.&quot;
       </text>
     </g>
 
