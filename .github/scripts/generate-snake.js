@@ -133,78 +133,142 @@ function getMonthLabels(grid) {
   return filtered;
 }
 
+function bfsGridPath(fromCol, fromRow, toCol, toRow) {
+  const queue = [[{ col: fromCol, row: fromRow }]];
+  const visited = new Set([`${fromCol},${fromRow}`]);
+  while (queue.length > 0) {
+    const path = queue.shift();
+    const curr = path[path.length - 1];
+    if (curr.col === toCol && curr.row === toRow) {
+      return path;
+    }
+    const dirs = [
+      { col: curr.col + 1, row: curr.row },
+      { col: curr.col - 1, row: curr.row },
+      { col: curr.col, row: curr.row + 1 },
+      { col: curr.col, row: curr.row - 1 }
+    ];
+    for (const d of dirs) {
+      if (d.col >= 0 && d.col < 53 && d.row >= 0 && d.row < 7) {
+        const key = `${d.col},${d.row}`;
+        if (!visited.has(key)) {
+          visited.add(key);
+          queue.push([...path, d]);
+        }
+      }
+    }
+  }
+  return null;
+}
+
 function solveSnakeTour(targets) {
-  // targets: array of { col, row, cx, cy, id, level }
-  // Snake stays strictly inside grid rows (row 0..6: cy = 172.5 ... 286.5)
   if (targets.length === 0) {
     return { pathD: 'M 105 172.5 L 1100 172.5 L 105 172.5', orderedTargets: [] };
   }
 
-  // Sort targets in a serpentine / column-ordered path
-  // Group targets by column
-  const cols = {};
-  targets.forEach(t => {
-    if (!cols[t.col]) cols[t.col] = [];
-    cols[t.col].push(t);
+  const targetMap = new Map();
+  targets.forEach(t => targetMap.set(`${t.col},${t.row}`, t));
+
+  // Start approach 1 cell to the left of first target
+  const firstTarget = targets[0];
+  const startCol = Math.max(0, firstTarget.col - 1);
+  const startRow = firstTarget.row;
+
+  const pathGridCells = [{ col: startCol, row: startRow }, { col: firstTarget.col, row: firstTarget.row }];
+  const uneaten = new Set(targets.map(t => t.id));
+  const orderedTargets = [];
+
+  // Eat first target
+  if (uneaten.has(firstTarget.id)) {
+    uneaten.delete(firstTarget.id);
+    firstTarget.cellIdx = 1;
+    orderedTargets.push(firstTarget);
+  }
+
+  let currPos = { col: firstTarget.col, row: firstTarget.row };
+
+  while (uneaten.size > 0) {
+    // Find closest uneaten target by Manhattan distance
+    let closest = null;
+    let minDist = Infinity;
+    for (const id of uneaten) {
+      const t = targets.find(item => item.id === id);
+      const dist = Math.abs(t.col - currPos.col) + Math.abs(t.row - currPos.row);
+      if (dist < minDist) {
+        minDist = dist;
+        closest = t;
+      }
+    }
+
+    const subPath = bfsGridPath(currPos.col, currPos.row, closest.col, closest.row);
+    for (let i = 1; i < subPath.length; i++) {
+      const p = subPath[i];
+      pathGridCells.push(p);
+      const t = targetMap.get(`${p.col},${p.row}`);
+      if (t && uneaten.has(t.id)) {
+        uneaten.delete(t.id);
+        t.cellIdx = pathGridCells.length - 1;
+        orderedTargets.push(t);
+      }
+    }
+    currPos = { col: closest.col, row: closest.row };
+  }
+
+  // Return to start approach cell
+  const returnPath = bfsGridPath(currPos.col, currPos.row, startCol, startRow);
+  for (let i = 1; i < returnPath.length; i++) {
+    pathGridCells.push(returnPath[i]);
+  }
+
+  // Convert grid cells to pixel coordinates
+  const pts = pathGridCells.map(c => ({
+    x: 105 + c.col * 19 + 7.5,
+    y: 165 + c.row * 19 + 7.5
+  }));
+
+  // Compress collinear segments
+  const compressedPts = [pts[0]];
+  for (let i = 1; i < pts.length - 1; i++) {
+    const prev = compressedPts[compressedPts.length - 1];
+    const curr = pts[i];
+    const next = pts[i + 1];
+    const dx1 = curr.x - prev.x, dy1 = curr.y - prev.y;
+    const dx2 = next.x - curr.x, dy2 = next.y - curr.y;
+    if (dx1 * dy2 !== dy1 * dx2 || (dx1 === 0 && dx2 === 0 && Math.sign(dy1) !== Math.sign(dy2)) || (dy1 === 0 && dy2 === 0 && Math.sign(dx1) !== Math.sign(dx2))) {
+      compressedPts.push(curr);
+    }
+  }
+  compressedPts.push(pts[pts.length - 1]);
+
+  // Compute cumulative distances
+  compressedPts[0].dist = 0;
+  let totalDist = 0;
+  for (let i = 1; i < compressedPts.length; i++) {
+    totalDist += Math.hypot(compressedPts[i].x - compressedPts[i-1].x, compressedPts[i].y - compressedPts[i-1].y);
+    compressedPts[i].dist = totalDist;
+  }
+
+  // Calculate hit percentage for each eaten target
+  orderedTargets.forEach(t => {
+    const pt = pts[t.cellIdx];
+    for (let i = 0; i < compressedPts.length - 1; i++) {
+      const p1 = compressedPts[i];
+      const p2 = compressedPts[i + 1];
+      const segLen = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+      const d1 = Math.hypot(pt.x - p1.x, pt.y - p1.y);
+      const d2 = Math.hypot(pt.x - p2.x, pt.y - p2.y);
+      if (Math.abs(d1 + d2 - segLen) < 0.1) {
+        t.hitDist = p1.dist + d1;
+        t.hitPct = totalDist > 0 ? (t.hitDist / totalDist) * 100 : 0;
+        break;
+      }
+    }
   });
 
-  const sortedColIndices = Object.keys(cols).map(Number).sort((a, b) => a - b);
-  const orderedTargets = [];
-  let goingDown = true;
-
-  for (const c of sortedColIndices) {
-    const list = cols[c];
-    list.sort((a, b) => goingDown ? a.row - b.row : b.row - a.row);
-    orderedTargets.push(...list);
-    goingDown = !goingDown; // Serpentine alternation
-  }
-
-  // Build points with Manhattan movements strictly inside rows
-  const pts = [];
-  const startX = Math.max(105 + 7.5, orderedTargets[0].cx - 19);
-  const startY = orderedTargets[0].cy;
-  pts.push({ x: startX, y: startY });
-
-  // First target
-  pts.push({ x: orderedTargets[0].cx, y: orderedTargets[0].cy, target: orderedTargets[0] });
-
-  for (let i = 1; i < orderedTargets.length; i++) {
-    const prev = orderedTargets[i - 1];
-    const curr = orderedTargets[i];
-    if (prev.cx !== curr.cx && prev.cy !== curr.cy) {
-      // Corner waypoint inside grid
-      pts.push({ x: curr.cx, y: prev.cy });
-    }
-    pts.push({ x: curr.cx, y: curr.cy, target: curr });
-  }
-
-  // Close loop back to start point
-  const last = pts[pts.length - 1];
-  if (last.y !== startY) {
-    pts.push({ x: last.x, y: startY });
-  }
-  pts.push({ x: startX, y: startY });
-
-  // Calculate cumulative distances along path
-  pts[0].cumDist = 0;
-  let totalDist = 0;
-  for (let i = 1; i < pts.length; i++) {
-    totalDist += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
-    pts[i].cumDist = totalDist;
-  }
-
-  // Assign hitPct to each target directly from its waypoint
-  for (let i = 0; i < pts.length; i++) {
-    if (pts[i].target) {
-      pts[i].target.hitDist = pts[i].cumDist;
-      pts[i].target.hitPct = totalDist > 0 ? (pts[i].cumDist / totalDist) * 100 : 0;
-    }
-  }
-
-  // Build SVG path D string
-  const dParts = [`M ${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`];
-  for (let i = 1; i < pts.length; i++) {
-    dParts.push(`L ${pts[i].x.toFixed(1)} ${pts[i].y.toFixed(1)}`);
+  // Build SVG path string
+  const dParts = [`M ${compressedPts[0].x.toFixed(1)} ${compressedPts[0].y.toFixed(1)}`];
+  for (let i = 1; i < compressedPts.length; i++) {
+    dParts.push(`L ${compressedPts[i].x.toFixed(1)} ${compressedPts[i].y.toFixed(1)}`);
   }
   const pathD = dParts.join(' ');
 
@@ -265,10 +329,10 @@ async function generate() {
   // 5. All eaten boxes reappear together at 97.5% - 100%
   const keyframesCSS = orderedTargets.map(t => {
     const p = t.hitPct;
-    const pPre = Math.max(0, p - 0.25).toFixed(2);
+    const pPre = Math.max(0, p - 0.20).toFixed(2);
     const pContact = p.toFixed(2);
-    const pFlash = Math.min(95.5, p + 0.35).toFixed(2);
-    const pGone = Math.min(95.8, p + 0.75).toFixed(2);
+    const pFlash = Math.min(95.5, p + 0.25).toFixed(2);
+    const pGone = Math.min(95.8, p + 0.50).toFixed(2);
 
     return `
       @keyframes eatCell_${t.id} {
@@ -282,19 +346,20 @@ async function generate() {
       .food-cell-${t.id} {
         fill: ${t.origFill};
         stroke: ${t.origStroke};
-        animation: eatCell_${t.id} 24s ease-out infinite;
+        animation: eatCell_${t.id} 24s linear infinite !important;
       }`;
   }).join('\n');
 
   // Month labels SVG
   const monthTexts = months.map(m => `<text x="${m.x - 105}" y="0">${m.name}</text>`).join('\n        ');
 
-  // Grid Rectangles SVG
+  // Grid Rectangles SVG (Base cell under each food cell so disappearance shows empty cell)
   const gridRects = grid.map(cell => {
+    const baseCell = `<rect x="${cell.x}" y="${cell.y}" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />`;
     if (cell.level > 0 && cell.foodId !== undefined) {
-      return `<rect class="food-cell-${cell.foodId}" x="${cell.x}" y="${cell.y}" width="15" height="15" rx="3" stroke-width="0.75" />`;
+      return `${baseCell}\n        <rect class="food-cell-${cell.foodId}" x="${cell.x}" y="${cell.y}" width="15" height="15" rx="3" stroke-width="0.75" />`;
     } else {
-      return `<rect x="${cell.x}" y="${cell.y}" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />`;
+      return baseCell;
     }
   }).join('\n        ');
 
