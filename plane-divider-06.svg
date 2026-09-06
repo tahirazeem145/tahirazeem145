@@ -1,21 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 64" width="100%" height="64" fill="none" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <!-- Lightweight Micro Glow Filters -->
-    <filter id="strobeGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    <!-- Hardware-Accelerated Strobe Glow Flares (Pure Vector Radial Gradients, 0% CPU Filter Lag) -->
+    <radialGradient id="redBeaconFlare" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4d4f" stop-opacity="1" />
+      <stop offset="35%" stop-color="#ef4444" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#ef4444" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0" />
+    </radialGradient>
 
-    <filter id="thrustGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    <radialGradient id="whiteStrobeFlare" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="40%" stop-color="#e0f2fe" stop-opacity="0.75" />
+      <stop offset="75%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="greenNavFlare" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="1" />
+      <stop offset="40%" stop-color="#22c55e" stop-opacity="0.75" />
+      <stop offset="75%" stop-color="#16a34a" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#16a34a" stop-opacity="0" />
+    </radialGradient>
 
     <!-- Flight Corridor Path Gradient -->
     <linearGradient id="flightPathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -29,17 +34,17 @@
     <!-- Jet Contrail Gradient (High Density Vapor Trail) -->
     <linearGradient id="contrailGrad" x1="100%" y1="0%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-      <stop offset="20%" stop-color="#a5f3fc" stop-opacity="0.6" />
-      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.3" />
-      <stop offset="85%" stop-color="#0284c7" stop-opacity="0.1" />
+      <stop offset="15%" stop-color="#bae6fd" stop-opacity="0.65" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="85%" stop-color="#0284c7" stop-opacity="0.08" />
       <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
     </linearGradient>
 
     <!-- Jet Engine Afterburner Flame Gradient -->
     <linearGradient id="thrustFlameGrad" x1="100%" y1="0%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
-      <stop offset="25%" stop-color="#67e8f9" stop-opacity="1" />
-      <stop offset="65%" stop-color="#0284c7" stop-opacity="0.8" />
+      <stop offset="20%" stop-color="#67e8f9" stop-opacity="1" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
 
@@ -70,6 +75,21 @@
       <stop offset="100%" stop-color="#0d1117" stop-opacity="0.92" />
     </linearGradient>
   </defs>
+
+  <style>
+    @keyframes smoothAeroCruise {
+      0% {
+        transform: translate3d(-460px, 0, 0);
+      }
+      100% {
+        transform: translate3d(1750px, 0, 0);
+      }
+    }
+    .smooth-flight-assembly {
+      animation: smoothAeroCruise 18s linear infinite;
+      will-change: transform;
+    }
+  </style>
 
   <!-- Base Ambient Airway Track -->
   <line x1="40" y1="32" x2="1160" y2="32" stroke="#21262d" stroke-width="1.2" />
@@ -106,11 +126,11 @@
   </g>
 
   <!-- THE AIRPLANE AND TOWED SKY-BANNER ASSEMBLY -->
-  <!-- Silky Smooth Aerodynamic Gliding: 14s duration for optimal cruising speed -->
-  <g>
+  <!-- GPU Compositor-Accelerated 18s Silky Smooth Glide (Sub-Pixel 60/120/144Hz Smoothness) -->
+  <g class="smooth-flight-assembly">
     <animateTransform attributeName="transform" type="translate"
-      from="-450 0" to="1750 0"
-      dur="14s" repeatCount="indefinite" />
+      from="-460 0" to="1750 0"
+      dur="18s" repeatCount="indefinite" />
 
     <!-- Static Vertical Centering at y=32 -->
     <g transform="translate(0, 32)">
@@ -149,24 +169,16 @@
         </g>
       </g>
 
-      <!-- 3. JET ENGINE CONTRAIL TRAILS (GPU Optimized Opacity Wave) -->
+      <!-- 3. JET ENGINE CONTRAIL TRAILS (Ultra Clean Gradient Stream) -->
       <g opacity="0.85">
-        <rect x="-150" y="-15" width="135" height="2.2" rx="1.1" fill="url(#contrailGrad)">
-          <animate attributeName="opacity" values="0.7;0.95;0.7" dur="2s" repeatCount="indefinite" />
-        </rect>
-        <rect x="-150" y="14" width="135" height="2.4" rx="1.2" fill="url(#contrailGrad)">
-          <animate attributeName="opacity" values="0.75;1;0.75" dur="2s" begin="-1s" repeatCount="indefinite" />
-        </rect>
+        <rect x="-160" y="-15" width="145" height="2.2" rx="1.1" fill="url(#contrailGrad)" />
+        <rect x="-160" y="14" width="145" height="2.4" rx="1.2" fill="url(#contrailGrad)" />
       </g>
 
-      <!-- 4. JET ENGINE AFTERBURNER FLAMES (Hardware-Accelerated Opacity Flicker) -->
-      <g filter="url(#thrustGlow)">
-        <polygon points="-16,-4.5 -40,-3 -16,-1.5" fill="url(#thrustFlameGrad)">
-          <animate attributeName="opacity" values="0.85;1;0.85" dur="0.2s" repeatCount="indefinite" />
-        </polygon>
-        <polygon points="-10,5.5 -36,7 -10,8.5" fill="url(#thrustFlameGrad)">
-          <animate attributeName="opacity" values="0.85;1;0.85" dur="0.24s" repeatCount="indefinite" />
-        </polygon>
+      <!-- 4. JET ENGINE AFTERBURNER FLAMES -->
+      <g>
+        <polygon points="-16,-4.5 -40,-3 -16,-1.5" fill="url(#thrustFlameGrad)" />
+        <polygon points="-10,5.5 -36,7 -10,8.5" fill="url(#thrustFlameGrad)" />
       </g>
 
       <!-- 5. THE AIRCRAFT -->
@@ -174,9 +186,9 @@
         <!-- Far Port Wing -->
         <polygon points="-8,-5 12,-5 -18,-20 -25,-19" fill="#475569" stroke="#334155" stroke-width="0.6" />
         <line x1="-25" y1="-19" x2="-27" y2="-24" stroke="#00f0ff" stroke-width="1.5" />
-        <circle cx="-27" cy="-24" r="1.8" fill="#ef4444" filter="url(#strobeGlow)">
-          <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite" />
-        </circle>
+        <!-- Port Wingtip Red Nav Light (Pure Vector Gradient Glow) -->
+        <circle cx="-27" cy="-24" r="3.5" fill="url(#redBeaconFlare)" />
+        <circle cx="-27" cy="-24" r="1.2" fill="#ffffff" />
 
         <!-- Horizontal Tail Stabilizer -->
         <polygon points="-60,-2 -46,-2 -64,-12 -70,-11" fill="#64748b" stroke="#334155" stroke-width="0.6" />
@@ -185,10 +197,9 @@
         <polygon points="-50,-4 -36,-4 -58,-28 -66,-28" fill="url(#fuselageGrad)" stroke="#334155" stroke-width="0.75" />
         <polygon points="-52,-14 -44,-14 -56,-26 -63,-26" fill="#00f0ff" opacity="0.9" />
 
-        <!-- White Tail Strobe Beacon -->
-        <circle cx="-62" cy="-28" r="2.2" fill="#ffffff" filter="url(#strobeGlow)">
-          <animate attributeName="opacity" values="1;0;0;1;0;0" dur="1.2s" repeatCount="indefinite" />
-        </circle>
+        <!-- White Tail Strobe Beacon (Pure Vector Gradient Glow) -->
+        <circle cx="-62" cy="-28" r="4" fill="url(#whiteStrobeFlare)" />
+        <circle cx="-62" cy="-28" r="1.5" fill="#ffffff" />
 
         <!-- Main Fuselage -->
         <path d="M-64,-1 Q-25,-6 25,-6 Q65,-6 76,1 Q62,8 24,8 Q-25,8 -64,2 Z" fill="url(#fuselageGrad)" stroke="#334155" stroke-width="0.9" />
@@ -218,9 +229,9 @@
         <!-- Near Starboard Wing -->
         <polygon points="-12,4 20,4 -10,22 -20,21" fill="url(#fuselageGrad)" stroke="#334155" stroke-width="0.75" />
         <polygon points="-20,21 -17,27 -14,27 -17,21" fill="#00f0ff" />
-        <circle cx="-15.5" cy="27" r="2" fill="#22c55e" filter="url(#strobeGlow)">
-          <animate attributeName="opacity" values="1;0.35;1" dur="1s" repeatCount="indefinite" />
-        </circle>
+        <!-- Starboard Wingtip Green Nav Light (Pure Vector Gradient Glow) -->
+        <circle cx="-15.5" cy="27" r="3.5" fill="url(#greenNavFlare)" />
+        <circle cx="-15.5" cy="27" r="1.2" fill="#ffffff" />
 
         <!-- Turbofan Engines -->
         <g transform="translate(-2, -4)">
@@ -233,10 +244,9 @@
           <line x1="-3" y1="-1.5" x2="-3" y2="-5" stroke="#475569" stroke-width="1.5" />
         </g>
 
-        <!-- Red Top Strobe Beacon -->
-        <circle cx="-6" cy="-6.8" r="2" fill="#ef4444" filter="url(#strobeGlow)">
-          <animate attributeName="opacity" values="1;0.1;1" dur="0.8s" repeatCount="indefinite" />
-        </circle>
+        <!-- Red Top Strobe Beacon (Pure Vector Gradient Glow) -->
+        <circle cx="-6" cy="-6.8" r="3.8" fill="url(#redBeaconFlare)" />
+        <circle cx="-6" cy="-6.8" r="1.2" fill="#ffffff" />
       </g>
     </g>
   </g>
