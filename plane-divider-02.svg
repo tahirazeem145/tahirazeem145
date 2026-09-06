@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 64" width="100%" height="64" fill="none" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <!-- Glow Filters (Only for small local lights, not on moving groups) -->
+    <!-- Micro Glow Filters -->
     <filter id="strobeGlow" x="-100%" y="-100%" width="300%" height="300%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
@@ -106,22 +106,14 @@
   </g>
 
   <!-- THE AIRPLANE AND TOWED SKY-BANNER ASSEMBLY -->
-  <!-- Pure Unidirectional Left-to-Right Continuous Loop: -->
-  <!-- 1. Flight starts completely off-screen left at -500 -->
-  <!-- 2. Screen is clear for initial ~2.3s pause -->
-  <!-- 3. Aircraft emerges smoothly from left (x=0 at ~2.3s) -->
-  <!-- 4. Plane tows text banner completely across the screen -->
-  <!-- 5. Plane exits right, banner continues all the way across to the right -->
-  <!-- 6. Banner completely clears off-screen right past 1200 at 1700 (~11.5s) -->
-  <!-- 7. At 12s, resets to -500 off-screen, giving a clear sky pause before next flight! -->
+  <!-- 100% UNIDIRECTIONAL LEFT-TO-RIGHT TRANSLATION: NO BACKWARD GLITCH -->
   <g>
     <animateTransform attributeName="transform" type="translate"
-      from="-500 0" to="1700 0"
+      from="-460 0" to="1750 0"
       dur="12s" repeatCount="indefinite" />
 
-    <!-- Aerodynamic Altitude Bob (Gentle Wave) -->
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0 32; 0 30; 0 34; 0 32" dur="3.6s" repeatCount="indefinite" />
+    <!-- Static Vertical Centering at y=32 -->
+    <g transform="translate(0, 32)">
 
       <!-- 1. TOW CABLES (Linking Aircraft Tail to Banner) -->
       <g stroke="#94a3b8" stroke-width="1.2" opacity="0.9">
