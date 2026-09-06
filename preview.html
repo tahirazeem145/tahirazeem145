@@ -185,7 +185,7 @@
     </div>
 
     <div class="section-separator">
-      <img src="plane-divider.svg" alt="Animated Airplane Divider" class="divider-img readme-svg" style="height: 50px;" />
+      <img id="div02" src="plane-divider-02.svg" alt="NEXT: 02 Developer System" class="divider-img readme-svg" style="height: 50px;" />
     </div>
 
     <!-- 02 — DEVELOPER SYSTEM (TAHIR_OS) -->
@@ -197,7 +197,7 @@
     </div>
 
     <div class="section-separator">
-      <img src="plane-divider.svg" alt="Animated Airplane Divider" class="divider-img readme-svg" style="height: 50px;" />
+      <img id="div03" src="plane-divider-03.svg" alt="NEXT: 03 Project Galaxy" class="divider-img readme-svg" style="height: 50px;" />
     </div>
 
     <!-- 03 — PROJECT GALAXY -->
@@ -209,7 +209,7 @@
     </div>
 
     <div class="section-separator">
-      <img src="plane-divider.svg" alt="Animated Airplane Divider" class="divider-img readme-svg" style="height: 50px;" />
+      <img id="div04" src="plane-divider-04.svg" alt="NEXT: 04 Contribution Snake" class="divider-img readme-svg" style="height: 50px;" />
     </div>
 
     <!-- 04 — CONTRIBUTION SNAKE -->
@@ -221,7 +221,7 @@
     </div>
 
     <div class="section-separator">
-      <img src="plane-divider.svg" alt="Animated Airplane Divider" class="divider-img readme-svg" style="height: 50px;" />
+      <img id="div05" src="plane-divider-05.svg" alt="NEXT: 05 Builder Mindset" class="divider-img readme-svg" style="height: 50px;" />
     </div>
 
     <!-- 05 — BUILDER MINDSET -->
@@ -233,7 +233,7 @@
     </div>
 
     <div class="section-separator">
-      <img src="plane-divider.svg" alt="Animated Airplane Divider" class="divider-img readme-svg" style="height: 50px;" />
+      <img id="div06" src="plane-divider-06.svg" alt="NEXT: 06 Connection" class="divider-img readme-svg" style="height: 50px;" />
     </div>
 
     <!-- 06 — CONNECTION -->
@@ -262,7 +262,11 @@
       document.getElementById('snakeImg').src = 'contribution-snake.svg?t=' + t;
       document.getElementById('mindsetImg').src = 'builder-mindset.svg?t=' + t;
       document.getElementById('connectionImg').src = 'connection.svg?t=' + t;
-      document.querySelectorAll('.divider-img').forEach(el => el.src = 'plane-divider.svg?t=' + t);
+      document.getElementById('div02').src = 'plane-divider-02.svg?t=' + t;
+      document.getElementById('div03').src = 'plane-divider-03.svg?t=' + t;
+      document.getElementById('div04').src = 'plane-divider-04.svg?t=' + t;
+      document.getElementById('div05').src = 'plane-divider-05.svg?t=' + t;
+      document.getElementById('div06').src = 'plane-divider-06.svg?t=' + t;
     }
     window.addEventListener('DOMContentLoaded', () => {
       reloadAllSVGs();

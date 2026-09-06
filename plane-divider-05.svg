@@ -158,10 +158,10 @@
           <text x="-133" y="3" fill="#00f0ff" font-size="7.5" font-weight="bold" text-anchor="middle" letter-spacing="1">NEXT ✈</text>
 
           <!-- Main Section Title Text -->
-          <text x="-172" y="3.5" fill="#ffffff" font-size="9" font-weight="800" text-anchor="end" letter-spacing="0.8">02 // DEVELOPER SYSTEM</text>
+          <text x="-172" y="3.5" fill="#ffffff" font-size="9" font-weight="800" text-anchor="end" letter-spacing="0.8">05 // BUILDER MINDSET</text>
           
           <!-- Trailing Subtitle Pill -->
-          <text x="-350" y="3" fill="#c084fc" font-size="6.5" font-weight="600" text-anchor="end" letter-spacing="0.6">// TAHIR_OS</text>
+          <text x="-350" y="3" fill="#c084fc" font-size="6.5" font-weight="600" text-anchor="end" letter-spacing="0.6">// THE PHILOSOPHY</text>
         </g>
       </g>
 
