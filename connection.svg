@@ -202,7 +202,7 @@
       </a>
 
       <!-- 02: LinkedIn -->
-      <a xlink:href="LINKEDIN_URL_HERE" target="_blank" class="link-capsule">
+      <a xlink:href="https://in.linkedin.com/in/tahirazeem-r" target="_blank" class="link-capsule">
         <rect x="-130" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#30363d" stroke-width="1" />
         <text x="-70" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
           → LinkedIn
@@ -210,7 +210,7 @@
       </a>
 
       <!-- 03: Email -->
-      <a xlink:href="mailto:EMAIL_HERE" class="link-capsule">
+      <a xlink:href="mailto:tahirazeems145s@gmail.com" class="link-capsule">
         <rect x="10" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#30363d" stroke-width="1" />
         <text x="70" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
           → Email
@@ -218,7 +218,7 @@
       </a>
 
       <!-- 04: Portfolio -->
-      <a xlink:href="PORTFOLIO_URL_HERE" target="_blank" class="link-capsule">
+      <a xlink:href="https://tahirazeemportfolio.vercel.app" target="_blank" class="link-capsule">
         <rect x="150" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#30363d" stroke-width="1" />
         <text x="210" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
           → Portfolio

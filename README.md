@@ -32,6 +32,6 @@
 
   <br/>
 
-  → [GitHub](https://github.com/tahirazeem145) &nbsp;·&nbsp; → [LinkedIn](LINKEDIN_URL_HERE) &nbsp;·&nbsp; → [Email](mailto:EMAIL_HERE) &nbsp;·&nbsp; → [Portfolio](PORTFOLIO_URL_HERE)
+  → [GitHub](https://github.com/tahirazeem145) &nbsp;·&nbsp; → [LinkedIn](https://in.linkedin.com/in/tahirazeem-r) &nbsp;·&nbsp; → [Email](mailto:tahirazeems145s@gmail.com) &nbsp;·&nbsp; → [Portfolio](https://tahirazeemportfolio.vercel.app)
 
 </div>
