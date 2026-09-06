@@ -96,6 +96,13 @@
       box-shadow: 0 14px 45px rgba(34, 197, 94, 0.14), 0 6px 24px rgba(0, 240, 255, 0.12);
       border: 1px solid rgba(34, 197, 94, 0.3);
     }
+    .svg-wrapper-mindset {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 14px 45px rgba(168, 85, 247, 0.14), 0 6px 24px rgba(0, 240, 255, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+    }
     .readme-svg {
       width: 100%;
       height: auto;
@@ -199,6 +206,15 @@
       <img id="snakeImg" src="contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" class="readme-svg" />
     </div>
 
+    <div class="section-separator"></div>
+
+    <!-- 05 — BUILDER MINDSET -->
+    <div class="section-label">
+      <span>✦</span> 05 — BUILDER MINDSET // THE PHILOSOPHY
+    </div>
+    <div class="svg-wrapper-mindset">
+      <img id="mindsetImg" src="builder-mindset.svg" alt="Tahir Azeem - Builder Mindset" class="readme-svg" />
+    </div>
 
   </div>
 
@@ -209,6 +225,7 @@
       document.getElementById('systemImg').src = 'developer-system.svg?t=' + t;
       document.getElementById('galaxyImg').src = 'project-galaxy.svg?t=' + t;
       document.getElementById('snakeImg').src = 'contribution-snake.svg?t=' + t;
+      document.getElementById('mindsetImg').src = 'builder-mindset.svg?t=' + t;
     }
     window.addEventListener('DOMContentLoaded', () => {
       reloadAllSVGs();

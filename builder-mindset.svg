@@ -1,0 +1,476 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap');
+
+      .font-display {
+        font-family: 'Outfit', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      .font-sans {
+        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+      }
+
+      /* ============================================================ */
+      /* ENTRANCE TIMELINE (0s - 6s)                                  */
+      /* ============================================================ */
+      @keyframes bgFadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes manifestoReveal {
+        0% { opacity: 0; transform: translateY(18px); }
+        100% { opacity: 1; transform: translateY(0px); }
+      }
+
+      @keyframes subReveal {
+        0% { opacity: 0; transform: translateY(12px); }
+        100% { opacity: 1; transform: translateY(0px); }
+      }
+
+      @keyframes loopDrawIn {
+        0% { stroke-dashoffset: 2400; opacity: 0; }
+        50% { opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 1; }
+      }
+
+      @keyframes nodePopIn {
+        0% { opacity: 0; transform: scale(0.95); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+
+      /* ============================================================ */
+      /* IDLE TIMELINE (6s+)                                          */
+      /* ============================================================ */
+      @keyframes coreAuraPulse {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.08); }
+      }
+
+      @keyframes alwaysBuildingBreathe {
+        0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 2px rgba(57, 211, 83, 0.4)); }
+        50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(57, 211, 83, 0.85)); }
+      }
+
+      @keyframes nodePulseGlow {
+        0%, 100% { stroke: #21262d; }
+        50% { stroke: rgba(0, 240, 255, 0.45); }
+      }
+
+      @keyframes particleSparkle {
+        0%, 100% { opacity: 0.9; r: 3.5; }
+        50% { opacity: 1; r: 4.8; }
+      }
+
+      /* Component Classes with Orchestrated Delays */
+      .anim-bg { animation: bgFadeIn 1s ease-out forwards; }
+      .anim-hdr { animation: bgFadeIn 0.8s ease-out 0.4s both; }
+      .anim-manifesto { animation: manifestoReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) 1.0s both; }
+      .anim-supporting { animation: subReveal 1.0s cubic-bezier(0.16, 1, 0.3, 1) 1.8s both; }
+      .anim-circuit {
+        stroke-dasharray: 2400;
+        stroke-dashoffset: 2400;
+        animation: loopDrawIn 1.6s ease-out 2.8s forwards;
+      }
+
+      .node-01 { animation: nodePopIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 3.6s both; }
+      .node-02 { animation: nodePopIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 3.9s both; }
+      .node-03 { animation: nodePopIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 4.2s both; }
+      .node-04 { animation: nodePopIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 4.5s both; }
+      .node-05 { animation: nodePopIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 4.8s both; }
+      .node-06 { animation: nodePopIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 5.1s both; }
+      .anim-ftr { animation: bgFadeIn 0.8s ease-out 5.4s both; }
+
+      .breathe-status { animation: alwaysBuildingBreathe 3s ease-in-out infinite; }
+      .pulse-core { animation: coreAuraPulse 6s ease-in-out infinite; }
+      .glow-particle { animation: particleSparkle 2s ease-in-out infinite; }
+    </style>
+
+    <!-- Filters -->
+    <filter id="softCyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="particleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="bgCanvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06090e" />
+      <stop offset="45%" stop-color="#0b0f17" />
+      <stop offset="100%" stop-color="#06090e" />
+    </linearGradient>
+
+    <radialGradient id="manifestoAura" cx="50%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.07" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#06090e" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="loopAura" cx="50%" cy="65%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.06" />
+      <stop offset="55%" stop-color="#00f0ff" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#06090e" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Typography Emphasized Linear Gradient -->
+    <linearGradient id="heroTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e0f2fe" />
+      <stop offset="75%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="cyanTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="60%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#30363d" />
+      <stop offset="50%" stop-color="#21262d" />
+      <stop offset="100%" stop-color="#30363d" />
+    </linearGradient>
+
+    <linearGradient id="dividerFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00f0ff" stop-opacity="0.4" />
+      <stop offset="80%" stop-color="#a855f7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="nodeGlassBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b26" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.85" />
+    </linearGradient>
+
+    <clipPath id="mindsetClip">
+      <rect x="0" y="0" width="1200" height="700" rx="14" />
+    </clipPath>
+
+    <!-- Master Racetrack Loop Path Connecting all 6 stages -->
+    <!-- Top row Y=360 (left=220, mid=600, right=980) -->
+    <!-- Right curve down to Y=510 -->
+    <!-- Bottom row Y=510 (right=980, mid=600, left=220) -->
+    <!-- Left curve up back to Y=360 -->
+    <path id="builderLoopTrack" d="M 220 360 L 980 360 A 75 75 0 0 1 980 510 L 220 510 A 75 75 0 0 1 220 360" fill="none" />
+  </defs>
+
+  <!-- Outer Canvas Container -->
+  <g clip-path="url(#mindsetClip)">
+    <!-- Base Deep Atmosphere Background -->
+    <rect width="1200" height="700" fill="url(#bgCanvasGrad)" class="anim-bg" />
+
+    <!-- Ambient Subtle Glowing Auras -->
+    <circle cx="600" cy="180" r="380" fill="url(#manifestoAura)" class="pulse-core" />
+    <circle cx="600" cy="450" r="440" fill="url(#loopAura)" class="pulse-core" />
+
+    <!-- Faint Technical Grid Dots (Minimalist Laboratory Grid) -->
+    <g opacity="0.12" fill="#8b949e">
+      <!-- Row 1 -->
+      <circle cx="80" cy="100" r="1" /><circle cx="200" cy="100" r="1" /><circle cx="320" cy="100" r="1" />
+      <circle cx="440" cy="100" r="1" /><circle cx="560" cy="100" r="1" /><circle cx="680" cy="100" r="1" />
+      <circle cx="800" cy="100" r="1" /><circle cx="920" cy="100" r="1" /><circle cx="1040" cy="100" r="1" /><circle cx="1120" cy="100" r="1" />
+      <!-- Row 2 -->
+      <circle cx="80" cy="280" r="1" /><circle cx="200" cy="280" r="1" /><circle cx="320" cy="280" r="1" />
+      <circle cx="440" cy="280" r="1" /><circle cx="560" cy="280" r="1" /><circle cx="680" cy="280" r="1" />
+      <circle cx="800" cy="280" r="1" /><circle cx="920" cy="280" r="1" /><circle cx="1040" cy="280" r="1" /><circle cx="1120" cy="280" r="1" />
+      <!-- Row 3 -->
+      <circle cx="80" cy="440" r="1" /><circle cx="200" cy="440" r="1" /><circle cx="320" cy="440" r="1" />
+      <circle cx="440" cy="440" r="1" /><circle cx="560" cy="440" r="1" /><circle cx="680" cy="440" r="1" />
+      <circle cx="800" cy="440" r="1" /><circle cx="920" cy="440" r="1" /><circle cx="1040" cy="440" r="1" /><circle cx="1120" cy="440" r="1" />
+      <!-- Row 4 -->
+      <circle cx="80" cy="600" r="1" /><circle cx="200" cy="600" r="1" /><circle cx="320" cy="600" r="1" />
+      <circle cx="440" cy="600" r="1" /><circle cx="560" cy="600" r="1" /><circle cx="680" cy="600" r="1" />
+      <circle cx="800" cy="600" r="1" /><circle cx="920" cy="600" r="1" /><circle cx="1040" cy="600" r="1" /><circle cx="1120" cy="600" r="1" />
+    </g>
+
+    <!-- Faint Crosshair Reference Marks in Corners -->
+    <g stroke="#30363d" stroke-width="0.75" opacity="0.4">
+      <path d="M 50 75 L 60 75 M 55 70 L 55 80" />
+      <path d="M 1140 75 L 1150 75 M 1145 70 L 1145 80" />
+      <path d="M 50 625 L 60 625 M 55 620 L 55 630" />
+      <path d="M 1140 625 L 1150 625 M 1145 620 L 1145 630" />
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- 01. HEADER: 05 // BUILDER MINDSET                        -->
+    <!-- ======================================================== -->
+    <g class="anim-hdr">
+      <line x1="40" y1="62" x2="1160" y2="62" stroke="url(#dividerFade)" stroke-width="1" />
+
+      <!-- Left Badge & Category -->
+      <g transform="translate(40, 28)">
+        <rect x="0" y="-1" width="22" height="20" rx="4" fill="#161b22" stroke="#a855f7" stroke-width="0.75" />
+        <text x="5" y="13" fill="#c084fc" class="font-mono" font-size="11" font-weight="700">✦</text>
+        <text x="32" y="13" fill="#f0f6fc" class="font-mono" font-size="13" font-weight="800" letter-spacing="2">
+          05 // BUILDER MINDSET
+        </text>
+        <text x="32" y="26" fill="#8b949e" class="font-mono" font-size="9" font-weight="600" letter-spacing="1">
+          HOW I THINK // ARCHITECTURE OF CREATION
+        </text>
+      </g>
+
+      <!-- Center Technical Metadata Coordinates -->
+      <g transform="translate(600, 42)" text-anchor="middle">
+        <text x="0" y="0" fill="#6e7681" class="font-mono" font-size="9" letter-spacing="1.5">
+          MINDSET_ID: <tspan fill="#58a6ff">BLD-05</tspan> • CORE: <tspan fill="#00f0ff">EXECUTION</tspan> • LOOP: <tspan fill="#39d353">PERPETUAL</tspan>
+        </text>
+      </g>
+
+      <!-- Right Index Tag -->
+      <g transform="translate(1160, 42)" text-anchor="end">
+        <rect x="-124" y="-13" width="124" height="22" rx="11" fill="#161b22" stroke="#30363d" stroke-width="0.75" />
+        <circle cx="-110" cy="-2" r="3.5" fill="#a855f7" />
+        <text x="-98" y="1.5" fill="#c9d1d9" class="font-mono" font-size="9" font-weight="600" letter-spacing="1.2">
+          PHILOSOPHY // 05
+        </text>
+      </g>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- 02. CENTERPIECE MANIFESTO (HOW I THINK)                  -->
+    <!-- ======================================================== -->
+    <g class="anim-manifesto" transform="translate(600, 115)" text-anchor="middle">
+      <!-- Upper Declarative Line -->
+      <text x="0" y="0" fill="#8b949e" class="font-display" font-size="15" font-weight="600" letter-spacing="4">
+        I DON'T JUST WRITE CODE.
+      </text>
+
+      <!-- Main Visual Emphasis: BUILD THINGS PEOPLE CAN USE -->
+      <text x="0" y="44" fill="#ffffff" class="font-display" font-size="38" font-weight="900" letter-spacing="0.5">
+        I BUILD THINGS
+      </text>
+      <text x="0" y="88" fill="url(#cyanTextGrad)" class="font-display" font-size="44" font-weight="900" letter-spacing="1" filter="url(#softCyanGlow)">
+        PEOPLE CAN USE.
+      </text>
+
+      <!-- Subtle Accent Geometric Line Underneath -->
+      <g transform="translate(0, 108)">
+        <line x1="-120" y1="0" x2="120" y2="0" stroke="url(#dividerFade)" stroke-width="1.2" />
+        <circle cx="0" cy="0" r="2.5" fill="#00f0ff" />
+      </g>
+    </g>
+
+    <!-- Supporting Statement -->
+    <g class="anim-supporting" transform="translate(600, 248)" text-anchor="middle">
+      <text x="0" y="0" fill="#6e7681" class="font-sans" font-size="14" font-weight="400" letter-spacing="0.8">
+        Ideas are cheap. <tspan fill="#e6edf3" font-weight="600">Building is the difference.</tspan>
+      </text>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- 03. THE BUILDER LOOP CIRCUIT                             -->
+    <!-- ======================================================== -->
+    <!-- Subtle Watermark in Center of Circuit -->
+    <g transform="translate(600, 435)" text-anchor="middle" opacity="0.35">
+      <text x="0" y="-3" fill="#6e7681" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="3">
+        THE BUILDER LOOP // PERPETUAL ITERATION
+      </text>
+      <text x="0" y="12" fill="#58a6ff" class="font-mono" font-size="7.5" letter-spacing="2">
+        CYCLE RATE: CONTINUOUS • DISCIPLINE OVER INTELLECT
+      </text>
+    </g>
+
+    <!-- Base Circuit Guide Track (Faint) -->
+    <use xlink:href="#builderLoopTrack" stroke="#1b2230" stroke-width="2" />
+    <use xlink:href="#builderLoopTrack" stroke="#30363d" stroke-dasharray="4 8" stroke-width="1" opacity="0.7" />
+
+    <!-- Animated Glowing Circuit Path -->
+    <use xlink:href="#builderLoopTrack" stroke="url(#cyanTextGrad)" stroke-width="1.5" class="anim-circuit" filter="url(#softCyanGlow)" opacity="0.85" />
+
+    <!-- Travelling Energy Particles (Subtle Kinetic Indicator) -->
+    <!-- Particle 1: Primary Head -->
+    <g>
+      <circle r="4" fill="#ffffff" filter="url(#particleGlow)" class="glow-particle">
+        <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
+          <mpath xlink:href="#builderLoopTrack" />
+        </animateMotion>
+      </circle>
+      <circle r="7" fill="#00f0ff" opacity="0.4" filter="url(#particleGlow)">
+        <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
+          <mpath xlink:href="#builderLoopTrack" />
+        </animateMotion>
+      </circle>
+    </g>
+
+    <!-- Particle 2: Trailing Subtle Aura -->
+    <g>
+      <circle r="2.5" fill="#a855f7" opacity="0.7">
+        <animateMotion dur="14s" begin="-0.35s" repeatCount="indefinite" rotate="auto">
+          <mpath xlink:href="#builderLoopTrack" />
+        </animateMotion>
+      </circle>
+    </g>
+
+    <!-- Directed Flow Arrows along track -->
+    <!-- Top row: left to right (x=410, x=790) -->
+    <g fill="#58a6ff" opacity="0.6">
+      <polygon points="406,357 413,360 406,363" />
+      <polygon points="786,357 793,360 786,363" />
+      <!-- Right arc: downwards -->
+      <polygon points="1052,431 1055,438 1058,431" />
+      <!-- Bottom row: right to left (x=790, x=410) -->
+      <polygon points="794,507 787,510 794,513" />
+      <polygon points="414,507 407,510 414,513" />
+      <!-- Left arc: upwards -->
+      <polygon points="142,439 145,432 148,439" />
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- 04. THE SIX PHILOSOPHY NODES                             -->
+    <!-- ======================================================== -->
+
+    <!-- NODE 01: THINK (Top-Left: cx=220, cy=360) -->
+    <g class="node-01" transform="translate(85, 316)">
+      <!-- Card Frame -->
+      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#30363d" stroke-width="1" />
+      <!-- Active Node Connector Dot on Track (x=135, y=44) -->
+      <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#00f0ff" stroke-width="2" />
+      <circle cx="135" cy="44" r="2" fill="#ffffff" />
+      
+      <!-- Content -->
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" fill="#00f0ff" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">01 // STAGE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">THINK</text>
+        <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
+          Understand the problem
+        </text>
+        <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
+          before writing the solution.
+        </text>
+      </g>
+    </g>
+
+    <!-- NODE 02: BUILD (Top-Center: cx=600, cy=360) -->
+    <g class="node-02" transform="translate(465, 316)">
+      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.5" />
+      <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="135" cy="44" r="2" fill="#ffffff" />
+
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">02 // STAGE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">BUILD</text>
+        <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
+          Turn raw ideas
+        </text>
+        <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
+          into working products.
+        </text>
+      </g>
+    </g>
+
+    <!-- NODE 03: BREAK (Top-Right: cx=980, cy=360) -->
+    <g class="node-03" transform="translate(845, 316)">
+      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#30363d" stroke-width="1" />
+      <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#f43f5e" stroke-width="2" />
+      <circle cx="135" cy="44" r="2" fill="#ffffff" />
+
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" fill="#fb7185" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">03 // STAGE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">BREAK</text>
+        <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
+          Expect fragile things
+        </text>
+        <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
+          to fail under pressure.
+        </text>
+      </g>
+    </g>
+
+    <!-- NODE 04: LEARN (Bottom-Right: cx=980, cy=510) -->
+    <g class="node-04" transform="translate(845, 466)">
+      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#30363d" stroke-width="1" />
+      <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#a855f7" stroke-width="2" />
+      <circle cx="135" cy="44" r="2" fill="#ffffff" />
+
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" fill="#c084fc" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">04 // STAGE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">LEARN</text>
+        <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
+          Deconstruct the failure
+        </text>
+        <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
+          and understand why.
+        </text>
+      </g>
+    </g>
+
+    <!-- NODE 05: IMPROVE (Bottom-Center: cx=600, cy=510) -->
+    <g class="node-05" transform="translate(465, 466)">
+      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#30363d" stroke-width="1" />
+      <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="135" cy="44" r="2" fill="#ffffff" />
+
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">05 // STAGE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">IMPROVE</text>
+        <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
+          Iterate relentlessly.
+        </text>
+        <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
+          Make next version better.
+        </text>
+      </g>
+    </g>
+
+    <!-- NODE 06: SHIP (Bottom-Left: cx=220, cy=510) -->
+    <g class="node-06" transform="translate(85, 466)">
+      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#39d353" stroke-width="1" stroke-opacity="0.55" />
+      <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#39d353" stroke-width="2" />
+      <circle cx="135" cy="44" r="2" fill="#ffffff" />
+
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" fill="#39d353" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">06 // STAGE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">SHIP</text>
+        <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
+          Real products
+        </text>
+        <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
+          belong in the real world.
+        </text>
+      </g>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- 05. SIGNATURE FOOTER: MINDSET & STATUS                   -->
+    <!-- ======================================================== -->
+    <g class="anim-ftr">
+      <line x1="40" y1="625" x2="1160" y2="625" stroke="url(#dividerFade)" stroke-width="1" />
+
+      <!-- Left Signature Mindset Flow -->
+      <g transform="translate(40, 655)">
+        <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="11" font-weight="600" letter-spacing="1.5">
+          MINDSET // <tspan fill="#f0f6fc">BUILD</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#fb7185">BREAK</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#c084fc">LEARN</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#39d353">SHIP</tspan>
+        </text>
+      </g>
+
+      <!-- Center System Revision Tag -->
+      <g transform="translate(600, 655)" text-anchor="middle">
+        <text x="0" y="0" fill="#484f58" class="font-mono" font-size="9" letter-spacing="2">
+          TAHIR_AZEEM // REVISION: 2026 • ARCHITECTURE MANIFESTO
+        </text>
+      </g>
+
+      <!-- Right Pulsing Status Pill: ALWAYS BUILDING -->
+      <g transform="translate(1160, 655)" text-anchor="end">
+        <rect x="-172" y="-14" width="172" height="24" rx="12" fill="#161b22" stroke="#238636" stroke-width="0.85" />
+        <circle cx="-154" cy="-2" r="3.5" fill="#39d353" class="breathe-status" />
+        <text x="-142" y="1.5" fill="#8b949e" class="font-mono" font-size="9" font-weight="600" letter-spacing="1">
+          STATUS: <tspan fill="#39d353" font-weight="800" class="breathe-status">ALWAYS BUILDING</tspan>
+        </text>
+      </g>
+    </g>
+
+    <!-- Outer Frame Border Line -->
+    <rect x="1" y="1" width="1198" height="698" rx="13" fill="none" stroke="url(#borderGrad)" stroke-width="1" />
+  </g>
+</svg>

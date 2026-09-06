@@ -20,4 +20,9 @@
   <!-- 04 — CONTRIBUTION SNAKE -->
   <img src="./contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" width="100%" />
 
+  <br/><br/>
+
+  <!-- 05 — BUILDER MINDSET -->
+  <img src="./builder-mindset.svg" alt="Tahir Azeem - Builder Mindset" width="100%" />
+
 </div>
