@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 650" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 350" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
   <defs>
     <!-- Fonts -->
     <style>
@@ -30,7 +30,7 @@
       .anim-base { animation: snakeFadeIn 0.8s ease-out forwards; }
       .anim-hdr { animation: snakeFadeIn 0.8s ease-out 0.3s both; }
       .anim-board { animation: snakeFadeIn 0.9s ease-out 0.6s both; }
-      .anim-telemetry { animation: snakeFadeIn 0.8s ease-out 1.0s both; }
+      
 
       .pulse-cyan-dot { animation: pulseCyan 2.5s ease-in-out infinite; }
       .pulse-green-dot { animation: pulseGreen 2.2s ease-in-out infinite; }
@@ -883,7 +883,7 @@
     </linearGradient>
 
     <clipPath id="snakeClip">
-      <rect x="0" y="0" width="1200" height="650" rx="14" />
+      <rect x="0" y="0" width="1200" height="350" rx="14" />
     </clipPath>
 
     <!-- Master Snake Traversal Path (Visits ALL 63 targets, strictly inside grid) -->
@@ -893,7 +893,7 @@
   <!-- Outer Canvas Container -->
   <g clip-path="url(#snakeClip)">
     <!-- Base Background -->
-    <rect width="1200" height="650" fill="url(#snakeBgGrad)" class="anim-base" />
+    <rect width="1200" height="350" fill="url(#snakeBgGrad)" class="anim-base" />
 
     <!-- ======================================================== -->
     <!-- HEADER: 04 // CONTRIBUTION SNAKE                         -->
@@ -935,7 +935,7 @@
     <!-- ======================================================== -->
     <g class="anim-board">
       <!-- Main Game Board Frame -->
-      <rect x="35" y="74" width="1130" height="465" rx="10" fill="url(#boardBg)" stroke="#30363d" stroke-width="1" />
+      <rect x="35" y="74" width="1130" height="246" rx="10" fill="url(#boardBg)" stroke="#30363d" stroke-width="1" />
       <rect x="35" y="74" width="1130" height="28" rx="10" fill="url(#boardHdrGrad)" />
 
       <!-- Top Frame Header: Real Contribution Count (1,897) -->
@@ -1424,150 +1424,9 @@
         <circle cx="3" cy="-3" r="0.8" fill="#ffffff" />
         <circle cx="3" cy="3" r="0.8" fill="#ffffff" />
       </g>
-
-      <!-- ======================================================== -->
-      <!-- LOWER SUB-PANEL: TELEMETRY (CLEAN RETRO ARCADE DESIGN)   -->
-      <!-- ======================================================== -->
-      <g transform="translate(60, 325)">
-        <line x1="0" y1="0" x2="1080" y2="0" stroke="#21262d" stroke-width="1" />
-
-        <!-- Card 1: GAME LOGIC MATRIX -->
-        <g transform="translate(0, 18)">
-          <rect x="0" y="0" width="340" height="175" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-          <rect x="0" y="0" width="340" height="24" rx="6" fill="#21262d" />
-          <text x="12" y="16" fill="#58a6ff" class="font-mono" font-size="9" font-weight="700" letter-spacing="1.5">
-            01 // ENGINE_TELEMETRY
-          </text>
-          <circle cx="325" cy="12" r="2.5" fill="#58a6ff" />
-
-          <g transform="translate(14, 46)" class="font-mono" font-size="9.5">
-            <text x="0" y="0" fill="#8b949e">TOTAL_ACTIVITY:</text>
-            <text x="130" y="0" fill="#39d353" font-weight="700">1,897 CONTRIBUTIONS</text>
-
-            <text x="0" y="24" fill="#8b949e">HUNTING_TARGET:</text>
-            <text x="130" y="24" fill="#58a6ff" font-weight="700">ALL_63_GREEN_BOXES</text>
-
-            <text x="0" y="48" fill="#8b949e">ALGORITHM:</text>
-            <text x="130" y="48" fill="#c084fc" font-weight="700">COMPLETE_GRID_SWEEP</text>
-
-            <text x="0" y="72" fill="#8b949e">PEAK_INTENSITY:</text>
-            <text x="130" y="72" fill="#39d353" font-weight="700">LEVEL 4 [AUG_PEAK]</text>
-
-            <text x="0" y="96" fill="#8b949e">REGEN_CYCLE:</text>
-            <text x="130" y="96" fill="#f0f6fc" font-weight="700">24.0s CONTINUOUS</text>
-          </g>
-        </g>
-
-        <!-- Card 2: LIVE STATS COUNTERS -->
-        <g transform="translate(370, 18)">
-          <rect x="0" y="0" width="340" height="175" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-          <rect x="0" y="0" width="340" height="24" rx="6" fill="#21262d" />
-          <text x="12" y="16" fill="#a855f7" class="font-mono" font-size="9" font-weight="700" letter-spacing="1.5">
-            02 // LIVE_STATS_METRICS
-          </text>
-          <circle cx="325" cy="12" r="2.5" fill="#a855f7" />
-
-          <!-- Big Stat Badges -->
-          <g transform="translate(14, 38)">
-            <!-- Stat 1 -->
-            <g transform="translate(0, 0)">
-              <rect x="0" y="0" width="148" height="52" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1" />
-              <text x="12" y="18" fill="#8b949e" class="font-mono" font-size="8" letter-spacing="1">SNAKE STATUS</text>
-              <text x="12" y="40" fill="#58a6ff" class="font-mono" font-size="13" font-weight="800">● FEEDING_ALL</text>
-            </g>
-
-            <!-- Stat 2 -->
-            <g transform="translate(164, 0)">
-              <rect x="0" y="0" width="148" height="52" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1" />
-              <text x="12" y="18" fill="#8b949e" class="font-mono" font-size="8" letter-spacing="1">BOXES CONSUMED</text>
-              <text x="12" y="40" fill="#c084fc" class="font-mono" font-size="13" font-weight="800">063 / 063 [100%]</text>
-            </g>
-
-            <!-- Stat 3 -->
-            <g transform="translate(0, 64)">
-              <rect x="0" y="0" width="148" height="52" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1" />
-              <text x="12" y="18" fill="#8b949e" class="font-mono" font-size="8" letter-spacing="1">CONTRIBUTIONS</text>
-              <text x="12" y="40" fill="#39d353" class="font-mono" font-size="12" font-weight="800">1,897 (1 YEAR)</text>
-            </g>
-
-            <!-- Stat 4 -->
-            <g transform="translate(164, 64)">
-              <rect x="0" y="0" width="148" height="52" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1" />
-              <text x="12" y="18" fill="#8b949e" class="font-mono" font-size="8" letter-spacing="1">SNAKE LENGTH</text>
-              <text x="12" y="40" fill="#58a6ff" class="font-mono" font-size="13" font-weight="800">008 UNITS</text>
-            </g>
-          </g>
-        </g>
-
-        <!-- Card 3: ACTION & REACTION MATRIX -->
-        <g transform="translate(740, 18)">
-          <rect x="0" y="0" width="340" height="175" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-          <rect x="0" y="0" width="340" height="24" rx="6" fill="#21262d" />
-          <text x="12" y="16" fill="#39d353" class="font-mono" font-size="9" font-weight="700" letter-spacing="1.5">
-            03 // FEED_ACTION_CHAIN
-          </text>
-          <circle cx="325" cy="12" r="2.5" fill="#39d353" />
-
-          <!-- Reaction Sequence Flow -->
-          <g transform="translate(14, 38)">
-            <!-- Step 1 -->
-            <g transform="translate(0, 0)">
-              <rect x="0" y="0" width="312" height="34" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.75" />
-              <text x="12" y="21" fill="#58a6ff" class="font-mono" font-size="9.5" font-weight="700">01</text>
-              <text x="38" y="21" fill="#f0f6fc" class="font-mono" font-size="9.5" font-weight="600">BOX CONTACT &amp; CONSUME</text>
-              <text x="296" y="21" fill="#58a6ff" class="font-mono" font-size="9" text-anchor="end">⚡ CONTACT</text>
-            </g>
-
-            <!-- Step 2 -->
-            <g transform="translate(0, 42)">
-              <rect x="0" y="0" width="312" height="34" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.75" />
-              <text x="12" y="21" fill="#a855f7" class="font-mono" font-size="9.5" font-weight="700">02</text>
-              <text x="38" y="21" fill="#f0f6fc" class="font-mono" font-size="9.5" font-weight="600">DISAPPEARS COMPLETELY</text>
-              <text x="296" y="21" fill="#c084fc" class="font-mono" font-size="9" text-anchor="end">● EATEN</text>
-            </g>
-
-            <!-- Step 3 -->
-            <g transform="translate(0, 84)">
-              <rect x="0" y="0" width="312" height="34" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.75" />
-              <text x="12" y="21" fill="#39d353" class="font-mono" font-size="9.5" font-weight="700">03</text>
-              <text x="38" y="21" fill="#f0f6fc" class="font-mono" font-size="9.5" font-weight="600">ALL EATEN → ALL APPEAR</text>
-              <text x="296" y="21" fill="#39d353" class="font-mono" font-size="9" text-anchor="end">✦ RESET ALL</text>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-
-    <!-- ======================================================== -->
-    <!-- FOOTER: STATUS SUMMARY & ARCADE VERIFICATION             -->
-    <!-- ======================================================== -->
-    <g class="anim-telemetry">
-      <line x1="35" y1="565" x2="1165" y2="565" stroke="url(#dividerFade)" stroke-width="1" />
-
-      <!-- Left Telemetry Text -->
-      <g transform="translate(40, 592)">
-        <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1">
-          <tspan fill="#8b949e">TAHIR_AZEEM // </tspan>
-          <tspan fill="#58a6ff">CONTRIBUTION_SNAKE</tspan>
-          <tspan fill="#30363d">   •   </tspan>
-          <tspan fill="#39d353">REAL_DATA: 1,897 CONTRIBUTIONS</tspan>
-          <tspan fill="#30363d">   •   </tspan>
-          <tspan fill="#58a6ff">SNAKE: ACTIVE_FEED_ALL</tspan>
-          <tspan fill="#30363d">   •   </tspan>
-          <tspan fill="#a855f7">ARCADE_V2.5</tspan>
-        </text>
-      </g>
-
-      <!-- Right Verification Badge -->
-      <g transform="translate(1160, 592)" text-anchor="end">
-        <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1.5">
-          <tspan fill="#8b949e">ACTIVITY</tspan> <tspan fill="#39d353">→</tspan> <tspan fill="#8b949e">GAME</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#8b949e">EVOLVE</tspan>
-          <tspan fill="#30363d">   [ </tspan><tspan fill="#39d353" font-weight="700">ONLINE</tspan><tspan fill="#30363d"> ]</tspan>
-        </text>
-      </g>
     </g>
 
     <!-- Outer Border Line -->
-    <rect x="1" y="1" width="1198" height="648" rx="13" fill="none" stroke="#30363d" stroke-width="1" />
+    <rect x="1" y="1" width="1198" height="348" rx="13" fill="none" stroke="#30363d" stroke-width="1" />
   </g>
 </svg>
