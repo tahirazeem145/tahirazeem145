@@ -30,18 +30,17 @@
       .anim-base { animation: snakeFadeIn 0.8s ease-out forwards; }
       .anim-hdr { animation: snakeFadeIn 0.8s ease-out 0.3s both; }
       .anim-board { animation: snakeFadeIn 0.9s ease-out 0.6s both; }
-      
 
       .pulse-cyan-dot { animation: pulseCyan 2.5s ease-in-out infinite; }
       .pulse-green-dot { animation: pulseGreen 2.2s ease-in-out infinite; }
 
-    /* All 63 Real Contribution Boxes: Eat -> Disappear -> Only After All Eaten, All Reappear */
+      /* Dynamic Real Contribution Boxes: Eat -> Disappear -> Reappear Together */
 
       @keyframes eatCell_0 {
-        0%, 1.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        1.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        1.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        2.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 99.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        100.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        95.50% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        95.80%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -50,11 +49,12 @@
         stroke: #238636;
         animation: eatCell_0 24s ease-out infinite;
       }
+
       @keyframes eatCell_1 {
-        0%, 2.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        2.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        2.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        3.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -63,11 +63,12 @@
         stroke: #238636;
         animation: eatCell_1 24s ease-out infinite;
       }
+
       @keyframes eatCell_2 {
-        0%, 3.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        3.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        3.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        3.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -76,63 +77,12 @@
         stroke: #238636;
         animation: eatCell_2 24s ease-out infinite;
       }
-      @keyframes eatCell_3 {
-        0%, 3.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        4.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        4.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        4.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-3 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_3 24s ease-out infinite;
-      }
-      @keyframes eatCell_4 {
-        0%, 4.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        5.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        5.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        5.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-4 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_4 24s ease-out infinite;
-      }
-      @keyframes eatCell_5 {
-        0%, 5.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        5.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        6.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        6.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-5 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_5 24s ease-out infinite;
-      }
-      @keyframes eatCell_6 {
-        0%, 7.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        7.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        7.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        8.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-6 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_6 24s ease-out infinite;
-      }
+
       @keyframes eatCell_7 {
-        0%, 8.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        9.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        9.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        9.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -141,11 +91,68 @@
         stroke: #238636;
         animation: eatCell_7 24s ease-out infinite;
       }
+
+      @keyframes eatCell_6 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-6 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_6 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_5 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-5 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_5 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_4 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-4 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_4 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_3 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-3 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_3 24s ease-out infinite;
+      }
+
       @keyframes eatCell_8 {
-        0%, 9.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        10.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        10.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        10.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -154,76 +161,12 @@
         stroke: #238636;
         animation: eatCell_8 24s ease-out infinite;
       }
-      @keyframes eatCell_9 {
-        0%, 10.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        10.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        11.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        11.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-9 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_9 24s ease-out infinite;
-      }
-      @keyframes eatCell_10 {
-        0%, 11.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        11.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        11.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        12.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-10 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_10 24s ease-out infinite;
-      }
-      @keyframes eatCell_11 {
-        0%, 13.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        13.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        13.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        13.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-11 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_11 24s ease-out infinite;
-      }
-      @keyframes eatCell_12 {
-        0%, 13.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        14.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        14.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        14.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-12 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_12 24s ease-out infinite;
-      }
-      @keyframes eatCell_13 {
-        0%, 14.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        15.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        15.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        15.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-13 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_13 24s ease-out infinite;
-      }
+
       @keyframes eatCell_14 {
-        0%, 15.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        15.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        16.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        16.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -232,11 +175,82 @@
         stroke: #238636;
         animation: eatCell_14 24s ease-out infinite;
       }
+
+      @keyframes eatCell_13 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-13 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_13 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_12 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-12 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_12 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_11 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-11 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_11 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_10 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-10 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_10 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_9 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-9 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_9 24s ease-out infinite;
+      }
+
       @keyframes eatCell_15 {
-        0%, 17.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        17.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        17.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        18.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -245,11 +259,12 @@
         stroke: #238636;
         animation: eatCell_15 24s ease-out infinite;
       }
+
       @keyframes eatCell_16 {
-        0%, 18.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        18.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        18.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        18.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -258,11 +273,12 @@
         stroke: #238636;
         animation: eatCell_16 24s ease-out infinite;
       }
+
       @keyframes eatCell_17 {
-        0%, 19.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        20.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        20.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        20.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -271,11 +287,12 @@
         stroke: #238636;
         animation: eatCell_17 24s ease-out infinite;
       }
+
       @keyframes eatCell_18 {
-        0%, 23.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        23.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        23.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        23.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -284,11 +301,12 @@
         stroke: #238636;
         animation: eatCell_18 24s ease-out infinite;
       }
+
       @keyframes eatCell_19 {
-        0%, 26.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        26.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        26.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        27.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -297,11 +315,12 @@
         stroke: #238636;
         animation: eatCell_19 24s ease-out infinite;
       }
+
       @keyframes eatCell_20 {
-        0%, 28.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        28.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        28.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        28.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -310,24 +329,12 @@
         stroke: #238636;
         animation: eatCell_20 24s ease-out infinite;
       }
-      @keyframes eatCell_21 {
-        0%, 31.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        31.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        31.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        32.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-21 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_21 24s ease-out infinite;
-      }
+
       @keyframes eatCell_22 {
-        0%, 33.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        33.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        33.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        33.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -336,11 +343,26 @@
         stroke: #238636;
         animation: eatCell_22 24s ease-out infinite;
       }
+
+      @keyframes eatCell_21 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-21 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_21 24s ease-out infinite;
+      }
+
       @keyframes eatCell_23 {
-        0%, 33.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        34.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        34.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        34.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -349,11 +371,12 @@
         stroke: #238636;
         animation: eatCell_23 24s ease-out infinite;
       }
+
       @keyframes eatCell_24 {
-        0%, 34.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        35.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        35.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        35.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -362,11 +385,12 @@
         stroke: #238636;
         animation: eatCell_24 24s ease-out infinite;
       }
+
       @keyframes eatCell_25 {
-        0%, 37.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        37.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        37.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        38.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -375,37 +399,12 @@
         stroke: #238636;
         animation: eatCell_25 24s ease-out infinite;
       }
-      @keyframes eatCell_26 {
-        0%, 39.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        40.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        40.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        40.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-26 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_26 24s ease-out infinite;
-      }
-      @keyframes eatCell_27 {
-        0%, 40.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        40.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        41.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        41.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-27 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_27 24s ease-out infinite;
-      }
+
       @keyframes eatCell_28 {
-        0%, 43.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        44.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        44.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        44.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -414,11 +413,40 @@
         stroke: #238636;
         animation: eatCell_28 24s ease-out infinite;
       }
+
+      @keyframes eatCell_27 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-27 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_27 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_26 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-26 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_26 24s ease-out infinite;
+      }
+
       @keyframes eatCell_29 {
-        0%, 45.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        45.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        46.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        46.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -427,50 +455,12 @@
         stroke: #238636;
         animation: eatCell_29 24s ease-out infinite;
       }
-      @keyframes eatCell_30 {
-        0%, 48.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        48.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        48.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        48.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-30 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_30 24s ease-out infinite;
-      }
-      @keyframes eatCell_31 {
-        0%, 50.63% { fill: #56d364; stroke: #7ee787; opacity: 1; }
-        50.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        51.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        51.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #56d364; stroke: #7ee787; opacity: 1; }
-      }
-      .food-cell-31 {
-        fill: #56d364;
-        stroke: #7ee787;
-        animation: eatCell_31 24s ease-out infinite;
-      }
-      @keyframes eatCell_32 {
-        0%, 51.47% { fill: #2ea043; stroke: #39d353; opacity: 1; }
-        51.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        51.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        52.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #2ea043; stroke: #39d353; opacity: 1; }
-      }
-      .food-cell-32 {
-        fill: #2ea043;
-        stroke: #39d353;
-        animation: eatCell_32 24s ease-out infinite;
-      }
+
       @keyframes eatCell_33 {
-        0%, 52.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        52.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        52.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        53.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -479,11 +469,54 @@
         stroke: #238636;
         animation: eatCell_33 24s ease-out infinite;
       }
+
+      @keyframes eatCell_32 {
+        0%, 49.75% { fill: #2ea043; stroke: #39d353; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #2ea043; stroke: #39d353; opacity: 1; }
+      }
+      .food-cell-32 {
+        fill: #2ea043;
+        stroke: #39d353;
+        animation: eatCell_32 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_31 {
+        0%, 49.75% { fill: #56d364; stroke: #7ee787; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #56d364; stroke: #7ee787; opacity: 1; }
+      }
+      .food-cell-31 {
+        fill: #56d364;
+        stroke: #7ee787;
+        animation: eatCell_31 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_30 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-30 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_30 24s ease-out infinite;
+      }
+
       @keyframes eatCell_34 {
-        0%, 53.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        53.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        53.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        53.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -492,76 +525,12 @@
         stroke: #238636;
         animation: eatCell_34 24s ease-out infinite;
       }
-      @keyframes eatCell_35 {
-        0%, 55.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        55.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        56.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        56.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-35 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_35 24s ease-out infinite;
-      }
-      @keyframes eatCell_36 {
-        0%, 56.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        56.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        56.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        57.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-36 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_36 24s ease-out infinite;
-      }
-      @keyframes eatCell_37 {
-        0%, 57.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        57.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        57.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        58.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-37 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_37 24s ease-out infinite;
-      }
-      @keyframes eatCell_38 {
-        0%, 58.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        58.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        58.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        58.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-38 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_38 24s ease-out infinite;
-      }
-      @keyframes eatCell_39 {
-        0%, 58.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        59.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        59.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        59.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-39 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_39 24s ease-out infinite;
-      }
+
       @keyframes eatCell_40 {
-        0%, 59.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        60.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        60.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        60.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -570,11 +539,82 @@
         stroke: #238636;
         animation: eatCell_40 24s ease-out infinite;
       }
+
+      @keyframes eatCell_39 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-39 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_39 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_38 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-38 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_38 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_37 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-37 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_37 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_36 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-36 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_36 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_35 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-35 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_35 24s ease-out infinite;
+      }
+
       @keyframes eatCell_41 {
-        0%, 60.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        60.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        61.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        61.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -583,11 +623,12 @@
         stroke: #238636;
         animation: eatCell_41 24s ease-out infinite;
       }
+
       @keyframes eatCell_42 {
-        0%, 61.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        61.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        61.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        62.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -596,11 +637,12 @@
         stroke: #238636;
         animation: eatCell_42 24s ease-out infinite;
       }
+
       @keyframes eatCell_43 {
-        0%, 62.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        62.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        62.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        63.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -609,11 +651,12 @@
         stroke: #238636;
         animation: eatCell_43 24s ease-out infinite;
       }
+
       @keyframes eatCell_44 {
-        0%, 63.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        63.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        63.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        63.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -622,102 +665,82 @@
         stroke: #238636;
         animation: eatCell_44 24s ease-out infinite;
       }
+
       @keyframes eatCell_45 {
-        0%, 63.97% { fill: #56d364; stroke: #7ee787; opacity: 1; }
-        64.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        64.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        64.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-45 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_45 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_46 {
+        0%, 49.75% { fill: #56d364; stroke: #7ee787; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #56d364; stroke: #7ee787; opacity: 1; }
       }
-      .food-cell-45 {
+      .food-cell-46 {
         fill: #56d364;
         stroke: #7ee787;
-        animation: eatCell_45 24s ease-out infinite;
+        animation: eatCell_46 24s ease-out infinite;
       }
-      @keyframes eatCell_46 {
-        0%, 64.80% { fill: #238636; stroke: #2ea043; opacity: 1; }
-        65.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        65.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        65.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+
+      @keyframes eatCell_47 {
+        0%, 49.75% { fill: #238636; stroke: #2ea043; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #238636; stroke: #2ea043; opacity: 1; }
       }
-      .food-cell-46 {
+      .food-cell-47 {
         fill: #238636;
         stroke: #2ea043;
-        animation: eatCell_46 24s ease-out infinite;
+        animation: eatCell_47 24s ease-out infinite;
       }
-      @keyframes eatCell_47 {
-        0%, 65.63% { fill: #2ea043; stroke: #39d353; opacity: 1; }
-        65.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        66.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        66.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+
+      @keyframes eatCell_54 {
+        0%, 49.75% { fill: #2ea043; stroke: #39d353; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #2ea043; stroke: #39d353; opacity: 1; }
       }
-      .food-cell-47 {
+      .food-cell-54 {
         fill: #2ea043;
         stroke: #39d353;
-        animation: eatCell_47 24s ease-out infinite;
+        animation: eatCell_54 24s ease-out infinite;
       }
-      @keyframes eatCell_48 {
-        0%, 66.47% { fill: #56d364; stroke: #7ee787; opacity: 1; }
-        66.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        66.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        67.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+
+      @keyframes eatCell_53 {
+        0%, 49.75% { fill: #56d364; stroke: #7ee787; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #56d364; stroke: #7ee787; opacity: 1; }
       }
-      .food-cell-48 {
+      .food-cell-53 {
         fill: #56d364;
         stroke: #7ee787;
-        animation: eatCell_48 24s ease-out infinite;
+        animation: eatCell_53 24s ease-out infinite;
       }
-      @keyframes eatCell_49 {
-        0%, 67.30% { fill: #238636; stroke: #2ea043; opacity: 1; }
-        67.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        67.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        68.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #238636; stroke: #2ea043; opacity: 1; }
-      }
-      .food-cell-49 {
-        fill: #238636;
-        stroke: #2ea043;
-        animation: eatCell_49 24s ease-out infinite;
-      }
-      @keyframes eatCell_50 {
-        0%, 68.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        68.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        68.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        68.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-50 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_50 24s ease-out infinite;
-      }
-      @keyframes eatCell_51 {
-        0%, 68.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        69.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        69.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        69.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
-      }
-      .food-cell-51 {
-        fill: #196c2e;
-        stroke: #238636;
-        animation: eatCell_51 24s ease-out infinite;
-      }
+
       @keyframes eatCell_52 {
-        0%, 69.80% { fill: #238636; stroke: #2ea043; opacity: 1; }
-        70.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        70.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        70.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #238636; stroke: #2ea043; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #238636; stroke: #2ea043; opacity: 1; }
       }
@@ -726,37 +749,68 @@
         stroke: #2ea043;
         animation: eatCell_52 24s ease-out infinite;
       }
-      @keyframes eatCell_53 {
-        0%, 70.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        70.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        71.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        71.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+
+      @keyframes eatCell_51 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
-      .food-cell-53 {
+      .food-cell-51 {
         fill: #196c2e;
         stroke: #238636;
-        animation: eatCell_53 24s ease-out infinite;
+        animation: eatCell_51 24s ease-out infinite;
       }
-      @keyframes eatCell_54 {
-        0%, 71.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        71.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        71.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        72.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+
+      @keyframes eatCell_50 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
-      .food-cell-54 {
+      .food-cell-50 {
         fill: #196c2e;
         stroke: #238636;
-        animation: eatCell_54 24s ease-out infinite;
+        animation: eatCell_50 24s ease-out infinite;
       }
+
+      @keyframes eatCell_49 {
+        0%, 49.75% { fill: #238636; stroke: #2ea043; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #238636; stroke: #2ea043; opacity: 1; }
+      }
+      .food-cell-49 {
+        fill: #238636;
+        stroke: #2ea043;
+        animation: eatCell_49 24s ease-out infinite;
+      }
+
+      @keyframes eatCell_48 {
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-48 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_48 24s ease-out infinite;
+      }
+
       @keyframes eatCell_55 {
-        0%, 72.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        72.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        72.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        73.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -765,11 +819,12 @@
         stroke: #238636;
         animation: eatCell_55 24s ease-out infinite;
       }
+
       @keyframes eatCell_56 {
-        0%, 73.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        73.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        73.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        73.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -778,11 +833,12 @@
         stroke: #238636;
         animation: eatCell_56 24s ease-out infinite;
       }
+
       @keyframes eatCell_57 {
-        0%, 73.97% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        74.17% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        74.42% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        74.72%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -791,11 +847,12 @@
         stroke: #238636;
         animation: eatCell_57 24s ease-out infinite;
       }
+
       @keyframes eatCell_58 {
-        0%, 74.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        75.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        75.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        75.55%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -804,11 +861,12 @@
         stroke: #238636;
         animation: eatCell_58 24s ease-out infinite;
       }
+
       @keyframes eatCell_59 {
-        0%, 80.63% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        80.83% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        81.08% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        81.38%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -817,11 +875,12 @@
         stroke: #238636;
         animation: eatCell_59 24s ease-out infinite;
       }
+
       @keyframes eatCell_60 {
-        0%, 81.47% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        81.67% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        81.92% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        82.22%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -830,11 +889,12 @@
         stroke: #238636;
         animation: eatCell_60 24s ease-out infinite;
       }
+
       @keyframes eatCell_61 {
-        0%, 82.30% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        82.50% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        82.75% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        83.05%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -843,11 +903,12 @@
         stroke: #238636;
         animation: eatCell_61 24s ease-out infinite;
       }
+
       @keyframes eatCell_62 {
-        0%, 83.13% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        83.33% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        83.58% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        83.88%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 49.75% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        50.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        50.35% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        50.75%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -858,21 +919,22 @@
       }
     </style>
 
-    <!-- Clean Solid / Crisp Gradients -->
-    <radialGradient id="snakeBgGrad" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#080e1e" stop-opacity="0.96" />
-      <stop offset="50%" stop-color="#040712" stop-opacity="0.98" />
-      <stop offset="100%" stop-color="#020306" stop-opacity="1" />
-    </radialGradient>
+    <!-- Linear Gradients -->
+    <linearGradient id="snakeBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#080c14" />
+    </linearGradient>
 
-    <linearGradient id="boardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" stop-opacity="0.95" />
-      <stop offset="100%" stop-color="#06090e" stop-opacity="0.98" />
+    <linearGradient id="boardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#090d13" />
     </linearGradient>
 
     <linearGradient id="boardHdrGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#161b22" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.6" />
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#21262d" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#161b22" stop-opacity="0.8" />
     </linearGradient>
 
     <linearGradient id="dividerFade" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -887,7 +949,7 @@
     </clipPath>
 
     <!-- Master Snake Traversal Path (Visits ALL 63 targets, strictly inside grid) -->
-    <path id="masterSnakePath" d="M 663.5 172.5 L 701.5 172.5 L 701.5 229.5 L 682.5 229.5 L 682.5 248.5 L 682.5 210.5 L 720.5 210.5 L 739.5 210.5 L 739.5 172.5 L 758.5 172.5 L 758.5 229.5 L 739.5 229.5 L 739.5 286.5 L 701.5 286.5 L 758.5 286.5 L 758.5 267.5 L 777.5 267.5 L 777.5 210.5 L 815.5 210.5 L 872.5 210.5 L 872.5 191.5 L 891.5 191.5 L 891.5 248.5 L 872.5 248.5 L 872.5 286.5 L 910.5 286.5 L 910.5 248.5 L 929.5 248.5 L 929.5 191.5 L 910.5 191.5 L 910.5 172.5 L 967.5 172.5 L 967.5 267.5 L 986.5 267.5 L 1005.5 267.5 L 1005.5 286.5 L 1024.5 286.5 L 1024.5 191.5 L 1043.5 191.5 L 1043.5 286.5 L 1062.5 286.5 L 1062.5 191.5 L 1081.5 191.5 L 1081.5 286.5 L 1100.5 286.5 L 1100.5 172.5 L 1081.5 172.5 L 1062.5 172.5 L 1043.5 172.5 L 663.5 172.5" fill="none" />
+    <path id="masterSnakePath" d="M 682.5 210.5 L 682.5 229.5 L 682.5 248.5 L 701.5 248.5 L 701.5 286.5 L 701.5 229.5 L 701.5 210.5 L 701.5 191.5 L 701.5 172.5 L 720.5 172.5 L 720.5 210.5 L 739.5 210.5 L 739.5 286.5 L 739.5 267.5 L 739.5 229.5 L 739.5 210.5 L 739.5 191.5 L 739.5 172.5 L 758.5 172.5 L 758.5 191.5 L 758.5 210.5 L 758.5 229.5 L 758.5 267.5 L 777.5 267.5 L 777.5 210.5 L 815.5 210.5 L 872.5 210.5 L 872.5 286.5 L 872.5 191.5 L 891.5 191.5 L 891.5 210.5 L 891.5 229.5 L 891.5 248.5 L 910.5 248.5 L 910.5 267.5 L 910.5 248.5 L 910.5 172.5 L 929.5 172.5 L 929.5 191.5 L 967.5 191.5 L 967.5 267.5 L 967.5 248.5 L 967.5 229.5 L 967.5 172.5 L 986.5 172.5 L 986.5 267.5 L 1024.5 267.5 L 1024.5 286.5 L 1024.5 267.5 L 1024.5 248.5 L 1024.5 229.5 L 1024.5 210.5 L 1024.5 191.5 L 1043.5 191.5 L 1043.5 172.5 L 1043.5 191.5 L 1043.5 210.5 L 1043.5 229.5 L 1043.5 248.5 L 1043.5 267.5 L 1043.5 286.5 L 1062.5 286.5 L 1062.5 267.5 L 1062.5 248.5 L 1062.5 229.5 L 1062.5 210.5 L 1062.5 191.5 L 1062.5 172.5 L 1081.5 172.5 L 1081.5 191.5 L 1081.5 210.5 L 1081.5 229.5 L 1081.5 248.5 L 1081.5 267.5 L 1081.5 286.5 L 1100.5 286.5 L 1100.5 172.5 L 1100.5 210.5 L 682.5 210.5" fill="none" />
   </defs>
 
   <!-- Outer Canvas Container -->
@@ -923,27 +985,27 @@
       <!-- Right Status Pill -->
       <g transform="translate(1165, 36)" text-anchor="end">
         <rect x="-184" y="-12" width="184" height="22" rx="11" fill="#161b22" stroke="#238636" stroke-width="0.75" />
-        <circle cx="-168" cy="-1" r="3" fill="#39d353" class="pulse-green-dot" />
-        <text x="-16" y="2.5" fill="#39d353" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
-          GITHUB ACTIVITY // LIVE
+        <circle cx="-168" cy="-1" r="3.5" fill="#39d353" class="pulse-green-dot" />
+        <text x="-155" y="2.5" fill="#f0f6fc" class="font-mono" font-size="9" font-weight="600" letter-spacing="1">
+          LIVE AUTONOMOUS GAME
         </text>
       </g>
     </g>
 
     <!-- ======================================================== -->
-    <!-- GAME BOARD: CRISP GITHUB CONTRIBUTION HEATMAP (FULL GREEN)-->
+    <!-- GAME BOARD: CRISP GITHUB CONTRIBUTION HEATMAP            -->
     <!-- ======================================================== -->
     <g class="anim-board">
       <!-- Main Game Board Frame -->
       <rect x="35" y="74" width="1130" height="246" rx="10" fill="url(#boardBg)" stroke="#30363d" stroke-width="1" />
       <rect x="35" y="74" width="1130" height="28" rx="10" fill="url(#boardHdrGrad)" />
 
-      <!-- Top Frame Header: Real Contribution Count (1,897) -->
+      <!-- Top Frame Header: Real Contribution Count -->
       <text x="60" y="92" fill="#f0f6fc" class="font-sans" font-size="12" font-weight="700" letter-spacing="0.5">
-        1,897 contributions in the last year
+        1,903 contributions in the last year
       </text>
 
-      <!-- Legend on top-right (matching GitHub vibrant green scale) -->
+      <!-- Legend on top-right -->
       <g transform="translate(1145, 92)" text-anchor="end">
         <text x="-125" y="0" fill="#8b949e" class="font-mono" font-size="8.5" letter-spacing="1">Less</text>
         <rect x="-115" y="-7" width="10" height="10" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.5" />
@@ -954,20 +1016,21 @@
         <text x="-10" y="0" fill="#8b949e" class="font-mono" font-size="8.5" letter-spacing="1">More</text>
       </g>
 
-      <!-- Month Labels (Sep -> Aug) -->
+      <!-- Month Labels -->
       <g transform="translate(105, 128)" fill="#8b949e" class="font-mono" font-size="9" font-weight="600">
         <text x="0" y="0">Sep</text>
-        <text x="81.7" y="0">Oct</text>
-        <text x="163.4" y="0">Nov</text>
+        <text x="76" y="0">Oct</text>
+        <text x="152" y="0">Nov</text>
         <text x="247" y="0">Dec</text>
-        <text x="328.7" y="0">Jan</text>
-        <text x="410.4" y="0">Feb</text>
-        <text x="494" y="0">Mar</text>
-        <text x="575.7" y="0">Apr</text>
-        <text x="657.4" y="0">May</text>
+        <text x="323" y="0">Jan</text>
+        <text x="399" y="0">Feb</text>
+        <text x="475" y="0">Mar</text>
+        <text x="570" y="0">Apr</text>
+        <text x="646" y="0">May</text>
         <text x="741" y="0">Jun</text>
-        <text x="822.7" y="0">Jul</text>
-        <text x="904.4" y="0">Aug</text>
+        <text x="817" y="0">Jul</text>
+        <text x="893" y="0">Aug</text>
+        <text x="988" y="0">Sep</text>
       </g>
 
       <!-- Day Labels on left -->
@@ -977,7 +1040,7 @@
         <text x="0" y="95">Fri</text>
       </g>
 
-      <!-- Heatmap Cells Matrix (53 Columns x 7 Rows = 371 Real GitHub Contribution Cells) -->
+      <!-- Heatmap Cells Matrix (53 Columns x 7 Rows) -->
       <g id="heatmapGrid">
         <rect x="105" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="105" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -1191,42 +1254,42 @@
         <rect x="656" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="675" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="675" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="675" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-6" />
-        <rect x="675" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-4" />
-        <rect x="675" y="241" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-5" />
+        <rect class="food-cell-0" x="675" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-1" x="675" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-2" x="675" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="675" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="675" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="694" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-0" />
-        <rect x="694" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-1" />
-        <rect x="694" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-2" />
-        <rect x="694" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-3" />
+        <rect class="food-cell-3" x="694" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-4" x="694" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-5" x="694" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-6" x="694" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="694" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="694" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="694" y="279" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-17" />
+        <rect class="food-cell-7" x="694" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="713" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="713" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="713" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-7" />
+        <rect class="food-cell-8" x="713" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="713" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="713" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="713" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="713" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="732" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-10" />
-        <rect x="732" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-9" />
-        <rect x="732" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-8" />
-        <rect x="732" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-14" />
+        <rect class="food-cell-9" x="732" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-10" x="732" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-11" x="732" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-12" x="732" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="732" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="732" y="260" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-15" />
-        <rect x="732" y="279" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-16" />
+        <rect class="food-cell-13" x="732" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-14" x="732" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="751" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="751" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-11" />
-        <rect x="751" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-12" />
-        <rect x="751" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-13" />
+        <rect class="food-cell-15" x="751" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-16" x="751" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-17" x="751" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="751" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="751" y="260" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-18" />
+        <rect class="food-cell-18" x="751" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="751" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="770" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-19" />
+        <rect class="food-cell-19" x="770" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="770" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="770" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -1240,7 +1303,7 @@
         <rect x="789" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="808" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="808" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="808" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-20" />
+        <rect class="food-cell-20" x="808" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="808" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="808" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="808" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -1260,28 +1323,28 @@
         <rect x="846" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="846" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="865" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="865" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-21" />
+        <rect class="food-cell-21" x="865" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="865" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="865" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="865" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="865" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="865" y="279" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-25" />
+        <rect class="food-cell-22" x="865" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="884" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="884" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="884" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-22" />
-        <rect x="884" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-23" />
-        <rect x="884" y="241" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-24" />
+        <rect class="food-cell-23" x="884" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-24" x="884" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-25" x="884" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="884" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="884" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="903" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-29" />
+        <rect class="food-cell-26" x="903" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="903" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="903" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="903" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="903" y="241" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-27" />
-        <rect x="903" y="260" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-26" />
+        <rect class="food-cell-27" x="903" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-28" x="903" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="903" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="922" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="922" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-28" />
+        <rect class="food-cell-29" x="922" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="922" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="922" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="922" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -1294,19 +1357,19 @@
         <rect x="941" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="941" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="941" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="960" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-30" />
+        <rect class="food-cell-30" x="960" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="960" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="960" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="960" y="222" width="15" height="15" rx="3" fill="#56d364" stroke="#7ee787" stroke-width="0.75" class="food-cell-31" />
-        <rect x="960" y="241" width="15" height="15" rx="3" fill="#2ea043" stroke="#39d353" stroke-width="0.75" class="food-cell-32" />
-        <rect x="960" y="260" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-33" />
+        <rect class="food-cell-31" x="960" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-32" x="960" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-33" x="960" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="960" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="979" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="979" y="260" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-34" />
+        <rect class="food-cell-34" x="979" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="979" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="998" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="998" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -1316,34 +1379,34 @@
         <rect x="998" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="998" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1017" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect x="1017" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-40" />
-        <rect x="1017" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-39" />
-        <rect x="1017" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-38" />
-        <rect x="1017" y="241" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-37" />
-        <rect x="1017" y="260" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-36" />
-        <rect x="1017" y="279" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-35" />
-        <rect x="1036" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-62" />
-        <rect x="1036" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-41" />
-        <rect x="1036" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-42" />
-        <rect x="1036" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-43" />
-        <rect x="1036" y="241" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-44" />
-        <rect x="1036" y="260" width="15" height="15" rx="3" fill="#56d364" stroke="#7ee787" stroke-width="0.75" class="food-cell-45" />
-        <rect x="1036" y="279" width="15" height="15" rx="3" fill="#238636" stroke="#2ea043" stroke-width="0.75" class="food-cell-46" />
-        <rect x="1055" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-61" />
-        <rect x="1055" y="184" width="15" height="15" rx="3" fill="#238636" stroke="#2ea043" stroke-width="0.75" class="food-cell-52" />
-        <rect x="1055" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-51" />
-        <rect x="1055" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-50" />
-        <rect x="1055" y="241" width="15" height="15" rx="3" fill="#238636" stroke="#2ea043" stroke-width="0.75" class="food-cell-49" />
-        <rect x="1055" y="260" width="15" height="15" rx="3" fill="#56d364" stroke="#7ee787" stroke-width="0.75" class="food-cell-48" />
-        <rect x="1055" y="279" width="15" height="15" rx="3" fill="#2ea043" stroke="#39d353" stroke-width="0.75" class="food-cell-47" />
-        <rect x="1074" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-60" />
-        <rect x="1074" y="184" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-53" />
-        <rect x="1074" y="203" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-54" />
-        <rect x="1074" y="222" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-55" />
-        <rect x="1074" y="241" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-56" />
-        <rect x="1074" y="260" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-57" />
-        <rect x="1074" y="279" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-58" />
-        <rect x="1093" y="165" width="15" height="15" rx="3" fill="#196c2e" stroke="#238636" stroke-width="0.75" class="food-cell-59" />
+        <rect class="food-cell-35" x="1017" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-36" x="1017" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-37" x="1017" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-38" x="1017" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-39" x="1017" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-40" x="1017" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-41" x="1036" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-42" x="1036" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-43" x="1036" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-44" x="1036" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-45" x="1036" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-46" x="1036" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-47" x="1036" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-48" x="1055" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-49" x="1055" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-50" x="1055" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-51" x="1055" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-52" x="1055" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-53" x="1055" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-54" x="1055" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-55" x="1074" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-56" x="1074" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-57" x="1074" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-58" x="1074" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-59" x="1074" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-60" x="1074" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-61" x="1074" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-62" x="1093" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1093" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1093" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
@@ -1352,15 +1415,15 @@
         <rect x="1093" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
       </g>
 
-      <!-- ======================================================== -->
-      <!-- THE CLEAN CRISP SNAKE (ZERO GLOW, ACCURATE HEAD)          -->
-      <!-- ======================================================== -->
-      <!-- Snake Tail Segment 7 (Violet) -->
+      <!-- ====================================================== -->
+      <!-- MULTI-SEGMENT AUTONOMOUS SNAKE                         -->
+      <!-- ====================================================== -->
+      <!-- Snake Tail Segment 7 -->
       <g>
         <animateMotion dur="24s" repeatCount="indefinite" begin="-22.95s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <rect x="-5" y="-5" width="10" height="10" rx="3" fill="#a855f7" />
+        <rect x="-4.5" y="-4.5" width="9" height="9" rx="2" fill="#10b981" opacity="0.65" />
       </g>
 
       <!-- Snake Body Segment 6 -->
@@ -1368,7 +1431,7 @@
         <animateMotion dur="24s" repeatCount="indefinite" begin="-23.10s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <rect x="-5.5" y="-5.5" width="11" height="11" rx="3" fill="#c084fc" />
+        <rect x="-5" y="-5" width="10" height="10" rx="2" fill="#10b981" opacity="0.8" />
       </g>
 
       <!-- Snake Body Segment 5 -->
@@ -1376,7 +1439,7 @@
         <animateMotion dur="24s" repeatCount="indefinite" begin="-23.25s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#818cf8" />
+        <rect x="-5.5" y="-5.5" width="11" height="11" rx="2.5" fill="#06b6d4" opacity="0.9" />
       </g>
 
       <!-- Snake Body Segment 4 -->
@@ -1384,7 +1447,7 @@
         <animateMotion dur="24s" repeatCount="indefinite" begin="-23.40s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#60a5fa" />
+        <rect x="-6" y="-6" width="12" height="12" rx="2.5" fill="#06b6d4" />
       </g>
 
       <!-- Snake Body Segment 3 -->
