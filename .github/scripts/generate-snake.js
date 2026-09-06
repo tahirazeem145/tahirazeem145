@@ -161,25 +161,45 @@ function solveSnakeTour(targets) {
 
   // Build points with Manhattan movements strictly inside rows
   const pts = [];
-  pts.push({ x: orderedTargets[0].cx, y: orderedTargets[0].cy });
+  const startX = Math.max(105 + 7.5, orderedTargets[0].cx - 19);
+  const startY = orderedTargets[0].cy;
+  pts.push({ x: startX, y: startY });
+
+  // First target
+  pts.push({ x: orderedTargets[0].cx, y: orderedTargets[0].cy, target: orderedTargets[0] });
 
   for (let i = 1; i < orderedTargets.length; i++) {
     const prev = orderedTargets[i - 1];
     const curr = orderedTargets[i];
     if (prev.cx !== curr.cx && prev.cy !== curr.cy) {
-      // Turn inside the grid
+      // Corner waypoint inside grid
       pts.push({ x: curr.cx, y: prev.cy });
     }
-    pts.push({ x: curr.cx, y: curr.cy });
+    pts.push({ x: curr.cx, y: curr.cy, target: curr });
   }
 
-  // Close the loop back to the start
+  // Close loop back to start point
   const last = pts[pts.length - 1];
-  const first = pts[0];
-  if (last.y !== first.y) {
-    pts.push({ x: last.x, y: first.y });
+  if (last.y !== startY) {
+    pts.push({ x: last.x, y: startY });
   }
-  pts.push({ x: first.x, y: first.y });
+  pts.push({ x: startX, y: startY });
+
+  // Calculate cumulative distances along path
+  pts[0].cumDist = 0;
+  let totalDist = 0;
+  for (let i = 1; i < pts.length; i++) {
+    totalDist += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
+    pts[i].cumDist = totalDist;
+  }
+
+  // Assign hitPct to each target directly from its waypoint
+  for (let i = 0; i < pts.length; i++) {
+    if (pts[i].target) {
+      pts[i].target.hitDist = pts[i].cumDist;
+      pts[i].target.hitPct = totalDist > 0 ? (pts[i].cumDist / totalDist) * 100 : 0;
+    }
+  }
 
   // Build SVG path D string
   const dParts = [`M ${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`];
@@ -187,33 +207,6 @@ function solveSnakeTour(targets) {
     dParts.push(`L ${pts[i].x.toFixed(1)} ${pts[i].y.toFixed(1)}`);
   }
   const pathD = dParts.join(' ');
-
-  // Calculate cumulative path distances to find exact hit time for each target
-  let totalDist = 0;
-  const distSegments = [];
-  for (let i = 1; i < pts.length; i++) {
-    const d = Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
-    totalDist += d;
-    distSegments.push({ dist: d, cumulative: totalDist, pt: pts[i] });
-  }
-
-  // Associate each target with its cumulative distance
-  let segIdx = 0;
-  let runningDist = 0;
-  orderedTargets.forEach(t => {
-    // Find the segment where this target matches pt
-    for (let s = segIdx; s < distSegments.length; s++) {
-      if (Math.abs(distSegments[s].pt.x - t.cx) < 0.1 && Math.abs(distSegments[s].pt.y - t.cy) < 0.1) {
-        t.hitDist = distSegments[s].cumulative;
-        t.hitPct = totalDist > 0 ? (t.hitDist / totalDist) * 100 : 50;
-        segIdx = s + 1;
-        break;
-      }
-    }
-    if (t.hitPct === undefined) {
-      t.hitPct = 50;
-    }
-  });
 
   return { pathD, orderedTargets };
 }
