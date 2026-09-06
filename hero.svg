@@ -25,12 +25,8 @@
       }
 
       @keyframes vibeGlowPulse {
-        0%, 100% {
-          filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.45)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.35));
-        }
-        50% {
-          filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 35px rgba(168, 85, 247, 0.6));
-        }
+        0%, 100% { opacity: 0.88; }
+        50% { opacity: 1; }
       }
 
       @keyframes ambientAura {

@@ -52,8 +52,8 @@
       }
 
       @keyframes alwaysBuildingBreathe {
-        0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 2px rgba(57, 211, 83, 0.4)); }
-        50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(57, 211, 83, 0.85)); }
+        0%, 100% { opacity: 0.75; }
+        50% { opacity: 1; }
       }
 
       @keyframes nodePulseGlow {
@@ -62,8 +62,8 @@
       }
 
       @keyframes particleSparkle {
-        0%, 100% { opacity: 0.9; r: 3.5; }
-        50% { opacity: 1; r: 4.8; }
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
       }
 
       /* Component Classes with Orchestrated Delays */
