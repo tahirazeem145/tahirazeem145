@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 420" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Embedded Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap');
+
+      .font-sans {
+        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      }
+
+      /* Entrance Animation */
+      @keyframes sectionFadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      /* Blinking Terminal Cursor */
+      @keyframes cursorBlink {
+        0%, 45% { opacity: 1; }
+        50%, 95% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      /* Ambient Aurora Pulse */
+      @keyframes auroraGaze {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.12); }
+      }
+
+      /* Subtle Link Capsule Pulse */
+      @keyframes linkFloat {
+        0%, 100% { stroke: #30363d; }
+        50% { stroke: rgba(0, 240, 255, 0.4); }
+      }
+
+      .cursor-blink {
+        animation: cursorBlink 1.05s steps(1) infinite;
+      }
+
+      .pulse-aurora {
+        animation: auroraGaze 8s ease-in-out infinite;
+      }
+
+      .link-capsule {
+        transition: all 0.3s ease;
+      }
+      .link-capsule:hover rect {
+        stroke: #00f0ff;
+        fill: #1c2433;
+      }
+      .link-capsule:hover text {
+        fill: #ffffff;
+      }
+    </style>
+
+    <!-- Glowing Filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="auroraBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a10" />
+      <stop offset="50%" stop-color="#0c1119" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+
+    <radialGradient id="cyanNebula" cx="35%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.12" />
+      <stop offset="60%" stop-color="#00f0ff" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#070a10" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="violetNebula" cx="65%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.12" />
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#070a10" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="quoteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#e0f2fe" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <clipPath id="cardClip">
+      <rect x="0" y="0" width="1200" height="420" rx="14" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Container -->
+  <g clip-path="url(#cardClip)">
+    <!-- Base Background -->
+    <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+    <!-- ======================================================== -->
+    <!-- ANIMATED BACKGROUND LAYER                                -->
+    <!-- ======================================================== -->
+    <!-- 1. Ambient Breathing Nebulas -->
+    <circle cx="420" cy="210" r="280" fill="url(#cyanNebula)" class="pulse-aurora" filter="url(#auroraBlur)" />
+    <circle cx="780" cy="210" r="280" fill="url(#violetNebula)" class="pulse-aurora" filter="url(#auroraBlur)" />
+
+    <!-- 2. Ambient Subtle Tech Grid Matrix -->
+    <g opacity="0.08" stroke="#58a6ff" stroke-width="0.5">
+      <line x1="100" y1="0" x2="100" y2="420" />
+      <line x1="300" y1="0" x2="300" y2="420" />
+      <line x1="500" y1="0" x2="500" y2="420" />
+      <line x1="700" y1="0" x2="700" y2="420" />
+      <line x1="900" y1="0" x2="900" y2="420" />
+      <line x1="1100" y1="0" x2="1100" y2="420" />
+      <line x1="0" y1="80" x2="1200" y2="80" />
+      <line x1="0" y1="160" x2="1200" y2="160" />
+      <line x1="0" y1="240" x2="1200" y2="240" />
+      <line x1="0" y1="320" x2="1200" y2="320" />
+    </g>
+
+    <!-- 3. Animated Drifting Kinetic Particles (Cosmic Stardust) -->
+    <!-- Particle 1 (Left Cyan) -->
+    <circle cx="160" cy="380" r="2" fill="#00f0ff">
+      <animate attributeName="cy" from="390" to="20" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.8;0.9;0.4;0" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="160;175;155;160" dur="9s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Particle 2 (Mid-Left Violet) -->
+    <circle cx="340" cy="380" r="1.5" fill="#c084fc">
+      <animate attributeName="cy" from="410" to="30" dur="11s" begin="-3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.7;0.8;0.3;0" dur="11s" begin="-3s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="340;330;350;340" dur="11s" begin="-3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Particle 3 (Center Cyan) -->
+    <circle cx="580" cy="380" r="2.2" fill="#38bdf8">
+      <animate attributeName="cy" from="400" to="10" dur="8s" begin="-1.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.9;1;0.4;0" dur="8s" begin="-1.5s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="580;595;570;580" dur="8s" begin="-1.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Particle 4 (Center-Right Mint) -->
+    <circle cx="720" cy="380" r="1.6" fill="#39d353">
+      <animate attributeName="cy" from="410" to="40" dur="10s" begin="-5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.8;0.9;0.3;0" dur="10s" begin="-5s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="720;710;730;720" dur="10s" begin="-5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Particle 5 (Right Violet) -->
+    <circle cx="890" cy="380" r="2.5" fill="#a855f7">
+      <animate attributeName="cy" from="390" to="15" dur="12s" begin="-2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.7;0.8;0.2;0" dur="12s" begin="-2s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="890;905;885;890" dur="12s" begin="-2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Particle 6 (Far Right Cyan) -->
+    <circle cx="1040" cy="380" r="1.8" fill="#00f0ff">
+      <animate attributeName="cy" from="400" to="25" dur="9.5s" begin="-4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.8;0.9;0.3;0" dur="9.5s" begin="-4s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="1040;1030;1050;1040" dur="9.5s" begin="-4s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- 4. Faint Horizon Glow Line Across Middle -->
+    <line x1="200" y1="210" x2="1000" y2="210" stroke="#00f0ff" stroke-width="0.75" opacity="0.15" />
+
+    <!-- ======================================================== -->
+    <!-- CONTENT LAYER                                            -->
+    <!-- ======================================================== -->
+
+    <!-- Section Header Tag: 06 // CONNECTION -->
+    <g transform="translate(600, 36)" text-anchor="middle">
+      <rect x="-78" y="-12" width="156" height="24" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1" />
+      <circle cx="-62" cy="0" r="3" fill="#38bdf8" />
+      <text x="-50" y="3.5" fill="#f0f6fc" class="font-mono" font-size="10.5" font-weight="700" letter-spacing="2" text-anchor="start">
+        06 // CONNECTION
+      </text>
+    </g>
+
+    <!-- Main Message / Invitation -->
+    <g transform="translate(600, 102)" text-anchor="middle">
+      <text x="0" y="0" fill="#8b949e" class="font-sans" font-size="16" font-style="italic" font-weight="400" letter-spacing="0.5">
+        &ldquo;If you&rsquo;ve made it this far,
+      </text>
+      <text x="0" y="28" fill="url(#quoteGrad)" class="font-sans" font-size="20" font-weight="700" letter-spacing="0.8" filter="url(#softGlow)">
+        let&rsquo;s build something worth shipping.&rdquo;
+      </text>
+    </g>
+
+    <!-- Four Terminal Connection Link Pills -->
+    <g transform="translate(600, 178)" text-anchor="middle">
+      <!-- 01: GitHub -->
+      <a xlink:href="https://github.com/tahirazeem145" target="_blank" class="link-capsule">
+        <rect x="-270" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#30363d" stroke-width="1" />
+        <text x="-210" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+          → GitHub
+        </text>
+      </a>
+
+      <!-- 02: LinkedIn -->
+      <a xlink:href="LINKEDIN_URL_HERE" target="_blank" class="link-capsule">
+        <rect x="-130" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#30363d" stroke-width="1" />
+        <text x="-70" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+          → LinkedIn
+        </text>
+      </a>
+
+      <!-- 03: Email -->
+      <a xlink:href="mailto:EMAIL_HERE" class="link-capsule">
+        <rect x="10" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#30363d" stroke-width="1" />
+        <text x="70" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+          → Email
+        </text>
+      </a>
+
+      <!-- 04: Portfolio -->
+      <a xlink:href="PORTFOLIO_URL_HERE" target="_blank" class="link-capsule">
+        <rect x="150" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#30363d" stroke-width="1" />
+        <text x="210" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+          → Portfolio
+        </text>
+      </a>
+    </g>
+
+    <!-- Developer Identity Signature -->
+    <g transform="translate(600, 252)" text-anchor="middle">
+      <text x="0" y="0" fill="#f0f6fc" class="font-sans" font-size="15" font-weight="800" letter-spacing="3">
+        TAHIR AZEEM
+      </text>
+      <!-- VIBE CODER · FULL STACK · AI -->
+      <rect x="-125" y="12" width="250" height="22" rx="6" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
+      <text x="0" y="27" fill="#8b949e" class="font-mono" font-size="10" font-weight="600" letter-spacing="1.5">
+        VIBE CODER · FULL STACK · AI
+      </text>
+    </g>
+
+    <!-- Interactive Terminal Command: > awaiting_connection_ -->
+    <g transform="translate(600, 328)" text-anchor="middle">
+      <rect x="-115" y="-14" width="230" height="28" rx="14" fill="#0e131d" stroke="#238636" stroke-width="0.85" />
+      <circle cx="-98" cy="0" r="3" fill="#39d353" />
+      <text x="-86" y="4" fill="#39d353" class="font-mono" font-size="11.5" font-weight="600" letter-spacing="1" text-anchor="start">
+        &gt; awaiting_connection<tspan class="cursor-blink" fill="#56d364" font-weight="900">_</tspan>
+      </text>
+    </g>
+
+    <!-- Quiet Terminal Exit: SYSTEM // END OF PROFILE -->
+    <g transform="translate(600, 386)" text-anchor="middle">
+      <text x="0" y="0" fill="#484f58" class="font-mono" font-size="9.5" font-weight="500" letter-spacing="2.5">
+        SYSTEM // END OF PROFILE
+      </text>
+    </g>
+
+    <!-- Outer Frame Border Line -->
+    <rect x="1" y="1" width="1198" height="418" rx="13" fill="none" stroke="#21262d" stroke-width="1" />
+  </g>
+</svg>

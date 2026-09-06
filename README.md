@@ -28,31 +28,10 @@
   <br/><br/>
 
   <!-- 06 — CONNECTION -->
-  <hr width="100%" size="1" color="#21262d" />
-
-  <br/>
-
-  ### `06 // CONNECTION`
-
-  <br/>
-
-  > *"If you've made it this far,<br/>let's build something worth shipping."*
+  <img src="./connection.svg" alt="Tahir Azeem - Connection" width="100%" />
 
   <br/>
 
   → [GitHub](https://github.com/tahirazeem145) &nbsp;·&nbsp; → [LinkedIn](LINKEDIN_URL_HERE) &nbsp;·&nbsp; → [Email](mailto:EMAIL_HERE) &nbsp;·&nbsp; → [Portfolio](PORTFOLIO_URL_HERE)
-
-  <br/><br/>
-
-  **TAHIR AZEEM**  
-  `VIBE CODER · FULL STACK · AI`
-
-  <br/>
-
-  `> awaiting_connection_`
-
-  <br/>
-
-  <sub>`SYSTEM // END OF PROFILE`</sub>
 
 </div>
