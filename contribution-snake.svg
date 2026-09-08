@@ -863,16 +863,16 @@
       }
 
       @keyframes eatCell_64 {
-        0%, 73.08% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        0%, 73.08% { fill: #238636; stroke: #2ea043; opacity: 1; }
         73.28% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
         73.53% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
         73.78%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
-        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        97.5%, 100% { fill: #238636; stroke: #2ea043; opacity: 1; }
       }
       .food-cell-64 {
-        fill: #196c2e;
-        stroke: #238636;
+        fill: #238636;
+        stroke: #2ea043;
         animation: eatCell_64 24s linear infinite !important;
       }
 
@@ -1030,7 +1030,7 @@
 
       <!-- Top Frame Header: Real Contribution Count -->
       <text x="60" y="92" fill="#f0f6fc" class="font-sans" font-size="12" font-weight="700" letter-spacing="0.5">
-        1,950 contributions in the last year
+        1,976 contributions in the last year
       </text>
 
       <!-- Legend on top-right -->
