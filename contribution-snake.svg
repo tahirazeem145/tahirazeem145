@@ -904,6 +904,20 @@
         animation: eatCell_66 24s linear infinite !important;
       }
 
+      @keyframes eatCell_67 {
+        0%, 75.66% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        75.86% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        76.11% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        76.36%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-67 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_67 24s linear infinite !important;
+      }
+
       @keyframes eatCell_34 {
         0%, 80.83% { fill: #196c2e; stroke: #238636; opacity: 1; }
         81.03% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
@@ -1004,8 +1018,8 @@
       <rect x="0" y="0" width="1200" height="350" rx="14" />
     </clipPath>
 
-    <!-- Master Snake Traversal Path (Visits ALL 67 targets, strictly inside grid) -->
-    <path id="masterSnakePath" d="M 663.5 210.5 L 682.5 210.5 L 682.5 248.5 L 701.5 248.5 L 701.5 172.5 L 739.5 172.5 L 739.5 210.5 L 720.5 210.5 L 739.5 210.5 L 739.5 229.5 L 758.5 229.5 L 758.5 191.5 L 777.5 191.5 L 777.5 210.5 L 872.5 210.5 L 872.5 191.5 L 891.5 191.5 L 891.5 248.5 L 910.5 248.5 L 910.5 267.5 L 872.5 267.5 L 872.5 286.5 L 967.5 286.5 L 967.5 172.5 L 910.5 172.5 L 929.5 172.5 L 929.5 191.5 L 1024.5 191.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 248.5 L 986.5 248.5 L 986.5 267.5 L 739.5 267.5 L 739.5 286.5 L 663.5 286.5 L 663.5 210.5" fill="none" />
+    <!-- Master Snake Traversal Path (Visits ALL 68 targets, strictly inside grid) -->
+    <path id="masterSnakePath" d="M 663.5 210.5 L 682.5 210.5 L 682.5 248.5 L 701.5 248.5 L 701.5 172.5 L 739.5 172.5 L 739.5 210.5 L 720.5 210.5 L 739.5 210.5 L 739.5 229.5 L 758.5 229.5 L 758.5 191.5 L 777.5 191.5 L 777.5 210.5 L 872.5 210.5 L 872.5 191.5 L 891.5 191.5 L 891.5 248.5 L 910.5 248.5 L 910.5 267.5 L 872.5 267.5 L 872.5 286.5 L 967.5 286.5 L 967.5 172.5 L 910.5 172.5 L 929.5 172.5 L 929.5 191.5 L 1024.5 191.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 267.5 L 739.5 267.5 L 739.5 286.5 L 663.5 286.5 L 663.5 210.5" fill="none" />
   </defs>
 
   <!-- Outer Canvas Container -->
@@ -1034,7 +1048,7 @@
       <!-- Center Telemetry Tag -->
       <g transform="translate(640, 36)" text-anchor="middle">
         <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="9" letter-spacing="1.2">
-          TARGET: <tspan fill="#39d353">ALL_67_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">VIBE_SNAKE</tspan>
+          TARGET: <tspan fill="#39d353">ALL_68_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">VIBE_SNAKE</tspan>
         </text>
       </g>
 
@@ -1058,7 +1072,7 @@
 
       <!-- Top Frame Header: Real Contribution Count -->
       <text x="60" y="92" fill="#f0f6fc" class="font-sans" font-size="12" font-weight="700" letter-spacing="0.5">
-        1,993 contributions in the last year
+        2,009 contributions in the last year
       </text>
 
       <!-- Legend on top-right -->
@@ -1535,6 +1549,7 @@
         <rect x="1093" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect class="food-cell-66" x="1093" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
+        <rect class="food-cell-67" x="1093" y="260" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
       </g>
 
