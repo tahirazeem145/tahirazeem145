@@ -384,7 +384,7 @@
           <tspan fill="#64748b">STATUS: </tspan>
           <tspan fill="#00f0ff" font-weight="700">BUILDING</tspan>
           <tspan fill="#475569"> | </tspan>
-          <tspan fill="#c084fc">VIBE_CODER</tspan>
+          <tspan fill="#c084fc">AI_BUILDER</tspan>
         </text>
       </g>
     </g>
@@ -410,7 +410,7 @@
         </g>
         <g class="t-line-2">
           <text x="0" y="18" fill="#94a3b8" class="font-mono" font-size="9">developer.identity = <tspan fill="#00f0ff">"Tahir Azeem"</tspan></text>
-          <text x="0" y="34" fill="#94a3b8" class="font-mono" font-size="9">mode = <tspan fill="#a855f7">"VIBE_CODER"</tspan></text>
+          <text x="0" y="34" fill="#94a3b8" class="font-mono" font-size="9">mode = <tspan fill="#a855f7">"FULL_STACK"</tspan></text>
         </g>
         <g class="t-line-3">
           <text x="0" y="50" fill="#94a3b8" class="font-mono" font-size="9">status = <tspan fill="#22c55e">"BUILDING"</tspan></text>
