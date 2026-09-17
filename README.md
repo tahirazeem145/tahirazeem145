@@ -9,7 +9,7 @@
 
   <br/>
 
-  # ✦ TAHIR AZEEM ✦
+  #  TAHIR AZEEM 
   ### ⚡ Full Stack Developer &nbsp;×&nbsp; AI Builder
   *“Turning ideas into real, scalable products.”*
 
