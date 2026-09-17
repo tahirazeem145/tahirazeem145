@@ -17,7 +17,7 @@
       padding: 0;
     }
     body {
-      background-color: #0d1117;
+      background-color: #080c14;
       color: #c9d1d9;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
       padding: 40px 20px;
@@ -28,26 +28,26 @@
     }
     .readme-container {
       width: 100%;
-      max-width: 1000px;
+      max-width: 1020px;
       background-color: #0d1117;
       border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 32px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 240, 255, 0.05);
     }
     .header-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       padding-bottom: 16px;
       border-bottom: 1px solid #21262d;
     }
-    .badge {
+    .badge-status {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 20px;
       font-size: 12px;
       font-family: 'JetBrains Mono', monospace;
@@ -56,7 +56,7 @@
       border: 1px solid rgba(0, 240, 255, 0.3);
     }
     .section-separator {
-      margin: 28px 0;
+      margin: 32px 0 24px 0;
       width: 100%;
     }
     .section-label {
@@ -64,7 +64,7 @@
       font-size: 12px;
       color: #58a6ff;
       letter-spacing: 1.5px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -116,36 +116,122 @@
       height: auto;
       display: block;
     }
-    .meta-info {
-      margin-top: 36px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
+    
+    /* Markdown Typography Styling */
+    .profile-content {
+      text-align: center;
     }
-    .meta-card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 16px 20px;
+    h1.md-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #f0f6fc;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      letter-spacing: 2px;
     }
-    .meta-card h3 {
-      font-size: 14px;
+    h2.md-section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
       color: #58a6ff;
+      margin-top: 24px;
       margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      letter-spacing: 1px;
     }
-    .meta-card p, .meta-card code {
-      font-size: 13px;
+    h3.md-subtitle {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #79c0ff;
+      margin-bottom: 8px;
+    }
+    p.md-desc {
+      font-size: 14px;
       color: #8b949e;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .shield-badge-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 14px 0 20px 0;
+    }
+    .shield-badge-group img {
+      height: 28px;
+      border-radius: 4px;
+    }
+    blockquote.md-quote {
+      background: rgba(22, 27, 34, 0.8);
+      border-left: 4px solid #00f0ff;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 20px;
+      margin: 16px auto;
+      max-width: 780px;
+      color: #e6edf3;
+      font-size: 15px;
+      font-style: italic;
+    }
+    .md-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 18px 0;
+    }
+    table.md-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #30363d;
+    }
+    table.md-table th {
+      background-color: #161b22;
+      color: #58a6ff;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-bottom: 1px solid #30363d;
+    }
+    table.md-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #21262d;
+      background-color: #0d1117;
+      color: #c9d1d9;
       line-height: 1.5;
     }
-    .meta-card code {
+    table.md-table tr:hover td {
+      background-color: #161b22;
+    }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
       color: #79c0ff;
-      background: rgba(110,118,129,0.1);
+      background: rgba(110, 118, 129, 0.15);
       padding: 2px 6px;
       border-radius: 4px;
+    }
+    a.md-link {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    a.md-link:hover {
+      color: #79c0ff;
+      text-decoration: underline;
+    }
+    .footer-links {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      margin: 20px 0 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
     .refresh-btn {
       background: #238636;
@@ -170,87 +256,247 @@
         📄 <strong>tahirazeem145</strong> / README.md
         <button class="refresh-btn" onclick="reloadAllSVGs()">⚡ Reload SVGs</button>
       </div>
-      <div class="badge">
+      <div class="badge-status">
         <span style="width: 8px; height: 8px; border-radius: 50%; background: #00f0ff; display: inline-block;"></span>
         SYSTEM: ONLINE
       </div>
     </div>
 
-    <!-- 01 — HERO SECTION -->
-    <div class="section-label">
-      <span>✦</span> 01 — HERO SECTION
-    </div>
-    <div class="svg-wrapper">
-      <img id="heroImg" src="hero.svg" alt="Tahir Azeem - Hero Banner" class="readme-svg" />
-    </div>
+    <div class="profile-content">
 
-    <div class="section-separator">
-      <img id="div02" src="flight-divider-02.svg" alt="NEXT: 02 Developer System" class="divider-img readme-svg" style="height: 50px;" />
-    </div>
+      <!-- ======================================================== -->
+      <!-- 01 — HERO SECTION                                        -->
+      <!-- ======================================================== -->
+      <div class="section-label">
+        <span>✦</span> 01 — HERO SECTION // DEVELOPER PROFILE
+      </div>
+      <div class="svg-wrapper">
+        <a href="https://github.com/tahirazeem145" target="_blank">
+          <img id="heroImg" src="hero.svg" alt="Tahir Azeem - Hero Banner" class="readme-svg" />
+        </a>
+      </div>
 
-    <!-- 02 — DEVELOPER SYSTEM (TAHIR_OS) -->
-    <div class="section-label">
-      <span>✦</span> 02 — DEVELOPER SYSTEM // TAHIR_OS
-    </div>
-    <div class="svg-wrapper-purple">
-      <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS" class="readme-svg" />
-    </div>
+      <h1 class="md-title">✦ TAHIR AZEEM ✦</h1>
+      <h3 class="md-subtitle">⚡ Vibe Coder &nbsp;|&nbsp; Full Stack Developer &nbsp;×&nbsp; AI Builder</h3>
+      <p class="md-desc"><em>“Turning ideas into real, scalable products.”</em></p>
 
-    <div class="section-separator">
-      <img id="div03" src="flight-divider-03.svg" alt="NEXT: 03 Project Galaxy" class="divider-img readme-svg" style="height: 50px;" />
-    </div>
+      <div class="shield-badge-group">
+        <a href="https://github.com/tahirazeem145" target="_blank"><img src="https://img.shields.io/badge/GitHub-tahirazeem145-00f0ff?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" /></a>
+        <a href="https://in.linkedin.com/in/tahirazeem-r" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Tahir_Azeem-38bdf8?style=for-the-badge&logo=linkedin&logoColor=black" alt="LinkedIn" /></a>
+        <a href="mailto:tahirazeems145s@gmail.com"><img src="https://img.shields.io/badge/Email-tahirazeems145s-a855f7?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+        <a href="https://tahirazeemportfolio.vercel.app" target="_blank"><img src="https://img.shields.io/badge/Portfolio-Live_Site-22c55e?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio" /></a>
+      </div>
 
-    <!-- 03 — PROJECT GALAXY -->
-    <div class="section-label">
-      <span>✦</span> 03 — PROJECT GALAXY // ACTIVE BUILDS
-    </div>
-    <div class="svg-wrapper-galaxy">
-      <img id="galaxyImg" src="project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" class="readme-svg" />
-    </div>
+      <div class="section-separator">
+        <img id="div02" src="flight-divider-02.svg" alt="NEXT: 02 Developer System" class="divider-img readme-svg" style="height: 50px;" />
+      </div>
 
-    <div class="section-separator">
-      <img id="div04" src="flight-divider-04.svg" alt="NEXT: 04 Contribution Snake" class="divider-img readme-svg" style="height: 50px;" />
-    </div>
+      <!-- ======================================================== -->
+      <!-- 02 — DEVELOPER SYSTEM (TAHIR_OS)                         -->
+      <!-- ======================================================== -->
+      <div class="section-label">
+        <span>✦</span> 02 — DEVELOPER SYSTEM // TAHIR_OS
+      </div>
+      <h2 class="md-section-title">⚙️ 02 // DEVELOPER SYSTEM [ TAHIR_OS ]</h2>
+      <p class="md-desc"><em>Autonomous execution environment engineered for velocity, deep learning, and continuous evolution.</em></p>
 
-    <!-- 04 — CONTRIBUTION SNAKE -->
-    <div class="section-label">
-      <span>✦</span> 04 — CONTRIBUTION SNAKE // AUTONOMOUS GAME
-    </div>
-    <div class="svg-wrapper-snake">
-      <img id="snakeImg" src="contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" class="readme-svg" />
-    </div>
+      <div class="svg-wrapper-purple">
+        <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS" class="readme-svg" />
+      </div>
 
-    <div class="section-separator">
-      <img id="div05" src="flight-divider-05.svg" alt="NEXT: 05 Builder Mindset" class="divider-img readme-svg" style="height: 50px;" />
-    </div>
+      <div class="md-table-wrap">
+        <table class="md-table">
+          <thead>
+            <tr>
+              <th>🎯 Directive</th>
+              <th>📝 Description</th>
+              <th style="text-align:center;">🚀 Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>01 // Build Real Products</strong></td>
+              <td>Engineering functional, user-centric software that solves actual problems.</td>
+              <td style="text-align:center;"><code>ACTIVE</code></td>
+            </tr>
+            <tr>
+              <td><strong>02 // Learn Deeply</strong></td>
+              <td>Deconstructing fundamentals, mastering modern frameworks, and exploring LLM agents.</td>
+              <td style="text-align:center;"><code>ACTIVE</code></td>
+            </tr>
+            <tr>
+              <td><strong>03 // Ship Relentlessly</strong></td>
+              <td>Maintaining high deployment velocity through rapid, disciplined iteration loops.</td>
+              <td style="text-align:center;"><code>ACTIVE</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <!-- 05 — BUILDER MINDSET -->
-    <div class="section-label">
-      <span>✦</span> 05 — BUILDER MINDSET // THE PHILOSOPHY
-    </div>
-    <div class="svg-wrapper-mindset">
-      <img id="mindsetImg" src="builder-mindset.svg" alt="Tahir Azeem - Builder Mindset" class="readme-svg" />
-    </div>
+      <div class="section-separator">
+        <img id="div03" src="flight-divider-03.svg" alt="NEXT: 03 Project Galaxy" class="divider-img readme-svg" style="height: 50px;" />
+      </div>
 
-    <div class="section-separator">
-      <img id="div06" src="flight-divider-06.svg" alt="NEXT: 06 Connection" class="divider-img readme-svg" style="height: 50px;" />
-    </div>
+      <!-- ======================================================== -->
+      <!-- 03 — PROJECT GALAXY                                      -->
+      <!-- ======================================================== -->
+      <div class="section-label">
+        <span>✦</span> 03 — PROJECT GALAXY // ACTIVE BUILDS
+      </div>
+      <h2 class="md-section-title">🚀 03 // PROJECT GALAXY [ ACTIVE BUILDS ]</h2>
+      <p class="md-desc"><em>Curated lineup of flagship applications, intelligent AI products, and developer utilities.</em></p>
 
-    <!-- 06 — CONNECTION -->
-    <div class="section-label">
-      <span>✦</span> 06 — CONNECTION // TERMINAL INVITATION
-    </div>
-    <div class="svg-wrapper-connection">
-      <img id="connectionImg" src="connection.svg" alt="Tahir Azeem - Connection" class="readme-svg" />
-    </div>
+      <div class="svg-wrapper-galaxy">
+        <img id="galaxyImg" src="project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" class="readme-svg" />
+      </div>
 
-    <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; margin-top: 18px; margin-bottom: 24px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-      <a href="https://github.com/tahirazeem145" target="_blank" style="color: #79c0ff; text-decoration: none;">&rarr; GitHub</a>
-      <a href="https://in.linkedin.com/in/tahirazeem-r" target="_blank" style="color: #79c0ff; text-decoration: none;">&rarr; LinkedIn</a>
-      <a href="mailto:tahirazeems145s@gmail.com" style="color: #79c0ff; text-decoration: none;">&rarr; Email</a>
-      <a href="https://tahirazeemportfolio.vercel.app" target="_blank" style="color: #79c0ff; text-decoration: none;">&rarr; Portfolio</a>
-    </div>
+      <div class="md-table-wrap">
+        <table class="md-table">
+          <thead>
+            <tr>
+              <th>🛸 Project</th>
+              <th>🛠️ Tech Stack</th>
+              <th>📌 Type & Overview</th>
+              <th style="text-align:center;">🔗 Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TripNest 2.0</strong><br/><small style="color:#00f0ff;">★ Flagship</small></td>
+              <td><code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Supabase</code> <code>PostgreSQL</code></td>
+              <td><strong>Travel Photo Sharing Community Platform</strong><br/>Geo-synced photo sharing, community feeds, and social travel networks.</td>
+              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank" class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145" target="_blank" class="md-link">Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>HireMind AI</strong></td>
+              <td><code>AI Product</code> <code>LLMs</code> <code>Next.js</code> <code>APIs</code></td>
+              <td><strong>AI-Powered Career Coach</strong><br/>Intelligent career guidance, automated resume critique, and interview simulator.</td>
+              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank" class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145" target="_blank" class="md-link">Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>QR Web Tool</strong></td>
+              <td><code>Web Tool</code> <code>JavaScript</code> <code>Modern UI</code></td>
+              <td><strong>Modern QR Code Generator</strong><br/>High-performance, customizable vector QR code generator for digital workflows.</td>
+              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank" class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145" target="_blank" class="md-link">Source</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <div class="section-separator">
+        <img id="div04" src="flight-divider-04.svg" alt="NEXT: 04 Contribution Snake" class="divider-img readme-svg" style="height: 50px;" />
+      </div>
+
+      <!-- ======================================================== -->
+      <!-- 04 — CONTRIBUTION SNAKE                                  -->
+      <!-- ======================================================== -->
+      <div class="section-label">
+        <span>✦</span> 04 — CONTRIBUTION SNAKE // AUTONOMOUS GAME
+      </div>
+      <h2 class="md-section-title">🐍 04 // CONTRIBUTION GRAPH [ AUTONOMOUS GAME ]</h2>
+      <p class="md-desc"><em>Autonomous daily visualization of GitHub activity, commit streaks, and continuous momentum.</em></p>
+
+      <div class="svg-wrapper-snake">
+        <img id="snakeImg" src="contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" class="readme-svg" />
+      </div>
+
+      <p style="margin: 16px 0; font-size: 13px;">
+        <code>Streak: Perpetual</code> &nbsp;•&nbsp; <code>Focus: Clean Code & High Velocity</code> &nbsp;•&nbsp; <code>Cadence: Daily Commits</code>
+      </p>
+
+      <div class="section-separator">
+        <img id="div05" src="flight-divider-05.svg" alt="NEXT: 05 Builder Mindset" class="divider-img readme-svg" style="height: 50px;" />
+      </div>
+
+      <!-- ======================================================== -->
+      <!-- 05 — BUILDER MINDSET                                     -->
+      <!-- ======================================================== -->
+      <div class="section-label">
+        <span>✦</span> 05 — BUILDER MINDSET // THE PHILOSOPHY
+      </div>
+      <h2 class="md-section-title">🧠 05 // BUILDER MINDSET [ THE PHILOSOPHY ]</h2>
+
+      <blockquote class="md-quote">
+        <strong>“I don't just write code. I build things people can use. Ideas are cheap — building is the difference.”</strong>
+      </blockquote>
+
+      <div class="svg-wrapper-mindset">
+        <img id="mindsetImg" src="builder-mindset.svg" alt="Tahir Azeem - Builder Mindset" class="readme-svg" />
+      </div>
+
+      <div class="md-table-wrap">
+        <table class="md-table">
+          <thead>
+            <tr>
+              <th style="text-align:center;">🔄 Stage</th>
+              <th>💡 Name</th>
+              <th>📖 Philosophy Directive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center;"><code>01</code></td>
+              <td><strong>THINK</strong></td>
+              <td>Understand the core problem and user needs before writing a single line of code.</td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"><code>02</code></td>
+              <td><strong>ARCHITECT</strong></td>
+              <td>Structure scalable systems, modular data models, and clean component hierarchies.</td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"><code>03</code></td>
+              <td><strong>EXECUTE</strong></td>
+              <td>Turn architecture into clean, high-velocity code using modern industry standards.</td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"><code>04</code></td>
+              <td><strong>TEST & BREAK</strong></td>
+              <td>Stress-test edge cases and potential failure modes to guarantee rock-solid stability.</td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"><code>05</code></td>
+              <td><strong>ITERATE</strong></td>
+              <td>Continuously refine performance, user experience, and architecture based on telemetry.</td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"><code>06</code></td>
+              <td><strong>SHIP</strong></td>
+              <td>Deploy production-ready value to users and repeat the perpetual build cycle.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-separator">
+        <img id="div06" src="flight-divider-06.svg" alt="NEXT: 06 Connection" class="divider-img readme-svg" style="height: 50px;" />
+      </div>
+
+      <!-- ======================================================== -->
+      <!-- 06 — CONNECTION                                          -->
+      <!-- ======================================================== -->
+      <div class="section-label">
+        <span>✦</span> 06 — CONNECTION // TERMINAL INVITATION
+      </div>
+      <h2 class="md-section-title">📡 06 // CONNECTION [ TERMINAL INVITATION ]</h2>
+      <p class="md-desc"><em>Open for high-impact product builds, full-stack web applications, AI integrations, and visionary collaborations.</em></p>
+
+      <div class="svg-wrapper-connection">
+        <img id="connectionImg" src="connection.svg" alt="Tahir Azeem - Connection" class="readme-svg" />
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/tahirazeem145" target="_blank" class="md-link">&rarr; GitHub</a>
+        <a href="https://in.linkedin.com/in/tahirazeem-r" target="_blank" class="md-link">&rarr; LinkedIn</a>
+        <a href="mailto:tahirazeems145s@gmail.com" class="md-link">&rarr; Email</a>
+        <a href="https://tahirazeemportfolio.vercel.app" target="_blank" class="md-link">&rarr; Portfolio</a>
+      </div>
+
+      <p style="color: #64748b; font-size: 11px; font-family: 'JetBrains Mono', monospace; margin-top: 20px;">
+        © 2026 Tahir Azeem • System Status: Nominal • Autonomous Builder
+      </p>
+
+    </div>
   </div>
 
   <script>
