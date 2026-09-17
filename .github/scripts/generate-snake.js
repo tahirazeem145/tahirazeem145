@@ -462,7 +462,7 @@ ${keyframesCSS}
       <!-- Center Telemetry Tag -->
       <g transform="translate(640, 36)" text-anchor="middle">
         <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="9" letter-spacing="1.2">
-          TARGET: <tspan fill="#39d353">ALL_${targets.length}_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">VIBE_SNAKE</tspan>
+          TARGET: <tspan fill="#39d353">ALL_${targets.length}_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">AUTO_SNAKE</tspan>
         </text>
       </g>
 
