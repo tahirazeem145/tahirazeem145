@@ -254,27 +254,27 @@
         <text x="0" y="16" fill="#f1f5f9" class="font-sans" font-size="14" font-weight="700" letter-spacing="1">Tahir Azeem</text>
       </g>
 
-      <!-- Field: MODE (VIBE CODER - Strongest Emphasis) -->
+      <!-- Field: SPECIALIZATION (FULL STACK & AI) -->
       <g transform="translate(52, 172)">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">MODE</text>
-        <!-- Vibe Coder Highlight Chip -->
+        <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">STACK FOCUS</text>
+        <!-- Stack Highlight Chip -->
         <g transform="translate(0, 7)">
-          <rect x="0" y="0" width="138" height="24" rx="4" fill="#09182d" stroke="#00f0ff" stroke-width="1" filter="url(#glow-cyan)" />
+          <rect x="0" y="0" width="148" height="24" rx="4" fill="#09182d" stroke="#00f0ff" stroke-width="1" filter="url(#glow-cyan)" />
           <circle cx="12" cy="12" r="3" fill="#00f0ff" class="pulse-dot-cyan" />
-          <text x="24" y="16" fill="#00f0ff" class="font-mono" font-size="11" font-weight="800" letter-spacing="2">VIBE CODER</text>
+          <text x="24" y="16" fill="#00f0ff" class="font-mono" font-size="10.5" font-weight="800" letter-spacing="1.5">FULL STACK &amp; AI</text>
         </g>
       </g>
 
       <!-- Field: ROLE -->
       <g transform="translate(52, 230)">
         <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">ROLE</text>
-        <text x="0" y="15" fill="#cbd5e1" class="font-sans" font-size="12" font-weight="600" letter-spacing="1">FULL STACK DEVELOPER</text>
+        <text x="0" y="15" fill="#cbd5e1" class="font-sans" font-size="12" font-weight="600" letter-spacing="1">SOFTWARE ENGINEER</text>
       </g>
 
       <!-- Field: DIRECTION -->
       <g transform="translate(52, 272)">
         <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">DIRECTION</text>
-        <text x="0" y="15" fill="#c084fc" class="font-mono" font-size="11.5" font-weight="700" letter-spacing="1.5">AI BUILDER</text>
+        <text x="0" y="15" fill="#c084fc" class="font-mono" font-size="11.5" font-weight="700" letter-spacing="1.5">AI PRODUCT BUILDER</text>
       </g>
 
       <!-- Corner Reticle -->
