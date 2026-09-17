@@ -4,13 +4,13 @@
   <!-- 01 — HERO SECTION                                        -->
   <!-- ======================================================== -->
   <a href="https://github.com/tahirazeem145">
-    <img src="./hero.svg" alt="Tahir Azeem - Vibe Coder & Full Stack AI Builder" width="100%" />
+    <img src="./hero.svg" alt="Tahir Azeem - Full Stack Developer & AI Builder" width="100%" />
   </a>
 
   <br/>
 
   # ✦ TAHIR AZEEM ✦
-  ### ⚡ Vibe Coder &nbsp;|&nbsp; Full Stack Developer &nbsp;×&nbsp; AI Builder
+  ### ⚡ Full Stack Developer &nbsp;×&nbsp; AI Builder
   *“Turning ideas into real, scalable products.”*
 
   <br/>
