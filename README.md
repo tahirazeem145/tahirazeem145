@@ -16,6 +16,12 @@
   <br/>
 
   <p>
+    <code>⚡ Experience: Full Stack & AI Systems</code> &nbsp;•&nbsp; <code>🚀 Focus: Production Engineering</code> &nbsp;•&nbsp; <code>📍 Location: Remote / Global</code>
+  </p>
+
+  <br/>
+
+  <p>
     <a href="https://github.com/tahirazeem145"><img src="https://img.shields.io/badge/GitHub-tahirazeem145-00f0ff?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" /></a>
     &nbsp;
     <a href="https://in.linkedin.com/in/tahirazeem-r"><img src="https://img.shields.io/badge/LinkedIn-Tahir_Azeem-38bdf8?style=for-the-badge&logo=linkedin&logoColor=black" alt="LinkedIn" /></a>
