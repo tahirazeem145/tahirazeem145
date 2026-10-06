@@ -1227,10 +1227,10 @@
       }
 
       @keyframes eatCell_90 {
-        0%, 75.48% { fill: #196c2e; stroke: #238636; opacity: 1; }
-        75.68% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        75.93% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        76.18%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        0%, 74.80% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        75.00% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        75.25% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        75.50%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
         96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
         97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
       }
@@ -1238,6 +1238,34 @@
         fill: #196c2e;
         stroke: #238636;
         animation: eatCell_90 24s linear infinite !important;
+      }
+
+      @keyframes eatCell_91 {
+        0%, 75.48% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        75.68% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        75.93% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        76.18%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-91 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_91 24s linear infinite !important;
+      }
+
+      @keyframes eatCell_92 {
+        0%, 76.15% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        76.35% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        76.60% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        76.85%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-92 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_92 24s linear infinite !important;
       }
 
       @keyframes eatCell_34 {
@@ -1340,8 +1368,8 @@
       <rect x="0" y="0" width="1200" height="350" rx="14" />
     </clipPath>
 
-    <!-- Master Snake Traversal Path (Visits ALL 91 targets, strictly inside grid) -->
-    <path id="masterSnakePath" d="M 587.5 210.5 L 606.5 210.5 L 606.5 248.5 L 625.5 248.5 L 625.5 172.5 L 663.5 172.5 L 663.5 210.5 L 644.5 210.5 L 663.5 210.5 L 663.5 229.5 L 682.5 229.5 L 682.5 191.5 L 701.5 191.5 L 701.5 210.5 L 796.5 210.5 L 796.5 191.5 L 815.5 191.5 L 815.5 248.5 L 834.5 248.5 L 834.5 267.5 L 796.5 267.5 L 796.5 286.5 L 891.5 286.5 L 891.5 172.5 L 834.5 172.5 L 853.5 172.5 L 853.5 191.5 L 948.5 191.5 L 948.5 286.5 L 967.5 286.5 L 967.5 172.5 L 986.5 172.5 L 986.5 286.5 L 1005.5 286.5 L 1005.5 172.5 L 1024.5 172.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 191.5 L 910.5 191.5 L 910.5 267.5 L 663.5 267.5 L 663.5 286.5 L 587.5 286.5 L 587.5 210.5" fill="none" />
+    <!-- Master Snake Traversal Path (Visits ALL 93 targets, strictly inside grid) -->
+    <path id="masterSnakePath" d="M 587.5 210.5 L 606.5 210.5 L 606.5 248.5 L 625.5 248.5 L 625.5 172.5 L 663.5 172.5 L 663.5 210.5 L 644.5 210.5 L 663.5 210.5 L 663.5 229.5 L 682.5 229.5 L 682.5 191.5 L 701.5 191.5 L 701.5 210.5 L 796.5 210.5 L 796.5 191.5 L 815.5 191.5 L 815.5 248.5 L 834.5 248.5 L 834.5 267.5 L 796.5 267.5 L 796.5 286.5 L 891.5 286.5 L 891.5 172.5 L 834.5 172.5 L 853.5 172.5 L 853.5 191.5 L 948.5 191.5 L 948.5 286.5 L 967.5 286.5 L 967.5 172.5 L 986.5 172.5 L 986.5 286.5 L 1005.5 286.5 L 1005.5 172.5 L 1024.5 172.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 210.5 L 910.5 210.5 L 910.5 267.5 L 663.5 267.5 L 663.5 286.5 L 587.5 286.5 L 587.5 210.5" fill="none" />
   </defs>
 
   <!-- Outer Canvas Container -->
@@ -1370,7 +1398,7 @@
       <!-- Center Telemetry Tag -->
       <g transform="translate(640, 36)" text-anchor="middle">
         <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="9" letter-spacing="1.2">
-          TARGET: <tspan fill="#39d353">ALL_91_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">AUTO_SNAKE</tspan>
+          TARGET: <tspan fill="#39d353">ALL_93_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">AUTO_SNAKE</tspan>
         </text>
       </g>
 
@@ -1394,7 +1422,7 @@
 
       <!-- Top Frame Header: Real Contribution Count -->
       <text x="60" y="92" fill="#f0f6fc" class="font-sans" font-size="12" font-weight="700" letter-spacing="0.5">
-        2,152 contributions in the last year
+        2,161 contributions in the last year
       </text>
 
       <!-- Legend on top-right -->
@@ -1889,9 +1917,11 @@
         <rect x="1074" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect class="food-cell-89" x="1074" y="279" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="165" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
+        <rect class="food-cell-90" x="1093" y="165" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
-        <rect class="food-cell-90" x="1093" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
+        <rect class="food-cell-91" x="1093" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
+        <rect class="food-cell-92" x="1093" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1093" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1093" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
