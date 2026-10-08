@@ -1268,6 +1268,34 @@
         animation: eatCell_92 24s linear infinite !important;
       }
 
+      @keyframes eatCell_93 {
+        0%, 76.83% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        77.03% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        77.28% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        77.53%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-93 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_93 24s linear infinite !important;
+      }
+
+      @keyframes eatCell_94 {
+        0%, 77.50% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        77.70% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        77.95% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        78.20%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-94 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_94 24s linear infinite !important;
+      }
+
       @keyframes eatCell_34 {
         0%, 84.94% { fill: #196c2e; stroke: #238636; opacity: 1; }
         85.14% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
@@ -1368,8 +1396,8 @@
       <rect x="0" y="0" width="1200" height="350" rx="14" />
     </clipPath>
 
-    <!-- Master Snake Traversal Path (Visits ALL 93 targets, strictly inside grid) -->
-    <path id="masterSnakePath" d="M 587.5 210.5 L 606.5 210.5 L 606.5 248.5 L 625.5 248.5 L 625.5 172.5 L 663.5 172.5 L 663.5 210.5 L 644.5 210.5 L 663.5 210.5 L 663.5 229.5 L 682.5 229.5 L 682.5 191.5 L 701.5 191.5 L 701.5 210.5 L 796.5 210.5 L 796.5 191.5 L 815.5 191.5 L 815.5 248.5 L 834.5 248.5 L 834.5 267.5 L 796.5 267.5 L 796.5 286.5 L 891.5 286.5 L 891.5 172.5 L 834.5 172.5 L 853.5 172.5 L 853.5 191.5 L 948.5 191.5 L 948.5 286.5 L 967.5 286.5 L 967.5 172.5 L 986.5 172.5 L 986.5 286.5 L 1005.5 286.5 L 1005.5 172.5 L 1024.5 172.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 210.5 L 910.5 210.5 L 910.5 267.5 L 663.5 267.5 L 663.5 286.5 L 587.5 286.5 L 587.5 210.5" fill="none" />
+    <!-- Master Snake Traversal Path (Visits ALL 95 targets, strictly inside grid) -->
+    <path id="masterSnakePath" d="M 587.5 210.5 L 606.5 210.5 L 606.5 248.5 L 625.5 248.5 L 625.5 172.5 L 663.5 172.5 L 663.5 210.5 L 644.5 210.5 L 663.5 210.5 L 663.5 229.5 L 682.5 229.5 L 682.5 191.5 L 701.5 191.5 L 701.5 210.5 L 796.5 210.5 L 796.5 191.5 L 815.5 191.5 L 815.5 248.5 L 834.5 248.5 L 834.5 267.5 L 796.5 267.5 L 796.5 286.5 L 891.5 286.5 L 891.5 172.5 L 834.5 172.5 L 853.5 172.5 L 853.5 191.5 L 948.5 191.5 L 948.5 286.5 L 967.5 286.5 L 967.5 172.5 L 986.5 172.5 L 986.5 286.5 L 1005.5 286.5 L 1005.5 172.5 L 1024.5 172.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 248.5 L 910.5 248.5 L 910.5 267.5 L 663.5 267.5 L 663.5 286.5 L 587.5 286.5 L 587.5 210.5" fill="none" />
   </defs>
 
   <!-- Outer Canvas Container -->
@@ -1398,7 +1426,7 @@
       <!-- Center Telemetry Tag -->
       <g transform="translate(640, 36)" text-anchor="middle">
         <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="9" letter-spacing="1.2">
-          TARGET: <tspan fill="#39d353">ALL_93_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">AUTO_SNAKE</tspan>
+          TARGET: <tspan fill="#39d353">ALL_95_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">AUTO_SNAKE</tspan>
         </text>
       </g>
 
@@ -1422,7 +1450,7 @@
 
       <!-- Top Frame Header: Real Contribution Count -->
       <text x="60" y="92" fill="#f0f6fc" class="font-sans" font-size="12" font-weight="700" letter-spacing="0.5">
-        2,161 contributions in the last year
+        2,167 contributions in the last year
       </text>
 
       <!-- Legend on top-right -->
@@ -1923,7 +1951,9 @@
         <rect x="1093" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect class="food-cell-92" x="1093" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
+        <rect class="food-cell-93" x="1093" y="222" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
+        <rect class="food-cell-94" x="1093" y="241" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1093" y="279" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
       </g>
