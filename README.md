@@ -110,6 +110,12 @@
 
   <img src="./contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" width="100%" />
 
+  <br/><br/>
+
+  <a href="https://github.com/tahirazeem145">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=tahirazeem145&theme=dark&background=0d1117&border=30363d&stroke=00f0ff&ring=00f0ff&fire=FB8C00&currStreakNum=00f0ff&sideNums=f0f6fc&currStreakLabel=00f0ff&dates=8b949e" alt="Tahir Azeem - GitHub Streak Stats" />
+  </a>
+
   <br/>
   <p>
     <code>Streak: Perpetual</code> &nbsp;•&nbsp; <code>Focus: Clean Code & High Velocity</code> &nbsp;•&nbsp; <code>Cadence: Daily Commits</code>
