@@ -113,7 +113,7 @@
   <br/><br/>
 
   <a href="https://github.com/tahirazeem145">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=tahirazeem145&theme=dark&background=0d1117&border=30363d&stroke=00f0ff&ring=00f0ff&fire=FB8C00&currStreakNum=00f0ff&sideNums=f0f6fc&currStreakLabel=00f0ff&dates=8b949e" alt="Tahir Azeem - GitHub Streak Stats" />
+    <img src="https://streak-stats.demolab.com/?user=tahirazeem145&theme=dark&background=0d1117&border=30363d&stroke=00f0ff&ring=00f0ff&fire=FB8C00&currStreakNum=00f0ff&sideNums=f0f6fc&currStreakLabel=00f0ff&dates=8b949e" alt="Tahir Azeem - GitHub Streak Stats" />
   </a>
 
   <br/>
