@@ -1,0 +1,37 @@
+name: Daily Auto Commit & Streak Keeper
+
+on:
+  schedule:
+    # Runs daily at 04:00 UTC (09:30 AM IST)
+    - cron: "0 4 * * *"
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update Daily Activity Log
+        run: |
+          mkdir -p .github/activity
+          echo "Autonomous activity check: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" > .github/activity/last-active.txt
+
+      - name: Commit & Push Daily Activity
+        run: |
+          git config --global user.name "tahirazeem145"
+          git config --global user.email "tahirazeems145s@gmail.com"
+          git add .github/activity/last-active.txt
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(streak): autonomous daily activity update for $(date -u +'%Y-%m-%d') [skip ci]"
+            git pull --rebase origin main || true
+            git push origin main
+          fi
