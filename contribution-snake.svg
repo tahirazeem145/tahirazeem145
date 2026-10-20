@@ -1450,6 +1450,20 @@
         animation: eatCell_105 24s linear infinite !important;
       }
 
+      @keyframes eatCell_106 {
+        0%, 77.24% { fill: #196c2e; stroke: #238636; opacity: 1; }
+        77.44% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
+        77.69% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
+        77.94%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        97.5%, 100% { fill: #196c2e; stroke: #238636; opacity: 1; }
+      }
+      .food-cell-106 {
+        fill: #196c2e;
+        stroke: #238636;
+        animation: eatCell_106 24s linear infinite !important;
+      }
+
       @keyframes eatCell_34 {
         0%, 86.39% { fill: #196c2e; stroke: #238636; opacity: 1; }
         86.59% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
@@ -1550,8 +1564,8 @@
       <rect x="0" y="0" width="1200" height="350" rx="14" />
     </clipPath>
 
-    <!-- Master Snake Traversal Path (Visits ALL 106 targets, strictly inside grid) -->
-    <path id="masterSnakePath" d="M 549.5 210.5 L 568.5 210.5 L 568.5 248.5 L 587.5 248.5 L 587.5 172.5 L 625.5 172.5 L 625.5 210.5 L 606.5 210.5 L 625.5 210.5 L 625.5 229.5 L 644.5 229.5 L 644.5 191.5 L 663.5 191.5 L 663.5 210.5 L 758.5 210.5 L 758.5 191.5 L 777.5 191.5 L 777.5 248.5 L 796.5 248.5 L 796.5 267.5 L 758.5 267.5 L 758.5 286.5 L 853.5 286.5 L 853.5 172.5 L 796.5 172.5 L 815.5 172.5 L 815.5 191.5 L 910.5 191.5 L 910.5 286.5 L 929.5 286.5 L 929.5 172.5 L 948.5 172.5 L 948.5 286.5 L 967.5 286.5 L 967.5 172.5 L 986.5 172.5 L 986.5 286.5 L 1005.5 286.5 L 1005.5 172.5 L 1024.5 172.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 191.5 L 872.5 191.5 L 872.5 267.5 L 625.5 267.5 L 625.5 286.5 L 549.5 286.5 L 549.5 210.5" fill="none" />
+    <!-- Master Snake Traversal Path (Visits ALL 107 targets, strictly inside grid) -->
+    <path id="masterSnakePath" d="M 549.5 210.5 L 568.5 210.5 L 568.5 248.5 L 587.5 248.5 L 587.5 172.5 L 625.5 172.5 L 625.5 210.5 L 606.5 210.5 L 625.5 210.5 L 625.5 229.5 L 644.5 229.5 L 644.5 191.5 L 663.5 191.5 L 663.5 210.5 L 758.5 210.5 L 758.5 191.5 L 777.5 191.5 L 777.5 248.5 L 796.5 248.5 L 796.5 267.5 L 758.5 267.5 L 758.5 286.5 L 853.5 286.5 L 853.5 172.5 L 796.5 172.5 L 815.5 172.5 L 815.5 191.5 L 910.5 191.5 L 910.5 286.5 L 929.5 286.5 L 929.5 172.5 L 948.5 172.5 L 948.5 286.5 L 967.5 286.5 L 967.5 172.5 L 986.5 172.5 L 986.5 286.5 L 1005.5 286.5 L 1005.5 172.5 L 1024.5 172.5 L 1024.5 286.5 L 1043.5 286.5 L 1043.5 172.5 L 1062.5 172.5 L 1062.5 286.5 L 1081.5 286.5 L 1081.5 172.5 L 1100.5 172.5 L 1100.5 210.5 L 872.5 210.5 L 872.5 267.5 L 625.5 267.5 L 625.5 286.5 L 549.5 286.5 L 549.5 210.5" fill="none" />
   </defs>
 
   <!-- Outer Canvas Container -->
@@ -1580,7 +1594,7 @@
       <!-- Center Telemetry Tag -->
       <g transform="translate(640, 36)" text-anchor="middle">
         <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="9" letter-spacing="1.2">
-          TARGET: <tspan fill="#39d353">ALL_106_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">AUTO_SNAKE</tspan>
+          TARGET: <tspan fill="#39d353">ALL_107_BOXES</tspan> • MODE: <tspan fill="#58a6ff">FEED_ALL</tspan> • ENG: <tspan fill="#a855f7">AUTO_SNAKE</tspan>
         </text>
       </g>
 
@@ -1604,7 +1618,7 @@
 
       <!-- Top Frame Header: Real Contribution Count -->
       <text x="60" y="92" fill="#f0f6fc" class="font-sans" font-size="12" font-weight="700" letter-spacing="0.5">
-        2,217 contributions in the last year
+        2,219 contributions in the last year
       </text>
 
       <!-- Legend on top-right -->
@@ -2116,6 +2130,7 @@
         <rect x="1093" y="184" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect class="food-cell-105" x="1093" y="184" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="203" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
+        <rect class="food-cell-106" x="1093" y="203" width="15" height="15" rx="3" stroke-width="0.75" />
         <rect x="1093" y="222" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1093" y="241" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
         <rect x="1093" y="260" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />
