@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,16 @@
   <title>GitHub Profile README Preview - Tahir Azeem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       background-color: #080c14;
       color: #c9d1d9;
@@ -26,6 +30,7 @@
       align-items: center;
       min-height: 100vh;
     }
+
     .readme-container {
       width: 100%;
       max-width: 1020px;
@@ -35,6 +40,7 @@
       padding: 36px 32px;
       box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 240, 255, 0.05);
     }
+
     .header-bar {
       display: flex;
       align-items: center;
@@ -43,6 +49,7 @@
       padding-bottom: 16px;
       border-bottom: 1px solid #21262d;
     }
+
     .badge-status {
       display: inline-flex;
       align-items: center;
@@ -55,10 +62,12 @@
       color: #00f0ff;
       border: 1px solid rgba(0, 240, 255, 0.3);
     }
+
     .section-separator {
       margin: 32px 0 24px 0;
       width: 100%;
     }
+
     .section-label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
@@ -69,6 +78,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .svg-wrapper {
       width: 100%;
       border-radius: 12px;
@@ -76,6 +86,7 @@
       box-shadow: 0 12px 40px rgba(0, 240, 255, 0.12), 0 4px 20px rgba(168, 85, 247, 0.15);
       border: 1px solid rgba(0, 240, 255, 0.2);
     }
+
     .svg-wrapper-purple {
       width: 100%;
       border-radius: 12px;
@@ -83,6 +94,7 @@
       box-shadow: 0 12px 40px rgba(168, 85, 247, 0.12), 0 4px 20px rgba(0, 240, 255, 0.1);
       border: 1px solid rgba(168, 85, 247, 0.25);
     }
+
     .svg-wrapper-galaxy {
       width: 100%;
       border-radius: 12px;
@@ -90,6 +102,7 @@
       box-shadow: 0 14px 45px rgba(0, 240, 255, 0.14), 0 6px 24px rgba(34, 197, 94, 0.1);
       border: 1px solid rgba(0, 240, 255, 0.25);
     }
+
     .svg-wrapper-snake {
       width: 100%;
       border-radius: 12px;
@@ -97,6 +110,7 @@
       box-shadow: 0 14px 45px rgba(34, 197, 94, 0.14), 0 6px 24px rgba(0, 240, 255, 0.12);
       border: 1px solid rgba(34, 197, 94, 0.3);
     }
+
     .svg-wrapper-mindset {
       width: 100%;
       border-radius: 12px;
@@ -104,6 +118,7 @@
       box-shadow: 0 14px 45px rgba(168, 85, 247, 0.14), 0 6px 24px rgba(0, 240, 255, 0.12);
       border: 1px solid rgba(168, 85, 247, 0.25);
     }
+
     .svg-wrapper-connection {
       width: 100%;
       border-radius: 12px;
@@ -111,16 +126,18 @@
       box-shadow: 0 14px 45px rgba(0, 240, 255, 0.12), 0 6px 24px rgba(168, 85, 247, 0.1);
       border: 1px solid rgba(0, 240, 255, 0.2);
     }
+
     .readme-svg {
       width: 100%;
       height: auto;
       display: block;
     }
-    
+
     /* Markdown Typography Styling */
     .profile-content {
       text-align: center;
     }
+
     h1.md-title {
       font-family: 'Outfit', sans-serif;
       font-size: 28px;
@@ -130,6 +147,7 @@
       margin-bottom: 6px;
       letter-spacing: 2px;
     }
+
     h2.md-section-title {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 20px;
@@ -139,6 +157,7 @@
       margin-bottom: 8px;
       letter-spacing: 1px;
     }
+
     h3.md-subtitle {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 16px;
@@ -146,12 +165,14 @@
       color: #79c0ff;
       margin-bottom: 8px;
     }
+
     p.md-desc {
       font-size: 14px;
       color: #8b949e;
       margin-bottom: 16px;
       line-height: 1.6;
     }
+
     .shield-badge-group {
       display: flex;
       justify-content: center;
@@ -159,10 +180,12 @@
       flex-wrap: wrap;
       margin: 14px 0 20px 0;
     }
+
     .shield-badge-group img {
       height: 28px;
       border-radius: 4px;
     }
+
     blockquote.md-quote {
       background: rgba(22, 27, 34, 0.8);
       border-left: 4px solid #00f0ff;
@@ -174,11 +197,13 @@
       font-size: 15px;
       font-style: italic;
     }
+
     .md-table-wrap {
       width: 100%;
       overflow-x: auto;
       margin: 18px 0;
     }
+
     table.md-table {
       width: 100%;
       border-collapse: collapse;
@@ -188,6 +213,7 @@
       overflow: hidden;
       border: 1px solid #30363d;
     }
+
     table.md-table th {
       background-color: #161b22;
       color: #58a6ff;
@@ -196,6 +222,7 @@
       padding: 10px 14px;
       border-bottom: 1px solid #30363d;
     }
+
     table.md-table td {
       padding: 10px 14px;
       border-bottom: 1px solid #21262d;
@@ -203,9 +230,11 @@
       color: #c9d1d9;
       line-height: 1.5;
     }
+
     table.md-table tr:hover td {
       background-color: #161b22;
     }
+
     code {
       font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
@@ -214,16 +243,19 @@
       padding: 2px 6px;
       border-radius: 4px;
     }
+
     a.md-link {
       color: #58a6ff;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s ease;
     }
+
     a.md-link:hover {
       color: #79c0ff;
       text-decoration: underline;
     }
+
     .footer-links {
       font-family: 'JetBrains Mono', monospace;
       font-size: 14px;
@@ -233,10 +265,11 @@
       gap: 20px;
       flex-wrap: wrap;
     }
+
     .refresh-btn {
       background: #238636;
       color: white;
-      border: 1px solid rgba(240,246,252,0.1);
+      border: 1px solid rgba(240, 246, 252, 0.1);
       border-radius: 6px;
       padding: 6px 12px;
       font-size: 12px;
@@ -244,11 +277,13 @@
       cursor: pointer;
       margin-left: 10px;
     }
+
     .refresh-btn:hover {
       background: #2ea043;
     }
   </style>
 </head>
+
 <body>
   <div class="readme-container">
     <div class="header-bar">
@@ -281,18 +316,28 @@
       <p class="md-desc"><em>“Turning ideas into real, scalable products.”</em></p>
 
       <p style="margin: 10px 0 16px 0; font-size: 13px;">
-        <code>⚡ Experience: Full Stack & AI Systems</code> &nbsp;•&nbsp; <code>🚀 Focus: Production Engineering</code> &nbsp;•&nbsp; <code>📍 Location: Remote / Global</code>
+        <code>⚡ Experience: Full Stack & AI Systems</code> &nbsp;•&nbsp; <code>🚀 Focus: Software Engineering</code>
+        &nbsp;•&nbsp; <code>📍 Location: Remote / Global</code>
       </p>
 
       <div class="shield-badge-group">
-        <a href="https://github.com/tahirazeem145" target="_blank"><img src="https://img.shields.io/badge/GitHub-tahirazeem145-00f0ff?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" /></a>
-        <a href="https://in.linkedin.com/in/tahirazeem-r" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Tahir_Azeem-38bdf8?style=for-the-badge&logo=linkedin&logoColor=black" alt="LinkedIn" /></a>
-        <a href="mailto:tahirazeems145s@gmail.com"><img src="https://img.shields.io/badge/Email-tahirazeems145s-a855f7?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-        <a href="https://tahirazeemportfolio.vercel.app" target="_blank"><img src="https://img.shields.io/badge/Portfolio-Live_Site-22c55e?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio" /></a>
+        <a href="https://github.com/tahirazeem145" target="_blank"><img
+            src="https://img.shields.io/badge/GitHub-tahirazeem145-00f0ff?style=for-the-badge&logo=github&logoColor=black"
+            alt="GitHub" /></a>
+        <a href="https://in.linkedin.com/in/tahirazeem-r" target="_blank"><img
+            src="https://img.shields.io/badge/LinkedIn-Tahir_Azeem-38bdf8?style=for-the-badge&logo=linkedin&logoColor=black"
+            alt="LinkedIn" /></a>
+        <a href="mailto:tahirazeems145s@gmail.com"><img
+            src="https://img.shields.io/badge/Email-tahirazeems145s-a855f7?style=for-the-badge&logo=gmail&logoColor=white"
+            alt="Email" /></a>
+        <a href="https://tahirazeemportfolio.vercel.app" target="_blank"><img
+            src="https://img.shields.io/badge/Portfolio-Live_Site-22c55e?style=for-the-badge&logo=vercel&logoColor=black"
+            alt="Portfolio" /></a>
       </div>
 
       <div class="section-separator">
-        <img id="div02" src="flight-divider-02.svg" alt="NEXT: 02 Developer System" class="divider-img readme-svg" style="height: 50px;" />
+        <img id="div02" src="flight-divider-02.svg" alt="NEXT: 02 Developer System" class="divider-img readme-svg"
+          style="height: 50px;" />
       </div>
 
       <!-- ======================================================== -->
@@ -302,10 +347,12 @@
         <span>✦</span> 02 — DEVELOPER SYSTEM // TAHIR_OS
       </div>
       <h2 class="md-section-title">⚙️ 02 // DEVELOPER SYSTEM [ TAHIR_OS ]</h2>
-      <p class="md-desc"><em>Autonomous execution environment engineered for velocity, deep learning, and continuous evolution.</em></p>
+      <p class="md-desc"><em>Autonomous execution environment engineered for velocity, deep learning, and continuous
+          evolution.</em></p>
 
       <div class="svg-wrapper-purple">
-        <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS" class="readme-svg" />
+        <img id="systemImg" src="developer-system.svg" alt="Tahir Azeem - Developer System TAHIR_OS"
+          class="readme-svg" />
       </div>
 
       <div class="md-table-wrap">
@@ -339,17 +386,24 @@
 
       <h3 class="md-subtitle" style="margin-top: 20px; font-size: 15px;">🛠️ Tech Arsenal &amp; Stack</h3>
       <div class="shield-badge-group" style="margin: 10px 0 20px 0;">
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+          alt="HTML5" />
         <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-        <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-        <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
-        <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+          alt="JavaScript" />
+        <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+          alt="React" />
+        <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
+          alt="Node.js" />
+        <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
+          alt="Express.js" />
+        <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
+          alt="MongoDB" />
       </div>
 
       <div class="section-separator">
-        <img id="div03" src="flight-divider-03.svg" alt="NEXT: 03 Project Galaxy" class="divider-img readme-svg" style="height: 50px;" />
+        <img id="div03" src="flight-divider-03.svg" alt="NEXT: 03 Project Galaxy" class="divider-img readme-svg"
+          style="height: 50px;" />
       </div>
 
       <!-- ======================================================== -->
@@ -359,7 +413,8 @@
         <span>✦</span> 03 — PROJECT GALAXY // ACTIVE BUILDS
       </div>
       <h2 class="md-section-title">🚀 03 // PROJECT GALAXY [ ACTIVE BUILDS ]</h2>
-      <p class="md-desc"><em>Curated lineup of flagship applications, intelligent AI products, and developer utilities.</em></p>
+      <p class="md-desc"><em>Curated lineup of flagship applications, intelligent AI products, and developer
+          utilities.</em></p>
 
       <div class="svg-wrapper-galaxy">
         <img id="galaxyImg" src="project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" class="readme-svg" />
@@ -377,29 +432,40 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>TripNest 2.0</strong><br/><small style="color:#00f0ff;">★ Flagship</small></td>
-              <td><code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Supabase</code> <code>PostgreSQL</code></td>
-              <td><strong>Travel Photo Sharing Community Platform</strong><br/>Geo-synced photo sharing, community feeds, and social travel networks.</td>
-              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank" class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145" target="_blank" class="md-link">Source</a></td>
+              <td><strong>TripNest 2.0</strong><br /><small style="color:#00f0ff;">★ Flagship</small></td>
+              <td><code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Supabase</code>
+                <code>PostgreSQL</code></td>
+              <td><strong>Travel Photo Sharing Community Platform</strong><br />Geo-synced photo sharing, community
+                feeds, and social travel networks.</td>
+              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank"
+                  class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145"
+                  target="_blank" class="md-link">Source</a></td>
             </tr>
             <tr>
               <td><strong>HireMind AI</strong></td>
               <td><code>AI Product</code> <code>LLMs</code> <code>Next.js</code> <code>APIs</code></td>
-              <td><strong>AI-Powered Career Coach</strong><br/>Intelligent career guidance, automated resume critique, and interview simulator.</td>
-              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank" class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145" target="_blank" class="md-link">Source</a></td>
+              <td><strong>AI-Powered Career Coach</strong><br />Intelligent career guidance, automated resume critique,
+                and interview simulator.</td>
+              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank"
+                  class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145"
+                  target="_blank" class="md-link">Source</a></td>
             </tr>
             <tr>
               <td><strong>QR Web Tool</strong></td>
               <td><code>Web Tool</code> <code>JavaScript</code> <code>Modern UI</code></td>
-              <td><strong>Modern QR Code Generator</strong><br/>High-performance, customizable vector QR code generator for digital workflows.</td>
-              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank" class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145" target="_blank" class="md-link">Source</a></td>
+              <td><strong>Modern QR Code Generator</strong><br />High-performance, customizable vector QR code generator
+                for digital workflows.</td>
+              <td style="text-align:center;"><a href="https://github.com/tahirazeem145" target="_blank"
+                  class="md-link">View Project</a> &nbsp;·&nbsp; <a href="https://github.com/tahirazeem145"
+                  target="_blank" class="md-link">Source</a></td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="section-separator">
-        <img id="div04" src="flight-divider-04.svg" alt="NEXT: 04 Contribution Snake" class="divider-img readme-svg" style="height: 50px;" />
+        <img id="div04" src="flight-divider-04.svg" alt="NEXT: 04 Contribution Snake" class="divider-img readme-svg"
+          style="height: 50px;" />
       </div>
 
       <!-- ======================================================== -->
@@ -409,24 +475,30 @@
         <span>✦</span> 04 — CONTRIBUTION SNAKE // AUTONOMOUS GAME
       </div>
       <h2 class="md-section-title">🐍 04 // CONTRIBUTION GRAPH [ AUTONOMOUS GAME ]</h2>
-      <p class="md-desc"><em>Autonomous daily visualization of GitHub activity, commit streaks, and continuous momentum.</em></p>
+      <p class="md-desc"><em>Autonomous daily visualization of GitHub activity, commit streaks, and continuous
+          momentum.</em></p>
 
       <div class="svg-wrapper-snake">
-        <img id="snakeImg" src="contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake" class="readme-svg" />
+        <img id="snakeImg" src="contribution-snake.svg" alt="Tahir Azeem - GitHub Contribution Snake"
+          class="readme-svg" />
       </div>
 
       <div style="margin: 24px auto 16px auto; text-align: center;">
         <a href="https://github.com/tahirazeem145" target="_blank">
-          <img src="https://streak-stats.demolab.com/?user=tahirazeem145&theme=dark&background=0d1117&border=30363d&stroke=00f0ff&ring=00f0ff&fire=FB8C00&currStreakNum=00f0ff&sideNums=f0f6fc&currStreakLabel=00f0ff&dates=8b949e" alt="Tahir Azeem - GitHub Streak Stats" style="max-width: 100%; border-radius: 8px;" />
+          <img
+            src="https://streak-stats.demolab.com/?user=tahirazeem145&theme=dark&background=0d1117&border=30363d&stroke=00f0ff&ring=00f0ff&fire=FB8C00&currStreakNum=00f0ff&sideNums=f0f6fc&currStreakLabel=00f0ff&dates=8b949e"
+            alt="Tahir Azeem - GitHub Streak Stats" style="max-width: 100%; border-radius: 8px;" />
         </a>
       </div>
 
       <p style="margin: 16px 0; font-size: 13px;">
-        <code>Streak: Perpetual</code> &nbsp;•&nbsp; <code>Focus: Clean Code & High Velocity</code> &nbsp;•&nbsp; <code>Cadence: Daily Commits</code>
+        <code>Streak: Perpetual</code> &nbsp;•&nbsp; <code>Focus: Clean Code & High Velocity</code> &nbsp;•&nbsp;
+        <code>Cadence: Daily Commits</code>
       </p>
 
       <div class="section-separator">
-        <img id="div05" src="flight-divider-05.svg" alt="NEXT: 05 Builder Mindset" class="divider-img readme-svg" style="height: 50px;" />
+        <img id="div05" src="flight-divider-05.svg" alt="NEXT: 05 Builder Mindset" class="divider-img readme-svg"
+          style="height: 50px;" />
       </div>
 
       <!-- ======================================================== -->
@@ -438,7 +510,8 @@
       <h2 class="md-section-title">🧠 05 // BUILDER MINDSET [ THE PHILOSOPHY ]</h2>
 
       <blockquote class="md-quote">
-        <strong>“I don't just write code. I build things people can use. Ideas are cheap — building is the difference.”</strong>
+        <strong>“I don't just write code. I build things people can use. Ideas are cheap — building is the
+          difference.”</strong>
       </blockquote>
 
       <div class="svg-wrapper-mindset">
@@ -490,7 +563,8 @@
       </div>
 
       <div class="section-separator">
-        <img id="div06" src="flight-divider-06.svg" alt="NEXT: 06 Connection" class="divider-img readme-svg" style="height: 50px;" />
+        <img id="div06" src="flight-divider-06.svg" alt="NEXT: 06 Connection" class="divider-img readme-svg"
+          style="height: 50px;" />
       </div>
 
       <!-- ======================================================== -->
@@ -500,7 +574,8 @@
         <span>✦</span> 06 — CONNECTION // TERMINAL INVITATION
       </div>
       <h2 class="md-section-title">📡 06 // CONNECTION [ TERMINAL INVITATION ]</h2>
-      <p class="md-desc"><em>Open for high-impact product builds, full-stack web applications, AI integrations, and visionary collaborations.</em></p>
+      <p class="md-desc"><em>Open for high-impact product builds, full-stack web applications, AI integrations, and
+          visionary collaborations.</em></p>
 
       <div class="svg-wrapper-connection">
         <img id="connectionImg" src="connection.svg" alt="Tahir Azeem - Connection" class="readme-svg" />
@@ -540,4 +615,5 @@
     });
   </script>
 </body>
+
 </html>

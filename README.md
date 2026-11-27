@@ -16,7 +16,7 @@
   <br/>
 
   <p>
-    <code>⚡ Experience: Full Stack & AI Systems</code> &nbsp;•&nbsp; <code>🚀 Focus: Production Engineering</code> &nbsp;•&nbsp; <code>📍 Location: Remote / Global</code>
+    <code>⚡ Experience: Full Stack & AI Systems</code> &nbsp;•&nbsp; <code>🚀 Focus: Software Engineering</code> &nbsp;•&nbsp; <code>📍 Location: Remote / Global</code>
   </p>
 
   <br/>
