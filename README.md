@@ -4,7 +4,10 @@
   <!-- 01 — HERO SECTION                                        -->
   <!-- ======================================================== -->
   <a href="https://github.com/tahirazeem145">
-    <img src="./hero.svg" alt="Tahir Azeem - Full Stack Developer & AI Builder" width="100%" />
+    <picture>
+      <source srcset="./hero-banner.webp" type="image/webp">
+      <img src="./hero-banner.png" alt="Tahir Azeem - Frontend Developer &amp; Software Engineer" width="100%" />
+    </picture>
   </a>
 
   <br/>
