@@ -342,15 +342,15 @@
         <text x="0" y="0" fill="#00f0ff" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">01 // STAGE</text>
         <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">THINK</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
-          Understand the core problem
+          Understand the problem
         </text>
         <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
-          and user needs first.
+          before writing the solution.
         </text>
       </g>
     </g>
 
-    <!-- NODE 02: ARCHITECT (Top-Center: cx=600, cy=360) -->
+    <!-- NODE 02: BUILD (Top-Center: cx=600, cy=360) -->
     <g class="node-02" transform="translate(465, 316)">
       <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.5" />
       <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#38bdf8" stroke-width="2" />
@@ -358,17 +358,17 @@
 
       <g transform="translate(16, 20)">
         <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">02 // STAGE</text>
-        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">ARCHITECT</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">BUILD</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
-          Structure scalable systems
+          Turn raw ideas
         </text>
         <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
-          and clean data models.
+          into working products.
         </text>
       </g>
     </g>
 
-    <!-- NODE 03: EXECUTE (Top-Right: cx=980, cy=360) -->
+    <!-- NODE 03: BREAK (Top-Right: cx=980, cy=360) -->
     <g class="node-03" transform="translate(845, 316)">
       <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#30363d" stroke-width="1" />
       <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#f43f5e" stroke-width="2" />
@@ -376,17 +376,17 @@
 
       <g transform="translate(16, 20)">
         <text x="0" y="0" fill="#fb7185" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">03 // STAGE</text>
-        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">EXECUTE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">BREAK</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
-          Turn architecture into clean,
+          Expect fragile things
         </text>
         <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
-          high-velocity modern code.
+          to fail under pressure.
         </text>
       </g>
     </g>
 
-    <!-- NODE 04: TEST & BREAK (Bottom-Right: cx=980, cy=510) -->
+    <!-- NODE 04: LEARN (Bottom-Right: cx=980, cy=510) -->
     <g class="node-04" transform="translate(845, 466)">
       <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#30363d" stroke-width="1" />
       <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#a855f7" stroke-width="2" />
@@ -394,17 +394,17 @@
 
       <g transform="translate(16, 20)">
         <text x="0" y="0" fill="#c084fc" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">04 // STAGE</text>
-        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="15" font-weight="800" letter-spacing="0.5">TEST &amp; BREAK</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">LEARN</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
-          Stress-test edge cases
+          Deconstruct the failure
         </text>
         <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
-          for rock-solid stability.
+          and understand why.
         </text>
       </g>
     </g>
 
-    <!-- NODE 05: ITERATE (Bottom-Center: cx=600, cy=510) -->
+    <!-- NODE 05: IMPROVE (Bottom-Center: cx=600, cy=510) -->
     <g class="node-05" transform="translate(465, 466)">
       <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#30363d" stroke-width="1" />
       <circle cx="135" cy="44" r="5" fill="#0d1117" stroke="#38bdf8" stroke-width="2" />
@@ -412,12 +412,12 @@
 
       <g transform="translate(16, 20)">
         <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">05 // STAGE</text>
-        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">ITERATE</text>
+        <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">IMPROVE</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
-          Continuously refine UX
+          Iterate relentlessly.
         </text>
         <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
-          and system performance.
+          Make next version better.
         </text>
       </g>
     </g>
@@ -432,10 +432,10 @@
         <text x="0" y="0" fill="#39d353" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">06 // STAGE</text>
         <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">SHIP</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
-          Deploy production-ready value
+          Real products
         </text>
         <text x="0" y="52" fill="#c9d1d9" class="font-sans" font-size="11.5" font-weight="500">
-          and repeat perpetual cycle.
+          belong in the real world.
         </text>
       </g>
     </g>
@@ -449,7 +449,7 @@
       <!-- Left Signature Mindset Flow -->
       <g transform="translate(40, 655)">
         <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="11" font-weight="600" letter-spacing="1.5">
-          MINDSET // <tspan fill="#00f0ff">THINK</tspan> <tspan fill="#38bdf8">→</tspan> <tspan fill="#38bdf8">ARCHITECT</tspan> <tspan fill="#fb7185">→</tspan> <tspan fill="#fb7185">EXECUTE</tspan> <tspan fill="#c084fc">→</tspan> <tspan fill="#c084fc">TEST &amp; BREAK</tspan> <tspan fill="#38bdf8">→</tspan> <tspan fill="#38bdf8">ITERATE</tspan> <tspan fill="#39d353">→</tspan> <tspan fill="#39d353">SHIP</tspan>
+          MINDSET // <tspan fill="#f0f6fc">BUILD</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#fb7185">BREAK</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#c084fc">LEARN</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#39d353">SHIP</tspan>
         </text>
       </g>
 

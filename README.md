@@ -134,7 +134,7 @@
     <strong>“I don't just write code. I build things people can use. Ideas are cheap — building is the difference.”</strong>
   </blockquote>
 
-  <img src="./builder-mindset.svg" alt="Tahir Azeem - Builder Mindset" width="100%" />
+  <img src="https://raw.githubusercontent.com/tahirazeem145/tahirazeem145/main/builder-mindset.svg?v=20261128" alt="Tahir Azeem - Builder Mindset" width="100%" />
 
   <br/>
 
