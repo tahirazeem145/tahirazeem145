@@ -47,7 +47,7 @@
 
   <img src="./developer-system.svg" alt="Tahir Azeem - Developer System" width="100%" />
 
-  <br/>
+  <br/><br/>
 
   | 🎯 Directive | 📝 Description | 🚀 Status |
   | :--- | :--- | :---: |
