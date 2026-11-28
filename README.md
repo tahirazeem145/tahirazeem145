@@ -136,7 +136,7 @@
 
   <img src="https://raw.githubusercontent.com/tahirazeem145/tahirazeem145/main/builder-mindset.svg?v=20261128" alt="Tahir Azeem - Builder Mindset" width="100%" />
 
-  <br/>
+  <br/><br/>
 
   | 🔄 Stage | 💡 Name | 📖 Philosophy Directive |
   | :---: | :--- | :--- |
