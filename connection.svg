@@ -33,7 +33,7 @@
       /* Subtle Link Capsule Pulse */
       @keyframes linkFloat {
         0%, 100% { stroke: #27272a; }
-        50% { stroke: rgba(0, 240, 255, 0.4); }
+        50% { stroke: rgba(244, 114, 182, 0.4); }
       }
 
       .cursor-blink {
@@ -48,7 +48,7 @@
         transition: all 0.3s ease;
       }
       .link-capsule:hover rect {
-        stroke: #00f0ff;
+        stroke: #f472b6;
         fill: #18181b;
       }
       .link-capsule:hover text {
@@ -74,8 +74,8 @@
     </linearGradient>
 
     <radialGradient id="cyanNebula" cx="35%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.12" />
-      <stop offset="60%" stop-color="#00f0ff" stop-opacity="0.02" />
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.12" />
+      <stop offset="60%" stop-color="#f472b6" stop-opacity="0.02" />
       <stop offset="100%" stop-color="#050507" stop-opacity="0" />
     </radialGradient>
 
@@ -87,8 +87,8 @@
 
     <linearGradient id="quoteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="50%" stop-color="#e0f2fe" />
-      <stop offset="100%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#fdf2f8" />
+      <stop offset="100%" stop-color="#ec4899" />
     </linearGradient>
 
     <clipPath id="cardClip">
@@ -109,7 +109,7 @@
     <circle cx="780" cy="210" r="280" fill="url(#violetNebula)" class="pulse-aurora" filter="url(#auroraBlur)" />
 
     <!-- 2. Ambient Subtle Tech Grid Matrix -->
-    <g opacity="0.08" stroke="#58a6ff" stroke-width="0.5">
+    <g opacity="0.08" stroke="#f472b6" stroke-width="0.5">
       <line x1="100" y1="0" x2="100" y2="420" />
       <line x1="300" y1="0" x2="300" y2="420" />
       <line x1="500" y1="0" x2="500" y2="420" />
@@ -124,7 +124,7 @@
 
     <!-- 3. Animated Drifting Kinetic Particles (Cosmic Stardust) -->
     <!-- Particle 1 (Left Cyan) -->
-    <circle cx="160" cy="380" r="2" fill="#00f0ff">
+    <circle cx="160" cy="380" r="2" fill="#f472b6">
       <animate attributeName="cy" from="390" to="20" dur="9s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0;0.8;0.9;0.4;0" dur="9s" repeatCount="indefinite" />
       <animate attributeName="cx" values="160;175;155;160" dur="9s" repeatCount="indefinite" />
@@ -138,7 +138,7 @@
     </circle>
 
     <!-- Particle 3 (Center Cyan) -->
-    <circle cx="580" cy="380" r="2.2" fill="#38bdf8">
+    <circle cx="580" cy="380" r="2.2" fill="#ec4899">
       <animate attributeName="cy" from="400" to="10" dur="8s" begin="-1.5s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0;0.9;1;0.4;0" dur="8s" begin="-1.5s" repeatCount="indefinite" />
       <animate attributeName="cx" values="580;595;570;580" dur="8s" begin="-1.5s" repeatCount="indefinite" />
@@ -159,14 +159,14 @@
     </circle>
 
     <!-- Particle 6 (Far Right Cyan) -->
-    <circle cx="1040" cy="380" r="1.8" fill="#00f0ff">
+    <circle cx="1040" cy="380" r="1.8" fill="#f472b6">
       <animate attributeName="cy" from="400" to="25" dur="9.5s" begin="-4s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0;0.8;0.9;0.3;0" dur="9.5s" begin="-4s" repeatCount="indefinite" />
       <animate attributeName="cx" values="1040;1030;1050;1040" dur="9.5s" begin="-4s" repeatCount="indefinite" />
     </circle>
 
     <!-- 4. Faint Horizon Glow Line Across Middle -->
-    <line x1="200" y1="210" x2="1000" y2="210" stroke="#00f0ff" stroke-width="0.75" opacity="0.15" />
+    <line x1="200" y1="210" x2="1000" y2="210" stroke="#f472b6" stroke-width="0.75" opacity="0.15" />
 
     <!-- ======================================================== -->
     <!-- CONTENT LAYER                                            -->
@@ -175,7 +175,7 @@
     <!-- Section Header Tag: 06 // CONNECTION -->
     <g transform="translate(600, 36)" text-anchor="middle">
       <rect x="-78" y="-12" width="156" height="24" rx="12" fill="#141418" stroke="#27272a" stroke-width="1" />
-      <circle cx="-62" cy="0" r="3" fill="#38bdf8" />
+      <circle cx="-62" cy="0" r="3" fill="#ec4899" />
       <text x="-50" y="3.5" fill="#f0f6fc" class="font-mono" font-size="10.5" font-weight="700" letter-spacing="2" text-anchor="start">
         06 // CONNECTION
       </text>
@@ -196,7 +196,7 @@
       <!-- 01: GitHub -->
       <a xlink:href="https://github.com/tahirazeem145" target="_blank" class="link-capsule">
         <rect x="-270" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#27272a" stroke-width="1" />
-        <text x="-210" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+        <text x="-210" y="4" fill="#f9a8d4" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
           → GitHub
         </text>
       </a>
@@ -204,7 +204,7 @@
       <!-- 02: LinkedIn -->
       <a xlink:href="https://in.linkedin.com/in/tahirazeem-r" target="_blank" class="link-capsule">
         <rect x="-130" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#27272a" stroke-width="1" />
-        <text x="-70" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+        <text x="-70" y="4" fill="#f9a8d4" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
           → LinkedIn
         </text>
       </a>
@@ -212,7 +212,7 @@
       <!-- 03: Email -->
       <a xlink:href="mailto:tahirazeems145s@gmail.com" class="link-capsule">
         <rect x="10" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#27272a" stroke-width="1" />
-        <text x="70" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+        <text x="70" y="4" fill="#f9a8d4" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
           → Email
         </text>
       </a>
@@ -220,7 +220,7 @@
       <!-- 04: Portfolio -->
       <a xlink:href="https://tahirazeemportfolio.vercel.app" target="_blank" class="link-capsule">
         <rect x="150" y="-14" width="120" height="28" rx="14" fill="#121722" stroke="#27272a" stroke-width="1" />
-        <text x="210" y="4" fill="#79c0ff" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
+        <text x="210" y="4" fill="#f9a8d4" class="font-mono" font-size="11" font-weight="600" letter-spacing="1">
           → Portfolio
         </text>
       </a>

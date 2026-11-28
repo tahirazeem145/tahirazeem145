@@ -58,7 +58,7 @@
 
       @keyframes nodePulseGlow {
         0%, 100% { stroke: #27272a; }
-        50% { stroke: rgba(0, 240, 255, 0.45); }
+        50% { stroke: rgba(244, 114, 182, 0.45); }
       }
 
       @keyframes particleSparkle {
@@ -109,28 +109,28 @@
     </linearGradient>
 
     <radialGradient id="manifestoAura" cx="50%" cy="30%" r="45%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.07" />
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.07" />
       <stop offset="50%" stop-color="#a855f7" stop-opacity="0.04" />
       <stop offset="100%" stop-color="#040405" stop-opacity="0" />
     </radialGradient>
 
     <radialGradient id="loopAura" cx="50%" cy="65%" r="50%">
       <stop offset="0%" stop-color="#a855f7" stop-opacity="0.06" />
-      <stop offset="55%" stop-color="#00f0ff" stop-opacity="0.03" />
+      <stop offset="55%" stop-color="#f472b6" stop-opacity="0.03" />
       <stop offset="100%" stop-color="#040405" stop-opacity="0" />
     </radialGradient>
 
     <!-- Typography Emphasized Linear Gradient -->
     <linearGradient id="heroTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="40%" stop-color="#e0f2fe" />
-      <stop offset="75%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#fdf2f8" />
+      <stop offset="75%" stop-color="#ec4899" />
       <stop offset="100%" stop-color="#a855f7" />
     </linearGradient>
 
     <linearGradient id="cyanTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" />
-      <stop offset="60%" stop-color="#38bdf8" />
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="60%" stop-color="#ec4899" />
       <stop offset="100%" stop-color="#818cf8" />
     </linearGradient>
 
@@ -141,8 +141,8 @@
     </linearGradient>
 
     <linearGradient id="dividerFade" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
-      <stop offset="20%" stop-color="#00f0ff" stop-opacity="0.4" />
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0" />
+      <stop offset="20%" stop-color="#f472b6" stop-opacity="0.4" />
       <stop offset="80%" stop-color="#a855f7" stop-opacity="0.4" />
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
@@ -222,7 +222,7 @@
       <!-- Center Technical Metadata Coordinates -->
       <g transform="translate(600, 42)" text-anchor="middle">
         <text x="0" y="0" fill="#6e7681" class="font-mono" font-size="9" letter-spacing="1.5">
-          MINDSET_ID: <tspan fill="#58a6ff">BLD-05</tspan> • CORE: <tspan fill="#00f0ff">EXECUTION</tspan> • LOOP: <tspan fill="#39d353">PERPETUAL</tspan>
+          MINDSET_ID: <tspan fill="#f472b6">BLD-05</tspan> • CORE: <tspan fill="#f472b6">EXECUTION</tspan> • LOOP: <tspan fill="#39d353">PERPETUAL</tspan>
         </text>
       </g>
 
@@ -256,7 +256,7 @@
       <!-- Subtle Accent Geometric Line Underneath -->
       <g transform="translate(0, 108)">
         <line x1="-120" y1="0" x2="120" y2="0" stroke="url(#dividerFade)" stroke-width="1.2" />
-        <circle cx="0" cy="0" r="2.5" fill="#00f0ff" />
+        <circle cx="0" cy="0" r="2.5" fill="#f472b6" />
       </g>
     </g>
 
@@ -275,7 +275,7 @@
       <text x="0" y="-3" fill="#6e7681" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="3">
         THE BUILDER LOOP // PERPETUAL ITERATION
       </text>
-      <text x="0" y="12" fill="#58a6ff" class="font-mono" font-size="7.5" letter-spacing="2">
+      <text x="0" y="12" fill="#f472b6" class="font-mono" font-size="7.5" letter-spacing="2">
         CYCLE RATE: CONTINUOUS • DISCIPLINE OVER INTELLECT
       </text>
     </g>
@@ -295,7 +295,7 @@
           <mpath xlink:href="#builderLoopTrack" />
         </animateMotion>
       </circle>
-      <circle r="7" fill="#00f0ff" opacity="0.4" filter="url(#particleGlow)">
+      <circle r="7" fill="#f472b6" opacity="0.4" filter="url(#particleGlow)">
         <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
           <mpath xlink:href="#builderLoopTrack" />
         </animateMotion>
@@ -313,7 +313,7 @@
 
     <!-- Directed Flow Arrows along track -->
     <!-- Top row: left to right (x=410, x=790) -->
-    <g fill="#58a6ff" opacity="0.6">
+    <g fill="#f472b6" opacity="0.6">
       <polygon points="406,357 413,360 406,363" />
       <polygon points="786,357 793,360 786,363" />
       <!-- Right arc: downwards -->
@@ -334,12 +334,12 @@
       <!-- Card Frame -->
       <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#27272a" stroke-width="1" />
       <!-- Active Node Connector Dot on Track (x=135, y=44) -->
-      <circle cx="135" cy="44" r="5" fill="#09090b" stroke="#00f0ff" stroke-width="2" />
+      <circle cx="135" cy="44" r="5" fill="#09090b" stroke="#f472b6" stroke-width="2" />
       <circle cx="135" cy="44" r="2" fill="#ffffff" />
       
       <!-- Content -->
       <g transform="translate(16, 20)">
-        <text x="0" y="0" fill="#00f0ff" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">01 // STAGE</text>
+        <text x="0" y="0" fill="#f472b6" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">01 // STAGE</text>
         <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">THINK</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
           Understand the problem
@@ -352,12 +352,12 @@
 
     <!-- NODE 02: BUILD (Top-Center: cx=600, cy=360) -->
     <g class="node-02" transform="translate(465, 316)">
-      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.5" />
-      <circle cx="135" cy="44" r="5" fill="#09090b" stroke="#38bdf8" stroke-width="2" />
+      <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#f472b6" stroke-width="1" stroke-opacity="0.5" />
+      <circle cx="135" cy="44" r="5" fill="#09090b" stroke="#ec4899" stroke-width="2" />
       <circle cx="135" cy="44" r="2" fill="#ffffff" />
 
       <g transform="translate(16, 20)">
-        <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">02 // STAGE</text>
+        <text x="0" y="0" fill="#ec4899" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">02 // STAGE</text>
         <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">BUILD</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
           Turn raw ideas
@@ -407,11 +407,11 @@
     <!-- NODE 05: IMPROVE (Bottom-Center: cx=600, cy=510) -->
     <g class="node-05" transform="translate(465, 466)">
       <rect x="0" y="0" width="270" height="88" rx="8" fill="url(#nodeGlassBg)" stroke="#27272a" stroke-width="1" />
-      <circle cx="135" cy="44" r="5" fill="#09090b" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="135" cy="44" r="5" fill="#09090b" stroke="#ec4899" stroke-width="2" />
       <circle cx="135" cy="44" r="2" fill="#ffffff" />
 
       <g transform="translate(16, 20)">
-        <text x="0" y="0" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">05 // STAGE</text>
+        <text x="0" y="0" fill="#ec4899" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">05 // STAGE</text>
         <text x="0" y="18" fill="#ffffff" class="font-display" font-size="16" font-weight="800" letter-spacing="1">IMPROVE</text>
         <text x="0" y="38" fill="#8b949e" class="font-sans" font-size="11.5" font-weight="400">
           Iterate relentlessly.
@@ -449,7 +449,7 @@
       <!-- Left Signature Mindset Flow -->
       <g transform="translate(40, 655)">
         <text x="0" y="0" fill="#8b949e" class="font-mono" font-size="11" font-weight="600" letter-spacing="1.5">
-          MINDSET // <tspan fill="#f0f6fc">BUILD</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#fb7185">BREAK</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#c084fc">LEARN</tspan> <tspan fill="#58a6ff">→</tspan> <tspan fill="#39d353">SHIP</tspan>
+          MINDSET // <tspan fill="#f0f6fc">BUILD</tspan> <tspan fill="#f472b6">→</tspan> <tspan fill="#fb7185">BREAK</tspan> <tspan fill="#f472b6">→</tspan> <tspan fill="#c084fc">LEARN</tspan> <tspan fill="#f472b6">→</tspan> <tspan fill="#39d353">SHIP</tspan>
         </text>
       </g>
 

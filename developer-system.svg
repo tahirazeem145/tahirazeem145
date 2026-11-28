@@ -62,7 +62,7 @@
       }
 
       @keyframes subtleCardGlow {
-        0%, 100% { border-color: rgba(0, 240, 255, 0.2); }
+        0%, 100% { border-color: rgba(244, 114, 182, 0.2); }
         50% { border-color: rgba(168, 85, 247, 0.35); }
       }
 
@@ -110,7 +110,7 @@
         transition: stroke 0.3s ease, fill 0.3s ease;
       }
       .card-box:hover {
-        stroke: rgba(0, 240, 255, 0.5);
+        stroke: rgba(244, 114, 182, 0.5);
         fill: #0e0e12;
       }
     </style>
@@ -135,26 +135,26 @@
 
     <!-- Accent Cyan-Violet Gradient -->
     <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" />
-      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="50%" stop-color="#ec4899" />
       <stop offset="100%" stop-color="#a855f7" />
     </linearGradient>
 
     <linearGradient id="badgeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.7" />
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#ec4899" stop-opacity="0.2" />
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0.7" />
     </linearGradient>
 
     <linearGradient id="scanlineLinear" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.25" />
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0" />
+      <stop offset="50%" stop-color="#f472b6" stop-opacity="0.25" />
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
 
     <linearGradient id="dividerFade" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
-      <stop offset="15%" stop-color="#00f0ff" stop-opacity="0.35" />
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0" />
+      <stop offset="15%" stop-color="#f472b6" stop-opacity="0.35" />
       <stop offset="85%" stop-color="#a855f7" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
@@ -178,8 +178,8 @@
 
     <!-- Patterns -->
     <pattern id="sysGrid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00f0ff" stroke-width="0.6" stroke-opacity="0.03" />
-      <circle cx="30" cy="30" r="0.6" fill="#00f0ff" fill-opacity="0.12" />
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#f472b6" stroke-width="0.6" stroke-opacity="0.03" />
+      <circle cx="30" cy="30" r="0.6" fill="#f472b6" fill-opacity="0.12" />
     </pattern>
 
     <!-- Clip Paths -->
@@ -207,8 +207,8 @@
       <!-- Left OS Title -->
       <g transform="translate(35, 38)">
         <!-- Terminal Prompt Symbol -->
-        <rect x="0" y="-14" width="22" height="20" rx="4" fill="#0c0c0f" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.6" />
-        <text x="6" y="0" fill="#00f0ff" class="font-mono" font-size="11" font-weight="700">&gt;_</text>
+        <rect x="0" y="-14" width="22" height="20" rx="4" fill="#0c0c0f" stroke="#f472b6" stroke-width="0.75" stroke-opacity="0.6" />
+        <text x="6" y="0" fill="#f472b6" class="font-mono" font-size="11" font-weight="700">&gt;_</text>
         <!-- System Title -->
         <text x="32" y="1" fill="#f8fafc" class="font-mono" font-size="14" font-weight="800" letter-spacing="2.5">
           TAHIR_OS
@@ -219,15 +219,15 @@
       <!-- Center Telemetry Tag -->
       <g transform="translate(600, 38)" text-anchor="middle">
         <text x="0" y="0" fill="#475569" class="font-mono" font-size="9.5" letter-spacing="1.5">
-          SYS_ID: <tspan fill="#38bdf8">TAZ-2026</tspan> • CORE: <tspan fill="#a855f7">DEVELOPER</tspan> • REV: <tspan fill="#94a3b8">02.4</tspan>
+          SYS_ID: <tspan fill="#ec4899">TAZ-2026</tspan> • CORE: <tspan fill="#a855f7">DEVELOPER</tspan> • REV: <tspan fill="#94a3b8">02.4</tspan>
         </text>
       </g>
 
       <!-- Right Mission Control Indicator -->
       <g transform="translate(1165, 38)" text-anchor="end">
-        <rect x="-140" y="-12" width="140" height="22" rx="11" fill="#0c0c0f" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.4" />
-        <circle cx="-124" cy="-1" r="3" fill="#00f0ff" class="pulse-dot-cyan" />
-        <text x="-16" y="2.5" fill="#38bdf8" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+        <rect x="-140" y="-12" width="140" height="22" rx="11" fill="#0c0c0f" stroke="#ec4899" stroke-width="0.75" stroke-opacity="0.4" />
+        <circle cx="-124" cy="-1" r="3" fill="#f472b6" class="pulse-dot-cyan" />
+        <text x="-16" y="2.5" fill="#ec4899" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
           MISSION // 02
         </text>
       </g>
@@ -238,15 +238,15 @@
     <!-- ======================================================== -->
     <g class="anim-panel-1">
       <!-- Container Box -->
-      <rect x="35" y="78" width="360" height="224" rx="8" fill="url(#panelBg)" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.25" class="card-box" />
+      <rect x="35" y="78" width="360" height="224" rx="8" fill="url(#panelBg)" stroke="#f472b6" stroke-width="0.75" stroke-opacity="0.25" class="card-box" />
       <rect x="35" y="78" width="360" height="26" rx="8" fill="url(#panelHeaderGrad)" />
       
       <!-- Panel Header -->
-      <path d="M 47 91 L 53 91" stroke="#00f0ff" stroke-width="2" />
-      <text x="60" y="95" fill="#38bdf8" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+      <path d="M 47 91 L 53 91" stroke="#f472b6" stroke-width="2" />
+      <text x="60" y="95" fill="#ec4899" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
         01 // IDENTITY_CORE
       </text>
-      <circle cx="380" cy="91" r="2.5" fill="#00f0ff" opacity="0.6" />
+      <circle cx="380" cy="91" r="2.5" fill="#f472b6" opacity="0.6" />
 
       <!-- Field: NAME -->
       <g transform="translate(52, 126)">
@@ -259,9 +259,9 @@
         <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">STACK FOCUS</text>
         <!-- Stack Highlight Chip -->
         <g transform="translate(0, 7)">
-          <rect x="0" y="0" width="148" height="24" rx="4" fill="#09182d" stroke="#00f0ff" stroke-width="1" filter="url(#glow-cyan)" />
-          <circle cx="12" cy="12" r="3" fill="#00f0ff" class="pulse-dot-cyan" />
-          <text x="24" y="16" fill="#00f0ff" class="font-mono" font-size="10.5" font-weight="800" letter-spacing="1.5">MERN STACK</text>
+          <rect x="0" y="0" width="148" height="24" rx="4" fill="#09182d" stroke="#f472b6" stroke-width="1" filter="url(#glow-cyan)" />
+          <circle cx="12" cy="12" r="3" fill="#f472b6" class="pulse-dot-cyan" />
+          <text x="24" y="16" fill="#f472b6" class="font-mono" font-size="10.5" font-weight="800" letter-spacing="1.5">MERN STACK</text>
         </g>
       </g>
 
@@ -278,7 +278,7 @@
       </g>
 
       <!-- Corner Reticle -->
-      <path d="M 390 295 L 390 299 L 386 299" fill="none" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.5" />
+      <path d="M 390 295 L 390 299 L 386 299" fill="none" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.5" />
     </g>
 
     <!-- ======================================================== -->
@@ -286,12 +286,12 @@
     <!-- ======================================================== -->
     <g class="anim-panel-2">
       <!-- Container Box -->
-      <rect x="420" y="78" width="360" height="224" rx="8" fill="url(#panelBg)" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.25" class="card-box" />
+      <rect x="420" y="78" width="360" height="224" rx="8" fill="url(#panelBg)" stroke="#ec4899" stroke-width="0.75" stroke-opacity="0.25" class="card-box" />
       <rect x="420" y="78" width="360" height="26" rx="8" fill="url(#panelHeaderGrad)" />
       
       <!-- Panel Header -->
-      <path d="M 432 91 L 438 91" stroke="#38bdf8" stroke-width="2" />
-      <text x="445" y="95" fill="#38bdf8" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+      <path d="M 432 91 L 438 91" stroke="#ec4899" stroke-width="2" />
+      <text x="445" y="95" fill="#ec4899" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
         02 // CURRENT_MISSION
       </text>
 
@@ -310,20 +310,20 @@
       <g transform="translate(438, 130)">
         <!-- Directive 01 -->
         <g transform="translate(0, 0)">
-          <rect x="0" y="0" width="324" height="40" rx="5" fill="#0a0a0d" stroke="#00f0ff" stroke-width="0.6" stroke-opacity="0.35" />
-          <text x="14" y="24" fill="#00f0ff" class="font-mono" font-size="11" font-weight="700">01</text>
+          <rect x="0" y="0" width="324" height="40" rx="5" fill="#0a0a0d" stroke="#f472b6" stroke-width="0.6" stroke-opacity="0.35" />
+          <text x="14" y="24" fill="#f472b6" class="font-mono" font-size="11" font-weight="700">01</text>
           <line x1="38" y1="12" x2="38" y2="28" stroke="#27272a" stroke-width="1" />
           <text x="50" y="24" fill="#f8fafc" class="font-sans" font-size="12.5" font-weight="700" letter-spacing="1.5">BUILD REAL PRODUCTS</text>
-          <circle cx="308" cy="20" r="2" fill="#00f0ff" opacity="0.6" />
+          <circle cx="308" cy="20" r="2" fill="#f472b6" opacity="0.6" />
         </g>
 
         <!-- Directive 02 -->
         <g transform="translate(0, 52)">
-          <rect x="0" y="0" width="324" height="40" rx="5" fill="#0a0a0d" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.35" />
-          <text x="14" y="24" fill="#38bdf8" class="font-mono" font-size="11" font-weight="700">02</text>
+          <rect x="0" y="0" width="324" height="40" rx="5" fill="#0a0a0d" stroke="#ec4899" stroke-width="0.6" stroke-opacity="0.35" />
+          <text x="14" y="24" fill="#ec4899" class="font-mono" font-size="11" font-weight="700">02</text>
           <line x1="38" y1="12" x2="38" y2="28" stroke="#27272a" stroke-width="1" />
           <text x="50" y="24" fill="#f8fafc" class="font-sans" font-size="12.5" font-weight="700" letter-spacing="1.5">MASTER MERN FUNDAMENTALS</text>
-          <circle cx="308" cy="20" r="2" fill="#38bdf8" opacity="0.6" />
+          <circle cx="308" cy="20" r="2" fill="#ec4899" opacity="0.6" />
         </g>
 
         <!-- Directive 03 -->
@@ -337,7 +337,7 @@
       </g>
 
       <!-- Corner Reticle -->
-      <path d="M 775 295 L 775 299 L 771 299" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5" />
+      <path d="M 775 295 L 775 299 L 771 299" fill="none" stroke="#ec4899" stroke-width="1.2" stroke-opacity="0.5" />
     </g>
 
     <!-- ======================================================== -->
@@ -360,25 +360,25 @@
         <!-- Orbit Tracks -->
         <circle cx="0" cy="0" r="68" fill="none" stroke="#27272a" stroke-width="1.5" />
         <circle cx="0" cy="0" r="68" fill="none" stroke="url(#accentGrad)" stroke-width="1" stroke-dasharray="3,6" opacity="0.6" />
-        <circle cx="0" cy="0" r="44" fill="#08080a" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.3" />
+        <circle cx="0" cy="0" r="44" fill="#08080a" stroke="#f472b6" stroke-width="0.75" stroke-opacity="0.3" />
 
         <!-- Center Core Text -->
-        <text x="0" y="-3" fill="#38bdf8" class="font-mono" font-size="9" font-weight="800" letter-spacing="1.5" text-anchor="middle">BUILD</text>
+        <text x="0" y="-3" fill="#ec4899" class="font-mono" font-size="9" font-weight="800" letter-spacing="1.5" text-anchor="middle">BUILD</text>
         <text x="0" y="9" fill="#a855f7" class="font-mono" font-size="9" font-weight="800" letter-spacing="1.5" text-anchor="middle">LOOP</text>
         <circle cx="0" cy="0" r="28" fill="none" stroke="#a855f7" stroke-width="0.5" stroke-opacity="0.4" stroke-dasharray="2,4" />
 
         <!-- 6 Orbital Process Nodes around radius 68px -->
         <!-- 1. IDEA at 270° (top: 0, -68) -->
         <g transform="translate(0, -68)">
-          <circle cx="0" cy="0" r="5" fill="#09090b" stroke="#00f0ff" stroke-width="1.2" />
-          <circle cx="0" cy="0" r="2" fill="#00f0ff" />
+          <circle cx="0" cy="0" r="5" fill="#09090b" stroke="#f472b6" stroke-width="1.2" />
+          <circle cx="0" cy="0" r="2" fill="#f472b6" />
           <text x="0" y="-9" fill="#e2e8f0" class="font-mono" font-size="8.5" font-weight="700" letter-spacing="1" text-anchor="middle">IDEA</text>
         </g>
 
         <!-- 2. BUILD at 330° (68 * cos(-30°) = 59, 68 * sin(-30°) = -34) -->
         <g transform="translate(59, -34)">
-          <circle cx="0" cy="0" r="4" fill="#09090b" stroke="#38bdf8" stroke-width="1" />
-          <circle cx="0" cy="0" r="1.5" fill="#38bdf8" />
+          <circle cx="0" cy="0" r="4" fill="#09090b" stroke="#ec4899" stroke-width="1" />
+          <circle cx="0" cy="0" r="1.5" fill="#ec4899" />
           <text x="14" y="3" fill="#94a3b8" class="font-mono" font-size="8" font-weight="600" letter-spacing="0.5" text-anchor="start">BUILD</text>
         </g>
 
@@ -413,8 +413,8 @@
 
       <!-- Continuous Traveling Particle Carrier -->
       <g class="loop-particle-rotator">
-        <circle cx="985" cy="124" r="3.5" fill="#00f0ff" filter="url(#glow-cyan)" />
-        <circle cx="985" cy="124" r="6" stroke="#00f0ff" stroke-width="0.5" fill="none" opacity="0.6" />
+        <circle cx="985" cy="124" r="3.5" fill="#f472b6" filter="url(#glow-cyan)" />
+        <circle cx="985" cy="124" r="6" stroke="#f472b6" stroke-width="0.5" fill="none" opacity="0.6" />
       </g>
 
       <!-- Corner Reticle -->
@@ -426,12 +426,12 @@
     <!-- ======================================================== -->
     <g class="anim-panel-4">
       <!-- Container Box -->
-      <rect x="35" y="318" width="645" height="224" rx="8" fill="url(#panelBg)" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.25" class="card-box" />
+      <rect x="35" y="318" width="645" height="224" rx="8" fill="url(#panelBg)" stroke="#f472b6" stroke-width="0.75" stroke-opacity="0.25" class="card-box" />
       <rect x="35" y="318" width="645" height="26" rx="8" fill="url(#panelHeaderGrad)" />
       
       <!-- Panel Header -->
-      <path d="M 47 331 L 53 331" stroke="#00f0ff" stroke-width="2" />
-      <text x="60" y="335" fill="#38bdf8" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
+      <path d="M 47 331 L 53 331" stroke="#f472b6" stroke-width="2" />
+      <text x="60" y="335" fill="#ec4899" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
         04 // DEVELOPMENT_FOCUS
       </text>
       <text x="665" y="335" fill="#64748b" class="font-mono" font-size="8.5" text-anchor="end">MATRIX // REAL_TIME</text>
@@ -441,14 +441,14 @@
         <!-- Row 01: FRONTEND -->
         <g transform="translate(0, 0)">
           <rect x="0" y="0" width="611" height="34" rx="4" fill="#09090b" stroke="#27272a" stroke-width="0.75" />
-          <text x="12" y="21" fill="#00f0ff" class="font-mono" font-size="10" font-weight="700">01</text>
+          <text x="12" y="21" fill="#f472b6" class="font-mono" font-size="10" font-weight="700">01</text>
           <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">FRONTEND</text>
           <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">React / JavaScript / Next.js</text>
           <!-- Status Badge: BUILDING -->
           <g transform="translate(495, 7)">
-            <rect x="0" y="0" width="104" height="20" rx="10" fill="#0e0e12" stroke="#00f0ff" stroke-width="0.8" />
-            <circle cx="12" cy="10" r="2.8" fill="#00f0ff" class="pulse-dot-cyan" />
-            <text x="22" y="13.5" fill="#00f0ff" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">BUILDING</text>
+            <rect x="0" y="0" width="104" height="20" rx="10" fill="#0e0e12" stroke="#f472b6" stroke-width="0.8" />
+            <circle cx="12" cy="10" r="2.8" fill="#f472b6" class="pulse-dot-cyan" />
+            <text x="22" y="13.5" fill="#f472b6" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">BUILDING</text>
           </g>
         </g>
 
@@ -469,14 +469,14 @@
         <!-- Row 03: DATABASE -->
         <g transform="translate(0, 84)">
           <rect x="0" y="0" width="611" height="34" rx="4" fill="#0c0c0f" stroke="#27272a" stroke-width="0.75" />
-          <text x="12" y="21" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700">03</text>
+          <text x="12" y="21" fill="#ec4899" class="font-mono" font-size="10" font-weight="700">03</text>
           <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">DATABASE</text>
           <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">MongoDB / Express / REST APIs</text>
           <!-- Status Badge: BUILDING -->
           <g transform="translate(495, 7)">
-            <rect x="0" y="0" width="104" height="20" rx="10" fill="#0e0e12" stroke="#00f0ff" stroke-width="0.8" />
-            <circle cx="12" cy="10" r="2.8" fill="#00f0ff" class="pulse-dot-cyan" />
-            <text x="22" y="13.5" fill="#00f0ff" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">BUILDING</text>
+            <rect x="0" y="0" width="104" height="20" rx="10" fill="#0e0e12" stroke="#f472b6" stroke-width="0.8" />
+            <circle cx="12" cy="10" r="2.8" fill="#f472b6" class="pulse-dot-cyan" />
+            <text x="22" y="13.5" fill="#f472b6" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">BUILDING</text>
           </g>
         </g>
 
@@ -496,7 +496,7 @@
       </g>
 
       <!-- Corner Reticle -->
-      <path d="M 675 535 L 675 539 L 671 539" fill="none" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.5" />
+      <path d="M 675 535 L 675 539 L 671 539" fill="none" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.5" />
     </g>
 
     <!-- ======================================================== -->
@@ -532,12 +532,12 @@
         </g>
 
         <!-- Animated Data Pulse traveling on main path -->
-        <path d="M 85 80 L 235 65 L 375 90 L 305 165 L 140 165 Z" fill="none" stroke="#00f0ff" stroke-width="1.5" class="network-data-pulse" />
+        <path d="M 85 80 L 235 65 L 375 90 L 305 165 L 140 165 Z" fill="none" stroke="#f472b6" stroke-width="1.5" class="network-data-pulse" />
 
         <!-- Node 1: MongoDB -->
         <g transform="translate(85, 80)">
-          <rect x="-45" y="-14" width="90" height="28" rx="14" fill="#09090b" stroke="#00f0ff" stroke-width="0.8" />
-          <circle cx="-32" cy="0" r="2.5" fill="#00f0ff" />
+          <rect x="-45" y="-14" width="90" height="28" rx="14" fill="#09090b" stroke="#f472b6" stroke-width="0.8" />
+          <circle cx="-32" cy="0" r="2.5" fill="#f472b6" />
           <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">MongoDB</text>
         </g>
 
@@ -550,15 +550,15 @@
 
         <!-- Node 3: System Design -->
         <g transform="translate(375, 90)">
-          <rect x="-60" y="-14" width="120" height="28" rx="14" fill="#0c0c0f" stroke="#38bdf8" stroke-width="0.8" />
-          <circle cx="-46" cy="0" r="2.5" fill="#38bdf8" />
+          <rect x="-60" y="-14" width="120" height="28" rx="14" fill="#0c0c0f" stroke="#ec4899" stroke-width="0.8" />
+          <circle cx="-46" cy="0" r="2.5" fill="#ec4899" />
           <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">System Design</text>
         </g>
 
         <!-- Node 4: REST APIs -->
         <g transform="translate(140, 165)">
-          <rect x="-55" y="-14" width="110" height="28" rx="14" fill="#0c0c0f" stroke="#00f0ff" stroke-width="0.8" />
-          <circle cx="-42" cy="0" r="2.5" fill="#00f0ff" />
+          <rect x="-55" y="-14" width="110" height="28" rx="14" fill="#0c0c0f" stroke="#f472b6" stroke-width="0.8" />
+          <circle cx="-42" cy="0" r="2.5" fill="#f472b6" />
           <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">REST APIs</text>
         </g>
 
@@ -585,9 +585,9 @@
       <g transform="translate(40, 592)">
         <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1">
           <tspan fill="#64748b">TAHIR_OS // </tspan>
-          <tspan fill="#38bdf8">PROFILE_STATUS</tspan> <tspan fill="#00f0ff">● ONLINE</tspan>
+          <tspan fill="#ec4899">PROFILE_STATUS</tspan> <tspan fill="#f472b6">● ONLINE</tspan>
           <tspan fill="#475569">   •   </tspan>
-          <tspan fill="#38bdf8">BUILD_MODE</tspan> <tspan fill="#00f0ff">● ACTIVE</tspan>
+          <tspan fill="#ec4899">BUILD_MODE</tspan> <tspan fill="#f472b6">● ACTIVE</tspan>
           <tspan fill="#475569">   •   </tspan>
           <tspan fill="#a855f7">LEARNING_MODE</tspan> <tspan fill="#a855f7">● ACTIVE</tspan>
         </text>
@@ -599,8 +599,8 @@
         <!-- Evolving Glowing Pill -->
         <g class="evolving-badge" transform="translate(-105, -11)">
           <rect x="0" y="0" width="105" height="22" rx="11" fill="#08182b" stroke="url(#badgeBorder)" stroke-width="1" />
-          <circle cx="12" cy="11" r="2.5" fill="#00f0ff" class="pulse-dot-cyan" />
-          <text x="56" y="14.5" fill="#00f0ff" class="font-mono" font-size="9" font-weight="800" letter-spacing="1.5" text-anchor="middle">EVOLVING</text>
+          <circle cx="12" cy="11" r="2.5" fill="#f472b6" class="pulse-dot-cyan" />
+          <text x="56" y="14.5" fill="#f472b6" class="font-mono" font-size="9" font-weight="800" letter-spacing="1.5" text-anchor="middle">EVOLVING</text>
         </g>
       </g>
     </g>
@@ -613,11 +613,11 @@
 
     <!-- Corner Sci-Fi Reticles -->
     <!-- Top-Left -->
-    <path d="M 10 24 L 10 10 L 24 10" fill="none" stroke="#00f0ff" stroke-width="2" />
+    <path d="M 10 24 L 10 10 L 24 10" fill="none" stroke="#f472b6" stroke-width="2" />
     <!-- Top-Right -->
     <path d="M 1190 24 L 1190 10 L 1176 10" fill="none" stroke="#a855f7" stroke-width="2" />
     <!-- Bottom-Left -->
-    <path d="M 10 596 L 10 610 L 24 610" fill="none" stroke="#00f0ff" stroke-width="2" />
+    <path d="M 10 596 L 10 610 L 24 610" fill="none" stroke="#f472b6" stroke-width="2" />
     <!-- Bottom-Right -->
     <path d="M 1190 596 L 1190 610 L 1176 610" fill="none" stroke="#a855f7" stroke-width="2" />
   </g>

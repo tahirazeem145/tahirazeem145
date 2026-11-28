@@ -25,9 +25,9 @@
   <br/>
 
   <p>
-    <a href="https://github.com/tahirazeem145"><img src="https://img.shields.io/badge/GitHub-tahirazeem145-00f0ff?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" /></a>
+    <a href="https://github.com/tahirazeem145"><img src="https://img.shields.io/badge/GitHub-tahirazeem145-f472b6?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" /></a>
     &nbsp;
-    <a href="https://in.linkedin.com/in/tahirazeem-r"><img src="https://img.shields.io/badge/LinkedIn-Tahir_Azeem-38bdf8?style=for-the-badge&logo=linkedin&logoColor=black" alt="LinkedIn" /></a>
+    <a href="https://in.linkedin.com/in/tahirazeem-r"><img src="https://img.shields.io/badge/LinkedIn-Tahir_Azeem-ec4899?style=for-the-badge&logo=linkedin&logoColor=black" alt="LinkedIn" /></a>
     &nbsp;
     <a href="mailto:tahirazeems145s@gmail.com"><img src="https://img.shields.io/badge/Email-tahirazeems145s-a855f7?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
     &nbsp;
@@ -157,7 +157,7 @@
   <br/><br/>
 
   <a href="https://github.com/tahirazeem145">
-    <img src="https://streak-stats.demolab.com/?user=tahirazeem145&theme=dark&background=050507&border=27272a&stroke=00f0ff&ring=00f0ff&fire=FB8C00&currStreakNum=00f0ff&sideNums=f0f6fc&currStreakLabel=00f0ff&dates=8b949e" alt="Tahir Azeem - GitHub Streak Stats" />
+    <img src="https://streak-stats.demolab.com/?user=tahirazeem145&theme=dark&background=050507&border=27272a&stroke=f472b6&ring=f472b6&fire=FB8C00&currStreakNum=f472b6&sideNums=f0f6fc&currStreakLabel=f472b6&dates=8b949e" alt="Tahir Azeem - GitHub Streak Stats" />
   </a>
 
   <br/>
