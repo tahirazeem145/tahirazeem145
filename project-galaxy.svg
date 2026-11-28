@@ -324,7 +324,7 @@
 
       <g transform="translate(1145, 92)" text-anchor="end">
         <text x="0" y="0" fill="#64748b" class="font-mono" font-size="9" letter-spacing="1">
-          PROJECT_ID: <tspan fill="#38bdf8">TRP-02</tspan> • STATE: <tspan fill="#00f0ff" font-weight="700">ACTIVE</tspan>
+          PROJECT_ID: <tspan fill="#38bdf8">AG-AI-01</tspan> • STATE: <tspan fill="#00f0ff" font-weight="700">ACTIVE</tspan>
         </text>
       </g>
 
@@ -343,12 +343,12 @@
 
         <!-- Project Title -->
         <text x="0" y="58" fill="url(#titleGrad)" class="font-sans" font-size="34" font-weight="900" letter-spacing="2">
-          TRIPNEST 2.0
+          AQUAGUARD AI
         </text>
 
         <!-- Project Description -->
         <text x="0" y="86" fill="#cbd5e1" class="font-sans" font-size="14.5" font-weight="500" letter-spacing="0.5">
-          Travel Photo Sharing Community Platform
+          Aquaculture Early Warning &amp; Lesion Diagnostics
         </text>
 
         <!-- Metadata Chips: STATUS & TYPE -->
@@ -363,9 +363,9 @@
 
           <!-- Type Pill -->
           <g transform="translate(126, 0)">
-            <rect x="0" y="0" width="138" height="22" rx="4" fill="#091424" stroke="#1e293b" stroke-width="0.75" />
+            <rect x="0" y="0" width="150" height="22" rx="4" fill="#091424" stroke="#1e293b" stroke-width="0.75" />
             <text x="8" y="14.5" fill="#64748b" class="font-mono" font-size="9">TYPE:</text>
-            <text x="44" y="14.5" fill="#38bdf8" class="font-mono" font-size="9" font-weight="700">FULL STACK</text>
+            <text x="44" y="14.5" fill="#38bdf8" class="font-mono" font-size="9" font-weight="700">AI / FULL STACK</text>
           </g>
         </g>
 
@@ -373,30 +373,30 @@
         <g transform="translate(0, 154)">
           <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="700" letter-spacing="1.5">TECH STACK:</text>
           <g transform="translate(0, 10)">
-            <!-- React -->
+            <!-- React 19 -->
             <g transform="translate(0, 0)">
-              <rect x="0" y="0" width="62" height="22" rx="4" fill="#081528" stroke="#00f0ff" stroke-width="0.6" />
-              <text x="31" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">React</text>
+              <rect x="0" y="0" width="70" height="22" rx="4" fill="#081528" stroke="#00f0ff" stroke-width="0.6" />
+              <text x="35" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">React 19</text>
+            </g>
+            <!-- FastAPI -->
+            <g transform="translate(76, 0)">
+              <rect x="0" y="0" width="68" height="22" rx="4" fill="#081528" stroke="#38bdf8" stroke-width="0.6" />
+              <text x="34" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">FastAPI</text>
+            </g>
+            <!-- PyTorch -->
+            <g transform="translate(150, 0)">
+              <rect x="0" y="0" width="70" height="22" rx="4" fill="#081528" stroke="#38bdf8" stroke-width="0.6" />
+              <text x="35" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">PyTorch</text>
+            </g>
+            <!-- MobileNetV3 -->
+            <g transform="translate(226, 0)">
+              <rect x="0" y="0" width="98" height="22" rx="4" fill="#0c102b" stroke="#a855f7" stroke-width="0.6" />
+              <text x="49" y="14.5" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">MobileNetV3</text>
             </g>
             <!-- Vite -->
-            <g transform="translate(68, 0)">
-              <rect x="0" y="0" width="52" height="22" rx="4" fill="#081528" stroke="#38bdf8" stroke-width="0.6" />
-              <text x="26" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">Vite</text>
-            </g>
-            <!-- Tailwind CSS -->
-            <g transform="translate(126, 0)">
-              <rect x="0" y="0" width="102" height="22" rx="4" fill="#081528" stroke="#38bdf8" stroke-width="0.6" />
-              <text x="51" y="14.5" fill="#7dd3fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">Tailwind CSS</text>
-            </g>
-            <!-- Supabase -->
-            <g transform="translate(234, 0)">
-              <rect x="0" y="0" width="82" height="22" rx="4" fill="#0c102b" stroke="#a855f7" stroke-width="0.6" />
-              <text x="41" y="14.5" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">Supabase</text>
-            </g>
-            <!-- PostgreSQL -->
-            <g transform="translate(322, 0)">
-              <rect x="0" y="0" width="94" height="22" rx="4" fill="#0c102b" stroke="#a855f7" stroke-width="0.6" />
-              <text x="47" y="14.5" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">PostgreSQL</text>
+            <g transform="translate(330, 0)">
+              <rect x="0" y="0" width="56" height="22" rx="4" fill="#0c102b" stroke="#a855f7" stroke-width="0.6" />
+              <text x="28" y="14.5" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="600" text-anchor="middle">Vite</text>
             </g>
           </g>
         </g>
@@ -404,7 +404,7 @@
         <!-- Action CTA Buttons (Clickable SVG Links with placeholders) -->
         <g transform="translate(0, 222)">
           <!-- VIEW PROJECT LINK -->
-          <a xlink:href="https://github.com/tahirazeem145/PROJECT_URL_HERE" href="https://github.com/tahirazeem145/PROJECT_URL_HERE" target="_blank">
+          <a xlink:href="https://github.com/tahirazeem145/AquaGuard-AI" href="https://github.com/tahirazeem145/AquaGuard-AI" target="_blank">
             <g class="btn-galaxy">
               <rect x="0" y="0" width="145" height="30" rx="15" fill="#0a1930" stroke="#00f0ff" stroke-width="0.8" />
               <circle cx="18" cy="15" r="2.5" fill="#00f0ff" />
@@ -413,7 +413,7 @@
           </a>
 
           <!-- SOURCE CODE LINK -->
-          <a xlink:href="https://github.com/tahirazeem145/GITHUB_URL_HERE" href="https://github.com/tahirazeem145/GITHUB_URL_HERE" target="_blank">
+          <a xlink:href="https://github.com/tahirazeem145/AquaGuard-AI" href="https://github.com/tahirazeem145/AquaGuard-AI" target="_blank">
             <g transform="translate(155, 0)" class="btn-galaxy">
               <rect x="0" y="0" width="145" height="30" rx="15" fill="#130e28" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.7" />
               <circle cx="18" cy="15" r="2.5" fill="#a855f7" />
@@ -509,7 +509,7 @@
     </g>
 
     <!-- ======================================================== -->
-    <!-- ROW 2 — PROJECT 02: HIREMIND AI (Left Column)           -->
+    <!-- ROW 2 — PROJECT 02: ROUTEWISE (Left Column)              -->
     <!-- ======================================================== -->
     <g class="anim-card-2">
       <!-- Box Container -->
@@ -519,12 +519,12 @@
       <!-- Card Header -->
       <path d="M 47 443 L 53 443" stroke="#a855f7" stroke-width="2" />
       <text x="60" y="447" fill="#c084fc" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
-        02 // AI_PRODUCT
+        02 // TRAFFIC_INTELLIGENCE
       </text>
 
       <g transform="translate(565, 447)" text-anchor="end">
         <text x="0" y="0" fill="#64748b" class="font-mono" font-size="8.5" letter-spacing="1">
-          PROJECT_ID: <tspan fill="#c084fc">HRM-01</tspan>
+          PROJECT_ID: <tspan fill="#c084fc">RTW-01</tspan>
         </text>
       </g>
 
@@ -532,33 +532,33 @@
       <g transform="translate(56, 474)">
         <!-- Project Title -->
         <text x="0" y="24" fill="#f8fafc" class="font-sans" font-size="22" font-weight="800" letter-spacing="1.5">
-          HIREMIND AI
+          ROUTEWISE
         </text>
 
         <!-- Project Description -->
         <text x="0" y="46" fill="#94a3b8" class="font-sans" font-size="13" font-weight="500">
-          AI-powered career coach
+          Smart Traffic &amp; Route Recommendation
         </text>
 
-        <!-- Status Pill: BUILDING -->
+        <!-- Status Pill: ACTIVE -->
         <g transform="translate(0, 64)">
           <rect x="0" y="0" width="108" height="20" rx="4" fill="#140a26" stroke="#a855f7" stroke-width="0.6" />
           <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">STATUS:</text>
           <circle cx="56" cy="10" r="2.5" fill="#a855f7" class="pulse-violet-dot" />
-          <text x="64" y="13.5" fill="#c084fc" class="font-mono" font-size="8.5" font-weight="700">BUILDING</text>
+          <text x="64" y="13.5" fill="#c084fc" class="font-mono" font-size="8.5" font-weight="700">ACTIVE</text>
         </g>
 
-        <!-- Type Pill: AI PRODUCT -->
+        <!-- Type Pill: FULL STACK / API -->
         <g transform="translate(116, 64)">
-          <rect x="0" y="0" width="128" height="20" rx="4" fill="#140a26" stroke="#a855f7" stroke-width="0.6" stroke-opacity="0.4" />
+          <rect x="0" y="0" width="144" height="20" rx="4" fill="#140a26" stroke="#a855f7" stroke-width="0.6" stroke-opacity="0.4" />
           <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">TYPE:</text>
-          <text x="40" y="13.5" fill="#e2e8f0" class="font-mono" font-size="8.5" font-weight="700">AI PRODUCT</text>
+          <text x="40" y="13.5" fill="#e2e8f0" class="font-mono" font-size="8.5" font-weight="700">FULL STACK / API</text>
         </g>
 
         <!-- Action CTA Buttons -->
         <g transform="translate(0, 118)">
           <!-- VIEW PROJECT LINK -->
-          <a xlink:href="https://github.com/tahirazeem145/PROJECT_URL_HERE" href="https://github.com/tahirazeem145/PROJECT_URL_HERE" target="_blank">
+          <a xlink:href="https://github.com/tahirazeem145/Route-Wise" href="https://github.com/tahirazeem145/Route-Wise" target="_blank">
             <g class="btn-galaxy btn-violet-glow">
               <rect x="0" y="0" width="128" height="28" rx="14" fill="#150e29" stroke="#a855f7" stroke-width="0.75" />
               <circle cx="16" cy="14" r="2.5" fill="#a855f7" />
@@ -567,7 +567,7 @@
           </a>
 
           <!-- SOURCE CODE LINK -->
-          <a xlink:href="https://github.com/tahirazeem145/GITHUB_URL_HERE" href="https://github.com/tahirazeem145/GITHUB_URL_HERE" target="_blank">
+          <a xlink:href="https://github.com/tahirazeem145/Route-Wise" href="https://github.com/tahirazeem145/Route-Wise" target="_blank">
             <g transform="translate(138, 0)" class="btn-galaxy btn-violet-glow">
               <rect x="0" y="0" width="128" height="28" rx="14" fill="#0d1426" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.6" />
               <circle cx="16" cy="14" r="2.5" fill="#38bdf8" />
@@ -610,7 +610,7 @@
     </g>
 
     <!-- ======================================================== -->
-    <!-- ROW 2 — PROJECT 03: QR (Right Column)                    -->
+    <!-- ROW 2 — PROJECT 03: RAGNEXT (Right Column)               -->
     <!-- ======================================================== -->
     <g class="anim-card-3">
       <!-- Box Container -->
@@ -620,12 +620,12 @@
       <!-- Card Header -->
       <path d="M 627 443 L 633 443" stroke="#22c55e" stroke-width="2" />
       <text x="640" y="447" fill="#4ade80" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="1.5">
-        03 // WEB_TOOL
+        03 // RAG_ENGINE
       </text>
 
       <g transform="translate(1145, 447)" text-anchor="end">
         <text x="0" y="0" fill="#64748b" class="font-mono" font-size="8.5" letter-spacing="1">
-          PROJECT_ID: <tspan fill="#4ade80">QR-01</tspan>
+          PROJECT_ID: <tspan fill="#4ade80">RAG-01</tspan>
         </text>
       </g>
 
@@ -633,33 +633,33 @@
       <g transform="translate(636, 474)">
         <!-- Project Title -->
         <text x="0" y="24" fill="#f8fafc" class="font-sans" font-size="22" font-weight="800" letter-spacing="1.5">
-          QR
+          RAGNEXT
         </text>
 
         <!-- Project Description -->
         <text x="0" y="46" fill="#94a3b8" class="font-sans" font-size="13" font-weight="500">
-          Modern QR Code Generator
+          Version-Aware Document Intelligence
         </text>
 
-        <!-- Status Pill: BUILT -->
+        <!-- Status Pill: ACTIVE -->
         <g transform="translate(0, 64)">
           <rect x="0" y="0" width="98" height="20" rx="4" fill="#081e14" stroke="#22c55e" stroke-width="0.6" />
           <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">STATUS:</text>
           <circle cx="54" cy="10" r="2.5" fill="#22c55e" class="pulse-green-dot" />
-          <text x="62" y="13.5" fill="#4ade80" class="font-mono" font-size="8.5" font-weight="700">BUILT</text>
+          <text x="62" y="13.5" fill="#4ade80" class="font-mono" font-size="8.5" font-weight="700">ACTIVE</text>
         </g>
 
-        <!-- Type Pill: WEB TOOL -->
+        <!-- Type Pill: AI / ENTERPRISE -->
         <g transform="translate(106, 64)">
-          <rect x="0" y="0" width="116" height="20" rx="4" fill="#081e14" stroke="#22c55e" stroke-width="0.6" stroke-opacity="0.4" />
+          <rect x="0" y="0" width="144" height="20" rx="4" fill="#081e14" stroke="#22c55e" stroke-width="0.6" stroke-opacity="0.4" />
           <text x="6" y="13.5" fill="#64748b" class="font-mono" font-size="8.5">TYPE:</text>
-          <text x="40" y="13.5" fill="#e2e8f0" class="font-mono" font-size="8.5" font-weight="700">WEB TOOL</text>
+          <text x="40" y="13.5" fill="#e2e8f0" class="font-mono" font-size="8.5" font-weight="700">AI / ENTERPRISE</text>
         </g>
 
         <!-- Action CTA Buttons -->
         <g transform="translate(0, 118)">
           <!-- VIEW PROJECT LINK -->
-          <a xlink:href="https://github.com/tahirazeem145/PROJECT_URL_HERE" href="https://github.com/tahirazeem145/PROJECT_URL_HERE" target="_blank">
+          <a xlink:href="https://github.com/Sainathloganathan/RAGNext" href="https://github.com/Sainathloganathan/RAGNext" target="_blank">
             <g class="btn-galaxy btn-green-glow">
               <rect x="0" y="0" width="128" height="28" rx="14" fill="#091d17" stroke="#22c55e" stroke-width="0.75" />
               <circle cx="16" cy="14" r="2.5" fill="#22c55e" />
@@ -668,7 +668,7 @@
           </a>
 
           <!-- SOURCE CODE LINK -->
-          <a xlink:href="https://github.com/tahirazeem145/GITHUB_URL_HERE" href="https://github.com/tahirazeem145/GITHUB_URL_HERE" target="_blank">
+          <a xlink:href="https://github.com/Sainathloganathan/RAGNext" href="https://github.com/Sainathloganathan/RAGNext" target="_blank">
             <g transform="translate(138, 0)" class="btn-galaxy btn-green-glow">
               <rect x="0" y="0" width="128" height="28" rx="14" fill="#0d1426" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.6" />
               <circle cx="16" cy="14" r="2.5" fill="#38bdf8" />
@@ -747,7 +747,7 @@
           <tspan fill="#475569">   •   </tspan>
           <tspan fill="#00f0ff">3 OF 3 OPERATIONAL</tspan>
           <tspan fill="#475569">   •   </tspan>
-          <tspan fill="#a855f7">FLAGSHIP: TRIPNEST_2.0</tspan>
+          <tspan fill="#a855f7">FLAGSHIP: AQUAGUARD_AI</tspan>
         </text>
       </g>
 

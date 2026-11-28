@@ -84,17 +84,58 @@
   <!-- ======================================================== -->
 
   ## 🚀 03 // PROJECT GALAXY [ ACTIVE BUILDS ]
-  <p><em>Curated lineup of flagship full-stack web applications, scalable MERN architectures, and developer utilities.</em></p>
+  <p><em>Curated lineup of flagship intelligent applications, version-aware engines, and traffic advisory platforms.</em></p>
 
   <img src="./project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" width="100%" />
 
-  <br/>
+  <br/><br/>
 
   | 🛸 Project | 🛠️ Tech Stack | 📌 Type & Overview | 🔗 Links |
   | :--- | :--- | :--- | :---: |
-  | **TripNest 2.0** <br/>*(Flagship)* | `React` `Node.js` `Express` `MongoDB` `Tailwind` | **MERN Travel Photo Sharing Community Platform**<br/>Geo-synced photo sharing, community feeds, and social travel networks. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
-  | **RepoMind** | `MERN Stack` `React` `Node.js` `MongoDB` | **Codebase Intelligence & Developer Platform**<br/>Interactive repository structure reasoning and automated codebase analytics. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
-  | **QR Web Tool** | `Web Tool` `JavaScript` `Modern UI` | **Modern QR Code Generator**<br/>High-performance, customizable vector QR code generator for digital workflows. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
+  | **AquaGuard-AI** <br/>*(Flagship)* | `React 19` `FastAPI` `PyTorch` `MobileNetV3` `Vite` | **Multimodal Aquaculture Early Warning & Diagnostics**<br/>Deep learning fish lesion vision (98.28% test accuracy), aqueous ammonia thermodynamics, biological synergy modeling, and precision treatment dosing across 12 languages. | [View Project](https://github.com/tahirazeem145/AquaGuard-AI) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145/AquaGuard-AI) |
+  | **RouteWise** | `React` `Node.js` `Express` `TomTom APIs` `REST` | **Intelligent Traffic-Aware Route Recommendation Platform**<br/>Dynamic multi-route alternative ranking by Adjusted ETA, switch-threshold flapping prevention, and community incident crowdsourcing with 2-vote verification. | [View Project](https://github.com/tahirazeem145/Route-Wise) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145/Route-Wise) |
+  | **RAGNext** | `React 18` `Node.js` `Express` `PostgreSQL` `ChromaDB` | **Version-Aware Document Intelligence Engine**<br/>Enterprise RAG solving multi-version policy conflicts through temporal validity enforcement, document revision lineage tracking, and verifiable page citations. | [View Project](https://github.com/Sainathloganathan/RAGNext) &nbsp;·&nbsp; [Source](https://github.com/Sainathloganathan/RAGNext) |
+
+  <br/>
+
+  ### 🔍 Detailed Project Architecture & Capabilities
+
+  <details open>
+  <summary><strong>🐟 01. AquaGuard-AI — Multimodal Aquaculture Early Warning & Diagnostics</strong></summary>
+  <br/>
+
+  - **Core Innovation**: An intelligent multimodal early-warning and antibiotic-free treatment platform designed for freshwater aquaculture ponds (protecting species such as Rohu, Catla, and Tilapia).
+  - **Computer Vision Diagnostics**: Fine-tuned **MobileNetV3-Large** deep neural network achieving **98.28% test accuracy** on macroscopic fish lesions (Fin Rot, Epizootic Ulcerative Syndrome / EUS, Columnaris, and healthy specimens).
+  - **Physicochemical Modeling**: Uses the **Emerson Thermodynamic Model** to determine toxic un-ionized ammonia ($NH_3$) equilibrium from pH and temperature data, providing proactive risk triage before biological stress occurs.
+  - **Prescriptive Guidance**: Comprehensive pond dosing calculations, natural biological synergy recommendations, and multi-lingual localized interfaces supporting **12 languages**.
+  - **Tech Stack**: `Python 3.12+`, `FastAPI`, `PyTorch`, `React 19`, `Vite`, `Tailwind CSS`.
+  </details>
+
+  <br/>
+
+  <details open>
+  <summary><strong>🚦 02. RouteWise — Intelligent Traffic-Aware Route Recommendation & Community Advisory</strong></summary>
+  <br/>
+
+  - **Core Innovation**: High-velocity traffic intelligence API and interactive commuter dashboard evaluating, ranking, and visualizing route alternatives with live congestion delays.
+  - **Route Ranking Overhaul**: Eliminates provider double-counting by calculating true Adjusted ETA with dynamic delay factors, coupled with a strict **Switch Threshold** (`timeSaved >= max(180s, 0.10 * mainRouteEta)`) to prevent recommendation flapping.
+  - **Community Incident Verification**: Crowdsourced reporting across 6 critical incident categories (congestion, roadblocks, roadwork, processions, signal failures, waterlogging) with 100m spatial deduplication and a **2-vote or telemetry-backed validation engine**.
+  - **Authority Hotspot Triage**: Municipal dispatch dashboard for real-time corridor monitoring and native Google Maps navigation handoff.
+  - **Tech Stack**: `Node.js`, `Express.js`, `React`, `TomTom Routing & Search APIs`, `RESTful Architecture`.
+  </details>
+
+  <br/>
+
+  <details open>
+  <summary><strong>🛡️ 03. RAGNext — Version-Aware Document Intelligence Engine</strong></summary>
+  <br/>
+
+  - **Core Innovation**: Solves a critical flaw in conventional RAG systems where semantic cosine similarity naively pulls outdated clauses from superseded document versions.
+  - **Temporal & Lineage Tracking**: Tracks document revision lineages (`v1.0` ➔ `v2.0` ➔ `v3.0`), enforces temporal validity rules, and detects conflicting active policy versions.
+  - **Verifiable Evidence Grounding**: Answers queries strictly backed by exact page-level citations, section breadcrumbs, and verifiable supporting excerpts.
+  - **Flexible Storage & Vector Ingestion**: Multi-format ingestion (PDF, DOCX, PPTX, Markdown) with embedded persistent vector storage and hybrid PostgreSQL / local SQLite adapters.
+  - **Tech Stack**: `React 18`, `Node.js`, `Express.js`, `PostgreSQL / SQLite`, `ChromaDB API`, `Vite`, `Bootstrap 5`.
+  </details>
 
   <br/>
   <img src="./flight-divider-04.svg" alt="NEXT: 04 Contribution Snake" width="100%" />
