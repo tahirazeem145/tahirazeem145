@@ -104,7 +104,7 @@
       }
 
       .radar-sweep-spin {
-        transform-origin: 470px 545px;
+        transform-origin: 0px 0px;
         animation: radarSweepAnim 4s linear infinite;
       }
       .doc-version-float {
@@ -299,8 +299,8 @@
       </g>
 
       <!-- Center Metadata Tag -->
-      <g transform="translate(600, 36)" text-anchor="middle">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="9.5" letter-spacing="1.5">
+      <g transform="translate(695, 36)" text-anchor="middle">
+        <text x="0" y="0" fill="#475569" class="font-mono" font-size="9" letter-spacing="1.2">
           UNIVERSE: <tspan fill="#38bdf8">TAHIR_AZEEM</tspan> • HUB: <tspan fill="#a855f7">PRODUCT_LAB</tspan> • NODE: <tspan fill="#94a3b8">03_ONLINE</tspan>
         </text>
       </g>
@@ -468,7 +468,7 @@
         </g>
 
         <!-- Sensor Station 03: Precision Dosing Node -->
-        <g transform="translate(430, 95)">
+        <g transform="translate(425, 95)">
           <circle cx="0" cy="0" r="12" fill="none" stroke="#00f0ff" stroke-width="0.75" stroke-dasharray="2,2" />
           <circle cx="0" cy="0" r="5" fill="#081426" stroke="#00f0ff" stroke-width="1.5" />
           <circle cx="0" cy="0" r="2" fill="#00f0ff" />
@@ -476,23 +476,27 @@
         </g>
 
         <!-- Dynamic Lesion Diagnostics HUD Window -->
-        <g transform="translate(130, 45)" class="photo-frame-1">
-          <rect x="0" y="0" width="100" height="56" rx="4" fill="#091428" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.8" />
-          <rect x="4" y="4" width="92" height="36" rx="2" fill="#081a33" />
-          <text x="8" y="16" fill="#00f0ff" class="font-mono" font-size="7" font-weight="700">LESION DETECT</text>
-          <text x="8" y="26" fill="#94a3b8" class="font-mono" font-size="6.5">EUS / FIN ROT: 0%</text>
-          <text x="8" y="35" fill="#22c55e" class="font-mono" font-size="6.5" font-weight="700">HEALTH: 99.1%</text>
-          <text x="8" y="49" fill="#64748b" class="font-mono" font-size="6">MOBILENETV3_L</text>
+        <g transform="translate(145, 32)">
+          <g class="photo-frame-1">
+            <rect x="0" y="0" width="108" height="56" rx="4" fill="#091428" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.8" />
+            <rect x="4" y="4" width="100" height="36" rx="2" fill="#081a33" />
+            <text x="8" y="16" fill="#00f0ff" class="font-mono" font-size="7" font-weight="700">LESION DETECT</text>
+            <text x="8" y="26" fill="#94a3b8" class="font-mono" font-size="6.5">EUS / FIN ROT: 0%</text>
+            <text x="8" y="35" fill="#22c55e" class="font-mono" font-size="6.5" font-weight="700">HEALTH: 99.1%</text>
+            <text x="8" y="49" fill="#64748b" class="font-mono" font-size="6">MOBILENETV3_L</text>
+          </g>
         </g>
 
         <!-- Water Quality Telemetry HUD Window -->
-        <g transform="translate(315, 145)" class="photo-frame-2">
-          <rect x="0" y="0" width="105" height="56" rx="4" fill="#130e28" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.8" />
-          <rect x="4" y="4" width="97" height="36" rx="2" fill="#1b0e36" />
-          <text x="8" y="16" fill="#c084fc" class="font-mono" font-size="7" font-weight="700">WATER TELEMETRY</text>
-          <text x="8" y="26" fill="#94a3b8" class="font-mono" font-size="6.5">pH: 7.8  •  Temp: 26°C</text>
-          <text x="8" y="35" fill="#22c55e" class="font-mono" font-size="6.5" font-weight="700">NH3 TOXIC: OPTIMAL</text>
-          <text x="8" y="49" fill="#64748b" class="font-mono" font-size="6">EMERSON_EQUILIBRIUM</text>
+        <g transform="translate(345, 168)">
+          <g class="photo-frame-2">
+            <rect x="0" y="0" width="112" height="56" rx="4" fill="#130e28" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.8" />
+            <rect x="4" y="4" width="104" height="36" rx="2" fill="#1b0e36" />
+            <text x="8" y="16" fill="#c084fc" class="font-mono" font-size="7" font-weight="700">WATER TELEMETRY</text>
+            <text x="8" y="26" fill="#94a3b8" class="font-mono" font-size="6.5">pH: 7.8  •  Temp: 26°C</text>
+            <text x="8" y="35" fill="#22c55e" class="font-mono" font-size="6.5" font-weight="700">NH3 TOXIC: OPTIMAL</text>
+            <text x="8" y="49" fill="#64748b" class="font-mono" font-size="6">EMERSON_EQUILIBRIUM</text>
+          </g>
         </g>
 
         <!-- Floating Metadata HUD tag -->
@@ -680,32 +684,34 @@
         <rect x="0" y="0" width="114" height="114" rx="6" fill="#06140f" stroke="#22c55e" stroke-width="0.75" stroke-opacity="0.5" />
 
         <!-- Version Hierarchy Pipeline Stack -->
-        <g transform="translate(14, 16)" class="doc-version-float">
-          <!-- Doc v1.0 (Archived) -->
-          <g transform="translate(0, 0)">
-            <rect x="0" y="0" width="86" height="20" rx="3" fill="#0a1f15" stroke="#1e3a29" stroke-width="0.6" />
-            <text x="6" y="13.5" fill="#475569" class="font-mono" font-size="7.5">v1.0 // ARCHIVED</text>
-            <circle cx="78" cy="10" r="2" fill="#475569" />
-          </g>
+        <g transform="translate(14, 16)">
+          <g class="doc-version-float">
+            <!-- Doc v1.0 (Archived) -->
+            <g transform="translate(0, 0)">
+              <rect x="0" y="0" width="86" height="20" rx="3" fill="#0a1f15" stroke="#1e3a29" stroke-width="0.6" />
+              <text x="6" y="13.5" fill="#475569" class="font-mono" font-size="7.5">v1.0 // ARCHIVED</text>
+              <circle cx="78" cy="10" r="2" fill="#475569" />
+            </g>
 
-          <!-- Branch Connection Line -->
-          <line x1="43" y1="20" x2="43" y2="28" stroke="#22c55e" stroke-width="1" stroke-dasharray="2,2" />
+            <!-- Branch Connection Line -->
+            <line x1="43" y1="20" x2="43" y2="28" stroke="#22c55e" stroke-width="1" stroke-dasharray="2,2" />
 
-          <!-- Doc v2.0 (Active) -->
-          <g transform="translate(0, 28)">
-            <rect x="0" y="0" width="86" height="22" rx="3" fill="#0d281a" stroke="#22c55e" stroke-width="0.8" />
-            <text x="6" y="14.5" fill="#4ade80" class="font-mono" font-size="8" font-weight="700">v2.0 // ACTIVE</text>
-            <circle cx="78" cy="11" r="2.5" fill="#22c55e" class="pulse-green-dot" />
-          </g>
+            <!-- Doc v2.0 (Active) -->
+            <g transform="translate(0, 28)">
+              <rect x="0" y="0" width="86" height="22" rx="3" fill="#0d281a" stroke="#22c55e" stroke-width="0.8" />
+              <text x="6" y="14.5" fill="#4ade80" class="font-mono" font-size="8" font-weight="700">v2.0 // ACTIVE</text>
+              <circle cx="78" cy="11" r="2.5" fill="#22c55e" class="pulse-green-dot" />
+            </g>
 
-          <!-- Branch Connection Line -->
-          <line x1="43" y1="50" x2="43" y2="58" stroke="#00f0ff" stroke-width="1" />
+            <!-- Branch Connection Line -->
+            <line x1="43" y1="50" x2="43" y2="58" stroke="#00f0ff" stroke-width="1" />
 
-          <!-- Citation Grounding Layer -->
-          <g transform="translate(0, 58)">
-            <rect x="0" y="0" width="86" height="20" rx="3" fill="#071b22" stroke="#00f0ff" stroke-width="0.6" />
-            <text x="6" y="13.5" fill="#38bdf8" class="font-mono" font-size="7.5" font-weight="600">PAGE CITATIONS</text>
-            <circle cx="78" cy="10" r="2" fill="#00f0ff" />
+            <!-- Citation Grounding Layer -->
+            <g transform="translate(0, 58)">
+              <rect x="0" y="0" width="86" height="20" rx="3" fill="#071b22" stroke="#00f0ff" stroke-width="0.6" />
+              <text x="6" y="13.5" fill="#38bdf8" class="font-mono" font-size="7.5" font-weight="600">PAGE CITATIONS</text>
+              <circle cx="78" cy="10" r="2" fill="#00f0ff" />
+            </g>
           </g>
         </g>
 
