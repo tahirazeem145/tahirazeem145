@@ -34,6 +34,24 @@
       .pulse-cyan-dot { animation: pulseCyan 2.5s ease-in-out infinite; }
       .pulse-green-dot { animation: pulseGreen 2.2s ease-in-out infinite; }
 
+      /* Snake Chomping Mouth Animation */
+      @keyframes snakeChompTop {
+        0%, 100% { transform: rotate(0deg); }
+        45% { transform: rotate(-30deg); }
+      }
+      @keyframes snakeChompBottom {
+        0%, 100% { transform: rotate(0deg); }
+        45% { transform: rotate(30deg); }
+      }
+      .snake-jaw-top {
+        transform-origin: -2px 0px;
+        animation: snakeChompTop 0.35s ease-in-out infinite;
+      }
+      .snake-jaw-bottom {
+        transform-origin: -2px 0px;
+        animation: snakeChompBottom 0.35s ease-in-out infinite;
+      }
+
       /* Dynamic Real Contribution Boxes: Eat -> Disappear -> Reappear Together */
 
       @keyframes eatCell_0 {
@@ -2751,18 +2769,25 @@
         <rect x="-7" y="-7" width="14" height="14" rx="3.5" fill="#00f0ff" />
       </g>
 
-      <!-- Snake Crisp Oriented Head -->
+      <!-- Snake Crisp Oriented Head with Chomping Mouth -->
       <g>
         <animateMotion dur="24s" repeatCount="indefinite" begin="0s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <!-- Head Square matching grid cell size -->
-        <rect x="-7.5" y="-7.5" width="15" height="15" rx="4" fill="#00f0ff" stroke="#ffffff" stroke-width="1" />
-        <!-- Head Eyes pointing in forward motion (+X) -->
-        <rect x="2" y="-4.5" width="3" height="3" rx="0.8" fill="#091322" />
-        <rect x="2" y="1.5" width="3" height="3" rx="0.8" fill="#091322" />
-        <circle cx="3" cy="-3" r="0.8" fill="#ffffff" />
-        <circle cx="3" cy="3" r="0.8" fill="#ffffff" />
+        <!-- Inner Mouth Cavity (visible when jaws open) -->
+        <circle cx="-1" cy="0" r="6.5" fill="#091322" />
+        <!-- Upper Jaw + Top Eye -->
+        <g class="snake-jaw-top">
+          <path d="M -8 0 L -8 -4 Q -8 -8 -4 -8 L 4 -8 Q 8 -8 8 -4 L 8 0 Z" fill="#00f0ff" stroke="#ffffff" stroke-width="0.9" />
+          <rect x="1.5" y="-5.2" width="3.2" height="3.2" rx="0.9" fill="#091322" />
+          <circle cx="2.7" cy="-3.6" r="0.9" fill="#ffffff" />
+        </g>
+        <!-- Lower Jaw + Bottom Eye -->
+        <g class="snake-jaw-bottom">
+          <path d="M -8 0 L 8 0 L 8 4 Q 8 8 4 8 L -4 8 Q -8 8 -8 4 Z" fill="#00f0ff" stroke="#ffffff" stroke-width="0.9" />
+          <rect x="1.5" y="2" width="3.2" height="3.2" rx="0.9" fill="#091322" />
+          <circle cx="2.7" cy="3.6" r="0.9" fill="#ffffff" />
+        </g>
       </g>
     </g>
 
