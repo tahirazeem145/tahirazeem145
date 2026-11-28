@@ -218,7 +218,7 @@
 
       <!-- Center Telemetry Tag -->
       <g transform="translate(600, 38)" text-anchor="middle">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="9.5" letter-spacing="1.5">
+        <text x="0" y="0" fill="#3f3f46" class="font-mono" font-size="9.5" letter-spacing="1.5">
           SYS_ID: <tspan fill="#ec4899">TAZ-2026</tspan> • CORE: <tspan fill="#a855f7">DEVELOPER</tspan> • REV: <tspan fill="#94a3b8">02.4</tspan>
         </text>
       </g>
@@ -250,13 +250,13 @@
 
       <!-- Field: NAME -->
       <g transform="translate(52, 126)">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">NAME</text>
+        <text x="0" y="0" fill="#3f3f46" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">NAME</text>
         <text x="0" y="16" fill="#f1f5f9" class="font-sans" font-size="14" font-weight="700" letter-spacing="1">Tahir Azeem</text>
       </g>
 
       <!-- Field: SPECIALIZATION (MERN STACK) -->
       <g transform="translate(52, 172)">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">STACK FOCUS</text>
+        <text x="0" y="0" fill="#3f3f46" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">STACK FOCUS</text>
         <!-- Stack Highlight Chip -->
         <g transform="translate(0, 7)">
           <rect x="0" y="0" width="148" height="24" rx="4" fill="#09182d" stroke="#f472b6" stroke-width="1" filter="url(#glow-cyan)" />
@@ -267,13 +267,13 @@
 
       <!-- Field: ROLE -->
       <g transform="translate(52, 230)">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">ROLE</text>
+        <text x="0" y="0" fill="#3f3f46" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">ROLE</text>
         <text x="0" y="15" fill="#cbd5e1" class="font-sans" font-size="12" font-weight="600" letter-spacing="1">SOFTWARE ENGINEER</text>
       </g>
 
       <!-- Field: DIRECTION -->
       <g transform="translate(52, 272)">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">DIRECTION</text>
+        <text x="0" y="0" fill="#3f3f46" class="font-mono" font-size="8.5" font-weight="600" letter-spacing="1.5">DIRECTION</text>
         <text x="0" y="15" fill="#c084fc" class="font-mono" font-size="11.5" font-weight="700" letter-spacing="1.5">FULL STACK WEB APPS</text>
       </g>
 
@@ -586,9 +586,9 @@
         <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1">
           <tspan fill="#64748b">TAHIR_OS // </tspan>
           <tspan fill="#ec4899">PROFILE_STATUS</tspan> <tspan fill="#f472b6">● ONLINE</tspan>
-          <tspan fill="#475569">   •   </tspan>
+          <tspan fill="#3f3f46">   •   </tspan>
           <tspan fill="#ec4899">BUILD_MODE</tspan> <tspan fill="#f472b6">● ACTIVE</tspan>
-          <tspan fill="#475569">   •   </tspan>
+          <tspan fill="#3f3f46">   •   </tspan>
           <tspan fill="#a855f7">LEARNING_MODE</tspan> <tspan fill="#a855f7">● ACTIVE</tspan>
         </text>
       </g>

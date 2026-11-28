@@ -300,7 +300,7 @@
 
       <!-- Center Metadata Tag -->
       <g transform="translate(695, 36)" text-anchor="middle">
-        <text x="0" y="0" fill="#475569" class="font-mono" font-size="9" letter-spacing="1.2">
+        <text x="0" y="0" fill="#3f3f46" class="font-mono" font-size="9" letter-spacing="1.2">
           UNIVERSE: <tspan fill="#ec4899">TAHIR_AZEEM</tspan> • HUB: <tspan fill="#a855f7">PRODUCT_LAB</tspan> • NODE: <tspan fill="#94a3b8">03_ONLINE</tspan>
         </text>
       </g>
@@ -378,7 +378,7 @@
 
         <!-- Technology Stack Tags (STRICTLY SPECIFIED TECH ONLY) -->
         <g transform="translate(0, 154)">
-          <text x="0" y="0" fill="#475569" class="font-mono" font-size="8.5" font-weight="700" letter-spacing="1.5">TECH STACK:</text>
+          <text x="0" y="0" fill="#3f3f46" class="font-mono" font-size="8.5" font-weight="700" letter-spacing="1.5">TECH STACK:</text>
           <g transform="translate(0, 10)">
             <!-- React 19 -->
             <g transform="translate(0, 0)">
@@ -689,8 +689,8 @@
             <!-- Doc v1.0 (Archived) -->
             <g transform="translate(0, 0)">
               <rect x="0" y="0" width="86" height="20" rx="3" fill="#0a1f15" stroke="#1e3a29" stroke-width="0.6" />
-              <text x="6" y="13.5" fill="#475569" class="font-mono" font-size="7.5">v1.0 // ARCHIVED</text>
-              <circle cx="78" cy="10" r="2" fill="#475569" />
+              <text x="6" y="13.5" fill="#3f3f46" class="font-mono" font-size="7.5">v1.0 // ARCHIVED</text>
+              <circle cx="78" cy="10" r="2" fill="#3f3f46" />
             </g>
 
             <!-- Branch Connection Line -->
@@ -734,9 +734,9 @@
         <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1">
           <tspan fill="#64748b">TAHIR_AZEEM // </tspan>
           <tspan fill="#ec4899">PRODUCT_GALAXY</tspan>
-          <tspan fill="#475569">   •   </tspan>
+          <tspan fill="#3f3f46">   •   </tspan>
           <tspan fill="#f472b6">3 OF 3 OPERATIONAL</tspan>
-          <tspan fill="#475569">   •   </tspan>
+          <tspan fill="#3f3f46">   •   </tspan>
           <tspan fill="#a855f7">FLAGSHIP: AQUAGUARD_AI</tspan>
         </text>
       </g>
@@ -745,7 +745,7 @@
       <g transform="translate(1160, 702)" text-anchor="end">
         <text x="0" y="0" class="font-mono" font-size="9.5" letter-spacing="1.5">
           <tspan fill="#94a3b8">BUILD</tspan> <tspan fill="#f472b6">→</tspan> <tspan fill="#94a3b8">EXPERIMENT</tspan> <tspan fill="#a855f7">→</tspan> <tspan fill="#94a3b8">SHIP</tspan>
-          <tspan fill="#475569">   [ </tspan><tspan fill="#22c55e" font-weight="700">VERIFIED</tspan><tspan fill="#475569"> ]</tspan>
+          <tspan fill="#3f3f46">   [ </tspan><tspan fill="#22c55e" font-weight="700">VERIFIED</tspan><tspan fill="#3f3f46"> ]</tspan>
         </text>
       </g>
     </g>
