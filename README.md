@@ -95,44 +95,48 @@
 
   <br/>
 
-  ### 🔍 Detailed Project Architecture & Capabilities
+  ### 🔍 Detailed Project Overview
+
+  <div align="left">
 
   <details open>
-  <summary><strong>🐟 01. AquaGuard-AI — Multimodal Aquaculture Early Warning & Diagnostics</strong></summary>
-  <br/>
-
-  - **Core Innovation**: An intelligent multimodal early-warning and antibiotic-free treatment platform designed for freshwater aquaculture ponds (protecting species such as Rohu, Catla, and Tilapia).
-  - **Computer Vision Diagnostics**: Fine-tuned **MobileNetV3-Large** deep neural network achieving **98.28% test accuracy** on macroscopic fish lesions (Fin Rot, Epizootic Ulcerative Syndrome / EUS, Columnaris, and healthy specimens).
-  - **Physicochemical Modeling**: Uses the **Emerson Thermodynamic Model** to determine toxic un-ionized ammonia ($NH_3$) equilibrium from pH and temperature data, providing proactive risk triage before biological stress occurs.
-  - **Prescriptive Guidance**: Comprehensive pond dosing calculations, natural biological synergy recommendations, and multi-lingual localized interfaces supporting **12 languages**.
-  - **Tech Stack**: `Python 3.12+`, `FastAPI`, `PyTorch`, `React 19`, `Vite`, `Tailwind CSS`.
+  <summary><strong>🐟 01. AquaGuard-AI — Smart Fish Farm &amp; Pond Health Assistant</strong></summary>
+  <ul>
+    <li><strong>What it does:</strong> Helps fish farmers detect diseases early and keep pond water safe without relying on harmful antibiotics.</li>
+    <li><strong>Fish Disease Detection:</strong> Farmers can upload a fish photo, and the AI checks for common diseases (like Fin Rot or ulcers) with <strong>98.28% accuracy</strong>.</li>
+    <li><strong>Water Safety Check:</strong> Calculates dangerous ammonia levels using simple pond readings like water pH and temperature to warn farmers before fish get sick.</li>
+    <li><strong>Easy Treatment &amp; Languages:</strong> Gives exact natural treatment amounts based on pond size and works in <strong>12 different languages</strong>.</li>
+    <li><strong>Tech Stack:</strong> <code>Python</code> <code>FastAPI</code> <code>PyTorch</code> <code>React 19</code> <code>Vite</code> <code>Tailwind CSS</code></li>
+  </ul>
   </details>
 
   <br/>
 
   <details open>
-  <summary><strong>🚦 02. RouteWise — Intelligent Traffic-Aware Route Recommendation & Community Advisory</strong></summary>
-  <br/>
-
-  - **Core Innovation**: High-velocity traffic intelligence API and interactive commuter dashboard evaluating, ranking, and visualizing route alternatives with live congestion delays.
-  - **Route Ranking Overhaul**: Eliminates provider double-counting by calculating true Adjusted ETA with dynamic delay factors, coupled with a strict **Switch Threshold** (`timeSaved >= max(180s, 0.10 * mainRouteEta)`) to prevent recommendation flapping.
-  - **Community Incident Verification**: Crowdsourced reporting across 6 critical incident categories (congestion, roadblocks, roadwork, processions, signal failures, waterlogging) with 100m spatial deduplication and a **2-vote or telemetry-backed validation engine**.
-  - **Authority Hotspot Triage**: Municipal dispatch dashboard for real-time corridor monitoring and native Google Maps navigation handoff.
-  - **Tech Stack**: `Node.js`, `Express.js`, `React`, `TomTom Routing & Search APIs`, `RESTful Architecture`.
+  <summary><strong>🚦 02. RouteWise — Smart Traffic &amp; Route Finder</strong></summary>
+  <ul>
+    <li><strong>What it does:</strong> Helps drivers avoid heavy traffic jams and roadblocks by finding faster, smarter routes in real time.</li>
+    <li><strong>Smart Route Ranking:</strong> Compares different routes using live traffic delays and only suggests switching routes if it actually saves meaningful time.</li>
+    <li><strong>Live Road Reports:</strong> Users can report roadblocks, waterlogging, roadwork, or broken signals on the map. Duplicate reports nearby are merged automatically.</li>
+    <li><strong>Community Verification:</strong> Reports get marked as <strong>Verified</strong> once 2 other users confirm them or live traffic speed data matches the slowdown.</li>
+    <li><strong>Tech Stack:</strong> <code>Node.js</code> <code>Express.js</code> <code>React</code> <code>TomTom APIs</code> <code>REST API</code></li>
+  </ul>
   </details>
 
   <br/>
 
   <details open>
-  <summary><strong>🛡️ 03. RAGNext — Version-Aware Document Intelligence Engine</strong></summary>
-  <br/>
-
-  - **Core Innovation**: Solves a critical flaw in conventional RAG systems where semantic cosine similarity naively pulls outdated clauses from superseded document versions.
-  - **Temporal & Lineage Tracking**: Tracks document revision lineages (`v1.0` ➔ `v2.0` ➔ `v3.0`), enforces temporal validity rules, and detects conflicting active policy versions.
-  - **Verifiable Evidence Grounding**: Answers queries strictly backed by exact page-level citations, section breadcrumbs, and verifiable supporting excerpts.
-  - **Flexible Storage & Vector Ingestion**: Multi-format ingestion (PDF, DOCX, PPTX, Markdown) with embedded persistent vector storage and hybrid PostgreSQL / local SQLite adapters.
-  - **Tech Stack**: `React 18`, `Node.js`, `Express.js`, `PostgreSQL / SQLite`, `ChromaDB API`, `Vite`, `Bootstrap 5`.
+  <summary><strong>🛡️ 03. RAGNext — Version-Aware Document Search AI</strong></summary>
+  <ul>
+    <li><strong>What it does:</strong> An AI search tool for company documents that always answers using the <strong>latest valid version</strong> instead of outdated files.</li>
+    <li><strong>Tracks Document Versions:</strong> Understands document history (<code>v1.0</code> ➔ <code>v2.0</code> ➔ <code>v3.0</code>) and warns if two active documents give conflicting rules.</li>
+    <li><strong>Proof &amp; Page Citations:</strong> Every AI answer includes the exact document name, page number, and quoted text so you can verify it easily.</li>
+    <li><strong>Supports Many File Types:</strong> Works with PDF, Word (DOCX), PowerPoint (PPTX), and text/Markdown files.</li>
+    <li><strong>Tech Stack:</strong> <code>React 18</code> <code>Node.js</code> <code>Express.js</code> <code>PostgreSQL</code> <code>ChromaDB</code> <code>Vite</code></li>
+  </ul>
   </details>
+
+  </div>
 
   <br/>
   <img src="./flight-divider-04.svg" alt="NEXT: 04 Contribution Snake" width="100%" />
