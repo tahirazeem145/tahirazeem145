@@ -282,7 +282,7 @@ async function generate() {
   const months = getMonthLabels(grid);
 
   const levelColors = {
-    0: { fill: '#161b22', stroke: '#21262d' },
+    0: { fill: '#141418', stroke: '#27272a' },
     1: { fill: '#196c2e', stroke: '#238636' },
     2: { fill: '#238636', stroke: '#2ea043' },
     3: { fill: '#2ea043', stroke: '#39d353' },
@@ -337,10 +337,10 @@ async function generate() {
     return `
       @keyframes eatCell_${t.id} {
         0%, ${pPre}% { fill: ${t.origFill}; stroke: ${t.origStroke}; opacity: 1; }
-        ${pContact}% { fill: #ffffff; stroke: #00f0ff; opacity: 1; }
-        ${pFlash}% { fill: #00f0ff; stroke: #38bdf8; opacity: 0.9; }
-        ${pGone}%, 96.0% { fill: #161b22; stroke: #21262d; opacity: 0; }
-        96.8% { fill: #ffffff; stroke: #00f0ff; opacity: 0.85; }
+        ${pContact}% { fill: #ffffff; stroke: #f472b6; opacity: 1; }
+        ${pFlash}% { fill: #f472b6; stroke: #ec4899; opacity: 0.9; }
+        ${pGone}%, 96.0% { fill: #141418; stroke: #27272a; opacity: 0; }
+        96.8% { fill: #ffffff; stroke: #f472b6; opacity: 0.85; }
         97.5%, 100% { fill: ${t.origFill}; stroke: ${t.origStroke}; opacity: 1; }
       }
       .food-cell-${t.id} {
@@ -355,7 +355,7 @@ async function generate() {
 
   // Grid Rectangles SVG (Base cell under each food cell so disappearance shows empty cell)
   const gridRects = grid.map(cell => {
-    const baseCell = `<rect x="${cell.x}" y="${cell.y}" width="15" height="15" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.75" />`;
+    const baseCell = `<rect x="${cell.x}" y="${cell.y}" width="15" height="15" rx="3" fill="#141418" stroke="#27272a" stroke-width="0.75" />`;
     if (cell.level > 0 && cell.foodId !== undefined) {
       return `${baseCell}\n        <rect class="food-cell-${cell.foodId}" x="${cell.x}" y="${cell.y}" width="15" height="15" rx="3" stroke-width="0.75" />`;
     } else {
@@ -399,31 +399,49 @@ async function generate() {
       .pulse-cyan-dot { animation: pulseCyan 2.5s ease-in-out infinite; }
       .pulse-green-dot { animation: pulseGreen 2.2s ease-in-out infinite; }
 
+      /* Snake Chomping Mouth Animation */
+      @keyframes snakeChompTop {
+        0%, 100% { transform: rotate(0deg); }
+        45% { transform: rotate(-30deg); }
+      }
+      @keyframes snakeChompBottom {
+        0%, 100% { transform: rotate(0deg); }
+        45% { transform: rotate(30deg); }
+      }
+      .snake-jaw-top {
+        transform-origin: -2px 0px;
+        animation: snakeChompTop 0.35s ease-in-out infinite;
+      }
+      .snake-jaw-bottom {
+        transform-origin: -2px 0px;
+        animation: snakeChompBottom 0.35s ease-in-out infinite;
+      }
+
       /* Dynamic Real Contribution Boxes: Eat -> Disappear -> Reappear Together */
 ${keyframesCSS}
     </style>
 
     <!-- Linear Gradients -->
     <linearGradient id="snakeBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080c14" />
-      <stop offset="50%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#080c14" />
+      <stop offset="0%" stop-color="#050507" />
+      <stop offset="50%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#050507" />
     </linearGradient>
 
     <linearGradient id="boardBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#090d13" />
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#050507" />
     </linearGradient>
 
     <linearGradient id="boardHdrGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#161b22" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#21262d" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#161b22" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#141418" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#27272a" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#141418" stop-opacity="0.8" />
     </linearGradient>
 
     <linearGradient id="dividerFade" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
-      <stop offset="15%" stop-color="#00f0ff" stop-opacity="0.4" />
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0" />
+      <stop offset="15%" stop-color="#f472b6" stop-opacity="0.4" />
       <stop offset="85%" stop-color="#a855f7" stop-opacity="0.4" />
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
@@ -449,7 +467,7 @@ ${keyframesCSS}
 
       <!-- Left Title & Subtitle -->
       <g transform="translate(35, 25)">
-        <rect x="0" y="-2" width="22" height="20" rx="4" fill="#161b22" stroke="#238636" stroke-width="0.75" />
+        <rect x="0" y="-2" width="22" height="20" rx="4" fill="#141418" stroke="#238636" stroke-width="0.75" />
         <text x="5.5" y="12" fill="#39d353" class="font-mono" font-size="11" font-weight="700">🐍</text>
         <text x="32" y="12" fill="#f0f6fc" class="font-mono" font-size="13" font-weight="800" letter-spacing="2">
           04 // CONTRIBUTION SNAKE
@@ -468,7 +486,7 @@ ${keyframesCSS}
 
       <!-- Right Status Pill -->
       <g transform="translate(1165, 36)" text-anchor="end">
-        <rect x="-184" y="-12" width="184" height="22" rx="11" fill="#161b22" stroke="#238636" stroke-width="0.75" />
+        <rect x="-184" y="-12" width="184" height="22" rx="11" fill="#141418" stroke="#238636" stroke-width="0.75" />
         <circle cx="-168" cy="-1" r="3.5" fill="#39d353" class="pulse-green-dot" />
         <text x="-155" y="2.5" fill="#f0f6fc" class="font-mono" font-size="9" font-weight="600" letter-spacing="1">
           LIVE AUTONOMOUS GAME
@@ -481,7 +499,7 @@ ${keyframesCSS}
     <!-- ======================================================== -->
     <g class="anim-board">
       <!-- Main Game Board Frame -->
-      <rect x="35" y="74" width="1130" height="246" rx="10" fill="url(#boardBg)" stroke="#30363d" stroke-width="1" />
+      <rect x="35" y="74" width="1130" height="246" rx="10" fill="url(#boardBg)" stroke="#27272a" stroke-width="1" />
       <rect x="35" y="74" width="1130" height="28" rx="10" fill="url(#boardHdrGrad)" />
 
       <!-- Top Frame Header: Real Contribution Count -->
@@ -492,7 +510,7 @@ ${keyframesCSS}
       <!-- Legend on top-right -->
       <g transform="translate(1145, 92)" text-anchor="end">
         <text x="-125" y="0" fill="#8b949e" class="font-mono" font-size="8.5" letter-spacing="1">Less</text>
-        <rect x="-115" y="-7" width="10" height="10" rx="2" fill="#161b22" stroke="#21262d" stroke-width="0.5" />
+        <rect x="-115" y="-7" width="10" height="10" rx="2" fill="#141418" stroke="#27272a" stroke-width="0.5" />
         <rect x="-100" y="-7" width="10" height="10" rx="2" fill="#196c2e" stroke="#238636" stroke-width="0.5" />
         <rect x="-85" y="-7" width="10" height="10" rx="2" fill="#238636" stroke="#2ea043" stroke-width="0.5" />
         <rect x="-70" y="-7" width="10" height="10" rx="2" fill="#2ea043" stroke="#39d353" stroke-width="0.5" />
@@ -557,7 +575,7 @@ ${keyframesCSS}
         <animateMotion dur="24s" repeatCount="indefinite" begin="-23.55s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#38bdf8" />
+        <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#ec4899" />
       </g>
 
       <!-- Snake Body Segment 2 -->
@@ -565,7 +583,7 @@ ${keyframesCSS}
         <animateMotion dur="24s" repeatCount="indefinite" begin="-23.70s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <rect x="-7" y="-7" width="14" height="14" rx="3.5" fill="#00f0ff" />
+        <rect x="-7" y="-7" width="14" height="14" rx="3.5" fill="#f472b6" />
       </g>
 
       <!-- Snake Body Segment 1 (Neck) -->
@@ -573,26 +591,33 @@ ${keyframesCSS}
         <animateMotion dur="24s" repeatCount="indefinite" begin="-23.85s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <rect x="-7" y="-7" width="14" height="14" rx="3.5" fill="#00f0ff" />
+        <rect x="-7" y="-7" width="14" height="14" rx="3.5" fill="#f472b6" />
       </g>
 
-      <!-- Snake Crisp Oriented Head -->
+      <!-- Snake Crisp Oriented Head with Chomping Mouth -->
       <g>
         <animateMotion dur="24s" repeatCount="indefinite" begin="0s" keyPoints="0;1" keyTimes="0;1" rotate="auto">
           <mpath xlink:href="#masterSnakePath" />
         </animateMotion>
-        <!-- Head Square matching grid cell size -->
-        <rect x="-7.5" y="-7.5" width="15" height="15" rx="4" fill="#00f0ff" stroke="#ffffff" stroke-width="1" />
-        <!-- Head Eyes pointing in forward motion (+X) -->
-        <rect x="2" y="-4.5" width="3" height="3" rx="0.8" fill="#091322" />
-        <rect x="2" y="1.5" width="3" height="3" rx="0.8" fill="#091322" />
-        <circle cx="3" cy="-3" r="0.8" fill="#ffffff" />
-        <circle cx="3" cy="3" r="0.8" fill="#ffffff" />
+        <!-- Inner Mouth Cavity (visible when jaws open) -->
+        <circle cx="-1" cy="0" r="6.5" fill="#09090b" />
+        <!-- Upper Jaw + Top Eye -->
+        <g class="snake-jaw-top">
+          <path d="M -8 0 L -8 -4 Q -8 -8 -4 -8 L 4 -8 Q 8 -8 8 -4 L 8 0 Z" fill="#f472b6" stroke="#ffffff" stroke-width="0.9" />
+          <rect x="1.5" y="-5.2" width="3.2" height="3.2" rx="0.9" fill="#09090b" />
+          <circle cx="2.7" cy="-3.6" r="0.9" fill="#ffffff" />
+        </g>
+        <!-- Lower Jaw + Bottom Eye -->
+        <g class="snake-jaw-bottom">
+          <path d="M -8 0 L 8 0 L 8 4 Q 8 8 4 8 L -4 8 Q -8 8 -8 4 Z" fill="#f472b6" stroke="#ffffff" stroke-width="0.9" />
+          <rect x="1.5" y="2" width="3.2" height="3.2" rx="0.9" fill="#09090b" />
+          <circle cx="2.7" cy="3.6" r="0.9" fill="#ffffff" />
+        </g>
       </g>
     </g>
 
     <!-- Outer Border Line -->
-    <rect x="1" y="1" width="1198" height="348" rx="13" fill="none" stroke="#30363d" stroke-width="1" />
+    <rect x="1" y="1" width="1198" height="348" rx="13" fill="none" stroke="#27272a" stroke-width="1" />
   </g>
 </svg>
 `;
