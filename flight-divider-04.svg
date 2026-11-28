@@ -102,14 +102,14 @@
   <!-- Flight Waypoints and Telemetry HUD -->
   <g opacity="0.6" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="600" fill="#8b949e">
     <circle cx="140" cy="32" r="2" fill="#58a6ff" />
-    <text x="140" y="22" text-anchor="middle" fill="#58a6ff">FLIGHT TA-145</text>
+    <text x="140" y="22" text-anchor="middle" fill="#58a6ff">ORBITAL TA-145</text>
 
     <circle cx="600" cy="32" r="2.5" fill="#a855f7" />
-    <text x="600" y="22" text-anchor="middle" fill="#c084fc">ALT 36,000 FT // CRUISE // RADAR ACTIVE</text>
+    <text x="600" y="22" text-anchor="middle" fill="#c084fc">WARP CRUISE // TELEMETRY ACTIVE</text>
     <line x1="585" y1="32" x2="615" y2="32" stroke="#a855f7" stroke-width="1" />
 
     <circle cx="1060" cy="32" r="2" fill="#58a6ff" />
-    <text x="1060" y="22" text-anchor="middle" fill="#58a6ff">WAYPOINT DELTA</text>
+    <text x="1060" y="22" text-anchor="middle" fill="#58a6ff">SECTOR DELTA</text>
   </g>
 
   <!-- High-Altitude Cirrus Cloud Layer -->
@@ -135,10 +135,10 @@
     <!-- Static Vertical Centering at y=32 -->
     <g transform="translate(0, 32)">
 
-      <!-- 1. TOW CABLES (Linking Aircraft Tail to Banner) -->
-      <g stroke="#94a3b8" stroke-width="1.2" opacity="0.9">
-        <line x1="-64" y1="-1" x2="-96" y2="-9" stroke-dasharray="4 2" />
-        <line x1="-64" y1="5" x2="-96" y2="9" stroke-dasharray="4 2" />
+      <!-- 1. ENERGY TETHER (Linking Shuttle to Data Banner) -->
+      <g stroke="#00f0ff" stroke-width="1.1" opacity="0.75">
+        <line x1="-54" y1="-3" x2="-96" y2="-9" stroke-dasharray="4 3" />
+        <line x1="-54" y1="3" x2="-96" y2="9" stroke-dasharray="4 3" />
       </g>
 
       <!-- 2. TOWED SKY-BANNER (DISPLAYING SECTION NAME) -->
@@ -159,7 +159,7 @@
         <g font-family="'JetBrains Mono', 'Space Grotesk', -apple-system, monospace">
           <!-- Leading Tag Badge -->
           <rect x="-150" y="-7" width="48" height="14" rx="3" fill="rgba(0, 240, 255, 0.25)" stroke="#00f0ff" stroke-width="1" />
-          <text x="-126" y="3.5" fill="#00f0ff" font-size="8" font-weight="bold" text-anchor="middle" letter-spacing="1">NEXT ✈</text>
+          <text x="-126" y="3.5" fill="#00f0ff" font-size="8" font-weight="bold" text-anchor="middle" letter-spacing="1">NEXT ✦</text>
 
           <!-- Centered Section Title -->
           <text x="-240" y="3.5" fill="#ffffff" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="0.8">04 // CONTRIBUTION SNAKE</text>
@@ -175,78 +175,43 @@
         <rect x="-160" y="14" width="145" height="2.4" rx="1.2" fill="url(#contrailGrad)" />
       </g>
 
-      <!-- 4. JET ENGINE AFTERBURNER FLAMES -->
+            <!-- 4. ION PLASMA THRUSTER PLUMES -->
       <g>
-        <polygon points="-16,-4.5 -40,-3 -16,-1.5" fill="url(#thrustFlameGrad)" />
-        <polygon points="-10,5.5 -36,7 -10,8.5" fill="url(#thrustFlameGrad)" />
+        <polygon points="-58,-7.5 -94,-5.5 -58,-3.5" fill="url(#thrustFlameGrad)" />
+        <polygon points="-58,3.5 -94,5.5 -58,7.5" fill="url(#thrustFlameGrad)" />
       </g>
 
-      <!-- 5. THE AIRCRAFT -->
+
+            <!-- 5. THE CYBER-SHUTTLE / ORBITAL STARFIGHTER -->
       <g>
-        <!-- Far Port Wing -->
-        <polygon points="-8,-5 12,-5 -18,-20 -25,-19" fill="#475569" stroke="#334155" stroke-width="0.6" />
-        <line x1="-25" y1="-19" x2="-27" y2="-24" stroke="#00f0ff" stroke-width="1.5" />
-        <!-- Port Wingtip Red Nav Light (Pure Vector Gradient Glow) -->
-        <circle cx="-27" cy="-24" r="3.5" fill="url(#redBeaconFlare)" />
-        <circle cx="-27" cy="-24" r="1.2" fill="#ffffff" />
+        <!-- Upper Swept Delta Fin -->
+        <polygon points="-46,-4 -12,-5 -38,-22 -52,-20" fill="#1e293b" stroke="#a855f7" stroke-width="0.8" />
+        <polygon points="-46,-16 -38,-18 -48,-22 -54,-20" fill="#a855f7" opacity="0.9" />
+        <circle cx="-51" cy="-21" r="3.2" fill="url(#redBeaconFlare)" />
+        <circle cx="-51" cy="-21" r="1.2" fill="#ffffff" />
 
-        <!-- Horizontal Tail Stabilizer -->
-        <polygon points="-60,-2 -46,-2 -64,-12 -70,-11" fill="#64748b" stroke="#334155" stroke-width="0.6" />
+        <!-- Lower Swept Delta Fin -->
+        <polygon points="-46,4 -12,5 -38,22 -52,20" fill="#1e293b" stroke="#00f0ff" stroke-width="0.8" />
+        <polygon points="-46,16 -38,18 -48,22 -54,20" fill="#00f0ff" opacity="0.9" />
+        <circle cx="-51" cy="21" r="3.2" fill="url(#greenNavFlare)" />
+        <circle cx="-51" cy="21" r="1.2" fill="#ffffff" />
 
-        <!-- Vertical Tail Fin -->
-        <polygon points="-50,-4 -36,-4 -58,-28 -66,-28" fill="url(#fuselageGrad)" stroke="#334155" stroke-width="0.75" />
-        <polygon points="-52,-14 -44,-14 -56,-26 -63,-26" fill="#00f0ff" opacity="0.9" />
+        <!-- Dual Ion Thruster Nozzles -->
+        <rect x="-58" y="-8" width="12" height="5" rx="1.5" fill="#0f172a" stroke="#38bdf8" stroke-width="0.75" />
+        <rect x="-58" y="3" width="12" height="5" rx="1.5" fill="#0f172a" stroke="#38bdf8" stroke-width="0.75" />
 
-        <!-- White Tail Strobe Beacon (Pure Vector Gradient Glow) -->
-        <circle cx="-62" cy="-28" r="4" fill="url(#whiteStrobeFlare)" />
-        <circle cx="-62" cy="-28" r="1.5" fill="#ffffff" />
+        <!-- Main Sleek Aerodynamic Hull -->
+        <path d="M-50,-6 L10,-8 Q52,-7 76,0 Q52,7 10,8 L-50,6 Q-44,0 -50,-6 Z" fill="url(#fuselageGrad)" stroke="#38bdf8" stroke-width="0.9" />
 
-        <!-- Main Fuselage -->
-        <path d="M-64,-1 Q-25,-6 25,-6 Q65,-6 76,1 Q62,8 24,8 Q-25,8 -64,2 Z" fill="url(#fuselageGrad)" stroke="#334155" stroke-width="0.9" />
+        <!-- Glowing Energy Core Spine -->
+        <line x1="-42" y1="0" x2="48" y2="0" stroke="#00f0ff" stroke-width="1.4" opacity="0.85" />
 
-        <!-- Cockpit Windshield -->
-        <path d="M54,-3.5 L63,-2 L60,1 L53,0 Z" fill="url(#windowGrad)" stroke="#0f172a" stroke-width="0.5" />
+        <!-- Futuristic Cockpit Canopy -->
+        <path d="M12,-4.5 Q36,-4.5 48,0 Q36,4.5 12,4.5 Q18,0 12,-4.5 Z" fill="url(#windowGrad)" stroke="#00f0ff" stroke-width="0.7" />
 
-        <!-- Illuminated Cabin Windows -->
-        <g fill="url(#windowGrad)" opacity="0.9">
-          <rect x="-42" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="-34" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="-26" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="-18" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="-10" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="-2" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="6" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="14" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="22" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="30" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="38" y="0" width="3.5" height="2.4" rx="0.6" />
-          <rect x="46" y="0" width="3.5" height="2.4" rx="0.6" />
-        </g>
-
-        <!-- Cyan Livery Stripe -->
-        <path d="M-58,4 Q0,4 58,4" stroke="#00f0ff" stroke-width="1" opacity="0.9" />
-
-        <!-- Near Starboard Wing -->
-        <polygon points="-12,4 20,4 -10,22 -20,21" fill="url(#fuselageGrad)" stroke="#334155" stroke-width="0.75" />
-        <polygon points="-20,21 -17,27 -14,27 -17,21" fill="#00f0ff" />
-        <!-- Starboard Wingtip Green Nav Light (Pure Vector Gradient Glow) -->
-        <circle cx="-15.5" cy="27" r="3.5" fill="url(#greenNavFlare)" />
-        <circle cx="-15.5" cy="27" r="1.2" fill="#ffffff" />
-
-        <!-- Turbofan Engines -->
-        <g transform="translate(-2, -4)">
-          <rect x="-14" y="-1.5" width="20" height="5.5" rx="2" fill="#334155" stroke="#475569" stroke-width="0.6" />
-          <line x1="5" y1="-1.5" x2="5" y2="4" stroke="#94a3b8" stroke-width="1" />
-        </g>
-        <g transform="translate(6, 6)">
-          <rect x="-16" y="-1.5" width="24" height="6.5" rx="2.2" fill="#1e293b" stroke="#475569" stroke-width="0.75" />
-          <ellipse cx="7" cy="1.7" rx="1.2" ry="2.8" fill="#94a3b8" />
-          <line x1="-3" y1="-1.5" x2="-3" y2="-5" stroke="#475569" stroke-width="1.5" />
-        </g>
-
-        <!-- Red Top Strobe Beacon (Pure Vector Gradient Glow) -->
-        <circle cx="-6" cy="-6.8" r="3.8" fill="url(#redBeaconFlare)" />
-        <circle cx="-6" cy="-6.8" r="1.2" fill="#ffffff" />
+        <!-- Forward Nose Strobe -->
+        <circle cx="75" cy="0" r="3.5" fill="url(#whiteStrobeFlare)" />
+        <circle cx="75" cy="0" r="1.2" fill="#ffffff" />
       </g>
     </g>
   </g>
