@@ -322,7 +322,7 @@
           <rect x="0" y="0" width="324" height="40" rx="5" fill="#0a1426" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.35" />
           <text x="14" y="24" fill="#38bdf8" class="font-mono" font-size="11" font-weight="700">02</text>
           <line x1="38" y1="12" x2="38" y2="28" stroke="#1e293b" stroke-width="1" />
-          <text x="50" y="24" fill="#f8fafc" class="font-sans" font-size="12.5" font-weight="700" letter-spacing="1.5">LEARN DEEPLY</text>
+          <text x="50" y="24" fill="#f8fafc" class="font-sans" font-size="12.5" font-weight="700" letter-spacing="1.5">MASTER MERN FUNDAMENTALS</text>
           <circle cx="308" cy="20" r="2" fill="#38bdf8" opacity="0.6" />
         </g>
 
@@ -466,17 +466,17 @@
           </g>
         </g>
 
-        <!-- Row 03: AI -->
+        <!-- Row 03: DATABASE -->
         <g transform="translate(0, 84)">
           <rect x="0" y="0" width="611" height="34" rx="4" fill="#0c172a" stroke="#1e293b" stroke-width="0.75" />
           <text x="12" y="21" fill="#38bdf8" class="font-mono" font-size="10" font-weight="700">03</text>
-          <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">AI</text>
-          <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">Python / AI Engineering</text>
-          <!-- Status Badge: EXPLORING -->
+          <text x="40" y="21" fill="#f1f5f9" class="font-mono" font-size="11" font-weight="700" letter-spacing="1.5">DATABASE</text>
+          <text x="155" y="21" fill="#94a3b8" class="font-sans" font-size="11.5" font-weight="500">MongoDB / Express / REST APIs</text>
+          <!-- Status Badge: BUILDING -->
           <g transform="translate(495, 7)">
-            <rect x="0" y="0" width="104" height="20" rx="10" fill="#0a1a30" stroke="#38bdf8" stroke-width="0.8" />
-            <circle cx="12" cy="10" r="2.8" fill="#38bdf8" class="pulse-dot-cyan" />
-            <text x="22" y="13.5" fill="#7dd3fc" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">EXPLORING</text>
+            <rect x="0" y="0" width="104" height="20" rx="10" fill="#061c2e" stroke="#00f0ff" stroke-width="0.8" />
+            <circle cx="12" cy="10" r="2.8" fill="#00f0ff" class="pulse-dot-cyan" />
+            <text x="22" y="13.5" fill="#00f0ff" class="font-mono" font-size="9" font-weight="700" letter-spacing="1">BUILDING</text>
           </g>
         </g>
 
@@ -518,13 +518,13 @@
       <g transform="translate(705, 318)">
         <!-- Network Connection Lines -->
         <g stroke="url(#accentGrad)" stroke-width="1" opacity="0.4">
-          <!-- Line Python to AI Engineering -->
+          <!-- Line MongoDB to Express.js -->
           <line x1="85" y1="80" x2="235" y2="65" />
-          <!-- Line AI Eng to System Design -->
+          <!-- Line Express.js to System Design -->
           <line x1="235" y1="65" x2="375" y2="90" />
-          <!-- Line Python to Automation -->
+          <!-- Line MongoDB to REST APIs -->
           <line x1="85" y1="80" x2="140" y2="165" />
-          <!-- Line AI Eng to Cloud Infra -->
+          <!-- Line Express.js to Cloud Infra -->
           <line x1="235" y1="65" x2="305" y2="165" />
           <!-- Cross Line -->
           <line x1="140" y1="165" x2="305" y2="165" stroke-dasharray="2,4" />
@@ -534,18 +534,18 @@
         <!-- Animated Data Pulse traveling on main path -->
         <path d="M 85 80 L 235 65 L 375 90 L 305 165 L 140 165 Z" fill="none" stroke="#00f0ff" stroke-width="1.5" class="network-data-pulse" />
 
-        <!-- Node 1: Python -->
+        <!-- Node 1: MongoDB -->
         <g transform="translate(85, 80)">
           <rect x="-45" y="-14" width="90" height="28" rx="14" fill="#081426" stroke="#00f0ff" stroke-width="0.8" />
           <circle cx="-32" cy="0" r="2.5" fill="#00f0ff" />
-          <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">Python</text>
+          <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">MongoDB</text>
         </g>
 
-        <!-- Node 2: AI Engineering -->
+        <!-- Node 2: Express.js -->
         <g transform="translate(235, 65)">
           <rect x="-65" y="-14" width="130" height="28" rx="14" fill="#140f29" stroke="#a855f7" stroke-width="0.8" />
           <circle cx="-50" cy="0" r="2.5" fill="#a855f7" />
-          <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">AI Engineering</text>
+          <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">Express.js</text>
         </g>
 
         <!-- Node 3: System Design -->
@@ -555,11 +555,11 @@
           <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">System Design</text>
         </g>
 
-        <!-- Node 4: Automation -->
+        <!-- Node 4: REST APIs -->
         <g transform="translate(140, 165)">
           <rect x="-55" y="-14" width="110" height="28" rx="14" fill="#0c162a" stroke="#00f0ff" stroke-width="0.8" />
           <circle cx="-42" cy="0" r="2.5" fill="#00f0ff" />
-          <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">Automation</text>
+          <text x="6" y="4" fill="#f1f5f9" class="font-mono" font-size="10" font-weight="700" text-anchor="middle">REST APIs</text>
         </g>
 
         <!-- Node 5: Cloud Infrastructure -->
