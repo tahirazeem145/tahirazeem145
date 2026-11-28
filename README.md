@@ -140,12 +140,12 @@
 
   | 🔄 Stage | 💡 Name | 📖 Philosophy Directive |
   | :---: | :--- | :--- |
-  | `01` | **THINK** | Understand the core problem and user needs before writing a single line of code. |
-  | `02` | **ARCHITECT** | Structure scalable systems, modular data models, and clean component hierarchies. |
-  | `03` | **EXECUTE** | Turn architecture into clean, high-velocity code using modern industry standards. |
-  | `04` | **TEST & BREAK** | Stress-test edge cases and potential failure modes to guarantee rock-solid stability. |
-  | `05` | **ITERATE** | Continuously refine performance, user experience, and architecture based on telemetry. |
-  | `06` | **SHIP** | Deploy production-ready value to users and repeat the perpetual build cycle. |
+  | `01` | **THINK** | Understand the problem before writing the solution. |
+  | `02` | **BUILD** | Turn raw ideas into working products. |
+  | `03` | **BREAK** | Expect fragile things to fail under pressure. |
+  | `04` | **LEARN** | Deconstruct the failure and understand why. |
+  | `05` | **IMPROVE** | Iterate relentlessly. Make next version better. |
+  | `06` | **SHIP** | Real products belong in the real world. |
 
   <br/>
   <img src="./flight-divider-06.svg" alt="NEXT: 06 Connection" width="100%" />
