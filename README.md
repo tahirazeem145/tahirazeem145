@@ -6,20 +6,20 @@
   <a href="https://github.com/tahirazeem145">
     <picture>
       <source srcset="./hero-banner.webp" type="image/webp">
-      <img src="./hero-banner.png" alt="Tahir Azeem - Frontend Developer &amp; Software Engineer" width="100%" />
+      <img src="./hero-banner.png" alt="Tahir Azeem - Software Engineer &amp; MERN Stack Developer" width="100%" />
     </picture>
   </a>
 
   <br/>
 
   #  TAHIR AZEEM 
-  ### ⚡ Full Stack Developer &nbsp;×&nbsp; AI Builder
-  *“Turning ideas into real, scalable products.”*
+  ### ⚡ Software Engineer &nbsp;×&nbsp; MERN Stack Developer
+  *“Architecting scalable full-stack applications with clean, production-ready code.”*
 
   <br/>
 
   <p>
-    <code>⚡ Experience: Full Stack & AI Systems</code> &nbsp;•&nbsp; <code>🚀 Focus: Software Engineering</code> &nbsp;•&nbsp; <code>📍 Location: Remote / Global</code>
+    <code>⚡ Role: Software Engineer</code> &nbsp;•&nbsp; <code>🚀 Focus: MERN Stack Engineering</code> &nbsp;•&nbsp; <code>📍 Location: Remote / Global</code>
   </p>
 
   <br/>
@@ -52,7 +52,7 @@
   | 🎯 Directive | 📝 Description | 🚀 Status |
   | :--- | :--- | :---: |
   | **01 // Build Real Products** | Engineering functional, user-centric software that solves actual problems. | `ACTIVE` |
-  | **02 // Learn Deeply** | Deconstructing fundamentals, mastering modern frameworks, and exploring LLM agents. | `ACTIVE` |
+  | **02 // Master MERN Fundamentals** | Deconstructing fundamentals, mastering React, Node.js, Express, and MongoDB architectures. | `ACTIVE` |
   | **03 // Ship Relentlessly** | Maintaining high deployment velocity through rapid, disciplined iteration loops. | `ACTIVE` |
 
   <br/>
@@ -84,7 +84,7 @@
   <!-- ======================================================== -->
 
   ## 🚀 03 // PROJECT GALAXY [ ACTIVE BUILDS ]
-  <p><em>Curated lineup of flagship applications, intelligent AI products, and developer utilities.</em></p>
+  <p><em>Curated lineup of flagship full-stack web applications, scalable MERN architectures, and developer utilities.</em></p>
 
   <img src="./project-galaxy.svg" alt="Tahir Azeem - Project Galaxy" width="100%" />
 
@@ -92,8 +92,8 @@
 
   | 🛸 Project | 🛠️ Tech Stack | 📌 Type & Overview | 🔗 Links |
   | :--- | :--- | :--- | :---: |
-  | **TripNest 2.0** <br/>*(Flagship)* | `React` `Vite` `Tailwind CSS` `Supabase` `PostgreSQL` | **Travel Photo Sharing Community Platform**<br/>Geo-synced photo sharing, community feeds, and social travel networks. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
-  | **HireMind AI** | `AI Product` `LLMs` `Next.js` `APIs` | **AI-Powered Career Coach**<br/>Intelligent career guidance, automated resume critique, and interview simulator. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
+  | **TripNest 2.0** <br/>*(Flagship)* | `React` `Node.js` `Express` `MongoDB` `Tailwind` | **MERN Travel Photo Sharing Community Platform**<br/>Geo-synced photo sharing, community feeds, and social travel networks. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
+  | **RepoMind** | `MERN Stack` `React` `Node.js` `MongoDB` | **Codebase Intelligence & Developer Platform**<br/>Interactive repository structure reasoning and automated codebase analytics. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
   | **QR Web Tool** | `Web Tool` `JavaScript` `Modern UI` | **Modern QR Code Generator**<br/>High-performance, customizable vector QR code generator for digital workflows. | [View Project](https://github.com/tahirazeem145) &nbsp;·&nbsp; [Source](https://github.com/tahirazeem145) |
 
   <br/>
@@ -156,7 +156,7 @@
   <!-- ======================================================== -->
 
   ## 📡 06 // CONNECTION [ TERMINAL INVITATION ]
-  <p><em>Open for high-impact product builds, full-stack web applications, AI integrations, and visionary collaborations.</em></p>
+  <p><em>Open for high-impact software engineering roles, full-stack MERN builds, scalable web applications, and visionary collaborations.</em></p>
 
   <img src="./connection.svg" alt="Tahir Azeem - Connection" width="100%" />
 
